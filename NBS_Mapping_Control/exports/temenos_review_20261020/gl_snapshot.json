@@ -1,0 +1,2729 @@
+{
+  "metadata": {
+    "database": "C:\\Users\\Test\\Downloads\\GL mapping\\data\\recon.db",
+    "database_bytes": 5227876352,
+    "snapshot_mode": "immutable read of committed database; no WAL",
+    "run": {
+      "id": 54,
+      "version_id": 6,
+      "ecb_file_id": 1,
+      "pl_file_id": 3,
+      "tb_file_id": 9,
+      "engine_version": "1.7.0",
+      "created_at": "2026-10-20 19:05:53",
+      "status": "complete"
+    },
+    "mapping_version": {
+      "id": 6,
+      "file_id": 8,
+      "name": "v6 ACPTCONTRA-23071 (on the 19 Oct workbook)",
+      "created_at": "2026-10-18 22:17:11"
+    },
+    "files": [
+      {
+        "id": 1,
+        "role": "ECB",
+        "filename": "ECB_BALANCE Asset type wise (30.09.2026).xlsx",
+        "sha256": "1D127921C28F104BC6440FF40F1062F1238C660293EC64A5D834A44343AA74A3",
+        "uploaded_at": "2026-10-10 21:37:56"
+      },
+      {
+        "id": 3,
+        "role": "PL",
+        "filename": "Mock3_UAT3 Categ Entry Extract.xlsx",
+        "sha256": "A19B25A904C32CE0409D95F8F0F3E5B17B5580A0398CF4D41FA92000E559CE63",
+        "uploaded_at": "2026-10-10 21:38:59"
+      },
+      {
+        "id": 8,
+        "role": "MAPPING",
+        "filename": "GL mapping 30 Sept 2026 ( please dont refer for the any other purpose other than migration (1) (1).xlsx",
+        "sha256": "CEF45E5FC3BDFB5FA674E26DDE562975CE4CBF5EDDCA7DE4CB510D62F733887A",
+        "uploaded_at": "2026-10-18 21:54:46"
+      },
+      {
+        "id": 9,
+        "role": "TB",
+        "filename": "Trial_Bal_withConsol_19Oct.csv",
+        "sha256": "80DBE3819B40885D26649767873E8C0AD8A355E6C722B631932A88C106E8381B",
+        "uploaded_at": "2026-10-19 19:58:43"
+      }
+    ],
+    "read_at": "2026-10-20T22:47:54"
+  },
+  "balances": [
+    {
+      "source": "ECB",
+      "balance_type": "ACCCRPROFIT",
+      "gl_line": "DKBGL.1935",
+      "outcome": "MAPPED",
+      "signed_qar": "1326158.88",
+      "source_records": 161,
+      "groups": 63
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCDEFERREDPFT",
+      "gl_line": "DKBGL.2610",
+      "outcome": "MAPPED",
+      "signed_qar": "15759529076.30",
+      "source_records": 32793,
+      "groups": 2625
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCDEFERREDPFTCO",
+      "gl_line": "DKBGL.9100",
+      "outcome": "MAPPED",
+      "signed_qar": "-23493169.41",
+      "source_records": 1147,
+      "groups": 45
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCDEFERREDPFTCOBL",
+      "gl_line": "DKBGL.9590",
+      "outcome": "MAPPED",
+      "signed_qar": "23493169.41",
+      "source_records": 1147,
+      "groups": 45
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCDEPOSITPFT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "14752.02",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCDEPOSITPFT",
+      "gl_line": "DKBGL.2655",
+      "outcome": "MAPPED",
+      "signed_qar": "576883964.60",
+      "source_records": 3750,
+      "groups": 948
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCLATEPAYMENT",
+      "gl_line": "DKBGL.1910",
+      "outcome": "MAPPED",
+      "signed_qar": "-803747851.42",
+      "source_records": 2605,
+      "groups": 466
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCLATEPAYMENTCUST",
+      "gl_line": "DKBGL.9050",
+      "outcome": "MAPPED",
+      "signed_qar": "-38841923.40",
+      "source_records": 1244,
+      "groups": 58
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCPRINCIPALPFT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "0",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCPRINCIPALPFT",
+      "gl_line": "DKBGL.1935",
+      "outcome": "MAPPED",
+      "signed_qar": "-166320917.35",
+      "source_records": 1321,
+      "groups": 342
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCPRINCIPALPFTCO",
+      "gl_line": "DKBGL.9100",
+      "outcome": "MAPPED",
+      "signed_qar": "-3349929.58",
+      "source_records": 136,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCPRINCIPALPFTCOBL",
+      "gl_line": "DKBGL.9590",
+      "outcome": "MAPPED",
+      "signed_qar": "3349929.58",
+      "source_records": 136,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACCPRINCIPALPFTCUST",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-2720002.35",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACPT",
+      "gl_line": "DKBGL.8510",
+      "outcome": "MAPPED",
+      "signed_qar": "150342732.57",
+      "source_records": 80,
+      "groups": 9
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACPTBANK",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "4660143803.80",
+      "source_records": 338,
+      "groups": 68
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACPTBANKBL",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-4660143803.80",
+      "source_records": 338,
+      "groups": 68
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACPTBL",
+      "gl_line": "DKBGL.8010",
+      "outcome": "MAPPED",
+      "signed_qar": "-150342732.57",
+      "source_records": 80,
+      "groups": 9
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACPTCONTRA",
+      "gl_line": "DKBGL.1965",
+      "outcome": "MAPPED",
+      "signed_qar": "-37566795.75",
+      "source_records": 43,
+      "groups": 7
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACPTCONTRA",
+      "gl_line": "DKBGL.8010",
+      "outcome": "MAPPED",
+      "signed_qar": "-62516353.86",
+      "source_records": 47,
+      "groups": 8
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACPTCONTRABL",
+      "gl_line": "DKBGL.2680",
+      "outcome": "MAPPED",
+      "signed_qar": "37566795.75",
+      "source_records": 43,
+      "groups": 7
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ACPTCONTRABL",
+      "gl_line": "DKBGL.8510",
+      "outcome": "MAPPED",
+      "signed_qar": "62516353.86",
+      "source_records": 47,
+      "groups": 8
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ADVICE",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "3435609.59",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ADVICE",
+      "gl_line": "DKBGL.8510",
+      "outcome": "MAPPED",
+      "signed_qar": "435411429.80",
+      "source_records": 254,
+      "groups": 32
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ADVICEBL",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-3435609.59",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ADVICEBL",
+      "gl_line": "DKBGL.8010",
+      "outcome": "MAPPED",
+      "signed_qar": "-435411429.80",
+      "source_records": 254,
+      "groups": 32
+    },
+    {
+      "source": "ECB",
+      "balance_type": "COLL",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "62893.6",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "COLL",
+      "gl_line": "DKBGL.8030",
+      "outcome": "MAPPED",
+      "signed_qar": "9623963.98",
+      "source_records": 42,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "COLL",
+      "gl_line": "DKBGL.8530",
+      "outcome": "MAPPED",
+      "signed_qar": "745875.27",
+      "source_records": 4,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "COLLBL",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-10369839.25",
+      "source_records": 46,
+      "groups": 16
+    },
+    {
+      "source": "ECB",
+      "balance_type": "COLLBL",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "-62893.6",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CONFIRM",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "2002825",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CONFIRMBL",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-2002825",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CONTCR",
+      "gl_line": "DKBGL.8520",
+      "outcome": "MAPPED",
+      "signed_qar": "35262532.33",
+      "source_records": 21,
+      "groups": 12
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CONTCRBL",
+      "gl_line": "DKBGL.8020",
+      "outcome": "MAPPED",
+      "signed_qar": "-35262532.33",
+      "source_records": 21,
+      "groups": 12
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CONTDB",
+      "gl_line": "DKBGL.8020",
+      "outcome": "MAPPED",
+      "signed_qar": "-27681694350.01",
+      "source_records": 6330,
+      "groups": 647
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CONTDBBL",
+      "gl_line": "DKBGL.8520",
+      "outcome": "MAPPED",
+      "signed_qar": "27681694350.01",
+      "source_records": 6330,
+      "groups": 647
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "(no destination)",
+      "outcome": "INVALID",
+      "signed_qar": "13705415.13",
+      "source_records": 18,
+      "groups": 18
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "-13648219516.80",
+      "source_records": 438,
+      "groups": 438
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1010",
+      "outcome": "MAPPED",
+      "signed_qar": "-72988786.85",
+      "source_records": 82,
+      "groups": 82
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1020",
+      "outcome": "MAPPED",
+      "signed_qar": "-3051180399.20",
+      "source_records": 5,
+      "groups": 5
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1090",
+      "outcome": "MAPPED",
+      "signed_qar": "-101596050.05",
+      "source_records": 5,
+      "groups": 5
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1110",
+      "outcome": "MAPPED",
+      "signed_qar": "-137226486.45",
+      "source_records": 40,
+      "groups": 40
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1210",
+      "outcome": "MAPPED",
+      "signed_qar": "314078259.67",
+      "source_records": 28,
+      "groups": 11
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1220",
+      "outcome": "MAPPED",
+      "signed_qar": "1065664855.54",
+      "source_records": 130,
+      "groups": 49
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1230",
+      "outcome": "MAPPED",
+      "signed_qar": "10118057495.51",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1510",
+      "outcome": "MAPPED",
+      "signed_qar": "-403633064.22",
+      "source_records": 10,
+      "groups": 10
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1520",
+      "outcome": "MAPPED",
+      "signed_qar": "-137652678.88",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1530",
+      "outcome": "MAPPED",
+      "signed_qar": "-23848945324.98",
+      "source_records": 9,
+      "groups": 9
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1540",
+      "outcome": "MAPPED",
+      "signed_qar": "-2153125657",
+      "source_records": 7,
+      "groups": 7
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1550",
+      "outcome": "MAPPED",
+      "signed_qar": "-131990108",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1801",
+      "outcome": "MAPPED",
+      "signed_qar": "-636493890.29",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1810",
+      "outcome": "MAPPED",
+      "signed_qar": "-715295192.60",
+      "source_records": 45,
+      "groups": 45
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1820",
+      "outcome": "MAPPED",
+      "signed_qar": "-896109000",
+      "source_records": 5,
+      "groups": 5
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1840",
+      "outcome": "MAPPED",
+      "signed_qar": "-49534567.67",
+      "source_records": 9,
+      "groups": 9
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1910",
+      "outcome": "MAPPED",
+      "signed_qar": "-198092070.2",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1915",
+      "outcome": "MAPPED",
+      "signed_qar": "-1499710.06",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1920",
+      "outcome": "MAPPED",
+      "signed_qar": "-33488518.39",
+      "source_records": 44,
+      "groups": 44
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1925",
+      "outcome": "MAPPED",
+      "signed_qar": "-177948666.21",
+      "source_records": 17,
+      "groups": 17
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1930",
+      "outcome": "MAPPED",
+      "signed_qar": "-6189873.94",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1935",
+      "outcome": "MAPPED",
+      "signed_qar": "-173803141.41",
+      "source_records": 5,
+      "groups": 5
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1940",
+      "outcome": "MAPPED",
+      "signed_qar": "-42347525.54",
+      "source_records": 7,
+      "groups": 7
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1945",
+      "outcome": "MAPPED",
+      "signed_qar": "0",
+      "source_records": 7,
+      "groups": 7
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1950",
+      "outcome": "MAPPED",
+      "signed_qar": "-957230207.61",
+      "source_records": 82,
+      "groups": 82
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1960",
+      "outcome": "MAPPED",
+      "signed_qar": "-0.48",
+      "source_records": 236,
+      "groups": 236
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.1970",
+      "outcome": "MAPPED",
+      "signed_qar": "-238601713.23",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2010",
+      "outcome": "MAPPED",
+      "signed_qar": "12542789902.48",
+      "source_records": 156948,
+      "groups": 6664
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2020",
+      "outcome": "MAPPED",
+      "signed_qar": "11801425952.21",
+      "source_records": 46231,
+      "groups": 374
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2030",
+      "outcome": "MAPPED",
+      "signed_qar": "4642819610.57",
+      "source_records": 354,
+      "groups": 184
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2040",
+      "outcome": "MAPPED",
+      "signed_qar": "2260334528.42",
+      "source_records": 732,
+      "groups": 235
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2120",
+      "outcome": "MAPPED",
+      "signed_qar": "2348960000",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2210",
+      "outcome": "MAPPED",
+      "signed_qar": "2715527290.11",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2220",
+      "outcome": "MAPPED",
+      "signed_qar": "8283427900.43",
+      "source_records": 5,
+      "groups": 5
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2230",
+      "outcome": "MAPPED",
+      "signed_qar": "38882165.19",
+      "source_records": 9,
+      "groups": 9
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2410",
+      "outcome": "MAPPED",
+      "signed_qar": "56650117.08",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2415",
+      "outcome": "MAPPED",
+      "signed_qar": "633736777.84",
+      "source_records": 46,
+      "groups": 46
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2425",
+      "outcome": "MAPPED",
+      "signed_qar": "603698856",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2510",
+      "outcome": "MAPPED",
+      "signed_qar": "2591809619.95",
+      "source_records": 14,
+      "groups": 14
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2515",
+      "outcome": "MAPPED",
+      "signed_qar": "1155021144.78",
+      "source_records": 17,
+      "groups": 17
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2530",
+      "outcome": "MAPPED",
+      "signed_qar": "135751537.67",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2535",
+      "outcome": "MAPPED",
+      "signed_qar": "199878395.43",
+      "source_records": 17,
+      "groups": 17
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2536",
+      "outcome": "MAPPED",
+      "signed_qar": "174698694.21",
+      "source_records": 7,
+      "groups": 7
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2537",
+      "outcome": "MAPPED",
+      "signed_qar": "51311105.58",
+      "source_records": 9,
+      "groups": 9
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2610",
+      "outcome": "MAPPED",
+      "signed_qar": "25247.76",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2615",
+      "outcome": "MAPPED",
+      "signed_qar": "5752463.93",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2625",
+      "outcome": "MAPPED",
+      "signed_qar": "300252024.19",
+      "source_records": 8,
+      "groups": 8
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2630",
+      "outcome": "MAPPED",
+      "signed_qar": "1053493424.19",
+      "source_records": 49,
+      "groups": 49
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2640",
+      "outcome": "MAPPED",
+      "signed_qar": "501950136.06",
+      "source_records": 13,
+      "groups": 13
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2645",
+      "outcome": "MAPPED",
+      "signed_qar": "284.3",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2650",
+      "outcome": "MAPPED",
+      "signed_qar": "128176621.48",
+      "source_records": 203,
+      "groups": 151
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2655",
+      "outcome": "MAPPED",
+      "signed_qar": "17125192.96",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2665",
+      "outcome": "MAPPED",
+      "signed_qar": "993578775.47",
+      "source_records": 38,
+      "groups": 38
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2670",
+      "outcome": "MAPPED",
+      "signed_qar": "1157183.91",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2675",
+      "outcome": "MAPPED",
+      "signed_qar": "510800",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2685",
+      "outcome": "MAPPED",
+      "signed_qar": "237526190.55",
+      "source_records": 3,
+      "groups": 3
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.2810",
+      "outcome": "MAPPED",
+      "signed_qar": "2638016.78",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.3010",
+      "outcome": "MAPPED",
+      "signed_qar": "5234100000",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.3030",
+      "outcome": "MAPPED",
+      "signed_qar": "2489961",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.3040",
+      "outcome": "MAPPED",
+      "signed_qar": "6800583872.13",
+      "source_records": 5,
+      "groups": 5
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.3050",
+      "outcome": "MAPPED",
+      "signed_qar": "1427128037.48",
+      "source_records": 12,
+      "groups": 12
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CREDIT",
+      "gl_line": "DKBGL.3090",
+      "outcome": "MAPPED",
+      "signed_qar": "1820750000",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "284267044.51",
+      "source_records": 104,
+      "groups": 67
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNT",
+      "gl_line": "DKBGL.1210",
+      "outcome": "MAPPED",
+      "signed_qar": "-48353042371.39",
+      "source_records": 33180,
+      "groups": 2693
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNT",
+      "gl_line": "DKBGL.1220",
+      "outcome": "MAPPED",
+      "signed_qar": "-25497170994.64",
+      "source_records": 2002,
+      "groups": 451
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNT",
+      "gl_line": "DKBGL.1230",
+      "outcome": "MAPPED",
+      "signed_qar": "-23388918070.05",
+      "source_records": 70,
+      "groups": 29
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNT",
+      "gl_line": "DKBGL.1240",
+      "outcome": "MAPPED",
+      "signed_qar": "-7300000",
+      "source_records": 3,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNT",
+      "gl_line": "DKBGL.2010",
+      "outcome": "MAPPED",
+      "signed_qar": "23246937884.22",
+      "source_records": 2874,
+      "groups": 758
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNT",
+      "gl_line": "DKBGL.2020",
+      "outcome": "MAPPED",
+      "signed_qar": "9989045775.93",
+      "source_records": 614,
+      "groups": 184
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNT",
+      "gl_line": "DKBGL.2030",
+      "outcome": "MAPPED",
+      "signed_qar": "24384820779.60",
+      "source_records": 506,
+      "groups": 93
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNT",
+      "gl_line": "DKBGL.2040",
+      "outcome": "MAPPED",
+      "signed_qar": "713122500",
+      "source_records": 39,
+      "groups": 8
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNTCO",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "-9735301.06",
+      "source_records": 134,
+      "groups": 14
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNTCO",
+      "gl_line": "DKBGL.9100",
+      "outcome": "MAPPED",
+      "signed_qar": "-165582643.39",
+      "source_records": 1187,
+      "groups": 46
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNTCOBL",
+      "gl_line": "DKBGL.9550",
+      "outcome": "MAPPED",
+      "signed_qar": "153614268.12",
+      "source_records": 1185,
+      "groups": 45
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNTCOBL",
+      "gl_line": "DKBGL.9590",
+      "outcome": "MAPPED",
+      "signed_qar": "21703676.33",
+      "source_records": 136,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNTCUST",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-6180735.75",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURACCOUNTCUST",
+      "gl_line": "DKBGL.9050",
+      "outcome": "MAPPED",
+      "signed_qar": "-1072378.29",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURCOMMITMENT",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-108213629961.17",
+      "source_records": 37307,
+      "groups": 3343
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURCOMMITMENT",
+      "gl_line": "DKBGL.2615",
+      "outcome": "MAPPED",
+      "signed_qar": "-457460368.62",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURCOMMITMENTBL",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "108213629961.17",
+      "source_records": 37307,
+      "groups": 3343
+    },
+    {
+      "source": "ECB",
+      "balance_type": "CURCOMMITMENTBL",
+      "gl_line": "DKBGL.2615",
+      "outcome": "MAPPED",
+      "signed_qar": "457460368.62",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DEBIT",
+      "gl_line": "DKBGL.1010",
+      "outcome": "MAPPED",
+      "signed_qar": "-320733484.07",
+      "source_records": 59,
+      "groups": 59
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DEFPAY",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-1088540.94",
+      "source_records": 3,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DEFPAY",
+      "gl_line": "DKBGL.1965",
+      "outcome": "MAPPED",
+      "signed_qar": "-4709314845.82",
+      "source_records": 325,
+      "groups": 60
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DEFPAYBL",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "935659.68",
+      "source_records": 2,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DEFPAYBL",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "152881.26",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DEFPAYBL",
+      "gl_line": "DKBGL.2680",
+      "outcome": "MAPPED",
+      "signed_qar": "4709314845.82",
+      "source_records": 325,
+      "groups": 60
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELACCOUNT",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-576000",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELACCOUNT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "0",
+      "source_records": 135,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELACCOUNT",
+      "gl_line": "DKBGL.1210",
+      "outcome": "MAPPED",
+      "signed_qar": "-29588363.86",
+      "source_records": 2220,
+      "groups": 434
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELACCOUNT",
+      "gl_line": "DKBGL.1220",
+      "outcome": "MAPPED",
+      "signed_qar": "-64347784.42",
+      "source_records": 130,
+      "groups": 26
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELACCOUNT",
+      "gl_line": "DKBGL.1230",
+      "outcome": "MAPPED",
+      "signed_qar": "-87417793.25",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELACCOUNTCUST",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-1370946.13",
+      "source_records": 135,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELACCOUNTCUST",
+      "gl_line": "DKBGL.9050",
+      "outcome": "MAPPED",
+      "signed_qar": "-10041779.18",
+      "source_records": 1004,
+      "groups": 45
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELDEFERREDPFT",
+      "gl_line": "DKBGL.1210",
+      "outcome": "MAPPED",
+      "signed_qar": "-35515286.23",
+      "source_records": 2167,
+      "groups": 374
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELDEFERREDPFT",
+      "gl_line": "DKBGL.1220",
+      "outcome": "MAPPED",
+      "signed_qar": "-8184415.00",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELDEFERREDPFT",
+      "gl_line": "DKBGL.1230",
+      "outcome": "MAPPED",
+      "signed_qar": "-20788012.23",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELDEFERREDPFTCUST",
+      "gl_line": "DKBGL.9050",
+      "outcome": "MAPPED",
+      "signed_qar": "-1790.11",
+      "source_records": 1125,
+      "groups": 45
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELPRINCIPALPFT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "0",
+      "source_records": 134,
+      "groups": 14
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELPRINCIPALPFT",
+      "gl_line": "DKBGL.1935",
+      "outcome": "MAPPED",
+      "signed_qar": "-7459996.37",
+      "source_records": 35,
+      "groups": 28
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DELPRINCIPALPFTCUST",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "0",
+      "source_records": 134,
+      "groups": 14
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEACCOUNT",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "0",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEACCOUNT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "0",
+      "source_records": 136,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEACCOUNT",
+      "gl_line": "DKBGL.1210",
+      "outcome": "MAPPED",
+      "signed_qar": "-1071549.86",
+      "source_records": 2877,
+      "groups": 546
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEACCOUNT",
+      "gl_line": "DKBGL.1220",
+      "outcome": "MAPPED",
+      "signed_qar": "0",
+      "source_records": 155,
+      "groups": 46
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEACCOUNT",
+      "gl_line": "DKBGL.1230",
+      "outcome": "MAPPED",
+      "signed_qar": "0",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEACCOUNTCUST",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-843212.52",
+      "source_records": 135,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEACCOUNTCUST",
+      "gl_line": "DKBGL.9050",
+      "outcome": "MAPPED",
+      "signed_qar": "-6324559.79",
+      "source_records": 1022,
+      "groups": 45
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEDEFERREDPFT",
+      "gl_line": "DKBGL.1210",
+      "outcome": "MAPPED",
+      "signed_qar": "-110533.17",
+      "source_records": 2440,
+      "groups": 439
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEDEFERREDPFT",
+      "gl_line": "DKBGL.1220",
+      "outcome": "MAPPED",
+      "signed_qar": "0",
+      "source_records": 28,
+      "groups": 25
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEDEFERREDPFT",
+      "gl_line": "DKBGL.1230",
+      "outcome": "MAPPED",
+      "signed_qar": "0",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEDEFERREDPFTCUST",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "0",
+      "source_records": 1103,
+      "groups": 45
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEPRINCIPALPFT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "0",
+      "source_records": 134,
+      "groups": 14
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEPRINCIPALPFT",
+      "gl_line": "DKBGL.1935",
+      "outcome": "MAPPED",
+      "signed_qar": "0",
+      "source_records": 77,
+      "groups": 54
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUEPRINCIPALPFTCUST",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "0",
+      "source_records": 134,
+      "groups": 14
+    },
+    {
+      "source": "ECB",
+      "balance_type": "DUERENT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "-190000",
+      "source_records": 290,
+      "groups": 66
+    },
+    {
+      "source": "ECB",
+      "balance_type": "EXPACCOUNT",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "0",
+      "source_records": 4134,
+      "groups": 1107
+    },
+    {
+      "source": "ECB",
+      "balance_type": "EXPACCOUNT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "0",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "EXPACCOUNTBL",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "0",
+      "source_records": 4134,
+      "groups": 1107
+    },
+    {
+      "source": "ECB",
+      "balance_type": "EXPACCOUNTBL",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "0",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCACCOUNT",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "0",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCACCOUNT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "0",
+      "source_records": 135,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCACCOUNT",
+      "gl_line": "DKBGL.1210",
+      "outcome": "MAPPED",
+      "signed_qar": "-12876586.33",
+      "source_records": 2626,
+      "groups": 525
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCACCOUNT",
+      "gl_line": "DKBGL.1220",
+      "outcome": "MAPPED",
+      "signed_qar": "-1042405330.72",
+      "source_records": 148,
+      "groups": 40
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCACCOUNT",
+      "gl_line": "DKBGL.1230",
+      "outcome": "MAPPED",
+      "signed_qar": "-48474746.87",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCACCOUNTCUST",
+      "gl_line": "DKBGL.9050",
+      "outcome": "MAPPED",
+      "signed_qar": "-22492.82",
+      "source_records": 3,
+      "groups": 3
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCDEFERREDPFT",
+      "gl_line": "DKBGL.1210",
+      "outcome": "MAPPED",
+      "signed_qar": "-27431777.16",
+      "source_records": 2332,
+      "groups": 420
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCDEFERREDPFT",
+      "gl_line": "DKBGL.1220",
+      "outcome": "MAPPED",
+      "signed_qar": "-24145034.78",
+      "source_records": 23,
+      "groups": 20
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCDEFERREDPFTCUST",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "0",
+      "source_records": 1103,
+      "groups": 45
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCPRINCIPALPFT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "0",
+      "source_records": 134,
+      "groups": 14
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCPRINCIPALPFT",
+      "gl_line": "DKBGL.1935",
+      "outcome": "MAPPED",
+      "signed_qar": "-2012106.01",
+      "source_records": 62,
+      "groups": 45
+    },
+    {
+      "source": "ECB",
+      "balance_type": "GRCPRINCIPALPFTCUST",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "0",
+      "source_records": 134,
+      "groups": 14
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ISSUE",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "371096.03",
+      "source_records": 5,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ISSUE",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "29685.85",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ISSUE",
+      "gl_line": "DKBGL.8510",
+      "outcome": "MAPPED",
+      "signed_qar": "2752050380.93",
+      "source_records": 685,
+      "groups": 194
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ISSUEBL",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-11902008.03",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ISSUEBL",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "-29685.85",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "ISSUEBL",
+      "gl_line": "DKBGL.8010",
+      "outcome": "MAPPED",
+      "signed_qar": "-2740519468.93",
+      "source_records": 688,
+      "groups": 193
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "-30795131313.30",
+      "source_records": 8,
+      "groups": 8
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.8040",
+      "outcome": "MAPPED",
+      "signed_qar": "-63060703443.75",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.8540",
+      "outcome": "MAPPED",
+      "signed_qar": "63060703442.44",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.8550",
+      "outcome": "MAPPED",
+      "signed_qar": "1637797450.9",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9010",
+      "outcome": "MAPPED",
+      "signed_qar": "3595563041.51",
+      "source_records": 15,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9020",
+      "outcome": "MAPPED",
+      "signed_qar": "-63060090394.52",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9030",
+      "outcome": "MAPPED",
+      "signed_qar": "-2204389143.55",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9040",
+      "outcome": "MAPPED",
+      "signed_qar": "-135682.4",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9045",
+      "outcome": "MAPPED",
+      "signed_qar": "-387005469.82",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9050",
+      "outcome": "MAPPED",
+      "signed_qar": "-37032247392.50",
+      "source_records": 12,
+      "groups": 12
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9060",
+      "outcome": "MAPPED",
+      "signed_qar": "-1789408069.62",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9070",
+      "outcome": "MAPPED",
+      "signed_qar": "-2715465.23",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9080",
+      "outcome": "MAPPED",
+      "signed_qar": "13922668409.56",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9100",
+      "outcome": "MAPPED",
+      "signed_qar": "-26675596.43",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9510",
+      "outcome": "MAPPED",
+      "signed_qar": "-3595563041.51",
+      "source_records": 15,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9520",
+      "outcome": "MAPPED",
+      "signed_qar": "63060090394.53",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9530",
+      "outcome": "MAPPED",
+      "signed_qar": "2204389143.55",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9540",
+      "outcome": "MAPPED",
+      "signed_qar": "135682.4",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9545",
+      "outcome": "MAPPED",
+      "signed_qar": "387005469.82",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9550",
+      "outcome": "MAPPED",
+      "signed_qar": "37032757202.50",
+      "source_records": 12,
+      "groups": 12
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9560",
+      "outcome": "MAPPED",
+      "signed_qar": "649700203.54",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9570",
+      "outcome": "MAPPED",
+      "signed_qar": "5864415.23",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9580",
+      "outcome": "MAPPED",
+      "signed_qar": "14154368456.22",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCR",
+      "gl_line": "DKBGL.9590",
+      "outcome": "MAPPED",
+      "signed_qar": "2243021700.43",
+      "source_records": 8,
+      "groups": 8
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCRBL",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-30795131313.30",
+      "source_records": 116,
+      "groups": 116
+    },
+    {
+      "source": "ECB",
+      "balance_type": "OFFCRBL",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "30795131313.30",
+      "source_records": 8,
+      "groups": 8
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREACCOUNT",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-67578343.18",
+      "source_records": 3,
+      "groups": 3
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREACCOUNT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "0",
+      "source_records": 136,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREACCOUNT",
+      "gl_line": "DKBGL.1210",
+      "outcome": "MAPPED",
+      "signed_qar": "-703938528.76",
+      "source_records": 2242,
+      "groups": 406
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREACCOUNT",
+      "gl_line": "DKBGL.1220",
+      "outcome": "MAPPED",
+      "signed_qar": "-1986730396.27",
+      "source_records": 132,
+      "groups": 27
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREACCOUNTCUST",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-13308781.93",
+      "source_records": 130,
+      "groups": 15
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREACCOUNTCUST",
+      "gl_line": "DKBGL.9050",
+      "outcome": "MAPPED",
+      "signed_qar": "-136153058.04",
+      "source_records": 1157,
+      "groups": 44
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREDEFERREDPFT",
+      "gl_line": "DKBGL.1210",
+      "outcome": "MAPPED",
+      "signed_qar": "-56759923.57",
+      "source_records": 2101,
+      "groups": 365
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREDEFERREDPFT",
+      "gl_line": "DKBGL.1220",
+      "outcome": "MAPPED",
+      "signed_qar": "-60402903.81",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREDEFERREDPFTCUST",
+      "gl_line": "DKBGL.9050",
+      "outcome": "MAPPED",
+      "signed_qar": "-23491379.30",
+      "source_records": 1147,
+      "groups": 45
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREPRINCIPALPFT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "0",
+      "source_records": 134,
+      "groups": 14
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREPRINCIPALPFT",
+      "gl_line": "DKBGL.1935",
+      "outcome": "MAPPED",
+      "signed_qar": "-630238638.41",
+      "source_records": 28,
+      "groups": 24
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PREPRINCIPALPFTCUST",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-627674.43",
+      "source_records": 134,
+      "groups": 14
+    },
+    {
+      "source": "ECB",
+      "balance_type": "PRINCIPALBALANCE",
+      "gl_line": "DKBGL.1910",
+      "outcome": "MAPPED",
+      "signed_qar": "467943126.14",
+      "source_records": 44,
+      "groups": 31
+    },
+    {
+      "source": "ECB",
+      "balance_type": "RECDEFERREDPFT",
+      "gl_line": "DKBGL.1210",
+      "outcome": "MAPPED",
+      "signed_qar": "-6165613957.76",
+      "source_records": 30860,
+      "groups": 2242
+    },
+    {
+      "source": "ECB",
+      "balance_type": "RECDEFERREDPFT",
+      "gl_line": "DKBGL.1220",
+      "outcome": "MAPPED",
+      "signed_qar": "-8864241110.15",
+      "source_records": 1868,
+      "groups": 360
+    },
+    {
+      "source": "ECB",
+      "balance_type": "RECDEFERREDPFT",
+      "gl_line": "DKBGL.1230",
+      "outcome": "MAPPED",
+      "signed_qar": "-1485864378.22",
+      "source_records": 62,
+      "groups": 21
+    },
+    {
+      "source": "ECB",
+      "balance_type": "RECDEFERREDPFT",
+      "gl_line": "DKBGL.1240",
+      "outcome": "MAPPED",
+      "signed_qar": "-717645.26",
+      "source_records": 3,
+      "groups": 2
+    },
+    {
+      "source": "ECB",
+      "balance_type": "RENTALRECEIVABLE",
+      "gl_line": "DKBGL.1910",
+      "outcome": "MAPPED",
+      "signed_qar": "-467943126.14",
+      "source_records": 44,
+      "groups": 31
+    },
+    {
+      "source": "ECB",
+      "balance_type": "TOTCOMMITMENT",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "15024315",
+      "source_records": 10,
+      "groups": 9
+    },
+    {
+      "source": "ECB",
+      "balance_type": "TOTCOMMITMENT",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "-25021585356.58",
+      "source_records": 130,
+      "groups": 54
+    },
+    {
+      "source": "ECB",
+      "balance_type": "TOTCOMMITMENT",
+      "gl_line": "DKBGL.2615",
+      "outcome": "MAPPED",
+      "signed_qar": "-457460368.62",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "TOTCOMMITMENT",
+      "gl_line": "DKBGL.8050",
+      "outcome": "MAPPED",
+      "signed_qar": "-24588874935.33",
+      "source_records": 41303,
+      "groups": 4389
+    },
+    {
+      "source": "ECB",
+      "balance_type": "TOTCOMMITMENTBL",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "-15024315",
+      "source_records": 10,
+      "groups": 9
+    },
+    {
+      "source": "ECB",
+      "balance_type": "TOTCOMMITMENTBL",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "25021585356.58",
+      "source_records": 130,
+      "groups": 54
+    },
+    {
+      "source": "ECB",
+      "balance_type": "TOTCOMMITMENTBL",
+      "gl_line": "DKBGL.2615",
+      "outcome": "MAPPED",
+      "signed_qar": "457460368.62",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "ECB",
+      "balance_type": "TOTCOMMITMENTBL",
+      "gl_line": "DKBGL.8550",
+      "outcome": "MAPPED",
+      "signed_qar": "24588874935.33",
+      "source_records": 41303,
+      "groups": 4389
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "(no destination)",
+      "outcome": "EXCLUDED",
+      "signed_qar": "6247.09",
+      "source_records": 3,
+      "groups": 3
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "(no destination)",
+      "outcome": "UNMAPPED",
+      "signed_qar": "-240999021.01",
+      "source_records": 79100,
+      "groups": 62
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4010",
+      "outcome": "MAPPED",
+      "signed_qar": "8956268.09",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4110",
+      "outcome": "MAPPED",
+      "signed_qar": "1770209855.64",
+      "source_records": 73,
+      "groups": 73
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4120",
+      "outcome": "MAPPED",
+      "signed_qar": "900803844.89",
+      "source_records": 18,
+      "groups": 18
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4130",
+      "outcome": "MAPPED",
+      "signed_qar": "547824460.10",
+      "source_records": 8,
+      "groups": 8
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4140",
+      "outcome": "MAPPED",
+      "signed_qar": "413430.42",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4210",
+      "outcome": "MAPPED",
+      "signed_qar": "-1332634.41",
+      "source_records": 14,
+      "groups": 14
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4220",
+      "outcome": "MAPPED",
+      "signed_qar": "15488075.33",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4230",
+      "outcome": "MAPPED",
+      "signed_qar": "821398668.57",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4310",
+      "outcome": "MAPPED",
+      "signed_qar": "45055730.75",
+      "source_records": 28,
+      "groups": 28
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4320",
+      "outcome": "MAPPED",
+      "signed_qar": "29958089.01",
+      "source_records": 354,
+      "groups": 131
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4330",
+      "outcome": "MAPPED",
+      "signed_qar": "162155976.05",
+      "source_records": 24,
+      "groups": 24
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4340",
+      "outcome": "MAPPED",
+      "signed_qar": "125495120.97",
+      "source_records": 7,
+      "groups": 7
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4350",
+      "outcome": "MAPPED",
+      "signed_qar": "111824768.38",
+      "source_records": 106,
+      "groups": 106
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4410",
+      "outcome": "MAPPED",
+      "signed_qar": "2731125",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4420",
+      "outcome": "MAPPED",
+      "signed_qar": "-7718487.34",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4430",
+      "outcome": "MAPPED",
+      "signed_qar": "453274.22",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4510",
+      "outcome": "MAPPED",
+      "signed_qar": "107990213.63",
+      "source_records": 215,
+      "groups": 11
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4610",
+      "outcome": "MAPPED",
+      "signed_qar": "3158010.39",
+      "source_records": 4,
+      "groups": 4
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4620",
+      "outcome": "MAPPED",
+      "signed_qar": "10691057.58",
+      "source_records": 35,
+      "groups": 35
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4680",
+      "outcome": "MAPPED",
+      "signed_qar": "643914416.02",
+      "source_records": 46,
+      "groups": 46
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4710",
+      "outcome": "MAPPED",
+      "signed_qar": "176978.96",
+      "source_records": 3,
+      "groups": 3
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.4790",
+      "outcome": "MAPPED",
+      "signed_qar": "63790578.94",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5010",
+      "outcome": "MAPPED",
+      "signed_qar": "169429597.42",
+      "source_records": 231,
+      "groups": 231
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5015",
+      "outcome": "MAPPED",
+      "signed_qar": "33613102.00",
+      "source_records": 135,
+      "groups": 135
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5020",
+      "outcome": "MAPPED",
+      "signed_qar": "23950354.18",
+      "source_records": 91,
+      "groups": 91
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5030",
+      "outcome": "MAPPED",
+      "signed_qar": "1465211.33",
+      "source_records": 50,
+      "groups": 50
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5040",
+      "outcome": "MAPPED",
+      "signed_qar": "239673.79",
+      "source_records": 21,
+      "groups": 21
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5090",
+      "outcome": "MAPPED",
+      "signed_qar": "71629155.57",
+      "source_records": 118,
+      "groups": 118
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5101",
+      "outcome": "MAPPED",
+      "signed_qar": "4080733.44",
+      "source_records": 9,
+      "groups": 9
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5102",
+      "outcome": "MAPPED",
+      "signed_qar": "5421248.96",
+      "source_records": 20,
+      "groups": 20
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5103",
+      "outcome": "MAPPED",
+      "signed_qar": "970618.95",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5104",
+      "outcome": "MAPPED",
+      "signed_qar": "19609426.68",
+      "source_records": 53,
+      "groups": 53
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5105",
+      "outcome": "MAPPED",
+      "signed_qar": "29881",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5106",
+      "outcome": "MAPPED",
+      "signed_qar": "21548201.87",
+      "source_records": 81,
+      "groups": 81
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5107",
+      "outcome": "MAPPED",
+      "signed_qar": "2156733.28",
+      "source_records": 5,
+      "groups": 5
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5108",
+      "outcome": "MAPPED",
+      "signed_qar": "944764.59",
+      "source_records": 6,
+      "groups": 6
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5109",
+      "outcome": "MAPPED",
+      "signed_qar": "861253.48",
+      "source_records": 56,
+      "groups": 56
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5111",
+      "outcome": "MAPPED",
+      "signed_qar": "30715382.75",
+      "source_records": 5,
+      "groups": 5
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5113",
+      "outcome": "MAPPED",
+      "signed_qar": "2530848.27",
+      "source_records": 19,
+      "groups": 19
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5114",
+      "outcome": "MAPPED",
+      "signed_qar": "7450934.80",
+      "source_records": 12,
+      "groups": 12
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5115",
+      "outcome": "MAPPED",
+      "signed_qar": "47381173.23",
+      "source_records": 20,
+      "groups": 20
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5116",
+      "outcome": "MAPPED",
+      "signed_qar": "948369.31",
+      "source_records": 52,
+      "groups": 52
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5117",
+      "outcome": "MAPPED",
+      "signed_qar": "35922380.86",
+      "source_records": 19,
+      "groups": 19
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5118",
+      "outcome": "MAPPED",
+      "signed_qar": "128172732.20",
+      "source_records": 16,
+      "groups": 16
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5119",
+      "outcome": "MAPPED",
+      "signed_qar": "1016846.07",
+      "source_records": 20,
+      "groups": 20
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5120",
+      "outcome": "MAPPED",
+      "signed_qar": "17540000.03",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5121",
+      "outcome": "MAPPED",
+      "signed_qar": "55000",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5122",
+      "outcome": "MAPPED",
+      "signed_qar": "6516336.29",
+      "source_records": 3,
+      "groups": 3
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5124",
+      "outcome": "MAPPED",
+      "signed_qar": "2216110.21",
+      "source_records": 65,
+      "groups": 65
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5125",
+      "outcome": "MAPPED",
+      "signed_qar": "3003066.59",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5210",
+      "outcome": "MAPPED",
+      "signed_qar": "46720306.11",
+      "source_records": 105,
+      "groups": 105
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5220",
+      "outcome": "MAPPED",
+      "signed_qar": "58850730",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5230",
+      "outcome": "MAPPED",
+      "signed_qar": "17728358.74",
+      "source_records": 14,
+      "groups": 14
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5310",
+      "outcome": "MAPPED",
+      "signed_qar": "631201931.06",
+      "source_records": 309,
+      "groups": 308
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5320",
+      "outcome": "MAPPED",
+      "signed_qar": "370659609.74",
+      "source_records": 29,
+      "groups": 29
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5330",
+      "outcome": "MAPPED",
+      "signed_qar": "864616337.38",
+      "source_records": 5,
+      "groups": 5
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5340",
+      "outcome": "MAPPED",
+      "signed_qar": "108523103.62",
+      "source_records": 8,
+      "groups": 8
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5508",
+      "outcome": "MAPPED",
+      "signed_qar": "116330829.36",
+      "source_records": 2,
+      "groups": 2
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5510",
+      "outcome": "MAPPED",
+      "signed_qar": "-5741899.76",
+      "source_records": 13,
+      "groups": 13
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5511",
+      "outcome": "MAPPED",
+      "signed_qar": "413569.24",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5512",
+      "outcome": "MAPPED",
+      "signed_qar": "3243177.63",
+      "source_records": 14,
+      "groups": 14
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5513",
+      "outcome": "MAPPED",
+      "signed_qar": "238321379.28",
+      "source_records": 10,
+      "groups": 10
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5514",
+      "outcome": "MAPPED",
+      "signed_qar": "9863479.75",
+      "source_records": 17,
+      "groups": 17
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5520",
+      "outcome": "MAPPED",
+      "signed_qar": "-576000",
+      "source_records": 1,
+      "groups": 1
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5540",
+      "outcome": "MAPPED",
+      "signed_qar": "30128857.08",
+      "source_records": 11,
+      "groups": 11
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5603",
+      "outcome": "MAPPED",
+      "signed_qar": "375242359.40",
+      "source_records": 8,
+      "groups": 8
+    },
+    {
+      "source": "PL",
+      "balance_type": "",
+      "gl_line": "DKBGL.5605",
+      "outcome": "MAPPED",
+      "signed_qar": "570400.99",
+      "source_records": 1,
+      "groups": 1
+    }
+  ]
+}

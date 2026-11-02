@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "basis": "Empirical September 2026 reconciliation, authorized by user to proceed and retain notes. Separate report measure; original owner balance rules retained.",
+  "products": {
+    "RCM": {
+      "enabled": true,
+      "parent_coefficients": {"CURACCOUNT": -1, "PREACCOUNT": -1, "GRCACCOUNT": -1, "DELACCOUNT": -1, "DUEACCOUNT": -1, "NABACCOUNT": -1, "RECDEFERREDPFT": -1, "ACCDEFERREDPFT": -1},
+      "linked_coefficients": {},
+      "add_ethix_fees": true,
+      "evidence": "1,614 of 1,623 matched September RCM accounts reproduce Ethix carrying amount within QAR 1. Remaining nine accounts differ by QAR 11,137,916.76 in aggregate. Principal account balances plus -RECDEFERREDPFT-ACCDEFERREDPFT earned profit avoids adding unearned deferred-profit balances to carrying amount. No missing component is aliased."
+    },
+    "CLM": {
+      "enabled": true,
+      "parent_coefficients": {"CURACCOUNT": -1, "PREACCOUNT": -1, "GRCACCOUNT": -1, "DELACCOUNT": -1, "DUEACCOUNT": -1, "NABACCOUNT": -1, "ACCPRINCIPALPFT": -1, "RECPRINCIPALPFT": -1, "GRCPRINCIPALPFT": -1, "DELPRINCIPALPFT": -1, "PREPRINCIPALPFT": -1},
+      "linked_coefficients": {"CREDIT": -1, "ACCCRPROFIT": -1},
+      "add_ethix_fees": true,
+      "evidence": "160 of 161 verified category 3713 / linked category 6050 September CLM accounts reproduce Ethix carrying amount within QAR 1. One remaining difference QAR 138,009.48. Actual extract has linked ACCCRPROFIT. This is a distinct report adjustment, never an alias for owner-defined ACCDEPOSITPFT. Seven unverified links excluded."
+    }
+  }
+}

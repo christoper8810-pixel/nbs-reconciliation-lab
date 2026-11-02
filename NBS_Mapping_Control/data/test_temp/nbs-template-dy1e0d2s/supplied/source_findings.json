@@ -1,0 +1,398 @@
+[
+  {
+    "id": "NBS-01",
+    "title": "Outstanding loan selection differs from the owner’s 12-code rule",
+    "source_sheet": "Table 8",
+    "source_cells": [
+      "B20",
+      "E20",
+      "B23",
+      "E23",
+      "B27",
+      "E27"
+    ],
+    "evidence": "Table 8!B20: CATEGORY=  3701, 3717, 3704 > ASSET TYPE = CURACCOUNT\nGRCACCOUNT\nDUEACCOUNT\nPDOACCOUNT\nNABACCOUNT\nDELACCOUNT\nPREACCOUNT\nTable 8!B23: CATEGORY = 3702, 3706 &  ASSET TYPE = CURACCOUNT\nGRCACCOUNT\nDUEACCOUNT\nPDOACCOUNT\nNABACCOUNT\nDELACCOUNT\nPREACCOUNT\nTable 8!B27: CATEGORY =3000 - 3999 BUT NOT EQUAL TO CATEGORY 3701, 3717, 3704, 3702, 3706 &  ASSET TYPE = CURACCOUNT\nGRCACCOUNT\nDUEACCOUNT\nPDOACCOUNT\nNABACCOUNT\nDELACCOUNT\nPREACCOUNT",
+    "implication": "Policy mismatch, not a proven historical numerical error. These seven-code lists contain the owner’s six ACCOUNT codes plus PDOACCOUNT, omit all six deferred-profit codes assigned by the owner to OUTSTANDING, and add PDOACCOUNT which the owner did not authorize. If these rows are intended to report the owner-defined outstanding measure, they need the selected rule rather than this legacy list. Table 10 uses the same seven-code pattern in B14, B17 and B19 and equivalent repeated rows. The report-specific metric must be established before replacing any list.",
+    "required_owner_decision": "Select OUTSTANDING for each applicable principal/exposure row and confirm PDOACCOUNT’s local definition and exclusion or explicitly approve a separate table-specific measure. Do not infer that PDOACCOUNT is DELACCOUNT or a CLM extra.",
+    "source_system": "T24"
+  },
+  {
+    "id": "NBS-02",
+    "title": "Category 3713 falls into Others under the existing Murabaha category filters",
+    "source_sheet": "Table 8",
+    "source_cells": [
+      "A20",
+      "B20",
+      "A27",
+      "B27"
+    ],
+    "evidence": "Table 8!A20: .........01 Murabaha - Musawma\nTable 8!B20: CATEGORY=  3701, 3717, 3704 > ASSET TYPE = CURACCOUNT\nGRCACCOUNT\nDUEACCOUNT\nPDOACCOUNT\nNABACCOUNT\nDELACCOUNT\nPREACCOUNT\nTable 8!A27: ...........02 Others *\nTable 8!B27: CATEGORY =3000 - 3999 BUT NOT EQUAL TO CATEGORY 3701, 3717, 3704, 3702, 3706 &  ASSET TYPE = CURACCOUNT\nGRCACCOUNT\nDUEACCOUNT\nPDOACCOUNT\nNABACCOUNT\nDELACCOUNT\nPREACCOUNT\nRelated Table 10 evidence:\nTable 10!A14: .........01 Murabaha - Musawma \nTable 10!B14: CATEGORY=  3701, 3717, 3704 > ASSET TYPE = CURACCOUNT\nGRCACCOUNT\nDUEACCOUNT\nPDOACCOUNT\nNABACCOUNT\nDELACCOUNT\nPREACCOUNT\nTable 10!A19: .........06 Others \nTable 10!B19: CATEGORY = 13101, 13103, 13105 &  \nCATEGORY =3000 - 3999 BUT NOT EQUAL TO CATEGORY 3701, 3717, 3704, 3702, 3706 &  ASSET TYPE = CURACCOUNT\nGRCACCOUNT\nDUEACCOUNT\nPDOACCOUNT\nNABACCOUNT\nDELACCOUNT\nPREACCOUNT",
+    "implication": "Routing mismatch with the owner-provided Murabaha/CLM category 3713 scope. The Murabaha list is 3701, 3717, 3704; the Others predicate includes 3000-3999 while excluding those three and Ijara 3702/3706, leaving 3713 in Others. This establishes the route under the text predicate, not the correctness of the bank’s category taxonomy. Reclassification and the two unknown CLM balances are separate controls.",
+    "required_owner_decision": "Approve category 3713’s Murabaha route, define whether category alone or additional product/arrangement conditions identify CLM, and supply the exact two extra balance identifiers, destination groups and effective date. Remove 3713 from Others when the Murabaha route is activated so one contract cannot enter both rows.",
+    "source_system": "T24",
+    "owner_update": "Owner supplied linked CLS category6050 CREDIT and ACCDEPOSITPFT. ACCDEPOSITPFT belongs to accrued-profit/AMORTIZED_EARNED. CREDIT to OUTSTANDING is proposed and pending review. Actual CLM detector and account links still needed."
+  },
+  {
+    "id": "NBS-03",
+    "title": "Deferred-income row mixes two owner groups and one unrecognized balance",
+    "source_sheet": "Table 11",
+    "source_cells": [
+      "A26",
+      "B26",
+      "D26",
+      "H26",
+      "J26",
+      "L26"
+    ],
+    "evidence": "Table 11!A26: 05 Deferred Interest / Income\nTable 11!B26: AA.ARRANGEMENT > LINKED APPL ID > ECB SUM(OPEN + DEBIT+ CREDIT) WHERE ASSET TYPE = ACCDEFERREDPFT\nDUEDEFERREDPFT\nGRCDEFERREDPFT\nPDODEFERREDPFT\nNABDEFERREDPFT\nTable 11!D26: AA.ARRANGEMENT > LINKED APPL ID > ECB SUM(OPEN + DEBIT+ CREDIT) WHERE ASSET TYPE = ACCDEFERREDPFT\nDUEDEFERREDPFT\nGRCDEFERREDPFT\nPDODEFERREDPFT\nNABDEFERREDPFT\nTable 11!H26: AA.ARRANGEMENT > LINKED APPL ID > ECB SUM(OPEN + DEBIT+ CREDIT) WHERE ASSET TYPE = ACCDEFERREDPFT\nDUEDEFERREDPFT\nGRCDEFERREDPFT\nPDODEFERREDPFT\nNABDEFERREDPFT\nTable 11!J26: AA.ARRANGEMENT > LINKED APPL ID > ECB SUM(OPEN + DEBIT+ CREDIT) WHERE ASSET TYPE = ACCDEFERREDPFT\nDUEDEFERREDPFT\nGRCDEFERREDPFT\nPDODEFERREDPFT\nNABDEFERREDPFT\nTable 11!L26: AA.ARRANGEMENT > LINKED APPL ID > ECB SUM(OPEN + DEBIT+ CREDIT) WHERE ASSET TYPE = ACCDEFERREDPFT\nDUEDEFERREDPFT\nGRCDEFERREDPFT\nPDODEFERREDPFT\nNABDEFERREDPFT",
+    "implication": "Metric ambiguity relative to the owner rules: ACCDEFERREDPFT is UNEARNED_PROFIT; DUEDEFERREDPFT, GRCDEFERREDPFT and NABDEFERREDPFT are OUTSTANDING; PDODEFERREDPFT belongs to none of the owner’s 19 codes. DEFERREDPFT, the other UNEARNED_PROFIT component, is absent. The label Deferred Interest / Income does not establish whether this row should be the owner’s unearned group or a separate legacy deferred-income measure. Row 25’s SP suspense list is a separate measure and must not be replaced by ordinary loan groups.",
+    "required_owner_decision": "Choose the intended metric for row 26 and supply authoritative definitions for PDODEFERREDPFT. If the intended metric is UNEARNED_PROFIT, explicitly bind row 26 to DEFERREDPFT + ACCDEFERREDPFT. Retain any separate suspense rule until the owner defines it.",
+    "source_system": "T24"
+  },
+  {
+    "id": "NBS-04",
+    "title": "Remaining-maturity subtraction runs in the wrong direction",
+    "source_sheet": "Table 10",
+    "source_cells": [
+      "A2",
+      "D4",
+      "E4",
+      "F4",
+      "D6",
+      "E6",
+      "F6",
+      "N6"
+    ],
+    "evidence": "Table 10!A2: Table (10) - (105) Breakdown of Performing Credit Facilities by maturity\nTable 10!D4: Without Maturity\nTable 10!E4: >1 Week\nTable 10!F4: >1 Week To1 Month\nTable 10!D6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is Equal to or less than 1 Days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT) \nTable 10!E6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is Equal to or less than  7 Days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT) \nTable 10!F6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is greater than 7 and less than 30 days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT) \nTable 10!N6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is greater than 7300\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT)",
+    "implication": "Concrete predicate defect if the table represents remaining maturity as indicated by the future maturity headings. System Date - MATURITY.DATE is negative for future maturities, so a future contract can meet both D6 (<=1) and E6 (<=7), while longer positive bands select past-due contracts. A contract maturing 100 days after the as-of date gives -100 and qualifies for both short buckets rather than the >3 to 6 months band. This is a logic illustration, not a value observed in report data.",
+    "required_owner_decision": "Set a single reporting as-of date and use maturity_date - as_of_date for remaining tenor if that is the regulatory basis. Define the disposition of matured/overdue and same-day contracts separately, and confirm contractual maturity versus any alternative reporting maturity.",
+    "source_system": "T24"
+  },
+  {
+    "id": "NBS-05",
+    "title": "Maturity buckets overlap, omit exact boundaries, and do not identify missing maturity",
+    "source_sheet": "Table 10",
+    "source_cells": [
+      "D4",
+      "E4",
+      "F4",
+      "D6",
+      "E6",
+      "F6",
+      "G6",
+      "H6",
+      "I6",
+      "J6",
+      "K6",
+      "L6",
+      "M6",
+      "N6",
+      "O6"
+    ],
+    "evidence": "Table 10!D4: Without Maturity\nTable 10!E4: >1 Week\nTable 10!F4: >1 Week To1 Month\nTable 10!D6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is Equal to or less than 1 Days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT) \nTable 10!E6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is Equal to or less than  7 Days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT) \nTable 10!F6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is greater than 7 and less than 30 days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT) \nTable 10!G6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is greater than 30 and less than 90 days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT)\nTable 10!H6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is greater than 90 and less than 180 days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT)\nTable 10!I6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is greater than 180 and less than 365 days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT)\nTable 10!J6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is greater than 365 and less than 730 days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT) \nTable 10!K6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is greater than 730 and less than 1825 days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT)\nTable 10!L6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is greater than 1825 and less than 3650 days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT)\nTable 10!M6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is greater than 3650 and less than 7300 days.\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT)\nTable 10!N6: 1.Take the Account ID and go to AA.ACCOUNT.DETAILS where(System Date - MATURITY.DATE) is greater than 7300\n2. Take the Account ID and go to EB.CONTRACT.BALANCES and SUM(OPEN.BALANCE + CREDIT.MVMT + DEBIT.MVMT)\nTable 10!O6: D+E+F+G+H+I+J+K+L+M+N",
+    "implication": "Concrete predicate defects independent of which balance group is selected. D6 uses <=1 and E6 <=7 so they overlap; Without Maturity is tested as <=1 day rather than a missing/undefined maturity date. Bands use strictly greater and strictly less comparisons, leaving exactly 30, 90, 180, 365, 730, 1825, 3650 and 7300 uncovered. E4’s >1 Week wording conflicts with E6’s <=7-day test. O6 sums all buckets, so overlap can double-count and gaps can omit contracts. Fixed days also differ from calendar months/years around leap days.",
+    "required_owner_decision": "Define one mutually exclusive and exhaustive interval model, an explicit missing-maturity bucket, precise inclusivity at every boundary, the intended first-week label, and whether month/year limits use calendar periods or fixed day counts. Validate that each eligible contract reaches exactly one bucket.",
+    "source_system": "T24"
+  },
+  {
+    "id": "NBS-06",
+    "title": "Direct credit-quality totals include performing exposures twice and indirect performing total uses the next row",
+    "source_sheet": "Table 11",
+    "source_cells": [
+      "B3",
+      "D3",
+      "F3",
+      "N3",
+      "P3",
+      "B4",
+      "C4",
+      "F4",
+      "G4",
+      "N4",
+      "P4",
+      "F5",
+      "G5",
+      "N5",
+      "P5",
+      "G7",
+      "N7",
+      "P7"
+    ],
+    "evidence": "Table 11!B3: Good / Low Risk\nTable 11!D3: Special Mentioned\nTable 11!F3: Total Performing\nTable 11!N3: Total Non-performing\nTable 11!P3: Grand Total\nTable 11!B4: Direct\nTable 11!C4: Indirect\nTable 11!F4: Direct\nTable 11!G4: Indirect\nTable 11!N4: Direct\nTable 11!P4: Direct\nTable 11!F5: =SUM(B5+D5)\nTable 11!G5: =SUM(B6+D6)\nTable 11!N5: =SUM(D5 + F5 + H5 +J5 + L5)\nTable 11!P5: =SUM(B5 + D5 + F5 + H5 +J5 + L5)\nTable 11!G7: =SUM(B8+D8)\nTable 11!N7: =SUM(D7 + F7 + H7 +J7 + L7)\nTable 11!P7: =SUM(B7 + D7 + F7 + H7 +J7 + L7)",
+    "implication": "Concrete formula-reference defects relative to the supplied headings, repeated on rows 5, 7-14 and 16-21. F=B+D already totals performing Direct. N=D+F+H+J+L includes performing balances inside Total Non-performing Direct. P=B+D+F+H+J+L counts B and D twice because F=B+D. G uses next-row B/D Direct cells rather than same-row C/E Indirect cells. Illustrative inputs B=100,D=20,H=30,J=40,L=50 yield N=260 rather than 120 and P=360 rather than 240. Mapping cells currently contain specification text, so these formula defects are not evidence of an actual submitted amount.",
+    "required_owner_decision": "Confirm the existing headings as the intended dimensions. The corresponding structural formulas are F=B+D, G=C+E, N=H+J+L and P=F+N on the same row. Apply only after separating specification text from numeric output and verify totals with independent reconciliation.",
+    "source_system": "T24"
+  },
+  {
+    "id": "NBS-07",
+    "title": "Indirect credit-quality totals sum Direct columns and duplicate a subtotal",
+    "source_sheet": "Table 11",
+    "source_cells": [
+      "H3",
+      "J3",
+      "L3",
+      "N3",
+      "P3",
+      "H4",
+      "I4",
+      "J4",
+      "K4",
+      "L4",
+      "M4",
+      "N4",
+      "O4",
+      "P4",
+      "Q4",
+      "O5",
+      "Q5",
+      "O7",
+      "Q7"
+    ],
+    "evidence": "Table 11!H3: Substandard\nTable 11!J3: Doubtful\nTable 11!L3: Bad Debts\nTable 11!N3: Total Non-performing\nTable 11!P3: Grand Total\nTable 11!H4: Direct\nTable 11!I4: Indirect\nTable 11!J4: Direct\nTable 11!K4: Indirect\nTable 11!L4: Direct\nTable 11!M4: Indirect\nTable 11!N4: Direct\nTable 11!O4: Indirect\nTable 11!P4: Direct\nTable 11!Q4: Indirect\nTable 11!O5: =SUM(C5 + E5 + H5 + J5 +L5 + N5)\nTable 11!Q5: =SUM(E5 + H5 + J5 +L5 + N5)\nTable 11!O7: =SUM(C7 + E7 + H7 + J7 +L7 + N7)\nTable 11!Q7: =SUM(E7 + H7 + J7 +L7 + N7)",
+    "implication": "Concrete formula dimension and duplication defects repeated on rows 5, 7-14 and 16-21. O (Total Non-performing Indirect) sums C,E plus Direct H,J,L and Direct subtotal N, omitting Indirect I,K,M. Q (Grand Total Indirect) likewise uses Direct H,J,L,N, omits C and I/K/M, and incorporates subtotal N alongside its component H/J/L. With illustrative Direct inputs B=100,D=20,H=30,J=40,L=50 and Indirect C=10,E=2,I=3,K=4,M=5, existing O=392 and Q=382; the headed indirect dimensions would give O=12 and Q=24. These probes demonstrate formula logic, not observed reporting data.",
+    "required_owner_decision": "Confirm Direct/Indirect headings. Structural same-row replacements are O=I+K+M and Q=G+O with G=C+E. Do not include direct exposure or a subtotal and its components in an indirect total.",
+    "source_system": "T24"
+  },
+  {
+    "id": "NBS-08",
+    "title": "Credit-quality baseline reads movements without an opening balance and changes selected balances by risk",
+    "source_sheet": "Table 11",
+    "source_cells": [
+      "A5",
+      "B5",
+      "D5",
+      "H5",
+      "J5",
+      "L5",
+      "B25",
+      "B26"
+    ],
+    "evidence": "Table 11!A5: Base Line\nTable 11!B5: Get Loan ID then go to AA.ARRANGEMENT>PRODUCT.LINE = LENDING & ACCOUNTS then in ACCOUNTS>PRODUCT = DUK.OVERDRAFT.ACCT AND GET CUSTOMER # & LINKED.APPL.ID then from CUSTOMER > \"L.INT.RISK.RT\"  = (1 to 6)  then go to ECB from their CUR.ASSET.TYPE=CURACCOUNT then from multi value bunch DEBIT+CREDIT.MVMT get amount against CURACCOUNT+DUEACCOUNT\nTable 11!D5: Get Loan ID then go to AA.ARRANGEMENT>PRODUCT.LINE = LENDING & ACCOUNTS then in ACCOUNTS>PRODUCT = DUK.OVERDRAFT.ACCT AND GET CUSTOMER # & LINKED.APPL.ID then from CUSTOMER > \"L.INT.RISK.RT\"  = (7)  then go to ECB from their CUR.ASSET.TYPE=CURACCOUNT then from multi value bunch DEBIT+CREDIT.MVMT get amount against CURACCOUNT+DUEACCOUNT + GRCACCOUNT + DELACCOUNT\nTable 11!H5: Get Loan ID then go to AA.ARRANGEMENT>PRODUCT = LENDING AND GET CUSTOMER # & LINKED.APPL.ID then from CUSTOMER > \"L.INT.RISK.RT\"  = (8) then go to ECB from their CUR.ASSET.TYPE=CURACCOUNT + DUEACCOUNT + GRCACCOUNT + DELACCOUNT + PREACCOUNT + NABACCOUNT then from multi value bunch DEBIT+CREDIT.MVMT get amount against CURACCOUNT + DUEACCOUNT + GRCACCOUNT + DELACCOUNT + PREACCOUNT + NABACCOUNT\nTable 11!J5: Get Loan ID then go to AA.ARRANGEMENT>PRODUCT = LENDING AND GET CUSTOMER # & LINKED.APPL.ID then from CUSTOMER > \"L.INT.RISK.RT\"  = (9) then go to ECB from their CUR.ASSET.TYPE=CURACCOUNT + DUEACCOUNT + GRCACCOUNT + DELACCOUNT + PREACCOUNT + NABACCOUNT then from multi value bunch DEBIT+CREDIT.MVMT get amount against CURACCOUNT + DUEACCOUNT + GRCACCOUNT + DELACCOUNT + PREACCOUNT + NABACCOUNT\nTable 11!L5: Get Loan ID then go to AA.ARRANGEMENT>PRODUCT = LENDING AND GET CUSTOMER # & LINKED.APPL.ID then from CUSTOMER > \"L.INT.RISK.RT\"  = (10) then go to ECB from their CUR.ASSET.TYPE=CURACCOUNT + DUEACCOUNT + GRCACCOUNT + DELACCOUNT + PREACCOUNT + NABACCOUNT then from multi value bunch DEBIT+CREDIT.MVMT get amount against CURACCOUNT + DUEACCOUNT + GRCACCOUNT + DELACCOUNT + PREACCOUNT + NABACCOUNT\nTable 11!B25: AA.ARRANGEMENT > LINKED APPL ID > ECB SUM(OPEN + DEBIT+ CREDIT) WHERE ASSET TYPE = ACCDEFERREDPFTSP\nDUEDEFERREDPFTSP\nGRCDEFERREDPFTSP\nPDODEFERREDPFTSP\nNABDEFERREDPFTSP\nACCPRINCIPALPFTSP\nDUEPRINCIPALPFTSP\nGRCPRINCIPALPFTSP\nPDOPRINCIPALPFTSP\nNABPRINCIPALPFTSP\nTable 11!B26: AA.ARRANGEMENT > LINKED APPL ID > ECB SUM(OPEN + DEBIT+ CREDIT) WHERE ASSET TYPE = ACCDEFERREDPFT\nDUEDEFERREDPFT\nGRCDEFERREDPFT\nPDODEFERREDPFT\nNABDEFERREDPFT",
+    "implication": "As-of-stock calculation ambiguity. Baseline row 5 explicitly reads DEBIT+CREDIT.MVMT but not OPEN, unlike rows 25/26 which use OPEN+DEBIT+CREDIT. Good/Low Risk selects CURACCOUNT+DUEACCOUNT, Special Mention adds GRCACCOUNT/DELACCOUNT, and nonperforming columns use six ACCOUNT balances, omitting all owner OUTSTANDING deferred-profit components. Risk is therefore controlling both contract classification and selected balance components; amount changes could reflect excluded balances as well as risk classification. A nonzero opening balance with zero movements would contribute zero under the literal movement-only baseline. No numeric source dataset was provided to establish the magnitude.",
+    "required_owner_decision": "Specify whether this table requires closing outstanding stock or period movements and the exact ECB field/date alignment. For closing stock use an authorized as-of snapshot or correctly aligned opening plus signed movements once. Select the approved table metric separately from the risk-routing predicate so any deliberate risk-specific exclusions remain explicit. Verify OPEN and movement multivalues align to each balance type and reporting currency.",
+    "source_system": "T24"
+  },
+  {
+    "id": "E01",
+    "title": "Legacy template is not a flat mapping table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "A1:J4",
+      "A354",
+      "A2092"
+    ],
+    "evidence": {
+      "sheet_count": 1,
+      "physical_max_rows": 2135,
+      "physical_max_columns": 22,
+      "nonempty_rows": 1864,
+      "sections": 49,
+      "base_reports": 5,
+      "detail_tables": 44,
+      "missing_table_numbers": [
+        20
+      ]
+    },
+    "implication": "Extract section identity, complete hierarchy and report dimensions before aligning rules. The workbook contains repeated leaf descriptions and varying headers; description-only joins are unsafe.",
+    "required_owner_decision": "Approve section/row crosswalk to the Temenos source before using legacy logic.",
+    "source_system": "ETHIX"
+  },
+  {
+    "id": "E02",
+    "title": "Ethix loan carrying amount has three metrics",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "K33",
+      "L33",
+      "K35",
+      "K37",
+      "L37",
+      "K40",
+      "L41"
+    ],
+    "evidence": "All seven cells explicitly state Outstanding_QAR + Amortized_Earned_QAR + Loan_Fees_QAR. They occur in five asset rows.",
+    "implication": "The target must keep OUTSTANDING, AMORTIZED_EARNED, and LOAN_FEES separate and compose the approved carrying amount. User-provided T24 groups cover the first two; no T24 fee group has been supplied.",
+    "required_owner_decision": "Supply the bank-specific T24 source and balance types for LOAN_FEES, fee sign, valuation basis and whether already embedded in another group.",
+    "source_system": "ETHIX"
+  },
+  {
+    "id": "E03",
+    "title": "Loan sector and government exceptions are legacy filters",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "K13",
+      "K33",
+      "L33",
+      "K35",
+      "K37",
+      "L37"
+    ],
+    "evidence": "Bank loan filter SIC=44108; non-bank financial institutions are NonPersonal SIC prefix441 excluding44108; government overdraft RIM2398; public-sector Islamic finance NonPersonal SIC prefix1,2,3 excluding RIM2398 in K37. L37 states nonresident but omits the RIM exception.",
+    "implication": "These are Ethix client/product classifications, not T24 balance types. Resident/nonresident variants are asymmetrical in the legacy text.",
+    "required_owner_decision": "Approve Ethix-to-T24 field dictionaries for SIC, RIM, personal status and residency, and resolve the K37/L37 RIM2398 asymmetry.",
+    "source_system": "ETHIX"
+  },
+  {
+    "id": "E04",
+    "title": "Private-sector SYN and Islamic rules can overlap",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "K40",
+      "L40",
+      "K41",
+      "L41",
+      "L670",
+      "L676",
+      "L751"
+    ],
+    "evidence": "K40 selects all account type SYN and names the three-metric amount. L40 selects SYN nonresident but omits the metric. K41 selects all personal plus NonPersonal SIC prefix4 except441, plus GL1300050001; L41 names the three-metric amount. Table8 L676 excludes SYN,IST,IJR from Murabaha/Musawma. Table9 L751 narrows Other Corporates to SIC prefix4 and SYN.",
+    "implication": "A SYN loan with nonpersonal SIC4 may satisfy both main private-sector rules. Copying the text without a precedence/partition rule can double count; K41 also mixes loan-file and GL populations.",
+    "required_owner_decision": "Approve mutually exclusive private-sector finance/product rules, SYN sector restrictions, the GL1300050001 allocation and inside/outside amount symmetry.",
+    "source_system": "ETHIX"
+  },
+  {
+    "id": "E05",
+    "title": "Ethix product classification codes are not T24 equivalents",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "L670",
+      "L676",
+      "L677",
+      "L679",
+      "L682"
+    ],
+    "evidence": "Table8 Private Sector: Loans=SYN; Murabaha/Musawma=all account types except SYN,IST,IJR; Istisna=IST; Finance Ijara=IJR; Credit Cards=GL1300050001.",
+    "implication": "These selectors inform an approved product crosswalk. They do not establish universal T24 categories or ECB balance types.",
+    "required_owner_decision": "Approve bank-specific product/category mapping, especially Murabaha category3713 and its CLM subset.",
+    "source_system": "ETHIX"
+  },
+  {
+    "id": "E06",
+    "title": "Credit risk, maturity and personal subdivisions require external feeds",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "K633",
+      "K693",
+      "L757",
+      "L758",
+      "L760",
+      "L761",
+      "N770",
+      "R822",
+      "V853",
+      "M887"
+    ],
+    "evidence": "Type and sector breakdowns refer to All Loan and match table100; personal/SME subdivisions refer to Risk; performing maturity is from Risk matching table11; quality is from BO after CRM upload matching table9; denominations from BO matching table9; collateral from BO with Risk matching table9.",
+    "implication": "Required reporting dimensions cannot all be inferred from balance types. Missing risk/BO sources must remain explicit exceptions, not default assignments.",
+    "required_owner_decision": "Approve risk/BO feed schemas, as-of dates, joins, classification fields and reconciliation controls.",
+    "source_system": "ETHIX"
+  },
+  {
+    "id": "E07",
+    "title": "Deferred income currently uses legacy GL selection",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "A103",
+      "K103",
+      "A841",
+      "A1450:J1453"
+    ],
+    "evidence": "K103 uses GL prefix2300 except2300020010,2300070010. A841 is a quality-report deferred-income row. Table30 carries report20801 and performing/nonperforming plus inside/outside dimensions. No Ethix Unearned_Profit_QAR metric or T24 balance-type names appears.",
+    "implication": "Do not automatically equate these GL selectors or every deferred-income report row with the user UNEARNED_PROFIT group without an approved crosswalk. Principal/deferred-state and risk dimensions still require validation.",
+    "required_owner_decision": "Approve replacement of legacy GL2300 rule with the appropriate loan population and T24 deferred-profit groups, including signs and performing status.",
+    "source_system": "ETHIX"
+  },
+  {
+    "id": "E08",
+    "title": "Formula aliases carry free-text mapping rules",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "K358",
+      "L378",
+      "L380",
+      "L409"
+    ],
+    "evidence": "K358=+K5; L378=+K7; L380=+K8; L409=+K13. Cached values respectively contain cash-prefix rule, reserve GLs, clearing GL and SIC44108 bank-loan rule. The other three formulas are L1261/M1261/N1261 totals.",
+    "implication": "Resolve direct formula aliases with dependency evidence instead of discarding formula cells or treating them as numeric balances. Cached values can be stale; referenced source remains primary.",
+    "required_owner_decision": "No owner decision is needed for safe extraction; any substantive rule change still needs approval.",
+    "source_system": "ETHIX"
+  },
+  {
+    "id": "E09",
+    "title": "CLM additional types are not in the Ethix workbook",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "A1:V2135"
+    ],
+    "evidence": "Zero CLM or ECB tokens, zero explicit T24 user-group balance names, and zero Ethix label tokens were found in workbook cells. Parent has user clarification that CLM is in Murabaha category3713.",
+    "implication": "CLM handling must be configured from the bank-specific user-approved rule. Category3713 alone does not identify exact additional balance types or justify applying the exception to other populations.",
+    "required_owner_decision": "Supply the exact two CLM balance types, target balance group(s), signs and positive identification of a CLM arrangement.",
+    "source_system": "ETHIX",
+    "owner_update": "Owner supplied exact two supplemental types CREDIT and ACCDEPOSITPFT in linked CLS6050 for Murabaha3713 CLM. They are not extracted from the workbook."
+  },
+  {
+    "id": "E10",
+    "title": "Section alignment has one missing NBS report",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "A1672:A1703"
+    ],
+    "evidence": {
+      "ehab_detail_tables": 44,
+      "nbs_matched_detail_tables": 43,
+      "unmatched": [
+        {
+          "table_number": 38,
+          "report_id": "303",
+          "title_cell": "A1672",
+          "title": "Table (38) - (303) Breakdown of Derivative Contracts "
+        }
+      ],
+      "report_id_mismatches": [],
+      "nbs_workbook_sheet_count": 50
+    },
+    "implication": "Table38 derivatives report303 is present in Ethix but absent from the NBS workbook. All other candidate detail-table joins require row-hierarchy/dimension validation. Notes and Sheet1 are not reporting sections.",
+    "required_owner_decision": "Decide whether to add Table38 to the Temenos replication scope; approve the section and row crosswalk before use.",
+    "source_system": "ETHIX"
+  },
+  {
+    "id": "E11",
+    "title": "Document structure includes no hidden mappings",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "A1:V2135"
+    ],
+    "evidence": {
+      "merged_ranges": 348,
+      "comments": 0,
+      "tables": 0,
+      "hidden_rows": 0,
+      "hidden_columns": 0,
+      "defined_names": 0,
+      "external_links": 0,
+      "formulas": 7
+    },
+    "implication": "Evidence is in visible cells and seven explicit formulas; merged headers still require dimension propagation.",
+    "required_owner_decision": "No additional owner decision beyond the source mapping and scope approvals.",
+    "source_system": "ETHIX"
+  },
+  {
+    "id": "E12",
+    "title": "NBS Table6 contains repeated report blocks",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "source_cells": [
+      "A559:A589"
+    ],
+    "evidence": "Ethix has one Table6/report104 section. NBS Table6 contains two report headings at B3 and B34 with the same table number and report code.",
+    "nbs_evidence": {
+      "sheet": "Table 6",
+      "cells": [
+        "B3",
+        "B34"
+      ]
+    },
+    "implication": "Table number plus report ID identifies the report but not the NBS block. Preserve block identity and validate hierarchy/dimensions before attempting row joins or aggregating source mapping records.",
+    "required_owner_decision": "Determine whether the repeated NBS block is a duplicate, separate scope, or intentional variant; approve which block(s) participate in replication.",
+    "source_system": "ETHIX"
+  }
+]

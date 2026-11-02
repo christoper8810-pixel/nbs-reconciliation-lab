@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Unresolved items</h1>
+<div class="cols">
+<div class="panel"><h2>Configuration inputs ({{ view.global|length }})</h2>
+<table><tr><th>Area</th><th>Item</th><th>Detail</th></tr>{% for g in view.global %}<tr><td>{{ g.area }}</td><td>{{ g.item }}</td><td class="muted">{{ g.detail }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Mapping blockers ({{ view.mappings|length }} rows)</h2>
+<table><tr><th>Reason</th><th>Rows</th></tr>{% for k, v in reason_counts %}<tr><td class="pre">{{ k }}</td><td>{{ v }}</td></tr>{% endfor %}</table>
+<p><a href="{{ url_for('mappings', view='unresolved') }}">Browse unresolved mapping rows →</a></p></div>
+</div>
+<div class="panel"><h2>Sections awaiting decision ({{ view.sections|length }})</h2>
+<table><tr><th>Identity</th><th>Title</th><th>Problems</th><th>Decision</th></tr>
+{% for e in view.sections %}<tr><td>{{ e.section.identity }}</td><td>{{ e.section.title }}</td><td>{{ e.section.problems|join(', ') }}</td><td>{{ e.decision.action if e.decision else 'none' }} <span class="tag {{ e.validity }}">{{ e.validity }}</span></td></tr>{% endfor %}</table>
+<p><a href="{{ url_for('sections') }}">Decide sections →</a></p></div>
+<div class="panel"><h2>Finding items awaiting decision ({{ view.findings|length }})</h2>
+<table><tr><th>Item</th><th>Kind</th><th>Blocking</th><th>Decision</th></tr>
+{% for e in view.findings %}<tr><td><a href="{{ url_for('findings', _anchor=e.entry.item_id) }}">{{ e.entry.item_id }}</a></td><td>{{ e.entry.kind }}</td><td>{{ e.entry.blocking }}</td><td>{{ e.decision.action if e.decision else 'none' }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

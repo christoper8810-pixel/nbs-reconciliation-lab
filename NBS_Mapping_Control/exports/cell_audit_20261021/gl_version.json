@@ -1,0 +1,48 @@
+{
+  "run": {
+    "id": 54,
+    "version_id": 6,
+    "engine_version": "1.7.0",
+    "created_at": "2026-10-20 19:05:53"
+  },
+  "versions": [
+    {
+      "id": 5,
+      "file_id": 8,
+      "parent_id": null,
+      "name": "As supplied: GL mapping 30 Sept 2026 ( please dont refer for the any othe",
+      "created_at": "2026-10-18 21:55:00"
+    },
+    {
+      "id": 6,
+      "file_id": 8,
+      "parent_id": 5,
+      "name": "v6 ACPTCONTRA-23071 (on the 19 Oct workbook)",
+      "created_at": "2026-10-18 22:17:11"
+    }
+  ],
+  "input": {
+    "id": 8,
+    "filename": "GL mapping 30 Sept 2026 ( please dont refer for the any other purpose other than migration (1) (1).xlsx",
+    "stored_path": "C:\\Users\\Test\\Downloads\\GL mapping\\inputs\\versions\\MAPPING\\CEF45E5FC3BD__GL mapping 30 Sept 2026 ( please dont refer for the any other purpose other than migration (1) (1).xlsx",
+    "sha256": "CEF45E5FC3BDFB5FA674E26DDE562975CE4CBF5EDDCA7DE4CB510D62F733887A"
+  },
+  "changes": [
+    {
+      "id": 590,
+      "version_id": 6,
+      "seq": 1,
+      "change_set": "USER-2026-10-18T221654",
+      "sheet": "GL Mapping",
+      "row_no": 48311,
+      "col": "L",
+      "old_value": "23100-23105, 23107, 23109, 23110, 23112, 23114, 23060, 23064, 23071",
+      "new_value": "23100-23105, 23107, 23109, 23110, 23112, 23114, 23060, 23064",
+      "is_new_row": 0,
+      "reason": "ACPTCONTRA of category 23071 QAR could not be brought to Acceptances: it fits two rules. Row 21993 (01-01-900-53-65-1908500001, Acceptances Asset, DKBGL.1965) takes category 23000-23999, departments 5365 / 5366, balance ACPTCONTRA; row 48311 (01-01-900-53-66-8000000003, ELC - Bank Liability, DKBGL.8010) names 23071 since the round-6 change of 24-Sep-2026 (comment in AB48311) and lists ACPTCONTRA in S48311. Category 23071 QAR carries no ADVICEBL or ACPTBL balance, so on row 48311 it serves only this conflict. Its other leg, ACPTCONTRABL 23071 QAR, is already allocated to Acceptances Liability (row 34367, DKBGL.2680): with the asset leg in ELC the two legs would sit in different sections. The twin rows do not name 23071 (48312 USD, 48983 / 48984 8500000003). Entry 23071 is taken out of L48311; nothing else in the cell changes. Requested by the user on 19 Oct 2026.",
+      "evidence": "User edit through the application; previous value '23100-23105, 23107, 23109, 23110, 23112, 23114, 23060, 23064, 23071'.",
+      "created_at": "2026-10-18 22:17:11"
+    }
+  ],
+  "mode": "immutable read with empty WAL and unchanged file metadata"
+}

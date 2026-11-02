@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Generate NBS reports</h1>
+<form method="post" enctype="multipart/form-data" class="panel">
+<input type="hidden" name="csrf" value="{{ csrf_token }}">
+<div class="cols"><div><label>ECB balance workbook (.xlsx)</label><input type="file" name="ecb" accept=".xlsx"><p class="muted">Leave blank to rerun the supplied September ECB with your current mapping changes.</p></div>
+<div><label>Supporting loan, deposit, trial balance and live NBS pack (.zip)</label><input type="file" name="pack" accept=".zip"><p class="muted">Leave blank to use the attached September pack. Dates must match the reporting date.</p></div></div>
+<button>Generate reports</button><p>Each output distinguishes calculated ECB amounts, supplementary trial balance amounts, and unavailable values. The live Ethix report is shown as a comparison.</p>
+</form>
+{% if result %}
+<div class="grid"><div class="stat"><b>{{ result.summary.report_sections }}</b><span>report sections · {{ result.summary.as_of }}</span></div><div class="stat"><b>{{ result.summary.rows_with_amounts }} / {{ result.summary.rows }}</b><span>rows with available calculations</span></div><div class="stat"><b>{{ result.summary.comparable_cells }}</b><span>cells compared with Ethix</span></div><div class="stat"><b>{{ result.summary.within_one_thousand }}</b><span>comparisons within QAR 1,000</span></div></div>
+<p>Amounts in QAR thousands. Available amounts can be partial; the status and notes show what is missing. A blank means unavailable. Mapping changes apply on the next generation.</p>
+<form method="post" action="{{ url_for('export_report_excel') }}" class="panel"><input type="hidden" name="csrf" value="{{ csrf_token }}"><button>Create Excel workbook for this run</button>{% if has_excel %} <a href="{{ url_for('report_download',name='NBS_Generated_September_2026.xlsx') }}">Download Excel workbook</a>{% endif %}</form>
+<div class="panel"><a href="{{ url_for('report_download',name='NBS_generated_vs_Ethix.csv') }}">Download all reports and comparisons</a> · <a href="{{ url_for('report_download',name='generation_notes.json') }}">Download evaluation notes</a> · <a href="{{ url_for('report_download',name='NBS_generated_review.json') }}">Download detailed results</a> · <a href="{{ url_for('product_policies') }}">Edit RCM / CLM calculation rules</a></div>
+<form class="filters"><div><label>Report</label><select name="section">{% for s in sections %}<option value="{{ s }}" {{ 'selected' if s==section }}>{{ section_labels[s] }}</option>{% endfor %}</select></div><div><label>Find a row</label><input name="q" value="{{ q }}"></div><button>Show report</button></form>
+<div style="overflow:auto" class="panel"><table><tr><th>Report row / change mapping</th><th>Status / source</th><th>Generated available</th><th>Ethix reference</th><th>Difference</th><th>Notes</th></tr>
+{% for r in rows %}<tr><td><a href="{{ url_for('report_mapping',key=r.id) }}">{{ r.row }} · {{ r.description }}</a><br><span class="muted">{{ r.path }}</span></td><td><span class="tag {{ 'warn' if r['values'] else 'bad' }}">{{ r.status }}</span><br>{{ r.source or 'not mapped' }}<br>{{ r.count }} matched records</td>
+<td>{% for col,v in r['values'].items()|sort %}{{ col }}: {{ '{:,.3f}'.format(v) if v is not none else 'unavailable' }}<br>{% else %}unavailable{% endfor %}</td>
+<td>{% for col,v in r.reference.items()|sort %}{{ col }}: {{ '{:,.3f}'.format(v) }}<br>{% endfor %}</td>
+<td>{% for col,v in r.variance.items()|sort %}{{ col }}: {{ '{:+,.3f}'.format(v) }}<br>{% endfor %}</td><td>{{ r.issues|unique|join(' · ') }}</td></tr>{% endfor %}</table></div>
+<details class="panel"><summary>Data coverage and outstanding issues</summary><pre>{{ json.dumps(result.checks,indent=2) }}</pre><p>Exact balance components are kept separate. CO, CUST and BL variants are never silently substituted. Maturity and collateral exceptions remain visible.</p></details>
+{% endif %}{% endblock %}

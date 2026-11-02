@@ -1,0 +1,134 @@
+{
+  "review_date": "2026-10-17",
+  "status": "Passed evidence-review checks",
+  "checks_passed": 31,
+  "checks": [
+    {
+      "check": "All new original file hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "Duplicate category filename is identical",
+      "passed": true
+    },
+    {
+      "check": "Category count from independent worksheet dimension",
+      "passed": true
+    },
+    {
+      "check": "Category date domain totals reconcile",
+      "passed": true
+    },
+    {
+      "check": "All booking and processing dates are October 1",
+      "passed": true
+    },
+    {
+      "check": "Value date range checked",
+      "passed": true
+    },
+    {
+      "check": "Positive negative counts reconcile",
+      "passed": true
+    },
+    {
+      "check": "Event counts reconcile",
+      "passed": true
+    },
+    {
+      "check": "Event amounts reconcile exactly to raw decimal total",
+      "passed": true
+    },
+    {
+      "check": "Category subtotal counts reconcile",
+      "passed": true
+    },
+    {
+      "check": "Category subtotal amounts reconcile exactly",
+      "passed": true
+    },
+    {
+      "check": "Repeat ID excess count reconciles",
+      "passed": true
+    },
+    {
+      "check": "Repeated-export group excess counts reconcile",
+      "passed": true
+    },
+    {
+      "check": "Repeated-export amount sensitivity reconciles",
+      "passed": true
+    },
+    {
+      "check": "Raw rows retained rather than deduplicated",
+      "passed": true
+    },
+    {
+      "check": "BO table catalogue has all 50 tables",
+      "passed": true
+    },
+    {
+      "check": "BO standard item dates reconcile",
+      "passed": true
+    },
+    {
+      "check": "BO item keys unique",
+      "passed": true
+    },
+    {
+      "check": "BO output is a value-only reference",
+      "passed": true
+    },
+    {
+      "check": "Independent read confirms unheaded U and first event",
+      "passed": true
+    },
+    {
+      "check": "Independent read confirms Table 20 record",
+      "passed": true
+    },
+    {
+      "check": "Independent read confirms header variations",
+      "passed": true
+    },
+    {
+      "check": "Independent read confirms gross versus net control",
+      "passed": true
+    },
+    {
+      "check": "Independent root total difference",
+      "passed": true
+    },
+    {
+      "check": "Crosswalk covers all standard BO rows without activation",
+      "passed": true
+    },
+    {
+      "check": "SQL final line and literal zero counts",
+      "passed": true
+    },
+    {
+      "check": "SQL omitted groups exposed",
+      "passed": true
+    },
+    {
+      "check": "SQL parameter and original field semantics retained",
+      "passed": true
+    },
+    {
+      "check": "Current maturity defect confirmed in saved result",
+      "passed": true
+    },
+    {
+      "check": "Current maturity headings independently confirm wrong columns",
+      "passed": true
+    },
+    {
+      "check": "Owner-confirmed September basis preserves original October dates and exact source scope",
+      "passed": true
+    }
+  ],
+  "scope": "Inspection evidence and arithmetic validation only. No production code fix or full NBS accounting reconciliation is claimed.",
+  "source_sql_executed": false,
+  "original_inputs_modified": false
+}

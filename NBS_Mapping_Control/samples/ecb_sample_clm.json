@@ -1,0 +1,284 @@
+{
+  "example_kind": "SYNTHETIC ONLY - not bank data",
+  "reporting_date": "2026-10-06",
+  "ecb_records": [
+    {
+      "record_id": "ECB-MUR-1",
+      "company": "SYNTHETIC_CO",
+      "source_system": "T24",
+      "contract_id": "SYN-MURABAHA-CLM",
+      "currency": "QAR",
+      "snapshot_as_of": "2026-10-06",
+      "date_basis": "BOOK",
+      "category": "3713",
+      "CURR.ASSET.TYPE": [
+        "CURACCOUNT",
+        "PREACCOUNT",
+        "GRCACCOUNT",
+        "DELACCOUNT",
+        "NABACCOUNT",
+        "DUEACCOUNT",
+        "DELDEFERREDPFT",
+        "GRCDEFERREDPFT",
+        "NABDEFERREDPFT",
+        "DUEDEFERREDPFT",
+        "RECDEFERREDPFT",
+        "PREDEFERREDPFT",
+        "ACCPRINCIPALPFT",
+        "RECPRINCIPALPFT",
+        "GRCPRINCIPALPFT",
+        "DELPRINCIPALPFT",
+        "PREPRINCIPALPFT",
+        "DEFERREDPFT",
+        "ACCDEFERREDPFT"
+      ],
+      "OPEN.BALANCE": [
+        "-1000.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "-25.50",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "300.00",
+        "0.00"
+      ],
+      "CREDIT.MVMT": [
+        "150.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00"
+      ],
+      "DEBIT.MVMT": [
+        "-200.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00"
+      ]
+    },
+    {
+      "record_id": "ECB-CLS-1",
+      "company": "SYNTHETIC_CO",
+      "source_system": "T24",
+      "contract_id": "SYN-CLS-1",
+      "currency": "QAR",
+      "snapshot_as_of": "2026-10-06",
+      "date_basis": "BOOK",
+      "category": "6050",
+      "CURR.ASSET.TYPE": [
+        "CREDIT",
+        "ACCDEPOSITPFT",
+        "OTHERCLSBAL"
+      ],
+      "OPEN.BALANCE": [
+        "-500.00",
+        "-12.34",
+        "9.99"
+      ],
+      "CREDIT.MVMT": [
+        "0.00",
+        "0.00",
+        "0.00"
+      ],
+      "DEBIT.MVMT": [
+        "0.00",
+        "0.00",
+        "0.00"
+      ]
+    },
+    {
+      "record_id": "ECB-MUS-1",
+      "company": "SYNTHETIC_CO",
+      "source_system": "T24",
+      "contract_id": "SYN-MUSAWAMA",
+      "currency": "QAR",
+      "snapshot_as_of": "2026-10-06",
+      "date_basis": "BOOK",
+      "category": "3701",
+      "CURR.ASSET.TYPE": [
+        "CURACCOUNT",
+        "PREACCOUNT",
+        "GRCACCOUNT",
+        "DELACCOUNT",
+        "NABACCOUNT",
+        "DUEACCOUNT",
+        "DELDEFERREDPFT",
+        "GRCDEFERREDPFT",
+        "NABDEFERREDPFT",
+        "DUEDEFERREDPFT",
+        "RECDEFERREDPFT",
+        "PREDEFERREDPFT",
+        "ACCPRINCIPALPFT",
+        "RECPRINCIPALPFT",
+        "GRCPRINCIPALPFT",
+        "DELPRINCIPALPFT",
+        "PREPRINCIPALPFT",
+        "DEFERREDPFT",
+        "ACCDEFERREDPFT"
+      ],
+      "OPEN.BALANCE": [
+        "-1000.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "-25.50",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "300.00",
+        "0.00"
+      ],
+      "CREDIT.MVMT": [
+        "150.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00"
+      ],
+      "DEBIT.MVMT": [
+        "-200.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00"
+      ]
+    },
+    {
+      "record_id": "ECB-CLS-UNLINKED",
+      "company": "SYNTHETIC_CO",
+      "source_system": "T24",
+      "contract_id": "SYN-CLS-ORPHAN",
+      "currency": "QAR",
+      "snapshot_as_of": "2026-10-06",
+      "date_basis": "BOOK",
+      "category": "6050",
+      "CURR.ASSET.TYPE": [
+        "CREDIT"
+      ],
+      "OPEN.BALANCE": [
+        "-77.00"
+      ],
+      "CREDIT.MVMT": [
+        "0.00"
+      ],
+      "DEBIT.MVMT": [
+        "0.00"
+      ]
+    },
+    {
+      "record_id": "ECB-DEP-1",
+      "company": "SYNTHETIC_CO",
+      "source_system": "T24",
+      "contract_id": "SYN-DEPOSIT",
+      "currency": "QAR",
+      "snapshot_as_of": "2026-10-06",
+      "date_basis": "BOOK",
+      "category": "6001",
+      "CURR.ASSET.TYPE": [
+        "CURACCOUNT"
+      ],
+      "OPEN.BALANCE": [
+        "900.00"
+      ],
+      "CREDIT.MVMT": [
+        "0.00"
+      ],
+      "DEBIT.MVMT": [
+        "0.00"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "link_id": "LINK-1",
+      "company": "SYNTHETIC_CO",
+      "source_system": "T24",
+      "as_of": "2026-10-06",
+      "currency": "QAR",
+      "parent_contract_id": "SYN-MURABAHA-CLM",
+      "parent_category": "3713",
+      "child_contract_id": "SYN-CLS-1",
+      "child_category": "6050",
+      "child_product": "CLS",
+      "verified": true,
+      "evidence": "SYNTHETIC: placeholder for the bank's arrangement-to-CLS relationship record"
+    }
+  ]
+}

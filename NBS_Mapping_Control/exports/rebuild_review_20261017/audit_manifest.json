@@ -1,0 +1,21 @@
+{
+  "review_date": "2026-10-17",
+  "sources": [
+    {
+      "path": "C:\\Users\\Test\\Downloads\\bs.docx",
+      "sha256": "80a2c59d84e8ad2110b0e55c74976c004b2372857e3c8cc71710cd08667f4069",
+      "characters": 10212,
+      "case_rules": 37,
+      "sql_executed": false
+    },
+    {
+      "path": "C:\\Users\\Test\\Downloads\\BO_QCB_NBS_Report.xlsx",
+      "sha256": "ad30f4607a615e7d671143ee1244e6eb179b6e53ffb429e397d76ab0cb607ebf"
+    },
+    {
+      "path": "C:\\Users\\Test\\Downloads\\Mock3_UAT3 Categ Entry Extract (1).xlsx",
+      "sha256": "a9dc0021a2cd9551802129fbb2277161178b971c38cbede07d93824d9a2f6ac1"
+    }
+  ],
+  "method": "Read cached OOXML cells and document text only. Source SQL was never executed. Existing bank database opened read-only. Original files unchanged."
+}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block content %}
+{% if state.phase not in ('Complete','Failed') %}<meta http-equiv="refresh" content="4">{% endif %}
+<h1>Rebuild job {{ state.job }}</h1>
+<div class="panel"><p>Status: <span class="tag {{ 'ok' if state.phase=='Complete' else 'bad' if state.phase=='Failed' else 'warn' }}">{{ state.phase }}</span></p>
+{% if state.error %}<pre>{{ state.error }}</pre>{% endif %}
+{% if state.result %}<pre>{{ json.dumps(state.result, indent=1, default=str) }}</pre>
+{% if state.result.run_id %}<p><a href="{{ url_for('rebuild_runview', run_id=state.result.run_id) }}">Open the run</a></p>{% endif %}{% endif %}
+<p><a href="{{ url_for('rebuild_home') }}">Back to rebuild</a></p></div>{% endblock %}

@@ -1,0 +1,17 @@
+{
+  "acceptance_checks_passed": 40,
+  "acceptance_checks_failed": 0,
+  "delivery_checks": "All workbook rows, original evidence text, GL references, cached summary formulas, CSV row counts, editable decision cells and original source hashes verified. Offline HTML filters and evidence links exercised in browser. Every workbook sheet visually reviewed.",
+  "finding_occurrences": 1520,
+  "source_nbs_cells": 10979,
+  "all_source_cells": 1663670,
+  "all_source_worksheets": 81,
+  "status_counts": {
+    "REVIEW": 134,
+    "DIFFERENCE": 336,
+    "CONFIRMED": 607,
+    "AMBIGUOUS": 31,
+    "INPUT GAP": 412
+  },
+  "limits": "Counts are occurrences, not unique root causes or monetary misstatements. Capturing every source cell is not proof of complete semantic validation. No engine mapping was changed."
+}

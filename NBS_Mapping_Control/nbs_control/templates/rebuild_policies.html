@@ -1,0 +1,21 @@
+{% extends "base.html" %}{% block content %}
+<h1>Reporting basis and duplicate policies</h1>
+<p class="muted">Each save creates a new policy version with history. Raw rows and original booking/processing dates are never changed.</p>
+{% for pol in basis.policies %}<form method="post" class="panel"><input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="kind" value="basis"><input type="hidden" name="policy_id" value="{{ pol.policy_id }}">
+<h2>{{ pol.policy_id }} (version {{ basis.version }})</h2>
+<p>{{ pol.filename }} · SHA-256 {{ pol.source_sha256 }} · raw booking {{ pol.raw_booking_date }} · raw processing {{ pol.raw_processing_date }}</p>
+<p>Authority: {{ pol.authority }}. Owner statement: “{{ pol.owner_statement }}”. Scope: {{ pol.scope }}.</p>
+<label><input type="checkbox" name="enabled" {{ 'checked' if pol.enabled }}> Enabled</label>
+<label>Effective reporting date</label><input type="date" name="effective_reporting_date" value="{{ pol.effective_reporting_date }}">
+<div class="cols"><div><label>Your name</label><input type="text" name="actor"></div><div><label>Reason</label><input type="text" name="reason"></div></div><button>Save policy version</button></form>{% endfor %}
+<form method="post" class="panel"><input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="kind" value="duplicates">
+<h2>Repeated identical observations (version {{ dup.version }})</h2>
+<p class="muted">Decisions are keyed by the value fingerprint of all exported fields, never by row position. {% for k,v in dup.treatments.items() %}<b>{{ k }}</b>: {{ v }}. {% endfor %}</p>
+<label>Default treatment</label><select name="default_treatment">{% for t in treatments %}<option {{ 'selected' if t==dup.default_treatment }}>{{ t }}</option>{% endfor %}</select>
+<label>Decision for one fingerprint (optional)</label><input type="text" name="fingerprint" placeholder="fingerprint from the table below">
+<select name="treatment">{% for t in treatments %}<option>{{ t }}</option>{% endfor %}<option>CLEAR</option></select>
+<div class="cols"><div><label>Your name</label><input type="text" name="actor"></div><div><label>Reason / evidence</label><input type="text" name="reason"></div></div><button>Save duplicate policy version</button></form>
+<div class="panel"><h2>Largest repeated groups (by excess amount)</h2><table><tr><th>Fingerprint</th><th>Source ID</th><th>Occurrences</th><th>Each LCY</th><th>Excess LCY</th><th>Decision</th><th>Rows</th></tr>
+{% for g in groups %}<tr><td class="pre">{{ g.fingerprint }}</td><td>{{ g.source_id }}</td><td>{{ g.occurrences }}</td><td>{{ micro_text(g.amount_each_micro) }}</td><td>{{ micro_text(g.excess_micro) }}</td>
+<td>{{ (dup.decisions.get(g.fingerprint) or {}).get('treatment', 'default') }}</td><td class="muted">{{ g.rows[:12]|join(', ') }}{% if g.rows|length>12 %}…{% endif %}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Policy history</h2>{% for h in history %}<p>{{ h.at }} · {{ h.actor }} · {{ h.reason }}</p>{% endfor %}</div>{% endblock %}

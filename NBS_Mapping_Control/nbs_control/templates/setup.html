@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Import / refresh source evidence</h1>
+<div class="cols">
+<div class="panel">
+  <h2>Re-import original workbooks</h2>
+  <p class="muted">Reads both workbooks read-only (values, formulas as text, comments, merged headers, aliases), hashes them and rebuilds the catalog. Decisions whose evidence changed become STALE.</p>
+  <form method="post">
+    <input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="mode" value="originals">
+    <label>Current NBS mapping (T24) workbook path</label><input type="text" name="t24" value="{{ defaults['T24'] }}">
+    <label>Ehab legacy Ethix workbook path</label><input type="text" name="ethix" value="{{ defaults['ETHIX'] }}">
+    <label>Note</label><input type="text" name="note" placeholder="e.g. refreshed after team update">
+    <button>Import originals</button>
+  </form>
+</div>
+<div class="panel">
+  <h2>Use supplied read-only inventory</h2>
+  <p class="muted">Fallback when the originals are not on this machine: builds the catalog from source_inventory.json (same source IDs and hashes; merge ranges are not available).</p>
+  <form method="post"><input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="mode" value="supplied">
+    <label>Note</label><input type="text" name="note"><button class="secondary">Import supplied inventory</button></form>
+</div>
+</div>
+<div class="panel"><h2>Catalog versions</h2>
+<table><tr><th>Version</th><th>Imported</th><th>Sources</th><th>Note</th></tr>
+{% for v in versions|reverse %}<tr><td>{{ v.version_id }}</td><td>{{ v.imported_at }}</td>
+<td>{% for s, src in v.sources.items() %}{{ s }}: {{ src.file_name }} <span class="muted">{{ src.sha256[:12] }}… {{ src.rows }} rows</span><br>{% endfor %}</td><td>{{ v.note }}</td></tr>{% endfor %}
+</table></div>
+{% endblock %}

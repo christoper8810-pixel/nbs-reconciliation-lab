@@ -1,0 +1,210 @@
+{
+  "checks": {
+    "joined_loans": 35973,
+    "joined_deposits": 236427,
+    "unresolved_clm_links": 7,
+    "shared_clm_children": 0,
+    "clm_linked": 161,
+    "missing_balance_columns": {
+      "OUTSTANDING": [
+        "NABACCOUNT",
+        "NABDEFERREDPFT"
+      ],
+      "AMORTIZED_EARNED": [
+        "RECPRINCIPALPFT"
+      ],
+      "UNEARNED_PROFIT": [
+        "DEFERREDPFT"
+      ]
+    },
+    "unknown_consol_key": 30367,
+    "maturity_missing_loans": 0,
+    "maturity_overdue_loans": 627,
+    "commitment_only_loan_accounts": 19,
+    "industry_differences": {
+      "DEPOSIT": 166,
+      "LOAN": 30
+    },
+    "loan_currency_conflicts": 0,
+    "deposit_currency_conflicts": 0
+  },
+  "loan_comparison_by_product": [
+    {
+      "product": "IST",
+      "currency": "QAR",
+      "accounts": 1,
+      "unavailable": 0,
+      "generated_carrying_QAR": 405000000.0,
+      "ethix_carrying_QAR_matched": 619833721.41,
+      "difference_QAR": -214833721.40999997,
+      "within_1_QAR": 0
+    },
+    {
+      "product": "IJR",
+      "currency": "QAR",
+      "accounts": 1177,
+      "unavailable": 3,
+      "generated_carrying_QAR": 3699340296.0799994,
+      "ethix_carrying_QAR_matched": 3783971761.950001,
+      "difference_QAR": -84631465.87000005,
+      "within_1_QAR": 1153
+    },
+    {
+      "product": "SYN",
+      "currency": "QAR",
+      "accounts": 5,
+      "unavailable": 1,
+      "generated_carrying_QAR": 1524953721.48,
+      "ethix_carrying_QAR_matched": 1538819248.8200002,
+      "difference_QAR": -13865527.339999976,
+      "within_1_QAR": 1
+    },
+    {
+      "product": "MUR",
+      "currency": "QAR",
+      "accounts": 31827,
+      "unavailable": 6,
+      "generated_carrying_QAR": 21094628446.61001,
+      "ethix_carrying_QAR_matched": 21094233898.200005,
+      "difference_QAR": 394548.41000193113,
+      "within_1_QAR": 31804
+    },
+    {
+      "product": "CLM",
+      "currency": "QAR",
+      "accounts": 167,
+      "unavailable": 7,
+      "generated_carrying_QAR": 4429237917.99,
+      "ethix_carrying_QAR_matched": 4429099908.509999,
+      "difference_QAR": 138009.48000027906,
+      "within_1_QAR": 159
+    },
+    {
+      "product": "RCM",
+      "currency": "QAR",
+      "accounts": 1623,
+      "unavailable": 8,
+      "generated_carrying_QAR": 43964540234.7001,
+      "ethix_carrying_QAR_matched": 43964586080.4401,
+      "difference_QAR": -45845.7399988737,
+      "within_1_QAR": 1614
+    },
+    {
+      "product": "MUR",
+      "currency": "USD",
+      "accounts": 20,
+      "unavailable": 1,
+      "generated_carrying_QAR": 14376087371.980001,
+      "ethix_carrying_QAR_matched": 14376087371.890003,
+      "difference_QAR": 0.0899990126490593,
+      "within_1_QAR": 19
+    },
+    {
+      "product": "MUR",
+      "currency": "GBP",
+      "accounts": 3,
+      "unavailable": 0,
+      "generated_carrying_QAR": 1683980226.88,
+      "ethix_carrying_QAR_matched": 1683980226.85,
+      "difference_QAR": 0.02999998163431883,
+      "within_1_QAR": 3
+    },
+    {
+      "product": "SYN",
+      "currency": "USD",
+      "accounts": 1,
+      "unavailable": 0,
+      "generated_carrying_QAR": 60887737.06,
+      "ethix_carrying_QAR_matched": 60887737.04,
+      "difference_QAR": 0.020000003278255463,
+      "within_1_QAR": 1
+    },
+    {
+      "product": "IJR",
+      "currency": "USD",
+      "accounts": 1,
+      "unavailable": 0,
+      "generated_carrying_QAR": 39022157.42,
+      "ethix_carrying_QAR_matched": 39022157.41,
+      "difference_QAR": 0.01000000536441803,
+      "within_1_QAR": 1
+    },
+    {
+      "product": "CLM",
+      "currency": "USD",
+      "accounts": 1,
+      "unavailable": 0,
+      "generated_carrying_QAR": -7.152266334742308e-09,
+      "ethix_carrying_QAR_matched": 0,
+      "difference_QAR": -7.152266334742308e-09,
+      "within_1_QAR": 1
+    },
+    {
+      "product": "TWM",
+      "currency": "QAR",
+      "accounts": 457,
+      "unavailable": 0,
+      "generated_carrying_QAR": 472908334.49000025,
+      "ethix_carrying_QAR_matched": 472908334.4900003,
+      "difference_QAR": -4.816683940589428e-09,
+      "within_1_QAR": 457
+    },
+    {
+      "product": "MOS",
+      "currency": "QAR",
+      "accounts": 8,
+      "unavailable": 0,
+      "generated_carrying_QAR": 962062.49,
+      "ethix_carrying_QAR_matched": 962062.49,
+      "difference_QAR": 5.820766091346741e-11,
+      "within_1_QAR": 8
+    },
+    {
+      "product": "BSA",
+      "currency": "QAR",
+      "accounts": 4,
+      "unavailable": 0,
+      "generated_carrying_QAR": 68154343.18,
+      "ethix_carrying_QAR_matched": 68154343.18,
+      "difference_QAR": 0,
+      "within_1_QAR": 4
+    },
+    {
+      "product": "QRH",
+      "currency": "QAR",
+      "accounts": 97,
+      "unavailable": 0,
+      "generated_carrying_QAR": 14412647.24,
+      "ethix_carrying_QAR_matched": 14412647.24,
+      "difference_QAR": 0,
+      "within_1_QAR": 97
+    },
+    {
+      "product": "SAF",
+      "currency": "QAR",
+      "accounts": 581,
+      "unavailable": 0,
+      "generated_carrying_QAR": 5052356.16,
+      "ethix_carrying_QAR_matched": 5052356.16,
+      "difference_QAR": 0,
+      "within_1_QAR": 581
+    }
+  ],
+  "deposits": {
+    "matched_accounts": 236427,
+    "ECB_net_QAR": 89866402762.94,
+    "Ethix_balance_QAR": 89866402738.99,
+    "difference_QAR": 23.949999697690895,
+    "within_1_QAR": 236427
+  },
+  "verified_clm_comparison": {
+    "accounts": 161,
+    "within_1_QAR": 160,
+    "difference_QAR": 138009.48000027175
+  },
+  "unmatched_source_accounts": {
+    "DEPOSIT": 1,
+    "LOAN": 34
+  },
+  "basis": "Per-account ECB owner component sum, CLM signed offsets, and dated Ethix fees; missing columns remain unresolved, not aliases."
+}

@@ -1,0 +1,41 @@
+{
+  "config_name": "finding_classification",
+  "schema_version": 1,
+  "version": "2026-10-14.1",
+  "note": "Reviewer classification of source_findings.json. PROVEN_* means the defect follows from the cell text/formula itself relative to its own headings; it is still not evidence of a submitted amount. Other kinds require an owner policy decision or a missing definition.",
+  "kinds": {
+    "PROVEN_FORMULA_DEFECT": "Formula references contradict the sheet's own headings (double counting, wrong row/column).",
+    "PROVEN_LOGIC_DEFECT": "Predicate text is internally inconsistent (direction, overlap, gaps) relative to its own headings.",
+    "POLICY_MISMATCH": "Legacy rule differs from the owner's stated policy; not a proven historical numerical error.",
+    "POLICY_CONFLICT": "Legacy selectors can overlap or contradict; precedence/partition required.",
+    "MISSING_DEFINITION": "A required metric, balance or identifier has no authoritative definition.",
+    "CROSSWALK_REQUIRED": "Legacy Ethix selector needs an approved T24 field/product crosswalk.",
+    "CALCULATION_BASIS_AMBIGUITY": "Stock versus movement or other amount basis is ambiguous.",
+    "MISSING_FEED": "Requires an external feed whose schema is not supplied.",
+    "MISSING_MAPPING": "A report/section has no target mapping.",
+    "STRUCTURE": "Source structure fact (layout, aliases, repeated blocks) that affects joins.",
+    "INFORMATIONAL": "No defect; recorded for coverage."
+  },
+  "findings": {
+    "NBS-01": "POLICY_MISMATCH",
+    "NBS-02": "POLICY_MISMATCH",
+    "NBS-03": "MISSING_DEFINITION",
+    "NBS-04": "PROVEN_LOGIC_DEFECT",
+    "NBS-05": "PROVEN_LOGIC_DEFECT",
+    "NBS-06": "PROVEN_FORMULA_DEFECT",
+    "NBS-07": "PROVEN_FORMULA_DEFECT",
+    "NBS-08": "CALCULATION_BASIS_AMBIGUITY",
+    "E01": "STRUCTURE",
+    "E02": "MISSING_DEFINITION",
+    "E03": "CROSSWALK_REQUIRED",
+    "E04": "POLICY_CONFLICT",
+    "E05": "CROSSWALK_REQUIRED",
+    "E06": "MISSING_FEED",
+    "E07": "POLICY_MISMATCH",
+    "E08": "STRUCTURE",
+    "E09": "MISSING_DEFINITION",
+    "E10": "MISSING_MAPPING",
+    "E11": "INFORMATIONAL",
+    "E12": "STRUCTURE"
+  }
+}

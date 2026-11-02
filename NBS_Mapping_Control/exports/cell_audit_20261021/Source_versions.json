@@ -1,0 +1,727 @@
+{
+  "sources": [
+    {
+      "label": "EHAB",
+      "filename": "NBS01 Mapping (Ehab).xlsx",
+      "sha256": "6378da738127324b0ec875cd381732a155d2bfbf0e0e37e3ccdb767b256eb87a",
+      "sheets": 1,
+      "cells": 2676,
+      "sheet_counts": [
+        {
+          "source": "EHAB",
+          "sheet": "All Reports By Report ID_Templa",
+          "populated_cells": 2676,
+          "formula_cells": 7,
+          "serialized_rows": 1984,
+          "empty_styled_cells": 18693
+        }
+      ]
+    },
+    {
+      "label": "SYSTEMS",
+      "filename": "NBS MAPPING - 6 Oct 2026.xlsx",
+      "sha256": "7c378f84cb4997490da9c598dab0531b58c3f829f2f98e96243477da506ce339",
+      "sheets": 50,
+      "cells": 8303,
+      "sheet_counts": [
+        {
+          "source": "SYSTEMS",
+          "sheet": "Income",
+          "populated_cells": 190,
+          "formula_cells": 0,
+          "serialized_rows": 82,
+          "empty_styled_cells": 697
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Expense",
+          "populated_cells": 285,
+          "formula_cells": 0,
+          "serialized_rows": 123,
+          "empty_styled_cells": 1055
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "ASSET - 100",
+          "populated_cells": 271,
+          "formula_cells": 29,
+          "serialized_rows": 106,
+          "empty_styled_cells": 897
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 1",
+          "populated_cells": 31,
+          "formula_cells": 0,
+          "serialized_rows": 15,
+          "empty_styled_cells": 109
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 2",
+          "populated_cells": 129,
+          "formula_cells": 0,
+          "serialized_rows": 56,
+          "empty_styled_cells": 485
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 3",
+          "populated_cells": 140,
+          "formula_cells": 0,
+          "serialized_rows": 51,
+          "empty_styled_cells": 370
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 4 ",
+          "populated_cells": 135,
+          "formula_cells": 0,
+          "serialized_rows": 39,
+          "empty_styled_cells": 568
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 5",
+          "populated_cells": 115,
+          "formula_cells": 0,
+          "serialized_rows": 37,
+          "empty_styled_cells": 550
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 6",
+          "populated_cells": 137,
+          "formula_cells": 0,
+          "serialized_rows": 61,
+          "empty_styled_cells": 492
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 7",
+          "populated_cells": 125,
+          "formula_cells": 0,
+          "serialized_rows": 37,
+          "empty_styled_cells": 225
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 8",
+          "populated_cells": 136,
+          "formula_cells": 0,
+          "serialized_rows": 62,
+          "empty_styled_cells": 465
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 9",
+          "populated_cells": 244,
+          "formula_cells": 0,
+          "serialized_rows": 79,
+          "empty_styled_cells": 526
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 10",
+          "populated_cells": 92,
+          "formula_cells": 0,
+          "serialized_rows": 47,
+          "empty_styled_cells": 583
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 11",
+          "populated_cells": 344,
+          "formula_cells": 90,
+          "serialized_rows": 28,
+          "empty_styled_cells": 115
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 12",
+          "populated_cells": 289,
+          "formula_cells": 0,
+          "serialized_rows": 34,
+          "empty_styled_cells": 437
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 13",
+          "populated_cells": 233,
+          "formula_cells": 0,
+          "serialized_rows": 30,
+          "empty_styled_cells": 119
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "NOTES - 4 OCT 2026",
+          "populated_cells": 60,
+          "formula_cells": 0,
+          "serialized_rows": 30,
+          "empty_styled_cells": 9
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "TABLE 14 ",
+          "populated_cells": 76,
+          "formula_cells": 0,
+          "serialized_rows": 57,
+          "empty_styled_cells": 473
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 15",
+          "populated_cells": 35,
+          "formula_cells": 0,
+          "serialized_rows": 14,
+          "empty_styled_cells": 85
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 16",
+          "populated_cells": 32,
+          "formula_cells": 0,
+          "serialized_rows": 15,
+          "empty_styled_cells": 126
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 17 ",
+          "populated_cells": 52,
+          "formula_cells": 3,
+          "serialized_rows": 21,
+          "empty_styled_cells": 161
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "TABLE 18",
+          "populated_cells": 31,
+          "formula_cells": 0,
+          "serialized_rows": 16,
+          "empty_styled_cells": 109
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "TABLE 19",
+          "populated_cells": 66,
+          "formula_cells": 0,
+          "serialized_rows": 22,
+          "empty_styled_cells": 149
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 21",
+          "populated_cells": 120,
+          "formula_cells": 0,
+          "serialized_rows": 56,
+          "empty_styled_cells": 475
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 22",
+          "populated_cells": 246,
+          "formula_cells": 0,
+          "serialized_rows": 50,
+          "empty_styled_cells": 244
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 44",
+          "populated_cells": 1503,
+          "formula_cells": 0,
+          "serialized_rows": 162,
+          "empty_styled_cells": 927
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 23",
+          "populated_cells": 193,
+          "formula_cells": 0,
+          "serialized_rows": 49,
+          "empty_styled_cells": 287
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 24",
+          "populated_cells": 165,
+          "formula_cells": 0,
+          "serialized_rows": 37,
+          "empty_styled_cells": 178
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 25",
+          "populated_cells": 274,
+          "formula_cells": 0,
+          "serialized_rows": 28,
+          "empty_styled_cells": 293
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 26",
+          "populated_cells": 236,
+          "formula_cells": 0,
+          "serialized_rows": 38,
+          "empty_styled_cells": 99
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 27",
+          "populated_cells": 65,
+          "formula_cells": 0,
+          "serialized_rows": 19,
+          "empty_styled_cells": 114
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 28",
+          "populated_cells": 90,
+          "formula_cells": 0,
+          "serialized_rows": 52,
+          "empty_styled_cells": 439
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 29",
+          "populated_cells": 138,
+          "formula_cells": 0,
+          "serialized_rows": 81,
+          "empty_styled_cells": 662
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Liabilities",
+          "populated_cells": 175,
+          "formula_cells": 28,
+          "serialized_rows": 66,
+          "empty_styled_cells": 576
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 30",
+          "populated_cells": 69,
+          "formula_cells": 0,
+          "serialized_rows": 26,
+          "empty_styled_cells": 181
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 31",
+          "populated_cells": 78,
+          "formula_cells": 0,
+          "serialized_rows": 36,
+          "empty_styled_cells": 272
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 32",
+          "populated_cells": 17,
+          "formula_cells": 0,
+          "serialized_rows": 10,
+          "empty_styled_cells": 19
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 33",
+          "populated_cells": 48,
+          "formula_cells": 0,
+          "serialized_rows": 15,
+          "empty_styled_cells": 64
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 34",
+          "populated_cells": 45,
+          "formula_cells": 0,
+          "serialized_rows": 17,
+          "empty_styled_cells": 115
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 35",
+          "populated_cells": 189,
+          "formula_cells": 0,
+          "serialized_rows": 54,
+          "empty_styled_cells": 335
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 36",
+          "populated_cells": 54,
+          "formula_cells": 0,
+          "serialized_rows": 23,
+          "empty_styled_cells": 188
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "CONTRA ITEMS",
+          "populated_cells": 54,
+          "formula_cells": 8,
+          "serialized_rows": 19,
+          "empty_styled_cells": 144
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 37",
+          "populated_cells": 180,
+          "formula_cells": 1,
+          "serialized_rows": 71,
+          "empty_styled_cells": 501
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 39",
+          "populated_cells": 31,
+          "formula_cells": 0,
+          "serialized_rows": 18,
+          "empty_styled_cells": 139
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 40",
+          "populated_cells": 96,
+          "formula_cells": 0,
+          "serialized_rows": 54,
+          "empty_styled_cells": 328
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 41",
+          "populated_cells": 70,
+          "formula_cells": 0,
+          "serialized_rows": 53,
+          "empty_styled_cells": 242
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 42",
+          "populated_cells": 523,
+          "formula_cells": 0,
+          "serialized_rows": 62,
+          "empty_styled_cells": 58
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 43",
+          "populated_cells": 72,
+          "formula_cells": 0,
+          "serialized_rows": 49,
+          "empty_styled_cells": 444
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Sheet1",
+          "populated_cells": 10,
+          "formula_cells": 0,
+          "serialized_rows": 5,
+          "empty_styled_cells": 0
+        },
+        {
+          "source": "SYSTEMS",
+          "sheet": "Table 45",
+          "populated_cells": 314,
+          "formula_cells": 0,
+          "serialized_rows": 50,
+          "empty_styled_cells": 372
+        }
+      ]
+    },
+    {
+      "label": "GL_CURRENT_BASE",
+      "filename": "CEF45E5FC3BD__GL mapping 30 Sept 2026 ( please dont refer for the any other purpose other than migration (1) (1).xlsx",
+      "sha256": "cef45e5fc3bdfb5fa674e26dde562975ce4cbf5eddca7de4cb510d62f733887a",
+      "sheets": 16,
+      "cells": 824423,
+      "sheet_counts": [
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "COA",
+          "populated_cells": 16757,
+          "formula_cells": 0,
+          "serialized_rows": 3929,
+          "empty_styled_cells": 20637
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "Other T24 Account",
+          "populated_cells": 8994,
+          "formula_cells": 0,
+          "serialized_rows": 898,
+          "empty_styled_cells": 891
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "GL Mapping",
+          "populated_cells": 719393,
+          "formula_cells": 0,
+          "serialized_rows": 1048576,
+          "empty_styled_cells": 643033
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "Sheet2",
+          "populated_cells": 565,
+          "formula_cells": 146,
+          "serialized_rows": 74,
+          "empty_styled_cells": 25
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "Sheet1",
+          "populated_cells": 26,
+          "formula_cells": 0,
+          "serialized_rows": 13,
+          "empty_styled_cells": 0
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "CATEGORY",
+          "populated_cells": 40307,
+          "formula_cells": 0,
+          "serialized_rows": 2202,
+          "empty_styled_cells": 8166
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "BRANCH",
+          "populated_cells": 61,
+          "formula_cells": 0,
+          "serialized_rows": 14,
+          "empty_styled_cells": 0
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "SEGMENT",
+          "populated_cells": 243,
+          "formula_cells": 0,
+          "serialized_rows": 70,
+          "empty_styled_cells": 13
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "DAO",
+          "populated_cells": 399,
+          "formula_cells": 0,
+          "serialized_rows": 98,
+          "empty_styled_cells": 6
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "Commission other",
+          "populated_cells": 2925,
+          "formula_cells": 0,
+          "serialized_rows": 311,
+          "empty_styled_cells": 496
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "commission trade",
+          "populated_cells": 353,
+          "formula_cells": 0,
+          "serialized_rows": 44,
+          "empty_styled_cells": 1
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "Nostro Vostro",
+          "populated_cells": 543,
+          "formula_cells": 0,
+          "serialized_rows": 74,
+          "empty_styled_cells": 1
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "POR",
+          "populated_cells": 18286,
+          "formula_cells": 0,
+          "serialized_rows": 1405,
+          "empty_styled_cells": 4
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "GL Report",
+          "populated_cells": 3174,
+          "formula_cells": 0,
+          "serialized_rows": 529,
+          "empty_styled_cells": 1191
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "GL criteria",
+          "populated_cells": 72,
+          "formula_cells": 0,
+          "serialized_rows": 19,
+          "empty_styled_cells": 5
+        },
+        {
+          "source": "GL_CURRENT_BASE",
+          "sheet": "Teller",
+          "populated_cells": 12325,
+          "formula_cells": 0,
+          "serialized_rows": 1651,
+          "empty_styled_cells": 0
+        }
+      ]
+    },
+    {
+      "label": "GL_09SEP",
+      "filename": "GL Mapping 9 Sept 2026 v1.xlsx",
+      "sha256": "7d1b333e2308e7aac664642a4f76f757ee673b6b3b53a3ebee811724f86d2d02",
+      "sheets": 14,
+      "cells": 828268,
+      "sheet_counts": [
+        {
+          "source": "GL_09SEP",
+          "sheet": "COA",
+          "populated_cells": 16756,
+          "formula_cells": 0,
+          "serialized_rows": 3929,
+          "empty_styled_cells": 20949
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "Other T24 Account",
+          "populated_cells": 8994,
+          "formula_cells": 0,
+          "serialized_rows": 898,
+          "empty_styled_cells": 891
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "GL Mapping",
+          "populated_cells": 723916,
+          "formula_cells": 0,
+          "serialized_rows": 63755,
+          "empty_styled_cells": 643987
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "CATEGORY",
+          "populated_cells": 40292,
+          "formula_cells": 0,
+          "serialized_rows": 2200,
+          "empty_styled_cells": 8160
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "BRANCH",
+          "populated_cells": 61,
+          "formula_cells": 0,
+          "serialized_rows": 14,
+          "empty_styled_cells": 1
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "SEGMENT",
+          "populated_cells": 242,
+          "formula_cells": 0,
+          "serialized_rows": 69,
+          "empty_styled_cells": 13
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "DAO",
+          "populated_cells": 399,
+          "formula_cells": 0,
+          "serialized_rows": 98,
+          "empty_styled_cells": 6
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "Commission other",
+          "populated_cells": 2925,
+          "formula_cells": 0,
+          "serialized_rows": 311,
+          "empty_styled_cells": 496
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "commission trade",
+          "populated_cells": 353,
+          "formula_cells": 0,
+          "serialized_rows": 44,
+          "empty_styled_cells": 1
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "Nostro Vostro",
+          "populated_cells": 543,
+          "formula_cells": 0,
+          "serialized_rows": 74,
+          "empty_styled_cells": 1
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "POR",
+          "populated_cells": 18286,
+          "formula_cells": 0,
+          "serialized_rows": 1405,
+          "empty_styled_cells": 4
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "GL Report",
+          "populated_cells": 3104,
+          "formula_cells": 0,
+          "serialized_rows": 517,
+          "empty_styled_cells": 1138
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "GL criteria",
+          "populated_cells": 72,
+          "formula_cells": 0,
+          "serialized_rows": 19,
+          "empty_styled_cells": 5
+        },
+        {
+          "source": "GL_09SEP",
+          "sheet": "Teller",
+          "populated_cells": 12325,
+          "formula_cells": 0,
+          "serialized_rows": 1651,
+          "empty_styled_cells": 0
+        }
+      ]
+    }
+  ],
+  "current_gl_run": {
+    "id": 54,
+    "version_id": 6,
+    "engine_version": "1.7.0",
+    "created_at": "2026-10-20 19:05:53"
+  },
+  "mapping_versions": [
+    {
+      "id": 5,
+      "file_id": 8,
+      "parent_id": null,
+      "name": "As supplied: GL mapping 30 Sept 2026 ( please dont refer for the any othe",
+      "created_at": "2026-10-18 21:55:00"
+    },
+    {
+      "id": 6,
+      "file_id": 8,
+      "parent_id": 5,
+      "name": "v6 ACPTCONTRA-23071 (on the 19 Oct workbook)",
+      "created_at": "2026-10-18 22:17:11"
+    }
+  ],
+  "recorded_changes": [
+    {
+      "id": 590,
+      "version_id": 6,
+      "seq": 1,
+      "change_set": "USER-2026-10-18T221654",
+      "sheet": "GL Mapping",
+      "row_no": 48311,
+      "col": "L",
+      "old_value": "23100-23105, 23107, 23109, 23110, 23112, 23114, 23060, 23064, 23071",
+      "new_value": "23100-23105, 23107, 23109, 23110, 23112, 23114, 23060, 23064",
+      "is_new_row": 0,
+      "reason": "ACPTCONTRA of category 23071 QAR could not be brought to Acceptances: it fits two rules. Row 21993 (01-01-900-53-65-1908500001, Acceptances Asset, DKBGL.1965) takes category 23000-23999, departments 5365 / 5366, balance ACPTCONTRA; row 48311 (01-01-900-53-66-8000000003, ELC - Bank Liability, DKBGL.8010) names 23071 since the round-6 change of 24-Sep-2026 (comment in AB48311) and lists ACPTCONTRA in S48311. Category 23071 QAR carries no ADVICEBL or ACPTBL balance, so on row 48311 it serves only this conflict. Its other leg, ACPTCONTRABL 23071 QAR, is already allocated to Acceptances Liability (row 34367, DKBGL.2680): with the asset leg in ELC the two legs would sit in different sections. The twin rows do not name 23071 (48312 USD, 48983 / 48984 8500000003). Entry 23071 is taken out of L48311; nothing else in the cell changes. Requested by the user on 19 Oct 2026.",
+      "evidence": "User edit through the application; previous value '23100-23105, 23107, 23109, 23110, 23112, 23114, 23060, 23064, 23071'.",
+      "created_at": "2026-10-18 22:17:11"
+    }
+  ]
+}

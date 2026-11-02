@@ -1,0 +1,4209 @@
+{
+ "schema_version": 1,
+ "version": 1,
+ "source": "Generated from BO headers; owner-editable",
+ "tables": {
+  "001": {
+   "sheet": "Table-001",
+   "title": "NBS Table (1) - (101) Cash and Precious Metals",
+   "measures": {
+    "In LC Amount": {
+     "header": "In LC Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In FC Amount": {
+     "header": "In FC Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out LC Amount": {
+     "header": "Out LC Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out FC Amount": {
+     "header": "Out FC Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    }
+   }
+  },
+  "002": {
+   "sheet": "Table-002",
+   "title": "Table (2) - (102,103) Breakdown of claims on central banks and banks",
+   "measures": {
+    "In LC Amount": {
+     "header": "In LC Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In FC Amount": {
+     "header": "In FC Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out LC Amount": {
+     "header": "Out LC Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out FC Amount": {
+     "header": "Out FC Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "GCC LC Amount": {
+     "header": "GCC LC Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "GCC FC Amount": {
+     "header": "GCC FC Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Blocked Amount": {
+     "header": "Blocked Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "BLOCKED_AMOUNT",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Lc": {
+     "header": "Saudi Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Fc": {
+     "header": "Saudi Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Lc": {
+     "header": "Uae Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Fc": {
+     "header": "Uae Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Lc": {
+     "header": "Oman Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Fc": {
+     "header": "Oman Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Lc": {
+     "header": "Kuw Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Fc": {
+     "header": "Kuw Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Lc": {
+     "header": "Bah Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Fc": {
+     "header": "Bah Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "003": {
+   "sheet": "Table-003",
+   "title": "Table (3) - (102,103) Breakdown of claims on central banks and banks by Maturity",
+   "measures": {
+    "One Week": {
+     "header": "One Week",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1W"
+    },
+    "Week To 1 Month": {
+     "header": "Week To 1 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1M"
+    },
+    "One To 3 Month": {
+     "header": "One To 3 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_3M"
+    },
+    "Three To 6 Month": {
+     "header": "Three To 6 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_6M"
+    },
+    "Six To 12 Month": {
+     "header": "Six To 12 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_12M"
+    },
+    "One To 2 Year": {
+     "header": "One To 2 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_2Y"
+    },
+    "Two To 5 Year": {
+     "header": "Two To 5 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_5Y"
+    },
+    "Greater 5 Year": {
+     "header": "Greater 5 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_GT5Y"
+    }
+   }
+  },
+  "004": {
+   "sheet": "Table-004",
+   "title": "Table (4) - (104) Breakdown of Debt Securities - Sukuk",
+   "measures": {
+    "Ls In Amount Lc": {
+     "header": "Ls In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LS_IN_AMOUNT_LC"
+    },
+    "Ls In Amount Fc": {
+     "header": "Ls In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LS_IN_AMOUNT_FC"
+    },
+    "Ls Out Amount Lc": {
+     "header": "Ls Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LS_OUT_AMOUNT_LC"
+    },
+    "Ls Out Amount Fc": {
+     "header": "Ls Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LS_OUT_AMOUNT_FC"
+    },
+    "Uls In Amount Lc": {
+     "header": "Uls In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "ULS_IN_AMOUNT_LC"
+    },
+    "Uls In Amount Fc": {
+     "header": "Uls In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "ULS_IN_AMOUNT_FC"
+    },
+    "Uls Out Amount Lc": {
+     "header": "Uls Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "ULS_OUT_AMOUNT_LC"
+    },
+    "Uls Out Amount Fc": {
+     "header": "Uls Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "ULS_OUT_AMOUNT_FC"
+    },
+    "Plg Against Repo": {
+     "header": "Plg Against Repo",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PLG_AGAINST_REPO"
+    },
+    "Plg Against Borrow": {
+     "header": "Plg Against Borrow",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PLG_AGAINST_BORROW"
+    },
+    "Plg Against Other": {
+     "header": "Plg Against Other",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PLG_AGAINST_OTHER"
+    },
+    "Gcc Amount Lc": {
+     "header": "Gcc Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Amount Fc": {
+     "header": "Gcc Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Lc": {
+     "header": "Saudi Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Fc": {
+     "header": "Saudi Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Lc": {
+     "header": "Uae Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Fc": {
+     "header": "Uae Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Lc": {
+     "header": "Oman Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Fc": {
+     "header": "Oman Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Lc": {
+     "header": "Kuw Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Fc": {
+     "header": "Kuw Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Lc": {
+     "header": "Bah Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Fc": {
+     "header": "Bah Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "005": {
+   "sheet": "Table-005",
+   "title": "Table (5) - ( ) Breakdown of Equity Participations and Mutual funds and Others",
+   "measures": {
+    "Ls In Amount Lc": {
+     "header": "Ls In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LS_IN_AMOUNT_LC"
+    },
+    "Ls In Amount Fc": {
+     "header": "Ls In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LS_IN_AMOUNT_FC"
+    },
+    "Ls Out Amount Lc": {
+     "header": "Ls Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LS_OUT_AMOUNT_LC"
+    },
+    "Ls Out Amount Fc": {
+     "header": "Ls Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LS_OUT_AMOUNT_FC"
+    },
+    "Uls In Amount Lc": {
+     "header": "Uls In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "ULS_IN_AMOUNT_LC"
+    },
+    "Uls In Amount Fc": {
+     "header": "Uls In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "ULS_IN_AMOUNT_FC"
+    },
+    "Uls Out Amount Lc": {
+     "header": "Uls Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "ULS_OUT_AMOUNT_LC"
+    },
+    "Uls Out Amount Fc": {
+     "header": "Uls Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "ULS_OUT_AMOUNT_FC"
+    },
+    "Plg Against Repo": {
+     "header": "Plg Against Repo",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PLG_AGAINST_REPO"
+    },
+    "Plg Against Borrow": {
+     "header": "Plg Against Borrow",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PLG_AGAINST_BORROW"
+    },
+    "Plg Against Other": {
+     "header": "Plg Against Other",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PLG_AGAINST_OTHER"
+    },
+    "Gcc Amount Lc": {
+     "header": "Gcc Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Amount Fc": {
+     "header": "Gcc Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Lc": {
+     "header": "Saudi Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Fc": {
+     "header": "Saudi Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Lc": {
+     "header": "Uae Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Fc": {
+     "header": "Uae Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Lc": {
+     "header": "Oman Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Fc": {
+     "header": "Oman Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Lc": {
+     "header": "Kuw Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Fc": {
+     "header": "Kuw Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Lc": {
+     "header": "Bah Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Fc": {
+     "header": "Bah Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "006": {
+   "sheet": "Table-006",
+   "title": "Table (6) - (104) Classification of Securities Portfolio",
+   "measures": {
+    "In Amount Lc": {
+     "header": "In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Amount Fc": {
+     "header": "In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Amount Lc": {
+     "header": "Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Amount Fc": {
+     "header": "Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    }
+   }
+  },
+  "007": {
+   "sheet": "Table-007",
+   "title": "Table (7) - ( ) Breakdown of Debt Securities - Sukuk by Maturity",
+   "measures": {
+    "One Week": {
+     "header": "One Week",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1W"
+    },
+    "Week To 1 Month": {
+     "header": "Week To 1 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1M"
+    },
+    "One To 3 Month": {
+     "header": "One To 3 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_3M"
+    },
+    "Three To 6 Month": {
+     "header": "Three To 6 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_6M"
+    },
+    "Six To 12 Month": {
+     "header": "Six To 12 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_12M"
+    },
+    "One To 5 Year": {
+     "header": "One To 5 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1Y_5Y"
+    },
+    "Five To 10 Year": {
+     "header": "Five To 10 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_10Y"
+    },
+    "Greater 10 Year": {
+     "header": "Greater 10 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_GT10Y"
+    }
+   }
+  },
+  "008": {
+   "sheet": "Table-008",
+   "title": "Table (8) - (105) Breakdown of Credit Facilities by Type of Facilities",
+   "measures": {
+    "In Amount Lc": {
+     "header": "In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Amount Fc": {
+     "header": "In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Amount Lc": {
+     "header": "Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Amount Fc": {
+     "header": "Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    }
+   }
+  },
+  "009": {
+   "sheet": "Table-009",
+   "title": "Table (9) - (105) Breakdown of Credit Facilities by Type of Customer",
+   "measures": {
+    "In Amount Lc": {
+     "header": "In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Amount Fc": {
+     "header": "In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Amount Lc": {
+     "header": "Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Amount Fc": {
+     "header": "Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Amount Lc": {
+     "header": "Gcc Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Amount Fc": {
+     "header": "Gcc Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Lc": {
+     "header": "Saudi Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Fc": {
+     "header": "Saudi Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Fc": {
+     "header": "Uae Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Lc": {
+     "header": "Uae Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Lc": {
+     "header": "Oman Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Fc": {
+     "header": "Oman Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Lc": {
+     "header": "Kuw Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Fc": {
+     "header": "Kuw Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Lc": {
+     "header": "Bah Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Fc": {
+     "header": "Bah Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "010": {
+   "sheet": "Table-010",
+   "title": "Table (10) - (105) Breakdown of Credit Facilities by Maturity",
+   "measures": {
+    "No Maturity": {
+     "header": "No Maturity",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_NONE"
+    },
+    "One Week": {
+     "header": "One Week",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1W"
+    },
+    "Week To 1 Month": {
+     "header": "Week To 1 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1M"
+    },
+    "One To 3 Month": {
+     "header": "One To 3 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_3M"
+    },
+    "Three To 6 Month": {
+     "header": "Three To 6 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_6M"
+    },
+    "Six To 12 Month": {
+     "header": "Six To 12 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_12M"
+    },
+    "One To 2 Year": {
+     "header": "One To 2 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_2Y"
+    },
+    "Two To 5 Year": {
+     "header": "Two To 5 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_5Y"
+    },
+    "Five To 10 Year": {
+     "header": "Five To 10 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_10Y"
+    },
+    "Ten To 20 Year": {
+     "header": "Ten To 20 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_20Y"
+    },
+    "Greater 20 Year": {
+     "header": "Greater 20 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_GT20Y"
+    }
+   }
+  },
+  "011": {
+   "sheet": "Table-011",
+   "title": "Table (11) - (105) Credit Classification According to quality",
+   "measures": {
+    "Good Low Dir": {
+     "header": "Good Low Dir",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "GOOD_DIRECT"
+    },
+    "Good Low Indir": {
+     "header": "Good Low Indir",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "GOOD_INDIRECT"
+    },
+    "Spec Ment Dir": {
+     "header": "Spec Ment Dir",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "WATCH_DIRECT"
+    },
+    "Spec Ment Indir": {
+     "header": "Spec Ment Indir",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "WATCH_INDIRECT"
+    },
+    "Substand Dir": {
+     "header": "Substand Dir",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SUBSTANDARD_DIRECT"
+    },
+    "Substand Indir": {
+     "header": "Substand Indir",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SUBSTANDARD_INDIRECT"
+    },
+    "Doubtful Dir": {
+     "header": "Doubtful Dir",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "DOUBTFUL_DIRECT"
+    },
+    "Doubtful Indir": {
+     "header": "Doubtful Indir",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "DOUBTFUL_INDIRECT"
+    },
+    "Bad Debt Dir": {
+     "header": "Bad Debt Dir",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAD_DIRECT"
+    },
+    "Bad Debt Indir": {
+     "header": "Bad Debt Indir",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAD_INDIRECT"
+    }
+   }
+  },
+  "012": {
+   "sheet": "Table-012",
+   "title": "Table (12) - (105) Breakdown of Credit Facilities by Amount Denominations",
+   "measures": {
+    "Upto 100th": {
+     "header": "Upto 100th",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_UPTO_100TH_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Upto 100th Amt": {
+     "header": "Upto 100th Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_UPTO_100TH_AMOUNT"
+    },
+    "Hun To 1000th": {
+     "header": "Hun To 1000th",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_HUN_TO_1000TH_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Hun To 1000th Amt": {
+     "header": "Hun To 1000th Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_HUN_TO_1000TH_AMOUNT"
+    },
+    "Thou To 2500th": {
+     "header": "Thou To 2500th",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_THOU_TO_2500TH_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Thou To 2500th Amt": {
+     "header": "Thou To 2500th Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_THOU_TO_2500TH_AMOUNT"
+    },
+    "Tfhun To 10000th": {
+     "header": "Tfhun To 10000th",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_TFHUN_TO_10000TH_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Tfhun To 10000th Amt": {
+     "header": "Tfhun To 10000th Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_TFHUN_TO_10000TH_AMOUNT"
+    },
+    "Ten To 50mi": {
+     "header": "Ten To 50mi",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_TEN_TO_50MI_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Ten To 50mi Amt": {
+     "header": "Ten To 50mi Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_TEN_TO_50MI_AMOUNT"
+    },
+    "Fifty To 100mi": {
+     "header": "Fifty To 100mi",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_FIFTY_TO_100MI_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Fifty To 100mi Amt": {
+     "header": "Fifty To 100mi Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_FIFTY_TO_100MI_AMOUNT"
+    },
+    "Hun To 500mi": {
+     "header": "Hun To 500mi",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_HUN_TO_500MI_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Hun To 500mi Amt": {
+     "header": "Hun To 500mi Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_HUN_TO_500MI_AMOUNT"
+    },
+    "Fhun To 1000mi": {
+     "header": "Fhun To 1000mi",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_FHUN_TO_1000MI_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Fhun To 1000mi Amt": {
+     "header": "Fhun To 1000mi Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_FHUN_TO_1000MI_AMOUNT"
+    },
+    "Greater1000mi": {
+     "header": "Greater1000mi",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_GREATER1000MI_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Greater1000mi Amt": {
+     "header": "Greater1000mi Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_GREATER1000MI_AMOUNT"
+    }
+   }
+  },
+  "013": {
+   "sheet": "Table-013",
+   "title": "Table (13) - (105) Breakdown of Tangible Collaterals - Against Credit Facilities",
+   "measures": {
+    "Secured Amt": {
+     "header": "Secured Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECURED_AMT"
+    },
+    "Unsecured Amt": {
+     "header": "Unsecured Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "UNSECURED_AMT"
+    },
+    "Cust Dep": {
+     "header": "Cust Dep",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "CUST_DEP"
+    },
+    "Govt Guarante": {
+     "header": "Govt Guarante",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "GOVT_GUARANTE"
+    },
+    "Bank Guarante": {
+     "header": "Bank Guarante",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BANK_GUARANTE"
+    },
+    "Real Est Mort": {
+     "header": "Real Est Mort",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "REAL_EST_MORT"
+    },
+    "Car Mort": {
+     "header": "Car Mort",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "CAR_MORT"
+    },
+    "Other Mort": {
+     "header": "Other Mort",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OTHER_MORT"
+    },
+    "Securities": {
+     "header": "Securities",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECURITIES"
+    },
+    "Other Tang Collat": {
+     "header": "Other Tang Collat",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OTHER_TANG_COLLAT"
+    }
+   }
+  },
+  "014": {
+   "sheet": "Table-014",
+   "title": "Table (14) - (106) Breakdown of Investments in Subsid. and Assoc. (Equity Participation)",
+   "measures": {
+    "In Amount Lc": {
+     "header": "In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Amount Fc": {
+     "header": "In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Amount Lc": {
+     "header": "Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Amount Fc": {
+     "header": "Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Amount Lc": {
+     "header": "Gcc Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Amount Fc": {
+     "header": "Gcc Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Lc": {
+     "header": "Saudi Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Fc": {
+     "header": "Saudi Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Lc": {
+     "header": "Uae Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Fc": {
+     "header": "Uae Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Lc": {
+     "header": "Oman Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Fc": {
+     "header": "Oman Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Lc": {
+     "header": "Kuw Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Fc": {
+     "header": "Kuw Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Lc": {
+     "header": "Bah Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Fc": {
+     "header": "Bah Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "015": {
+   "sheet": "Table-015",
+   "title": "Table (15) - (107) Breakdown of Investments in Real Estates",
+   "measures": {
+    "In Lc Amount": {
+     "header": "In Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Fc Amount": {
+     "header": "In Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Lc Amount": {
+     "header": "Out Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Fc Amount": {
+     "header": "Out Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    }
+   }
+  },
+  "016": {
+   "sheet": "Table-016",
+   "title": "Table (16) - (107) Breakdown of Investments in Real Estates",
+   "measures": {
+    "Cost In Qatar": {
+     "header": "Cost In Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "COST_IN_QATAR"
+    },
+    "Prov Depre In Qatar": {
+     "header": "Prov Depre In Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DEPRE_IN_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Prov Decline In Qatar": {
+     "header": "Prov Decline In Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DECLINE_IN_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Change Pos In Qatar": {
+     "header": "Change Pos In Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "CHANGE_POS_IN_QATAR"
+    },
+    "Change Neg In Qatar": {
+     "header": "Change Neg In Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "CHANGE_NEG_IN_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Cost Out Qatar": {
+     "header": "Cost Out Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "COST_OUT_QATAR"
+    },
+    "Prov Depre Out Qatar": {
+     "header": "Prov Depre Out Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DEPRE_OUT_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Prov Decline Out Qatar": {
+     "header": "Prov Decline Out Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DECLINE_OUT_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Change Pos Out Qatar": {
+     "header": "Change Pos Out Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "CHANGE_POS_OUT_QATAR"
+    },
+    "Change Neg Out Qatar": {
+     "header": "Change Neg Out Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "CHANGE_NEG_OUT_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    }
+   }
+  },
+  "017": {
+   "sheet": "Table-017",
+   "title": "Table (17) - (108) Breakdown of Net Fixed Assets",
+   "measures": {
+    "Cost In Qatar": {
+     "header": "Cost In Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "COST_IN_QATAR"
+    },
+    "Rate Depre In Qatar": {
+     "header": "Rate Depre In Qatar",
+     "kind": "rate",
+     "unit": "RATE",
+     "additive": false,
+     "primary": true,
+     "semantic": "RATE_RATE_DEPRE_IN_QATAR",
+     "note": "Rate: never summed as money"
+    },
+    "Prov Depre In Qatar": {
+     "header": "Prov Depre In Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DEPRE_IN_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Prov Decline In Qatar": {
+     "header": "Prov Decline In Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DECLINE_IN_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Cost Out Qatar": {
+     "header": "Cost Out Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "COST_OUT_QATAR"
+    },
+    "Rate Depre Out Qatar": {
+     "header": "Rate Depre Out Qatar",
+     "kind": "rate",
+     "unit": "RATE",
+     "additive": false,
+     "primary": true,
+     "semantic": "RATE_RATE_DEPRE_OUT_QATAR",
+     "note": "Rate: never summed as money"
+    },
+    "Prov Depre Out Qatar": {
+     "header": "Prov Depre Out Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DEPRE_OUT_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Prov Decline Out Qatar": {
+     "header": "Prov Decline Out Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DECLINE_OUT_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Cost Gcc Qatar": {
+     "header": "Cost Gcc Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "COST_GCC_QATAR"
+    },
+    "Prov Depre Gcc Qatar": {
+     "header": "Prov Depre Gcc Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DEPRE_GCC_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Prov Decline Gcc Qatar": {
+     "header": "Prov Decline Gcc Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DECLINE_GCC_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Cost Saudi Qatar": {
+     "header": "Cost Saudi Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "COST_SAUDI_QATAR"
+    },
+    "Prov Depre Saudi Qatar": {
+     "header": "Prov Depre Saudi Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DEPRE_SAUDI_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Prov Decline Saudi Qatar": {
+     "header": "Prov Decline Saudi Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DECLINE_SAUDI_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Cost Uae Qatar": {
+     "header": "Cost Uae Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "COST_UAE_QATAR"
+    },
+    "Prov Depre Uae Qatar": {
+     "header": "Prov Depre Uae Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DEPRE_UAE_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Prov Decline Uae Qatar": {
+     "header": "Prov Decline Uae Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DECLINE_UAE_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Cost Oman Qatar": {
+     "header": "Cost Oman Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "COST_OMAN_QATAR"
+    },
+    "Prov Depre Oman Qatar": {
+     "header": "Prov Depre Oman Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DEPRE_OMAN_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Prov Decline Oman Qatar": {
+     "header": "Prov Decline Oman Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DECLINE_OMAN_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Cost Kuw Qatar": {
+     "header": "Cost Kuw Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "COST_KUW_QATAR"
+    },
+    "Prov Depre Kuw Qatar": {
+     "header": "Prov Depre Kuw Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DEPRE_KUW_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Prov Decline Kuw Qatar": {
+     "header": "Prov Decline Kuw Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DECLINE_KUW_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Cost Bah Qatar": {
+     "header": "Cost Bah Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "COST_BAH_QATAR"
+    },
+    "Prov Depre Bah Qatar": {
+     "header": "Prov Depre Bah Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DEPRE_BAH_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Prov Decline Bah Qatar": {
+     "header": "Prov Decline Bah Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROV_DECLINE_BAH_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    }
+   }
+  },
+  "018": {
+   "sheet": "Table-018",
+   "title": "Table (18) - (10902) Breakdown of Intangible Assets in Other Assets",
+   "measures": {
+    "Orig Cost In Qatar": {
+     "header": "Orig Cost In Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "ORIG_COST_IN_QATAR"
+    },
+    "Amor Impair In Qatar": {
+     "header": "Amor Impair In Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "AMOR_IMPAIR_IN_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Orig Cost Out Qatar": {
+     "header": "Orig Cost Out Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "ORIG_COST_OUT_QATAR"
+    },
+    "Amor Impair Out Qatar": {
+     "header": "Amor Impair Out Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "AMOR_IMPAIR_OUT_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    }
+   }
+  },
+  "019": {
+   "sheet": "Table-019",
+   "title": "Table (19) - (10903) Breakdown of Others in Other Assets",
+   "measures": {
+    "In Amount Lc": {
+     "header": "In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Amount Fc": {
+     "header": "In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Amount Lc": {
+     "header": "Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Amount Fc": {
+     "header": "Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Amount Lc": {
+     "header": "Gcc Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Amount Fc": {
+     "header": "Gcc Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Lc": {
+     "header": "Saudi Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Fc": {
+     "header": "Saudi Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Lc": {
+     "header": "Uae Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Fc": {
+     "header": "Uae Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Lc": {
+     "header": "Oman Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Fc": {
+     "header": "Oman Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Lc": {
+     "header": "Kuw Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Fc": {
+     "header": "Kuw Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Lc": {
+     "header": "Bah Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Fc": {
+     "header": "Bah Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "020": {
+   "sheet": "Table-020",
+   "title": "Table (20)",
+   "special_schema": [
+    "Acquistion No",
+    "Provision Amount",
+    "Net Value"
+   ],
+   "measures": {}
+  },
+  "021": {
+   "sheet": "Table-021",
+   "title": "Table (21) - (201,202) Breakdown of Due to Central Banks and Due to Banks",
+   "measures": {
+    "In Amount Lc": {
+     "header": "In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Amount Fc": {
+     "header": "In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Amount Lc": {
+     "header": "Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Amount Fc": {
+     "header": "Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Amount Lc": {
+     "header": "Gcc Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Amount Fc": {
+     "header": "Gcc Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Blocked Amt": {
+     "header": "Blocked Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "BLOCKED_AMOUNT",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Lc": {
+     "header": "Saudi Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Fc": {
+     "header": "Saudi Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Lc": {
+     "header": "Uae Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Fc": {
+     "header": "Uae Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Lc": {
+     "header": "Oman Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Fc": {
+     "header": "Oman Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Lc": {
+     "header": "Kuw Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Fc": {
+     "header": "Kuw Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Lc": {
+     "header": "Bah Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Fc": {
+     "header": "Bah Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "022": {
+   "sheet": "Table-022",
+   "title": "Table (22) - (201,202) Breakdown of Due to Central Banks and Due to Banks by Maturity",
+   "measures": {
+    "One Week": {
+     "header": "One Week",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1W"
+    },
+    "Week To 1 Month": {
+     "header": "Week To 1 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1M"
+    },
+    "One To 3 Month": {
+     "header": "One To 3 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_3M"
+    },
+    "Three To 6 Month": {
+     "header": "Three To 6 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_6M"
+    },
+    "Six To 12 Month": {
+     "header": "Six To 12 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_12M"
+    },
+    "One To 2 Year": {
+     "header": "One To 2 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_2Y"
+    },
+    "Two To 5 Year": {
+     "header": "Two To 5 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_5Y"
+    },
+    "Greater 5 Year": {
+     "header": "Greater 5 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_GT5Y"
+    }
+   }
+  },
+  "023": {
+   "sheet": "Table-023",
+   "title": "Table (23) - (203) Breakdown of Customer Deposits by Type of Customer",
+   "measures": {
+    "In Amount Lc": {
+     "header": "In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Amount Fc": {
+     "header": "In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Amount Lc": {
+     "header": "Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Amount Fc": {
+     "header": "Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Amount Lc": {
+     "header": "Gcc Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Amount Fc": {
+     "header": "Gcc Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Lc": {
+     "header": "Saudi Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Fc": {
+     "header": "Saudi Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Lc": {
+     "header": "Uae Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Fc": {
+     "header": "Uae Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Lc": {
+     "header": "Oman Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Fc": {
+     "header": "Oman Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Lc": {
+     "header": "Kuw Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Fc": {
+     "header": "Kuw Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Lc": {
+     "header": "Bah Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Fc": {
+     "header": "Bah Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "024": {
+   "sheet": "Table-024",
+   "title": "Table (24) - (203) Breakdown of Customer Deposits by Maturity",
+   "measures": {
+    "Current and Call": {
+     "header": "Current and Call",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "DEP_CURRENT_CALL"
+    },
+    "Saving": {
+     "header": "Saving",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "DEP_SAVING"
+    },
+    "One Week": {
+     "header": "One Week",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1W"
+    },
+    "Week To 1 Month": {
+     "header": "Week To 1 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1M"
+    },
+    "One To 3 Month": {
+     "header": "One To 3 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_3M"
+    },
+    "Three To 6 Month": {
+     "header": "Three To 6 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_6M"
+    },
+    "Six To 12 Month": {
+     "header": "Six To 12 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_12M"
+    },
+    "One To 2 Year": {
+     "header": "One To 2 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_2Y"
+    },
+    "Greater 2 Year": {
+     "header": "Greater 2 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_GT2Y"
+    }
+   }
+  },
+  "025": {
+   "sheet": "Table-025",
+   "title": "Table (25) - (203) Breakdown of customers deposits by Amount Denominations",
+   "measures": {
+    "Upto 100th": {
+     "header": "Upto 100th",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_UPTO_100TH_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Upto 100th Amt": {
+     "header": "Upto 100th Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_UPTO_100TH_AMOUNT"
+    },
+    "Hun To 1000th": {
+     "header": "Hun To 1000th",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_HUN_TO_1000TH_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Hun To 1000th Amt": {
+     "header": "Hun To 1000th Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_HUN_TO_1000TH_AMOUNT"
+    },
+    "Thou To 2500th": {
+     "header": "Thou To 2500th",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_THOU_TO_2500TH_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Thou To 2500th Amt": {
+     "header": "Thou To 2500th Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_THOU_TO_2500TH_AMOUNT"
+    },
+    "Tfhun To 10000th": {
+     "header": "Tfhun To 10000th",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_TFHUN_TO_10000TH_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Tfhun To 10000th Amt": {
+     "header": "Tfhun To 10000th Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_TFHUN_TO_10000TH_AMOUNT"
+    },
+    "Ten To 50mi": {
+     "header": "Ten To 50mi",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_TEN_TO_50MI_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Ten To 50mi Amt": {
+     "header": "Ten To 50mi Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_TEN_TO_50MI_AMOUNT"
+    },
+    "Fifty To 100mi": {
+     "header": "Fifty To 100mi",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_FIFTY_TO_100MI_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Fifty To 100mi Amt": {
+     "header": "Fifty To 100mi Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_FIFTY_TO_100MI_AMOUNT"
+    },
+    "Hun To 500mi": {
+     "header": "Hun To 500mi",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_HUN_TO_500MI_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Hun To 500mi Amt": {
+     "header": "Hun To 500mi Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_HUN_TO_500MI_AMOUNT"
+    },
+    "Fhun To 1000mi": {
+     "header": "Fhun To 1000mi",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_FHUN_TO_1000MI_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Fhun To 1000mi Amt": {
+     "header": "Fhun To 1000mi Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_FHUN_TO_1000MI_AMOUNT"
+    },
+    "Greater1000mi": {
+     "header": "Greater1000mi",
+     "kind": "count",
+     "unit": "COUNT",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_GREATER1000MI_COUNT",
+     "note": "Count: never divided by 1000"
+    },
+    "Greater1000mi Amt": {
+     "header": "Greater1000mi Amt",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "BAND_GREATER1000MI_AMOUNT"
+    }
+   }
+  },
+  "026": {
+   "sheet": "Table-026",
+   "title": "Table (26) - (205) Breakdown of Other Borrowings-Finance",
+   "measures": {
+    "In Lc Amount": {
+     "header": "In Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Fc Amount": {
+     "header": "In Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Lc Amount": {
+     "header": "Out Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Fc Amount": {
+     "header": "Out Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    }
+   }
+  },
+  "027": {
+   "sheet": "Table-027",
+   "title": "Table (27) - (206) Breakdown of Cash Margin",
+   "measures": {
+    "In Lc Amount": {
+     "header": "In Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Fc Amount": {
+     "header": "In Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Lc Amount": {
+     "header": "Out Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Fc Amount": {
+     "header": "Out Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    }
+   }
+  },
+  "028": {
+   "sheet": "Table-028",
+   "title": "Table (28) - (204-205) Breakdown of Debt Securities - Sukuk & Other Borrowings-Finance by Maturity",
+   "measures": {
+    "One Week": {
+     "header": "One Week",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1W"
+    },
+    "Week To 1 Month": {
+     "header": "Week To 1 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_1M"
+    },
+    "One To 3 Month": {
+     "header": "One To 3 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_3M"
+    },
+    "Three To 6 Month": {
+     "header": "Three To 6 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_6M"
+    },
+    "Six To 12 Month": {
+     "header": "Six To 12 Month",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_12M"
+    },
+    "One To 2 Year": {
+     "header": "One To 2 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_2Y"
+    },
+    "Two To 5 Year": {
+     "header": "Two To 5 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_5Y"
+    },
+    "Five To 10 Year": {
+     "header": "Five To 10 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_10Y"
+    },
+    "Greater 10 Year": {
+     "header": "Greater 10 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MAT_GT10Y"
+    }
+   }
+  },
+  "029": {
+   "sheet": "Table-029",
+   "title": "Table (29) - (207) Breakdown of Provisions",
+   "measures": {
+    "In Lc Amount": {
+     "header": "In Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Fc Amount": {
+     "header": "In Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Lc Amount": {
+     "header": "Out Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Fc Amount": {
+     "header": "Out Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Lc Amount": {
+     "header": "Gcc Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Fc Amount": {
+     "header": "Gcc Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "030": {
+   "sheet": "Table-030",
+   "title": "Table (30) - (20801) Breakdown of Deferred Interest-Income in Other Liabilities",
+   "measures": {
+    "Perf In Amount": {
+     "header": "Perf In Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PERF_IN_AMOUNT"
+    },
+    "Nperf In Amount": {
+     "header": "Nperf In Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "NPERF_IN_AMOUNT"
+    },
+    "Perf Out Amount": {
+     "header": "Perf Out Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PERF_OUT_AMOUNT"
+    },
+    "Nperf Out Amount": {
+     "header": "Nperf Out Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "NPERF_OUT_AMOUNT"
+    }
+   }
+  },
+  "031": {
+   "sheet": "Table-031",
+   "title": "Table (31) - (20804) Breakdown of Others in Other Liabilities",
+   "measures": {
+    "In Amount Lc": {
+     "header": "In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Amount Fc": {
+     "header": "In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Amount Lc": {
+     "header": "Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Amount Fc": {
+     "header": "Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Amount Lc": {
+     "header": "Gcc Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Amount Fc": {
+     "header": "Gcc Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "032": {
+   "sheet": "Table-032",
+   "title": "Table (32) - (20901) Breakdown of Paid Up Capital",
+   "measures": {
+    "In Amount Lc": {
+     "header": "In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Amount Fc": {
+     "header": "In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    }
+   }
+  },
+  "033": {
+   "sheet": "Table-033",
+   "title": "Table (33) - (20906) Breakdown of Fair Value Adjustments",
+   "measures": {
+    "Postive In Amount": {
+     "header": "Postive In Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "POSTIVE_IN_AMOUNT"
+    },
+    "Neg In Amount": {
+     "header": "Neg In Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "NEG_IN_AMOUNT",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Postive Out Amount": {
+     "header": "Postive Out Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "POSTIVE_OUT_AMOUNT"
+    },
+    "Neg Out Amount": {
+     "header": "Neg Out Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "NEG_OUT_AMOUNT",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    }
+   }
+  },
+  "034": {
+   "sheet": "Table-034",
+   "title": "Table (34) - (20908) Breakdown of Other Reserves",
+   "measures": {
+    "In Amount Lc": {
+     "header": "In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Amount Fc": {
+     "header": "In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Amount Lc": {
+     "header": "Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Amount Fc": {
+     "header": "Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    }
+   }
+  },
+  "035": {
+   "sheet": "Table-035",
+   "title": "Table (35) - (301) Breakdown of Contingent liabilities",
+   "measures": {
+    "In Lc Amount": {
+     "header": "In Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Fc Amount": {
+     "header": "In Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Lc Amount": {
+     "header": "Out Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Fc Amount": {
+     "header": "Out Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    }
+   }
+  },
+  "036": {
+   "sheet": "Table-036",
+   "title": "Table (36) - (302) Breakdown of Commitments",
+   "measures": {
+    "In Amount Lc": {
+     "header": "In Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Amount Fc": {
+     "header": "In Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Amount Lc": {
+     "header": "Out Amount Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Amount Fc": {
+     "header": "Out Amount Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    }
+   }
+  },
+  "037": {
+   "sheet": "Table-037",
+   "title": "Table (37) - (30201) Breakdown of Unutilized Facilities",
+   "measures": {
+    "Over Draft": {
+     "header": "Over Draft",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OVER_DRAFT"
+    },
+    "Loans Advances": {
+     "header": "Loans Advances",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LOANS_ADVANCES"
+    },
+    "Istisna": {
+     "header": "Istisna",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "ISTISNA"
+    },
+    "Mudar Mushar": {
+     "header": "Mudar Mushar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "MUDAR_MUSHAR"
+    },
+    "Other Islamic Finance": {
+     "header": "Other Islamic Finance",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OTHER_ISLAMIC_FINANCE"
+    },
+    "Tot Less 1 Year": {
+     "header": "Tot Less 1 Year",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "TOT_LESS_1_YEAR"
+    },
+    "LC Amount": {
+     "header": "LC Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LC_AMOUNT"
+    },
+    "LG Amount": {
+     "header": "LG Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LG_AMOUNT"
+    }
+   }
+  },
+  "038": {
+   "sheet": "Table-038",
+   "title": "Table (38) - (303) Breakdown of Derivative Contracts",
+   "measures": {
+    "Nat Amount": {
+     "header": "Nat Amount",
+     "kind": "notional",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "NOTIONAL_NAT_AMOUNT"
+    },
+    "Pive Fair Value": {
+     "header": "Pive Fair Value",
+     "kind": "fair_value_positive",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "FV_POSITIVE"
+    },
+    "Negative Fair Value": {
+     "header": "Negative Fair Value",
+     "kind": "fair_value_negative",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "FV_NEGATIVE"
+    },
+    "Nat In 3 Month": {
+     "header": "Nat In 3 Month",
+     "kind": "notional",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "NOTIONAL_NAT_IN_3_MONTH"
+    },
+    "Nat 3 to 12 Month": {
+     "header": "Nat 3 to 12 Month",
+     "kind": "notional",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "NOTIONAL_NAT_3_TO_12_MONTH"
+    },
+    "Nat 1 to 5 Year": {
+     "header": "Nat 1 to 5 Year",
+     "kind": "notional",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "NOTIONAL_NAT_1_TO_5_YEAR"
+    },
+    "Nat Over 5 Year": {
+     "header": "Nat Over 5 Year",
+     "kind": "notional",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "NOTIONAL_NAT_OVER_5_YEAR"
+    }
+   }
+  },
+  "039": {
+   "sheet": "Table-039",
+   "title": "Table (39) - (304) Breakdown of Assets Under Management",
+   "measures": {
+    "In Lc Amount": {
+     "header": "In Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Fc Amount": {
+     "header": "In Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Lc Amount": {
+     "header": "Out Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Fc Amount": {
+     "header": "Out Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    }
+   }
+  },
+  "040": {
+   "sheet": "Table-040",
+   "title": "Table (40) - ( ) Breakdown of Claims on Subsidiaries and Associates",
+   "measures": {
+    "Deposits": {
+     "header": "Deposits",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "DEPOSITS"
+    },
+    "Loans To Bank": {
+     "header": "Loans To Bank",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LOANS_TO_BANK"
+    },
+    "Credit Facilities": {
+     "header": "Credit Facilities",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "CREDIT_FACILITIES"
+    },
+    "Debt Sec Sukuk": {
+     "header": "Debt Sec Sukuk",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "DEBT_SEC_SUKUK"
+    },
+    "Other Facilities": {
+     "header": "Other Facilities",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OTHER_FACILITIES"
+    },
+    "Equity Partcip": {
+     "header": "Equity Partcip",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "EQUITY_PARTCIP"
+    }
+   }
+  },
+  "041": {
+   "sheet": "Table-041",
+   "title": "Table (41) - ( ) Breakdown of Due to Subsid. and Assoc",
+   "measures": {
+    "Deposits": {
+     "header": "Deposits",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "DEPOSITS"
+    },
+    "Loans To Bank": {
+     "header": "Loans To Bank",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LOANS_TO_BANK"
+    },
+    "Debt Sec Sukuk": {
+     "header": "Debt Sec Sukuk",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "DEBT_SEC_SUKUK"
+    },
+    "Other Facilities": {
+     "header": "Other Facilities",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OTHER_FACILITIES"
+    }
+   }
+  },
+  "042": {
+   "sheet": "Table-042",
+   "title": "Table (42) - ( ) Breakdown of Securities Portfolio in Q.F.C Institution",
+   "measures": {
+    "Listed Lc": {
+     "header": "Listed Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LISTED_LC"
+    },
+    "Listed Fc": {
+     "header": "Listed Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LISTED_FC"
+    },
+    "Unlited Lc": {
+     "header": "Unlited Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "UNLITED_LC"
+    },
+    "Unlisted Fc": {
+     "header": "Unlisted Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "UNLISTED_FC"
+    }
+   }
+  },
+  "043": {
+   "sheet": "Table-043",
+   "title": "Table (43) - (402) Breakdown of Net Profit (Loss) on Securities Portfolio",
+   "measures": {
+    "Profit Inside Qatar": {
+     "header": "Profit Inside Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROFIT_INSIDE_QATAR"
+    },
+    "Loss Inside Qatar": {
+     "header": "Loss Inside Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LOSS_INSIDE_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    },
+    "Profit Outside Qatar": {
+     "header": "Profit Outside Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "PROFIT_OUTSIDE_QATAR"
+    },
+    "Loss Outside Qatar": {
+     "header": "Loss Outside Qatar",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "LOSS_OUTSIDE_QATAR",
+     "sign_note": "Contra/negative measure: raw sign preserved; presentation rule applied once downstream"
+    }
+   }
+  },
+  "044": {
+   "sheet": "Table-044",
+   "title": "Table (44) - (105) Breakdown of Credit Facilities by Economic Sectors",
+   "measures": {
+    "Non Bank Fin Inst Lc": {
+     "header": "Non Bank Fin Inst Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_NBFI_LC"
+    },
+    "Non Bank Fin Inst Fc": {
+     "header": "Non Bank Fin Inst Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_NBFI_FC"
+    },
+    "Govt Inst Lc": {
+     "header": "Govt Inst Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_GOV_LC"
+    },
+    "Govt Inst Fc": {
+     "header": "Govt Inst Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_GOV_FC"
+    },
+    "Semi Govt Inst Lc": {
+     "header": "Semi Govt Inst Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_SEMI_GOV_LC"
+    },
+    "Semi Govt Inst Fc": {
+     "header": "Semi Govt Inst Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_SEMI_GOV_FC"
+    },
+    "Priv Sect Corp Lc": {
+     "header": "Priv Sect Corp Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_PRIVATE_LC"
+    },
+    "Priv Sect Corp Fc": {
+     "header": "Priv Sect Corp Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_PRIVATE_FC"
+    },
+    "Personal Lc": {
+     "header": "Personal Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_PERSONAL_LC"
+    },
+    "Personal Fc": {
+     "header": "Personal Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_PERSONAL_FC"
+    },
+    "Total LC": {
+     "header": "Total LC",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "TOTAL_LC",
+     "subtotal": true
+    },
+    "Total FC": {
+     "header": "Total FC",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "TOTAL_FC",
+     "subtotal": true
+    },
+    "Total": {
+     "header": "Total",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "TOTAL",
+     "subtotal": true
+    }
+   }
+  },
+  "045": {
+   "sheet": "Table-045",
+   "title": "Table (45) - (203) Breakdown of Customer Deposits by Economic Sectors",
+   "measures": {
+    "Non Bank Fin Inst Lc": {
+     "header": "Non Bank Fin Inst Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_NBFI_LC"
+    },
+    "Non Bank Fin Inst Fc": {
+     "header": "Non Bank Fin Inst Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_NBFI_FC"
+    },
+    "Govt Inst Lc": {
+     "header": "Govt Inst Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_GOV_LC"
+    },
+    "Govt Inst Fc": {
+     "header": "Govt Inst Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_GOV_FC"
+    },
+    "Semi Govt Inst Lc": {
+     "header": "Semi Govt Inst Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_SEMI_GOV_LC"
+    },
+    "Semi Govt Inst Fc": {
+     "header": "Semi Govt Inst Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_SEMI_GOV_FC"
+    },
+    "Priv Sect Corp Lc": {
+     "header": "Priv Sect Corp Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_PRIVATE_LC"
+    },
+    "Priv Sect Corp Fc": {
+     "header": "Priv Sect Corp Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_PRIVATE_FC"
+    },
+    "Personal Lc": {
+     "header": "Personal Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_PERSONAL_LC"
+    },
+    "Personal Fc": {
+     "header": "Personal Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "SECTOR_PERSONAL_FC"
+    },
+    "Total LC": {
+     "header": "Total LC",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "TOTAL_LC",
+     "subtotal": true
+    },
+    "Total FC": {
+     "header": "Total FC",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "TOTAL_FC",
+     "subtotal": true
+    },
+    "Total": {
+     "header": "Total",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "TOTAL",
+     "subtotal": true
+    }
+   }
+  },
+  "100": {
+   "sheet": "Table-100",
+   "title": "Table (100) - Assets",
+   "measures": {
+    "In Lc Amount": {
+     "header": "In Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Fc Amount": {
+     "header": "In Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Lc Amount": {
+     "header": "Out Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Fc Amount": {
+     "header": "Out Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Lc Amount": {
+     "header": "Gcc Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Fc Amount": {
+     "header": "Gcc Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Lc": {
+     "header": "Saudi Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Fc": {
+     "header": "Saudi Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Lc": {
+     "header": "Uae Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Fc": {
+     "header": "Uae Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Lc": {
+     "header": "Oman Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Fc": {
+     "header": "Oman Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Lc": {
+     "header": "Kuw Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Fc": {
+     "header": "Kuw Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Lc": {
+     "header": "Bah Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Fc": {
+     "header": "Bah Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "200": {
+   "sheet": "Table-200",
+   "title": "Table (200) Liabilities",
+   "measures": {
+    "In Lc Amount": {
+     "header": "In Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Fc Amount": {
+     "header": "In Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Lc Amount": {
+     "header": "Out Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Fc Amount": {
+     "header": "Out Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Lc Amount": {
+     "header": "Gcc Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Fc Amount": {
+     "header": "Gcc Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Lc": {
+     "header": "Saudi Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Saudi Fc": {
+     "header": "Saudi Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_SA_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Lc": {
+     "header": "Uae Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Uae Fc": {
+     "header": "Uae Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_AE_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Lc": {
+     "header": "Oman Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Oman Fc": {
+     "header": "Oman Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_OM_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Lc": {
+     "header": "Kuw Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Kuw Fc": {
+     "header": "Kuw Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_KW_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Lc": {
+     "header": "Bah Lc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Bah Fc": {
+     "header": "Bah Fc",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_BH_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "300": {
+   "sheet": "Table-300",
+   "title": "Table (300) Contra Items",
+   "measures": {
+    "In Lc Amount": {
+     "header": "In Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Fc Amount": {
+     "header": "In Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Lc Amount": {
+     "header": "Out Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Fc Amount": {
+     "header": "Out Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Lc Amount": {
+     "header": "Gcc Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Fc Amount": {
+     "header": "Gcc Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "400": {
+   "sheet": "Table-400",
+   "title": "Table (400) Income",
+   "measures": {
+    "In Lc Amount": {
+     "header": "In Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Fc Amount": {
+     "header": "In Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Lc Amount": {
+     "header": "Out Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Fc Amount": {
+     "header": "Out Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Lc Amount": {
+     "header": "Gcc Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Fc Amount": {
+     "header": "Gcc Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  },
+  "500": {
+   "sheet": "Table-500",
+   "title": "Table (500) Expenses",
+   "measures": {
+    "In Lc Amount": {
+     "header": "In Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_LC"
+    },
+    "In Fc Amount": {
+     "header": "In Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "IN_FC"
+    },
+    "Out Lc Amount": {
+     "header": "Out Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_LC"
+    },
+    "Out Fc Amount": {
+     "header": "Out Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": true,
+     "semantic": "OUT_FC"
+    },
+    "Gcc Lc Amount": {
+     "header": "Gcc Lc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_LC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    },
+    "Gcc Fc Amount": {
+     "header": "Gcc Fc Amount",
+     "kind": "money",
+     "unit": "QAR_THOUSANDS_ASSUMED",
+     "additive": true,
+     "primary": false,
+     "semantic": "SUBSET_GCC_FC",
+     "note": "Subset/view of primary geography; never added to primary totals"
+    }
+   }
+  }
+ }
+}

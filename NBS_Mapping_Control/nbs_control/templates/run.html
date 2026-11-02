@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>ECB review run</h1>
+<p><a href="{{ url_for('reports') }}">Upload the asset-type-wise ECB Excel file and generate NBS reports</a>. This page retains the earlier JSON component-review workflow.</p>
+<form method="post" enctype="multipart/form-data" class="panel"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<p class="muted">Upload an ECB JSON export (see samples/ecb_sample_clm.json). Component review only: no bank connection, no FX, no sign inference, not a complete NBS report.</p>
+<input type="file" name="payload" accept=".json"><button>Run review</button></form>
+{% if result %}
+<div class="panel"><h2>Result <span class="tag {{ 'ok' if result.complete_for_supplied_records_and_required_types else 'bad' }}">{{ 'complete for supplied records' if result.complete_for_supplied_records_and_required_types else 'incomplete / unresolved' }}</span></h2>
+<p>Records {{ result.input_record_count }} · rejected {{ result.rejected_record_count }} · exceptions {{ result.adapter.exceptions|length }} · links accepted {{ result.adapter.accepted_links|length }} / rejected {{ result.adapter.rejected_links|length }}</p>
+{% for w in result.adapter.warnings %}<div class="flash error">{{ w }}</div>{% endfor %}
+<h3>Contracts</h3>
+<table><tr><th>Contract</th><th>Company</th><th>Currency</th><th>Date</th><th>CLM</th><th>Complete</th><th>Totals</th><th>Flags</th></tr>
+{% for c in result.contracts %}<tr><td>{{ c.contract_id }}{% if c.linked_component_contract_ids %}<br><span class="muted">CLS {{ c.linked_component_contract_ids|join(', ') }}</span>{% endif %}</td><td>{{ c.company }}</td><td>{{ c.currency }}</td><td>{{ c.as_of }}</td><td>{{ c.is_clm }}</td>
+<td><span class="tag {{ 'ok' if c.complete_for_supplied_records_and_required_types else 'bad' }}">{{ c.complete_for_supplied_records_and_required_types }}</span></td>
+<td class="pre">{{ json.dumps(c.group_totals_for_supplied_records, indent=1) if c.group_totals_for_supplied_records else 'unavailable' }}</td><td class="pre">{{ c.flags|join('\n') }}{% if c.missing_required_balance_types %}
+missing: {{ c.missing_required_balance_types|join(', ') }}{% endif %}</td></tr>{% endfor %}</table>
+<h3>Exceptions</h3><pre>{{ json.dumps(result.adapter.exceptions, indent=1) }}</pre>
+<h3>Rejected links</h3><pre>{{ json.dumps(result.adapter.rejected_links, indent=1) }}</pre>
+</div>{% endif %}
+{% endblock %}

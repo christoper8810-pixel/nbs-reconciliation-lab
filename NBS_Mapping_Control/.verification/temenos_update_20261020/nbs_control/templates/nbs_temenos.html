@@ -1,0 +1,14 @@
+{% extends "base.html" %}{% block title %}Original Temenos mapping{% endblock %}{% block content %}
+<h1>Original Temenos mapping — presentation review</h1>
+<p><a href="{{url_for('nbs_temenos_file',name='NBS_Temenos_Presentation.html')}}">Open meeting presentation</a> · <a href="{{url_for('nbs_temenos_file',name='NBS_Temenos_Mapping_for_21Oct2026.xlsx')}}">Download full mapping workbook</a></p>
+{% if not review %}<p>The original-cell review has not been prepared yet.</p>{% else %}
+<p>Prepared {{ review.manifest.prepared_date }} for 21 October. {{ review.manifest['items'] }} NBS items; {{ review.manifest.original_linked_items }} linked to original Temenos rows. GL comparison: run {{ review.manifest.gl_snapshot.run.id }}, mapping version {{ review.manifest.gl_snapshot.mapping_version.id }}.</p>
+<p>The original wording below includes parent and column conditions. The engine's current rule is shown separately so substitutions are visible. A missing original balance definition requires a decision.</p>
+<form method="get"><label>Table</label><select name="table" onchange="this.form.submit()">{% for x in tables %}<option {{ 'selected' if x==table }}>{{x}}</option>{% endfor %}</select></form>
+<p><a href="{{url_for('nbs_report',table=table,compare='1')}}">View calculated table and BO</a></p>
+{% for r in rows %}<div class="panel"><h2>{{r.item_code}} · {{r.description}}</h2><p><b>Original source:</b> {{r.temenos_reference or 'No unique original row located'}}</p>
+<div class="cols"><div><h3>Original Temenos wording</h3><pre>{{r.original_line or '(No line-level criteria recorded)'}}</pre><details><summary>Parent conditions and column splits</summary><pre>{{r.original_parents}}</pre><pre>{{r.original_headers}}</pre></details></div>
+<div><h3>Current engine</h3><p>{{r.current_evidence}} · {{r.current_status}}</p><p><b>Source:</b> {{r.current_source}}</p><p><b>Accounts:</b> {{r.current_selection}}</p><pre>{{r.current_types}}</pre></div></div>
+{% if r.review %}<details open><summary><b>Differences and decisions</b></summary><pre>{{r.review}}</pre></details>{% endif %}
+<p>{{r.proposed_logic}}</p><a href="{{url_for('rebuild_builder',tid=r.target_id)}}">Edit this item's logic</a></div>{% endfor %}{% endif %}
+{% endblock %}

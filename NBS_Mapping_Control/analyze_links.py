@@ -1,0 +1,5 @@
+import sqlite3,json
+c=sqlite3.connect('data/bank_20260930.sqlite')
+queries=["SELECT l.account,l.linked_account,e.category,e.currency,json_extract(e.components,'$.CURACCOUNT'),ch.category,json_extract(ch.components,'$.CREDIT'),json_extract(ch.components,'$.ACCDEPOSITPFT'),l.outstanding,l.earned FROM unique_records l LEFT JOIN unique_records e ON e.source='ECB' AND e.account=l.account AND e.currency=l.currency LEFT JOIN unique_records ch ON ch.source='ECB' AND ch.account=l.linked_account AND ch.currency=l.currency WHERE l.source='LOAN' AND l.product='CLM' LIMIT 8", "SELECT category,count(*),sum(json_extract(components,'$.DEBIT')),sum(json_extract(components,'$.CREDIT')) FROM unique_records WHERE source='ECB' AND category IN ('10000','10001','3713','6050') GROUP BY category", "SELECT count(*) FROM unique_records WHERE source='ECB' AND category IS NULL", "SELECT sum(amount) FROM unique_records WHERE source='DEPOSIT'", "SELECT source,sum(amount),sum(outstanding),sum(earned),sum(fees) FROM unique_records WHERE source IN ('LOAN','TB') GROUP BY source"]
+for q in queries:print(c.execute(q).fetchall(),flush=True)
+c.close()

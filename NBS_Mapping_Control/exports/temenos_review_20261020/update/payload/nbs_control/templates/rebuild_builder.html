@@ -1,0 +1,71 @@
+{% extends "base.html" %}{% block title %}Logic builder{% endblock %}{% block content %}
+<h1>Logic builder · {{ t.table }} · {{ t.item_code }} · {{ t.description }}</h1>
+<p class="muted">Current mapping: <span class="tag">{{ t.status }}</span> {{ t.method }} {{ t.legacy_rule_id or '' }} · {{ t.evidence }}</p>
+<p class="muted">The item's value is the <b>sum of its parts</b>. Each part selects records from one source by T24 category, sector, residence, currency,
+balance type, GL account, PL category… and is broken down into this table's columns automatically. Nothing is saved until you press Save.</p>
+<form method="post"><input type="hidden" name="csrf" value="{{ csrf_token }}"><textarea name="parts_json" hidden>{{ parts_json }}</textarea>
+<div class="panel"><h2>Parts ({{ parts|length }})</h2>
+<button name="action" value="original_temenos" class="secondary" formnovalidate>Load original Temenos cells</button>
+<p class="muted">Loads explicit category, sector and balance-type conditions from the original NBS workbook. Complex customer lookups or missing type definitions are reported for review. Raw signs are retained.</p>
+{% if not parts %}<p class="muted">No parts yet. Add one below{% if t.method in ('QCB_COMPOSITION','SUBTOTAL_OF_CHILDREN') %} – this item is currently derived from other items ({{ t.method }}){% endif %}.</p>{% endif %}
+<table>{% for p in parts %}<tr><td>{{ loop.index }}</td><td><b>{{ p.label }}</b><br>
+{% if p.kind=='CATEG' %}Category entries where {{ readable(p.filter) }} · sign {{ p.sign }}{% else %}
+{{ source_labels.get(p.source, p.source) }} where {{ readable(p.filter) }}<br>
+<span class="muted">{{ measure_labels.get(p.measure, p.measure) }}{% if p.components %}: {{ p.components|join(', ') }}{% endif %} · sign {{ p.factor }}</span>{% endif %}</td>
+<td><button name="action" value="remove:{{ loop.index0 }}" class="secondary">Remove</button></td></tr>{% endfor %}</table>
+{% if parts %}<button name="action" value="clear" class="secondary">Remove all</button>{% endif %}</div>
+
+<div class="panel"><h2>Add a part</h2>
+<div class="cols"><div>
+<label>Source</label><select name="part_source" id="src" onchange="showFor(this.value)">{% for k,v in source_labels.items() %}<option value="{{ k }}">{{ v }}</option>{% endfor %}</select>
+<label>Label (optional)</label><input type="text" name="part_label">
+<label>Sign</label><select name="part_sign"><option value="1">As held in the source (+1)</option><option value="-1">Reversed (−1)</option></select>
+<div data-for="GL_LINE"><label>GL Report line</label><input type="text" class="flt" data-target="line" placeholder="filter list"><select name="part_line" id="line" size="10">
+{% for o in opts.get('gl_lines', []) %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}</select>
+<p class="muted">Adds one part per criteria row of the line (categories × sectors × balance types), exactly as the GL Report defines it.</p></div>
+<div data-for="ECB ECB_LOAN ECB_DEPOSIT"><label>T24 categories</label><input type="text" class="flt" data-target="cats" placeholder="filter list (code or words)">
+<select name="part_categories" id="cats" multiple size="9">{% for o in opts.get('categories', []) %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}</select>
+<label>…and/or category ranges</label><input type="text" name="part_category_ranges" placeholder="e.g. 3000-3999, 13101-13109">
+<label>T24 sectors</label><select name="part_sectors" multiple size="6">{% for o in opts.get('sectors', []) %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}</select>
+<label>…and/or sector ranges</label><input type="text" name="part_sector_ranges" placeholder="e.g. 1000-1999, 4000-4004, 2005">
+<label>Residence (ECB country)</label><select name="part_country"><option value="">Any</option><option value="QA">Qatar</option><option value="NOT_QA">Outside Qatar</option></select></div>
+<div data-for="ECB ECB_LOAN ECB_DEPOSIT TB"><label>Currency</label><select name="part_currency"><option value="">Any</option><option value="QAR">QAR (LC)</option><option value="FC">Foreign (FC)</option></select></div>
+</div><div>
+<div data-for="ECB ECB_LOAN ECB_DEPOSIT"><label>Measure</label><select name="part_measure">{% for k,v in measure_labels.items() %}<option value="{{ k }}">{{ v }}</option>{% endfor %}</select>
+<label>Balance types (for “Selected balance types”)</label><input type="text" class="flt" data-target="bts" placeholder="filter list">
+<select name="part_balance_types" id="bts" multiple size="9">{% for o in opts.get('balance_types', []) %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}</select></div>
+<div data-for="ECB_LOAN ECB_DEPOSIT"><label>Residency (loan/deposit file)</label><select name="part_residency"><option value="">Any</option><option>Resident</option><option>NonResident</option></select>
+<label>Customer type</label><select name="part_personal"><option value="">Any</option><option>Personal</option><option>NonPersonal</option></select>
+<label>SIC code prefixes</label><input type="text" name="part_sic" placeholder="e.g. 441, 12104">
+<label>Account types</label><select name="part_products" multiple size="6">{% for o in opts.get('loan_products', []) + opts.get('deposit_products', []) %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}</select></div>
+<div data-for="TB"><label>Ethix GL accounts</label><input type="text" class="flt" data-target="gls" placeholder="filter list"><select name="part_gls" id="gls" multiple size="9">
+{% for o in opts.get('gls', []) %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}</select>
+<label>…and/or GL numbers or prefixes</label><input type="text" name="part_gl_text" placeholder="e.g. 1003000020, 2306"></div>
+<div data-for="CATEG"><label>PL categories</label><input type="text" class="flt" data-target="pls" placeholder="filter list"><select name="part_pl" id="pls" multiple size="9">
+{% for o in opts.get('pl_categories', []) %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}</select><label>…or codes</label><input type="text" name="part_pl_text">
+<label>Event types</label><select name="part_events" multiple size="5">{% for o in opts.get('event_types', []) %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}</select>
+<label>Geography (entries carry no residency)</label><select name="part_geography"><option>UNKNOWN</option><option>IN</option><option>OUT</option></select></div>
+</div></div>
+<button name="action" value="add">Add this part</button></div>
+
+<div class="panel"><h2>Preview and save</h2>
+<button name="action" value="preview" class="secondary">Preview against BO</button>
+{% if preview %}<p>{{ preview.included_records }} of {{ preview.matched_records }} matched records included.</p>
+<table><tr><th>Measure</th><th>Kind</th><th>Current</th><th>With these parts</th><th>BO reference</th><th>Difference</th></tr>
+{% for r in preview.rows %}<tr><td>{{ r.measure }}</td><td>{{ measures[r.measure].kind }}</td><td>{{ '{:,.1f}'.format(r.old) if r.old is not none else 'n.a.' }}</td>
+<td><b>{{ '{:,.1f}'.format(r.new) if r.new is not none else 'n.a.' }}</b></td><td>{{ '{:,.0f}'.format(r.bo) if r.bo is not none else '–' }}</td>
+<td>{{ '{:,.1f}'.format(r.diff) if r.diff is not none else '' }}</td></tr>{% endfor %}</table>
+<p class="muted">Money in QAR thousands; counts as counts. BO is a comparison reference only.</p>
+<h3>By part</h3><table>{% for x in preview.parts %}<tr><td>{{ x.label }}</td><td>{{ x.records }} records</td><td class="muted">{% for k,v in x['values'].items() %}{{ k }} {{ '{:,.1f}'.format(v) }} · {% endfor %}</td></tr>{% endfor %}</table>
+<ul>{% for i in preview.issues %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
+<div class="cols"><div><label>Status after saving</label><select name="status">{% for s in ('PROVISIONAL','APPROVED','DRAFT_CANDIDATE') %}<option>{{ s }}</option>{% endfor %}</select>
+<label>Evidence (why this logic is right)</label><input type="text" name="evidence"></div>
+<div><label>Your name</label><input type="text" name="actor"><label>Reason for change</label><input type="text" name="reason"></div></div>
+<button name="action" value="save">Save as new mapping version</button></div></form>
+<p><a href="{{ url_for('rebuild_mapping', tid=t.target_id) }}">Mapping details and history</a> · <a href="{{ url_for('rebuild_explore') }}">Explore sources</a></p>
+<script>
+function showFor(v){document.querySelectorAll('[data-for]').forEach(function(e){e.style.display=e.dataset.for.split(' ').indexOf(v)>=0?'':'none';});}
+showFor(document.getElementById('src').value);
+document.querySelectorAll('input.flt').forEach(function(inp){inp.addEventListener('input',function(){var q=inp.value.toLowerCase();
+var sel=document.getElementById(inp.dataset.target);for(var i=0;i<sel.options.length;i++){var o=sel.options[i];o.hidden=q&&o.text.toLowerCase().indexOf(q)<0&&!o.selected;}});});
+</script>{% endblock %}

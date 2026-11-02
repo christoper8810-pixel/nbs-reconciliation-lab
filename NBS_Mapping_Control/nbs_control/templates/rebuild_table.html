@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block content %}
+<h1>Table {{ table }} · {{ meta.title }}</h1>
+<p><a href="{{ url_for('rebuild_runview', run_id=run_id) }}">Back to run {{ run_id }}</a>. Each cell: generated / BO reference / difference. Click a value to see contributing records.</p>
+<div class="panel" style="overflow:auto"><table><tr><th>Item</th><th>Mapping</th>{% for h in measures %}<th>{{ h }}<br><span class="muted">{{ meta.measures[h].kind }}{% if not meta.measures[h].primary %} · subset{% endif %}</span></th>{% endfor %}</tr>
+{% for it in items %}<tr><td><a href="{{ url_for('rebuild_mapping', tid=it.target_id) }}">{{ it.item_code }}</a><br>{{ it.description }}<br><a href="{{ url_for('rebuild_builder', tid=it.target_id) }}">Logic builder</a></td><td><span class="tag">{{ it.mapping_status }}</span></td>
+{% for c in it.cells %}<td><a href="{{ url_for('rebuild_cell', run_id=run_id, target=it.target_id, measure=c.measure) }}">{{ c.generated if c.generated!='' else 'n.a.' }}</a><br>
+<span class="muted">BO {{ c.reference if c.reference!='' else '–' }}</span><br>{% if c.difference %}Δ {{ c.difference }}<br>{% endif %}<span class="tag">{{ c.category }}</span> <span class="tag">{{ c.status }}</span></td>{% endfor %}</tr>{% endfor %}</table></div>
+{% endblock %}

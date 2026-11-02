@@ -1,0 +1,65 @@
+{
+  "config_name": "balance_rules",
+  "schema_version": 1,
+  "rule_version": "owner-2026-10-14-draft",
+  "basis": "User-supplied loan report component groups; bank AC.BALANCE.TYPE definitions not yet validated. These are report groups, not core balance types.",
+  "groups": {
+    "OUTSTANDING": [
+      "CURACCOUNT",
+      "PREACCOUNT",
+      "GRCACCOUNT",
+      "DELACCOUNT",
+      "NABACCOUNT",
+      "DUEACCOUNT",
+      "DELDEFERREDPFT",
+      "GRCDEFERREDPFT",
+      "NABDEFERREDPFT",
+      "DUEDEFERREDPFT",
+      "RECDEFERREDPFT",
+      "PREDEFERREDPFT"
+    ],
+    "AMORTIZED_EARNED": [
+      "ACCPRINCIPALPFT",
+      "RECPRINCIPALPFT",
+      "GRCPRINCIPALPFT",
+      "DELPRINCIPALPFT",
+      "PREPRINCIPALPFT"
+    ],
+    "UNEARNED_PROFIT": [
+      "DEFERREDPFT",
+      "ACCDEFERREDPFT"
+    ]
+  },
+  "clm": {
+    "candidate_category": "3713",
+    "source_category": "6050",
+    "source_product": "CLS",
+    "detector_field": null,
+    "true_values": [],
+    "false_values": [],
+    "extra_balances": [
+      {
+        "balance_type": "CREDIT",
+        "group": "OUTSTANDING",
+        "basis": "INFERRED_REVIEW_REQUIRED",
+        "scope": "Verified linked CLS category6050 component of Murabaha category3713 CLM parent",
+        "owner_approved": false,
+        "approved_by": null,
+        "approved_on": null
+      },
+      {
+        "balance_type": "ACCDEPOSITPFT",
+        "group": "AMORTIZED_EARNED",
+        "basis": "USER_ACCRUED_PROFIT",
+        "scope": "Verified linked CLS category6050 component of Murabaha category3713 CLM parent",
+        "owner_approved": true,
+        "approved_by": "Report owner (chat instruction)",
+        "approved_on": "2026-10-14"
+      }
+    ]
+  },
+  "valid_balance_types": null,
+  "virtual_balances": null,
+  "virtual_balances_note": "Supply local AC.BALANCE.TYPE virtual/aggregate composition as {\"VIRTUALCODE\": [\"COMPONENT\", ...]} after bank validation. null means unverified, which blocks CLM embedding verification.",
+  "ethix_crosswalk": null
+}

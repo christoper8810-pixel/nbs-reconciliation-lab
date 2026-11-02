@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block content %}<div class="panel"><h1>{{ state.phase }}</h1>
+{% if state.phase not in ['Complete','Failed'] %}<p>Your files are being processed. This page refreshes automatically.</p><script>setTimeout(()=>location.reload(),4000)</script>
+{% elif state.phase=='Complete' %}<p>Reports generated. <a href="{{ url_for('reports') }}">View reports and edit mappings</a></p><pre>{{ json.dumps(state.summary,indent=2) }}</pre>
+{% else %}<p class="flash error">{{ state.error }}</p><a href="{{ url_for('reports') }}">Return to upload</a>{% endif %}</div>{% endblock %}

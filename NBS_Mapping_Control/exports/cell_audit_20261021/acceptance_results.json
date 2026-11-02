@@ -1,0 +1,166 @@
+{
+  "passed": 40,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Original source unchanged: EHAB",
+      "result": "PASS"
+    },
+    {
+      "check": "Every captured source cell counted: EHAB",
+      "result": "PASS"
+    },
+    {
+      "check": "Original source unchanged: SYSTEMS",
+      "result": "PASS"
+    },
+    {
+      "check": "Every captured source cell counted: SYSTEMS",
+      "result": "PASS"
+    },
+    {
+      "check": "Original source unchanged: GL_CURRENT_BASE",
+      "result": "PASS"
+    },
+    {
+      "check": "Every captured source cell counted: GL_CURRENT_BASE",
+      "result": "PASS"
+    },
+    {
+      "check": "Original source unchanged: GL_09SEP",
+      "result": "PASS"
+    },
+    {
+      "check": "Every captured source cell counted: GL_09SEP",
+      "result": "PASS"
+    },
+    {
+      "check": "Source coverage includes all 81 worksheets",
+      "result": "PASS"
+    },
+    {
+      "check": "All 10979 populated NBS cells have exactly one ledger record",
+      "result": "PASS"
+    },
+    {
+      "check": "Finding IDs unique and sequential",
+      "result": "PASS"
+    },
+    {
+      "check": "Unknown syntax never becomes a wildcard",
+      "result": "PASS"
+    },
+    {
+      "check": "Numeric range boundaries preserved",
+      "result": "PASS"
+    },
+    {
+      "check": "Numbered source components are not categories 4,5,7",
+      "result": "PASS"
+    },
+    {
+      "check": "Narrative words are not balance codes",
+      "result": "PASS"
+    },
+    {
+      "check": "Sixth GL segment retained as ten-digit text",
+      "result": "PASS"
+    },
+    {
+      "check": "Cash selector respects prefix exclusion",
+      "result": "PASS"
+    },
+    {
+      "check": "Explicit add-back survives broader excluded prefix",
+      "result": "PASS"
+    },
+    {
+      "check": "Contra deductions retain negative leg",
+      "result": "PASS"
+    },
+    {
+      "check": "Government sukuk income Ehab GL preserved",
+      "result": "PASS"
+    },
+    {
+      "check": "Current independent government sukuk PL category is 65073",
+      "result": "PASS"
+    },
+    {
+      "check": "9 September independent government sukuk PL category is 65073",
+      "result": "PASS"
+    },
+    {
+      "check": "Government sukuk Systems original is 65037",
+      "result": "PASS"
+    },
+    {
+      "check": "Both-date sukuk mismatch is listed",
+      "result": "PASS"
+    },
+    {
+      "check": "Subsidiary original category mismatch retained",
+      "result": "PASS"
+    },
+    {
+      "check": "Original 90 cached Excel errors are each listed",
+      "result": "PASS"
+    },
+    {
+      "check": "75 credit-quality formula defects individually listed",
+      "result": "PASS"
+    },
+    {
+      "check": "Correct Table 30 and Table 43 totals are not flagged",
+      "result": "PASS"
+    },
+    {
+      "check": "Wrong asset currency totals E61 K61 flagged",
+      "result": "PASS"
+    },
+    {
+      "check": "Cached category alias in CONTRA D16 is not falsely missing",
+      "result": "PASS"
+    },
+    {
+      "check": "Independent future-maturity direction fixture",
+      "result": "PASS"
+    },
+    {
+      "check": "Independent exact-30-day boundary fixture misses strict bands",
+      "result": "PASS"
+    },
+    {
+      "check": "Maturity omitted boundaries all listed",
+      "result": "PASS"
+    },
+    {
+      "check": "ECB vocabulary 74 exact types retained",
+      "result": "PASS"
+    },
+    {
+      "check": "Absent codes remain gaps and are never synonyms",
+      "result": "PASS"
+    },
+    {
+      "check": "Repeated Ehab treasury GL retained for investigation",
+      "result": "PASS"
+    },
+    {
+      "check": "Source-only missing schedules recorded",
+      "result": "PASS"
+    },
+    {
+      "check": "Current version overlay is recorded, original kept",
+      "result": "PASS"
+    },
+    {
+      "check": "Every cited GL category reference is a nonblank numeric category row",
+      "result": "PASS"
+    },
+    {
+      "check": "Every ledger finding links to a listed finding",
+      "result": "PASS"
+    }
+  ]
+}

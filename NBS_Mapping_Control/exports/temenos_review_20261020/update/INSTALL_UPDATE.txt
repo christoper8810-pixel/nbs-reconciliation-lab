@@ -1,0 +1,14 @@
+NBS Temenos-source review update - 20 October 2026
+
+For tomorrow's presentation, open NBS_Temenos_Presentation.html directly or the mapping Excel workbook.
+
+To update your existing NBS tool:
+1. Close its black server window.
+2. Extract the NBS_Temenos_Update_20261020 folder inside your existing NBS tool folder.
+3. Double-click APPLY_UPDATE.cmd in that folder. It creates a backup before updating.
+4. Start your NBS tool. The menu includes Original Temenos logic; the builder has Load original Temenos cells.
+5. Generate a new run. Missing balance types are labelled PARTIAL; absent definitions remain unavailable.
+
+The update preserves your mapping versions, input-file selections, customer data and previous runs.
+It withdraws only the automatic forced-empty overdraft/loan assumption, unless marked owner_confirmed.
+The presentation review is a dated snapshot of the supplied source files, NBS mapping v17 and GL mapping v6/run54.

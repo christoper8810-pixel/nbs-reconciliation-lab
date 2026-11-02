@@ -1,0 +1,44 @@
+[
+  {
+    "document": "NBS01 Mapping Review Revised 22Oct2026.docx",
+    "result": "PASS",
+    "checks": [
+      "original hash unchanged",
+      "DOCX ZIP integrity and reader load",
+      "one general comment with valid anchors and relationships",
+      "all requested policies present",
+      "contradictory recommendations removed",
+      "unmodified source paragraphs preserved",
+      "table structures preserved"
+    ],
+    "sha256": "4ac96c64e3ff62ff7021272653f957bf220813edaa6721390aa5f0f31f0978a3"
+  },
+  {
+    "document": "NBS001 Additional Tables Review Revised 22Oct2026.docx",
+    "result": "PASS",
+    "checks": [
+      "original hash unchanged",
+      "DOCX ZIP integrity and reader load",
+      "one general comment with valid anchors and relationships",
+      "all requested policies present",
+      "contradictory recommendations removed",
+      "unmodified source paragraphs preserved",
+      "table structures preserved"
+    ],
+    "sha256": "8de7e4e3f1e7210f9f8aad950adaf38deaa456c8e89858d360a4e469a2ff4676"
+  },
+  {
+    "document": "LCR and NSFR Solo Review Revised 22Oct2026.docx",
+    "result": "PASS",
+    "checks": [
+      "original hash unchanged",
+      "DOCX ZIP integrity and reader load",
+      "one general comment with valid anchors and relationships",
+      "all requested policies present",
+      "contradictory recommendations removed",
+      "unmodified source paragraphs preserved",
+      "table structures preserved"
+    ],
+    "sha256": "acfc3828572dcae636ef0eb64e20fa440024c75c88026e9dd98b98a963e9ec3e"
+  }
+]

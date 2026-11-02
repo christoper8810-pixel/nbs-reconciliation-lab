@@ -1,0 +1,154 @@
+NBS mapping vs GL mapping – comparison by balance
+Prepared for the reporting workshop. NBS MAPPING - 6 Oct 2026 compared with GL mapping 30 Sept 2026 (sheets GL Report, GL Mapping, COA). IDs refer to the NBS Mapping Review.
+Reading: GL Report holds the configured GL line criteria; GL Mapping maps old Ethix GLs line by line; COA is the finance chart-of-accounts view. Row counts are rows in the GL Mapping sheet that name the type. "Not named" means the type is not listed explicitly (it may sit inside a range). Agreement: red = NBS or the GL sheets conflict on presentation; amber = narrower or naming difference; green = all agree.
+#
+Balance / item
+NBS mapping (6 Oct)
+GL Report (configured lines)
+GL Mapping sheet (Ethix → Transact)
+COA sheet
+Agreement
+A1
+ACCDEFERREDPFT
+Accrued income (Table 19, ASSET - 100 row 107) and deferred income (Table 30)
+Deferred income 2610
+Deferred income 2610 (319 rows)
+Accrued income 1935 (rows 1084, 1110, 1112) and deferred income 2610 (6 rows)
+GL Report = GL Mapping. COA and NBS place it on both sides
+B1
+RECDEFERREDPFT
+Accrued income (Table 19, ASSET - 100 row 107)
+Financing 1210–1240 (since 15 Sep)
+Financing 1210/1220/1230 and accrued income 1935 (146 rows)
+Accrued income 1935 (rows 1110, 1112)
+Only GL Report is unambiguous; GL Mapping lists both; COA and NBS use accrued income
+B1
+DUE, GRC, NAB, DEL, PRE DEFERREDPFT
+NAB, GRC, DUE only in Table 11; DEL, PRE not mapped
+Financing 1210–1240
+Financing 1210/1220/1230
+Not named
+GL sheets agree; NBS behind
+B2
+DELACCOUNT, PREACCOUNT
+Tables 8, 10, 44; missing in ASSET - 100 and Table 12
+Financing (PRINCIPAL2)
+Financing
+Not named individually
+GL sheets agree; NBS partly
+B2
+PDOACCOUNT
+Tables 8, 10, 44
+Financing (PRINCIPAL2)
+Not named
+Not named
+Owner group OUTSTANDING excludes it: decide
+A2 / B8
+Current-account DEBIT (1000–1999, incl. 1102) and 6513 DEBIT
+Overdraft = 1000–1004 only; DEBIT 1000–1999 also in Table 19 accrued income; 6513 not mapped
+Financing (CURRENT DEBIT, 6513 DEBIT); accrued income takes only DRINTEREST
+Financing 1210/1220/1240
+Financing ("Overdrawn current accounts", incl. 1102 and 6513 DEBIT)
+GL sheets agree; NBS differs
+B8
+13410 Commodity Murabaha (DEBIT)
+Table 19 Amounts Receivables (13400–13429)
+Financing – Corporate 1220
+Financing – Corporate 1220
+Financing – Corporate 1220
+GL sheets agree; NBS differs
+B9
+Credit cards 13101–13109
+13101, 13103, 13105 only
+Financing – Retail 1210 (RLUSAGE)
+Financing – Retail 1210
+Financing – Retail 1210
+NBS narrower
+C1
+Accrued profit (PRINCIPALPFT types)
+DUE, GRC, NAB
+ACC, DUE, DEL, PRE
+ACC, DUE, GRC, DEL, PRE
+ACCPRINCIPALPFT only named
+Four different lists (owner group AMORTIZED_EARNED: ACC, REC, GRC, DEL, PRE). NAB and RECPRINCIPALPFT in no GL sheet
+C2
+Late payment fees
+...LATEPAYMENTFEE names
+...LATEPAYMENTFEE (Receivables 1910)
+Both names, incl. ACCLATEPAYMENT (1910)
+ACCLATEPAYMENTFEE (1910)
+Only GL Mapping has the name used in CAL
+C3
+Suspended income: late payment SP, DEL/PRE profit SP
+Not mapped
+Suspended income 2615
+Suspended income 2615
+Suspended income 2615
+GL sheets agree; NBS missing
+B6
+PRINCIPALBALANCE, RENTALRECEIVABLE (Ijara)
+Table 19 Amounts Receivables
+Receivables 1910
+Receivables 1910
+Receivables 1910
+All agree
+B6
+ACCUMDEPRECN (Ijara)
+Not mapped
+Acc Depr/Amort-Financing 2620
+2620
+2620
+GL sheets agree; NBS missing
+A3
+ACCDEPOSITPFT
+Profit payable (Table 31); prepaid in Table 19 (6640–6649 inside, 6000–6999 outside Qatar)
+Profit payable 2655 and Advances & Prepayments 1920
+2655 (1,013 rows) and 1920 (71 rows)
+2655 and 1920
+GL uses both by design; NBS outside-Qatar rule is wider
+D3
+PAYACCOUNT
+Tables 23, 24, 25; not Table 45
+Deposits 2010–2040
+Deposits
+Deposits
+NBS Table 45 missing
+D3
+PAYDEPOSITPFT
+Not mapped
+Profit payable 2655
+Not named
+Not named
+Only GL Report maps it
+D4
+ACPTCONTRABL
+Table 35 Acceptances
+Acceptances 2680 (liability)
+Off-balance sheet 8510
+1965
+Three different lines in the GL sheets: resolve before changing NBS
+D4
+ACPT, ACPTBANK, DEFPAY
+Not in Table 35
+Letters of Credit 8010
+8510 / 8010 (DEFPAY also 2680)
+8510 / 8010
+GL sheets disagree
+GL gap
+6513 CREDIT (Wealth Investment Account)
+Deposit tables (ranges 6000–6999, to confirm)
+Not mapped: deposit ranges skip 6500–6599 (catch-all at 23 Sep)
+Deposits 2010–2040
+Current Accounts 2010–2040
+GL Report is the outlier
+B4
+Customer sector split
+Non-bank 2004; Public = all except 2004 and 4000–4004; Private = 4000–4004
+Retail 1000–1999, 4000–4004, 6000/6001/7000/7001; Corporate 2000–2003, 2006, 4005, 5001, 5002; Government 2005; Banks & FI 2004
+By sector, as GL Report
+Sector per COA row
+NBS sections do not match DKB segment codes
+Summary
+GL Report and GL Mapping agree in most rows. Exceptions: RECDEFERREDPFT (GL Mapping also lists accrued income), the accrued profit list, late payment fee names, acceptances, PAYDEPOSITPFT and PDOACCOUNT.
+The COA sheet is the outlier for ACCDEFERREDPFT and RECDEFERREDPFT and appears to predate the 15 Sep change. NBS follows the COA view in both.
+NBS deviates from the configured GL lines in 14 of the 20 rows; acceptances cannot be judged until the GL sheets agree. Decision for the workshop: confirm the GL Report as the reference, correct the GL sheets where they disagree with it (COA rows 1084, 1110, 1112; acceptances; 6513 CREDIT), then align NBS.

@@ -1,0 +1,15 @@
+{% extends "base.html" %}{% block title %}Explore sources{% endblock %}{% block content %}
+<h1>Explore sources</h1>
+<form class="filters" method="get"><div><label>Source</label><select name="dataset" onchange="this.form.dim.value='';this.form.submit()">
+{% for k,v in datasets.items() %}<option value="{{ k }}" {{ 'selected' if k==ds }}>{{ v.label }}</option>{% endfor %}</select></div>
+<div><label>Totals by</label><select name="dim">{% for k,v in datasets[ds].dims.items() %}<option value="{{ k }}" {{ 'selected' if k==dim }}>{{ v }}</option>{% endfor %}</select></div>
+<div><label>Contains</label><input type="text" name="q" value="{{ q }}" placeholder="code or description"></div><button>Show</button></form>
+{% if error %}<div class="flash error">{{ error }} – <a href="{{ url_for('rebuild_sources') }}">Sources</a></div>{% endif %}
+<p class="muted">{{ total }} values{% if total>400 %} (first 400 shown){% endif %}. Amounts in QAR as held in the source (balance types keep their T24 sign).
+{% if ds=='GL_LINES' %} “ECB amount” is each DKBGL line computed from its GL Report criteria on the ECB balances (button on the Sources page); “Trial balance” is the Ethix TB mapped to the line through the GL mapping sheet.{% endif %}</p>
+<div class="panel" style="overflow:auto"><table><tr><th>{{ datasets[ds].dims[dim] }}</th><th>Description</th><th>Records{% if ds=='GL_LINES' %} / criteria{% endif %}</th>
+<th>{% if ds=='GL_LINES' %}ECB amount{% else %}Amount{% endif %}</th>{% if ds=='GL_LINES' %}<th>Trial balance</th>{% endif %}<th>{% if ds=='GL_LINES' %}Criteria{% elif ds=='ECB' %}Largest balance types{% endif %}</th></tr>
+{% for r in rows %}<tr><td class="pre">{{ r.value if r.value is not none else '(blank)' }}</td><td>{{ r.description }}</td><td>{{ '{:,}'.format(r.records) }}</td>
+<td style="text-align:right">{{ '{:,.0f}'.format(r.amount) if r.amount is not none else '' }}</td>{% if ds=='GL_LINES' %}<td style="text-align:right">{{ '{:,.0f}'.format(r.tb_amount) if r.tb_amount is not none else '' }}</td>{% endif %}
+<td class="muted">{{ r.balance_types }}{% if r.notes %}<br><b>{{ r.notes }}</b>{% endif %}</td></tr>{% endfor %}</table></div>
+<p><a href="{{ url_for('rebuild_home') }}">Back to rebuild</a> · <a href="{{ url_for('rebuild_sources') }}">Sources</a></p>{% endblock %}

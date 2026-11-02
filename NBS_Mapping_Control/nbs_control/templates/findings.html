@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Findings review queue <span class="muted">(cell level, {{ rows|length }} items)</span></h1>
+<div class="panel"><h2>Classification</h2><table>{% for k, v in findings_meta.kinds.items() %}<tr><td><span class="tag">{{ k }}</span></td><td>{{ v }}</td></tr>{% endfor %}</table></div>
+{% for r in rows %}{% set f = r.entry %}
+<div class="panel" id="{{ f.item_id }}">
+  <h2>{{ f.finding_id }} · {{ f.sheet }}!{{ f.cell }} <span class="tag {{ 'bad' if f.kind.startswith('PROVEN') else 'warn' }}">{{ f.kind }}</span>
+  {% if not f.blocking %}<span class="tag">context range</span>{% endif %} <span class="tag {{ r.validity }}">{{ r.decision.action if r.decision else 'NO DECISION' }} · {{ r.validity }}</span></h2>
+  <p><b>{{ f.finding_title }}</b>{% if f.business_id %} · <a href="{{ url_for('mapping', business_id=f.business_id) }}">{{ f.business_id }}</a>{% endif %}</p>
+  {% if f.current_value is not none %}<pre>{{ f.current_value }}</pre>{% endif %}
+  <p class="muted">{{ f.implication }}</p>
+  <p><b>Required decision:</b> {{ f.required_owner_decision }}</p>
+  {% if f.owner_update %}<p><b>Owner update:</b> {{ f.owner_update }}</p>{% endif %}
+  <form method="post" class="filters"><input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="item_id" value="{{ f.item_id }}">
+    <div><label>Action</label><select name="action">{% for a in ACTIONS['FINDING'] %}<option>{{ a }}</option>{% endfor %}</select></div>
+    <div><label>Owner</label><input type="text" name="actor" required></div>
+    <div><label>Approved on</label><input type="date" name="approved_on"></div>
+    <div style="flex:1;min-width:200px"><label>Reason</label><input type="text" name="reason" required></div>
+    <div style="flex:1;min-width:160px"><label>Approval evidence</label><input type="text" name="approval_evidence"></div>
+    <div><button>Record</button></div></form>
+</div>{% endfor %}
+{% endblock %}

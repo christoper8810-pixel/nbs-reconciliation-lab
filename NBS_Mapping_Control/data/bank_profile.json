@@ -1,0 +1,2164 @@
+{
+  "All Deposit 30.09.2026..xlsx": {
+    "rows": 236428,
+    "counts": {
+      "Business_Date": [
+        [
+          "2026-09-30 00:00:00",
+          236428
+        ]
+      ],
+      "Rim_Class": [
+        [
+          "11",
+          125870
+        ],
+        [
+          "21",
+          50841
+        ],
+        [
+          "18",
+          15172
+        ],
+        [
+          "41",
+          8215
+        ],
+        [
+          "81",
+          5368
+        ],
+        [
+          "85",
+          4429
+        ],
+        [
+          "13",
+          4231
+        ],
+        [
+          "90",
+          4097
+        ],
+        [
+          "24",
+          2137
+        ],
+        [
+          "16",
+          1599
+        ],
+        [
+          "150",
+          1272
+        ],
+        [
+          "112",
+          1201
+        ],
+        [
+          "91",
+          1197
+        ],
+        [
+          "46",
+          1185
+        ],
+        [
+          "71",
+          1102
+        ],
+        [
+          "25",
+          1057
+        ],
+        [
+          "42",
+          733
+        ],
+        [
+          "19",
+          623
+        ],
+        [
+          "151",
+          578
+        ],
+        [
+          "83",
+          551
+        ],
+        [
+          "92",
+          527
+        ],
+        [
+          "47",
+          468
+        ],
+        [
+          "111",
+          416
+        ],
+        [
+          "23",
+          314
+        ],
+        [
+          "33",
+          312
+        ],
+        [
+          "65",
+          308
+        ],
+        [
+          "67",
+          302
+        ],
+        [
+          "141",
+          265
+        ],
+        [
+          "15",
+          206
+        ],
+        [
+          "52",
+          194
+        ],
+        [
+          "26",
+          165
+        ],
+        [
+          "6",
+          138
+        ],
+        [
+          "10",
+          132
+        ],
+        [
+          "113",
+          107
+        ],
+        [
+          "140",
+          99
+        ],
+        [
+          "82",
+          77
+        ],
+        [
+          "55",
+          73
+        ],
+        [
+          "48",
+          71
+        ],
+        [
+          "68",
+          70
+        ],
+        [
+          "40",
+          64
+        ],
+        [
+          "44",
+          60
+        ],
+        [
+          "201",
+          55
+        ],
+        [
+          "142",
+          52
+        ],
+        [
+          "7",
+          48
+        ],
+        [
+          "152",
+          47
+        ],
+        [
+          "38",
+          47
+        ],
+        [
+          "51",
+          44
+        ],
+        [
+          "14",
+          41
+        ],
+        [
+          "50",
+          26
+        ],
+        [
+          "43",
+          25
+        ],
+        [
+          "49",
+          23
+        ],
+        [
+          "74",
+          20
+        ],
+        [
+          "121",
+          19
+        ],
+        [
+          "160",
+          19
+        ],
+        [
+          "161",
+          14
+        ],
+        [
+          "8",
+          14
+        ],
+        [
+          "39",
+          13
+        ],
+        [
+          "28",
+          12
+        ],
+        [
+          "143",
+          12
+        ],
+        [
+          "60",
+          9
+        ],
+        [
+          "54",
+          9
+        ],
+        [
+          "29",
+          8
+        ],
+        [
+          "61",
+          7
+        ],
+        [
+          "30",
+          6
+        ],
+        [
+          "45",
+          5
+        ],
+        [
+          "123",
+          3
+        ],
+        [
+          "2",
+          3
+        ],
+        [
+          "122",
+          3
+        ],
+        [
+          "300",
+          3
+        ],
+        [
+          "5",
+          3
+        ]
+      ],
+      "Rim_Class_Description": [
+        [
+          "Regular",
+          125870
+        ],
+        [
+          "BB - Salary Cards",
+          50841
+        ],
+        [
+          "Ratib Salary Account",
+          15172
+        ],
+        [
+          "Prestige - Salary",
+          8215
+        ],
+        [
+          "Prestige - Plus AUM",
+          5368
+        ],
+        [
+          "Prime",
+          4429
+        ],
+        [
+          "Minor",
+          4231
+        ],
+        [
+          "Private Individual - Regular",
+          4097
+        ],
+        [
+          "Trading & Manufacturing",
+          2137
+        ],
+        [
+          "Staff",
+          1599
+        ],
+        [
+          "Other Services - SME Micro",
+          1272
+        ],
+        [
+          "Trading - SME Small",
+          1201
+        ],
+        [
+          "Private Individual - VIP",
+          1197
+        ],
+        [
+          "Prestige - Others",
+          1185
+        ],
+        [
+          "GIB - Gov",
+          1102
+        ],
+        [
+          "Contracting",
+          1057
+        ],
+        [
+          "Prestige-Asset Avg monthly bal",
+          733
+        ],
+        [
+          "Domestic Workers",
+          623
+        ],
+        [
+          "Other Services - SME Small",
+          578
+        ],
+        [
+          "Prestige Plus - High Earned",
+          551
+        ],
+        [
+          "Private Corporate - Regular",
+          527
+        ],
+        [
+          "Prestige - Staff",
+          468
+        ],
+        [
+          "Trading - SME Micro",
+          416
+        ],
+        [
+          "EX-Staff-Retail",
+          314
+        ],
+        [
+          "Home Business",
+          312
+        ],
+        [
+          "Private - Minor",
+          308
+        ],
+        [
+          "Private Corporate - VIP",
+          302
+        ],
+        [
+          "Construction - SME Micro",
+          265
+        ],
+        [
+          "Real Estate",
+          264
+        ],
+        [
+          "Joint Personal",
+          206
+        ],
+        [
+          "Financial Inst - Staff Related",
+          194
+        ],
+        [
+          "Outsourced Staff",
+          138
+        ],
+        [
+          "Staff Related - Regular",
+          132
+        ],
+        [
+          "Trading - SME Medium",
+          107
+        ],
+        [
+          "Prestige Plus - Wealth",
+          77
+        ],
+        [
+          "Locked Customer - Personal",
+          73
+        ],
+        [
+          "Prestige - Joint",
+          71
+        ],
+        [
+          "Private Individual - Staff",
+          70
+        ],
+        [
+          "Contracting - Staff Related",
+          64
+        ],
+        [
+          "Prestige - Spouses of Premium",
+          60
+        ],
+        [
+          "Digital Onboarding NonPersonal",
+          55
+        ],
+        [
+          "Construction - SME Small",
+          52
+        ],
+        [
+          "Staff Related - Minor",
+          48
+        ],
+        [
+          "Other Services - SME Medium",
+          47
+        ],
+        [
+          "Trad & Mfg - Staff Related",
+          47
+        ],
+        [
+          "EX-Staff-Prestige",
+          44
+        ],
+        [
+          "Youth Minor",
+          41
+        ],
+        [
+          "Financial Institutions",
+          26
+        ],
+        [
+          "Prestige - Self employed",
+          25
+        ],
+        [
+          "Prestige -Tharaa",
+          23
+        ],
+        [
+          "GIB - International",
+          20
+        ],
+        [
+          "Trans Indust - SME Micro",
+          19
+        ],
+        [
+          "SME - Micro - Staff Related",
+          19
+        ],
+        [
+          "SME - Small - Staff Related",
+          14
+        ],
+        [
+          "Staff Related Prestige",
+          14
+        ],
+        [
+          "Real Estate - Staff Related",
+          13
+        ],
+        [
+          "Real Estate -Personal",
+          12
+        ],
+        [
+          "Construction - SME Medium",
+          12
+        ],
+        [
+          "EX-Staff-Private",
+          9
+        ],
+        [
+          "Locked Customer - NonPersonal",
+          9
+        ],
+        [
+          "Trading &Manufactur -Personal",
+          8
+        ],
+        [
+          "Private - HNWI",
+          7
+        ],
+        [
+          "Strategic - TIG",
+          6
+        ],
+        [
+          "Prestige - Special category",
+          5
+        ],
+        [
+          "Trans Indust - SME Med",
+          3
+        ],
+        [
+          "GCC Non-Resident - Regular",
+          3
+        ],
+        [
+          "Trans Indust - SME Small",
+          3
+        ],
+        [
+          "Non-Bank Customer-Personal",
+          3
+        ],
+        [
+          "Private Strategic - TIG",
+          3
+        ],
+        [
+          "FinTech - Trad & Mfg",
+          3
+        ]
+      ],
+      "Sic_Code": [
+        [
+          "47004",
+          171423
+        ],
+        [
+          "44229",
+          34485
+        ],
+        [
+          "12104",
+          11296
+        ],
+        [
+          "42104",
+          2032
+        ],
+        [
+          "46004",
+          1629
+        ],
+        [
+          "44236",
+          1248
+        ],
+        [
+          "43027",
+          1072
+        ],
+        [
+          "11001",
+          890
+        ],
+        [
+          "45002",
+          882
+        ],
+        [
+          "43003",
+          517
+        ],
+        [
+          "45006",
+          510
+        ],
+        [
+          "12103",
+          478
+        ],
+        [
+          "44208",
+          417
+        ],
+        [
+          "14201",
+          411
+        ],
+        [
+          "11002",
+          396
+        ],
+        [
+          "44234",
+          318
+        ],
+        [
+          "42308",
+          313
+        ],
+        [
+          "44103",
+          305
+        ],
+        [
+          "43009",
+          284
+        ],
+        [
+          "42412",
+          275
+        ],
+        [
+          "43004",
+          259
+        ],
+        [
+          "12206",
+          252
+        ],
+        [
+          "44212",
+          246
+        ],
+        [
+          "42206",
+          223
+        ],
+        [
+          "24229",
+          210
+        ],
+        [
+          "43021",
+          205
+        ],
+        [
+          "14228",
+          202
+        ],
+        [
+          "24201",
+          188
+        ],
+        [
+          "44206",
+          163
+        ],
+        [
+          "43008",
+          161
+        ],
+        [
+          "12102",
+          156
+        ],
+        [
+          "44210",
+          147
+        ],
+        [
+          "44218",
+          142
+        ],
+        [
+          "43019",
+          129
+        ],
+        [
+          "45005",
+          127
+        ],
+        [
+          "43016",
+          117
+        ],
+        [
+          "44101",
+          115
+        ],
+        [
+          "12308",
+          113
+        ],
+        [
+          "44108",
+          110
+        ],
+        [
+          "47003",
+          108
+        ],
+        [
+          "44110",
+          106
+        ],
+        [
+          "14110",
+          103
+        ],
+        [
+          "43005",
+          102
+        ],
+        [
+          "44228",
+          102
+        ],
+        [
+          "44209",
+          95
+        ],
+        [
+          "48002",
+          94
+        ],
+        [
+          "44226",
+          93
+        ],
+        [
+          "14236",
+          86
+        ],
+        [
+          "13027",
+          85
+        ],
+        [
+          "44211",
+          82
+        ],
+        [
+          "44216",
+          79
+        ],
+        [
+          "44203",
+          76
+        ],
+        [
+          "12412",
+          74
+        ],
+        [
+          "44207",
+          73
+        ],
+        [
+          "43025",
+          71
+        ],
+        [
+          "43007",
+          71
+        ],
+        [
+          "44232",
+          70
+        ],
+        [
+          "43022",
+          65
+        ],
+        [
+          "44231",
+          64
+        ],
+        [
+          "44201",
+          60
+        ],
+        [
+          "44213",
+          57
+        ],
+        [
+          "24226",
+          57
+        ],
+        [
+          "14206",
+          55
+        ],
+        [
+          "47001",
+          54
+        ],
+        [
+          "43023",
+          54
+        ],
+        [
+          "44214",
+          53
+        ],
+        [
+          "12101",
+          53
+        ],
+        [
+          "43001",
+          51
+        ],
+        [
+          "44105",
+          50
+        ],
+        [
+          "22104",
+          47
+        ]
+      ],
+      "Acct_Type": [
+        [
+          "CUR",
+          92654
+        ],
+        [
+          "SAL",
+          50846
+        ],
+        [
+          "SAV",
+          48803
+        ],
+        [
+          "PSV",
+          24254
+        ],
+        [
+          "SSV",
+          8058
+        ],
+        [
+          "NTD",
+          4128
+        ],
+        [
+          "MSP",
+          2409
+        ],
+        [
+          "MSS",
+          1352
+        ],
+        [
+          "CAL",
+          1179
+        ],
+        [
+          "WMI",
+          880
+        ],
+        [
+          "YSV",
+          842
+        ],
+        [
+          "DHW",
+          620
+        ],
+        [
+          "POS",
+          371
+        ],
+        [
+          "PTA",
+          17
+        ],
+        [
+          "PIA",
+          9
+        ],
+        [
+          "PGY",
+          4
+        ],
+        [
+          "ESC",
+          2
+        ]
+      ],
+      "Class_Code": [
+        [
+          "61",
+          59182
+        ],
+        [
+          "51",
+          51256
+        ],
+        [
+          "3",
+          36127
+        ],
+        [
+          "36",
+          28610
+        ],
+        [
+          "16",
+          20871
+        ],
+        [
+          "136",
+          6006
+        ],
+        [
+          "116",
+          4206
+        ],
+        [
+          "201",
+          3473
+        ],
+        [
+          "91",
+          3390
+        ],
+        [
+          "103",
+          2904
+        ],
+        [
+          "71",
+          2502
+        ],
+        [
+          "4",
+          1818
+        ],
+        [
+          "511",
+          1442
+        ],
+        [
+          "141",
+          1209
+        ],
+        [
+          "202",
+          1086
+        ],
+        [
+          "150",
+          942
+        ],
+        [
+          "211",
+          752
+        ],
+        [
+          "151",
+          683
+        ],
+        [
+          "205",
+          557
+        ],
+        [
+          "104",
+          540
+        ],
+        [
+          "72",
+          539
+        ],
+        [
+          "6",
+          513
+        ],
+        [
+          "204",
+          472
+        ],
+        [
+          "411",
+          399
+        ],
+        [
+          "11",
+          390
+        ],
+        [
+          "203",
+          383
+        ],
+        [
+          "26",
+          366
+        ],
+        [
+          "305",
+          329
+        ],
+        [
+          "236",
+          314
+        ],
+        [
+          "5",
+          283
+        ],
+        [
+          "442",
+          276
+        ],
+        [
+          "105",
+          234
+        ],
+        [
+          "512",
+          214
+        ],
+        [
+          "106",
+          196
+        ],
+        [
+          "302",
+          193
+        ],
+        [
+          "311",
+          188
+        ],
+        [
+          "1",
+          170
+        ],
+        [
+          "152",
+          147
+        ],
+        [
+          "839",
+          134
+        ],
+        [
+          "536",
+          133
+        ],
+        [
+          "336",
+          126
+        ],
+        [
+          "301",
+          123
+        ],
+        [
+          "101",
+          119
+        ],
+        [
+          "412",
+          118
+        ],
+        [
+          "439",
+          118
+        ],
+        [
+          "303",
+          97
+        ],
+        [
+          "92",
+          96
+        ],
+        [
+          "341",
+          95
+        ],
+        [
+          "514",
+          86
+        ],
+        [
+          "117",
+          84
+        ],
+        [
+          "2",
+          84
+        ],
+        [
+          "842",
+          84
+        ],
+        [
+          "102",
+          81
+        ],
+        [
+          "212",
+          78
+        ],
+        [
+          "840",
+          73
+        ],
+        [
+          "638",
+          69
+        ],
+        [
+          "111",
+          68
+        ],
+        [
+          "838",
+          66
+        ],
+        [
+          "32",
+          55
+        ],
+        [
+          "93",
+          52
+        ],
+        [
+          "154",
+          51
+        ],
+        [
+          "214",
+          47
+        ],
+        [
+          "207",
+          44
+        ],
+        [
+          "119",
+          43
+        ],
+        [
+          "436",
+          41
+        ],
+        [
+          "438",
+          40
+        ],
+        [
+          "414",
+          37
+        ],
+        [
+          "173",
+          35
+        ],
+        [
+          "75",
+          31
+        ],
+        [
+          "208",
+          29
+        ]
+      ],
+      "residency": [
+        [
+          "Resident",
+          235590
+        ],
+        [
+          "NonResident",
+          838
+        ]
+      ],
+      "Segment": [
+        [
+          "Retail Banking",
+          173751
+        ],
+        [
+          "Corporate Banking",
+          55109
+        ],
+        [
+          "Private Banking",
+          6473
+        ],
+        [
+          "Govt Banking",
+          1086
+        ],
+        [
+          "TIG",
+          9
+        ]
+      ]
+    },
+    "duplicate_accounts": 0
+  },
+  "All Loan 30.09.2026.xlsx": {
+    "rows": 36007,
+    "counts": {
+      "Business_Date": [
+        [
+          "2026-09-30 00:00:00",
+          36007
+        ]
+      ],
+      "Rim_Class": [
+        [
+          "Regular",
+          18752
+        ],
+        [
+          "Ratib Salary Account",
+          8166
+        ],
+        [
+          "Prestige - Salary",
+          3875
+        ],
+        [
+          "Trading & Manufacturing",
+          1219
+        ],
+        [
+          "Prime",
+          1121
+        ],
+        [
+          "Contracting",
+          776
+        ],
+        [
+          "Staff",
+          536
+        ],
+        [
+          "Prestige - Plus AUM",
+          355
+        ],
+        [
+          "Private Individual - Regular",
+          199
+        ],
+        [
+          "Prestige - Staff",
+          125
+        ],
+        [
+          "Prestige Plus - High Earned",
+          124
+        ],
+        [
+          "Prestige - Others",
+          96
+        ],
+        [
+          "Prestige-Asset Avg monthly bal",
+          94
+        ],
+        [
+          "Real Estate",
+          81
+        ],
+        [
+          "Joint Personal",
+          76
+        ],
+        [
+          "GIB - Gov",
+          72
+        ],
+        [
+          "Private Individual - VIP",
+          60
+        ],
+        [
+          "Private Corporate - VIP",
+          52
+        ],
+        [
+          "EX-Staff-Retail",
+          27
+        ],
+        [
+          "Staff Related - Regular",
+          25
+        ],
+        [
+          "Prestige - Joint",
+          24
+        ],
+        [
+          "Prestige - Spouses of Premium",
+          21
+        ],
+        [
+          "Outsourced Staff",
+          21
+        ],
+        [
+          "Contracting - Staff Related",
+          20
+        ],
+        [
+          "Private Corporate - Regular",
+          18
+        ],
+        [
+          "Prestige - Self employed",
+          16
+        ],
+        [
+          "Private Individual - Staff",
+          12
+        ],
+        [
+          "Locked Customer - Personal",
+          9
+        ],
+        [
+          "EX-Staff-Prestige",
+          9
+        ],
+        [
+          "Real Estate -Personal",
+          6
+        ],
+        [
+          "Financial Inst - Staff Related",
+          3
+        ],
+        [
+          "FinTech - Trad & Mfg",
+          3
+        ],
+        [
+          "Trading &Manufactur -Personal",
+          2
+        ],
+        [
+          "Trad & Mfg - Staff Related",
+          2
+        ],
+        [
+          "Prestige -Tharaa",
+          2
+        ],
+        [
+          "Locked Customer - NonPersonal",
+          1
+        ],
+        [
+          "SME - Small - Staff Related",
+          1
+        ],
+        [
+          "Trans Indust - SME Med",
+          1
+        ],
+        [
+          "Construction - SME Small",
+          1
+        ],
+        [
+          "Trading - SME Small",
+          1
+        ],
+        [
+          "GIB - International",
+          1
+        ],
+        [
+          "Staff Related Prestige",
+          1
+        ],
+        [
+          "Trans Indust - SME Small",
+          1
+        ]
+      ],
+      "Sector_Code": [
+        [
+          "47004 PVT-Others",
+          26185
+        ],
+        [
+          "12104 GOV-Others",
+          3741
+        ],
+        [
+          "44229 PVT-Personal",
+          2124
+        ],
+        [
+          "45002 PVT-Construction",
+          423
+        ],
+        [
+          "42104 PVT-Others",
+          386
+        ],
+        [
+          "45006 PVT-Others",
+          284
+        ],
+        [
+          "46004 PVT-Others",
+          232
+        ],
+        [
+          "43003 PVT-Food",
+          193
+        ],
+        [
+          "43004 PVT-Cloths & Leather Prod",
+          163
+        ],
+        [
+          "14201 GOV-Air Transportation",
+          142
+        ],
+        [
+          "11001 GOV-Ministry of Finance",
+          138
+        ],
+        [
+          "43027 PVT-Others",
+          117
+        ],
+        [
+          "12103 GOV-Production",
+          102
+        ],
+        [
+          "12206 GOV-Others",
+          88
+        ],
+        [
+          "44236 PVT-Others",
+          74
+        ],
+        [
+          "43016 PVT-Health Products",
+          67
+        ],
+        [
+          "24201 GI-Air Transportation",
+          64
+        ],
+        [
+          "44218 PVT-Computer",
+          64
+        ],
+        [
+          "42301 PVT-Steel",
+          64
+        ],
+        [
+          "43009 PVT-Cars and Spare Parts",
+          58
+        ],
+        [
+          "45003 PVT-Electrical Contracts",
+          55
+        ],
+        [
+          "11002 GOV-Other Gov. Inst",
+          51
+        ],
+        [
+          "43021 PVT-Building Materials",
+          50
+        ],
+        [
+          "44206 PVT-Education",
+          46
+        ],
+        [
+          "44210 PVT-Health and pharmacy",
+          46
+        ],
+        [
+          "24229 GI-Personal",
+          44
+        ],
+        [
+          "43019 PVT-Electronc & Tools Mac",
+          44
+        ],
+        [
+          "44108 PVT-Other banks",
+          43
+        ],
+        [
+          "43007 PVT-Chemical & its Prod",
+          40
+        ],
+        [
+          "43008 PVT-Machines and Equip.",
+          40
+        ],
+        [
+          "43023 PVT-Cooperatve & Grocery",
+          39
+        ],
+        [
+          "14110 GOV-Others",
+          38
+        ],
+        [
+          "13027 GOV-Others",
+          36
+        ],
+        [
+          "14236 GOV-Others",
+          36
+        ],
+        [
+          "42406 PVT-Plastic",
+          36
+        ],
+        [
+          "44217 PVT-Doctors",
+          34
+        ],
+        [
+          "12308 GOV-Others",
+          30
+        ],
+        [
+          "44234 PVT-Real Estate Services",
+          30
+        ],
+        [
+          "13019 GOV-Electronc & Tools Mac",
+          30
+        ],
+        [
+          "43005 PVT-Furniture & Wood Prod",
+          29
+        ],
+        [
+          "42403 PVT-Furniture & Wood Prod",
+          28
+        ],
+        [
+          "12412 GOV-Others",
+          27
+        ],
+        [
+          "43013 PVT-Steel",
+          26
+        ],
+        [
+          "12102 GOV-Drilling Oil wells",
+          23
+        ],
+        [
+          "42206 PVT-Others",
+          22
+        ],
+        [
+          "44201 PVT-Air Transportation",
+          21
+        ],
+        [
+          "14206 GOV-Education",
+          18
+        ],
+        [
+          "42308 PVT-Others",
+          17
+        ],
+        [
+          "17004 GOV-Others",
+          16
+        ],
+        [
+          "42412 PVT-Others",
+          13
+        ],
+        [
+          "15006 GOV-Others",
+          13
+        ],
+        [
+          "44216 PVT-Entertainment",
+          12
+        ],
+        [
+          "45005 PVT-Maintenance contracts",
+          12
+        ],
+        [
+          "12201 GOV-Pressed Gas",
+          11
+        ],
+        [
+          "14210 GOV-Health and pharmacy",
+          11
+        ],
+        [
+          "47003 PVT-Personal Loans",
+          10
+        ],
+        [
+          "44209 PVT-Hotels",
+          10
+        ],
+        [
+          "16004 GOV-Others",
+          10
+        ],
+        [
+          "46002 PVT-Commercial housing",
+          10
+        ],
+        [
+          "42409 PVT-Bricks and Marbles",
+          9
+        ],
+        [
+          "44203 PVT-Land Transportation",
+          8
+        ],
+        [
+          "13016 GOV-Health Products",
+          8
+        ],
+        [
+          "48002 PVT-Outside Qatar",
+          8
+        ],
+        [
+          "44208 PVT-Restaurant",
+          7
+        ],
+        [
+          "14205 GOV-Telecommunication",
+          7
+        ],
+        [
+          "12101 GOV-Oil Exploration",
+          7
+        ],
+        [
+          "44103 PVT-Investment Companies",
+          6
+        ],
+        [
+          "44214 PVT-Car Rent",
+          6
+        ],
+        [
+          "42103 PVT-Production",
+          5
+        ],
+        [
+          "42204 PVT-Drilling Gas Wells",
+          5
+        ]
+      ],
+      "Risk_Rating": [
+        [
+          "1 Prime",
+          28721
+        ],
+        [
+          "4 Satisfactory",
+          3729
+        ],
+        [
+          "5 Adequate",
+          1286
+        ],
+        [
+          "10 Loss",
+          925
+        ],
+        [
+          "6 Watch list",
+          776
+        ],
+        [
+          "1 Excellent",
+          166
+        ],
+        [
+          "8 Substandard",
+          165
+        ],
+        [
+          "3 Good",
+          129
+        ],
+        [
+          "9 Doubtful",
+          88
+        ],
+        [
+          "2 Strong",
+          13
+        ],
+        [
+          "7 Special Mention",
+          9
+        ]
+      ],
+      "Account_Type": [
+        [
+          "MUR",
+          31851
+        ],
+        [
+          "RCM",
+          1624
+        ],
+        [
+          "IJR",
+          1182
+        ],
+        [
+          "SAF",
+          608
+        ],
+        [
+          "TWM",
+          457
+        ],
+        [
+          "CLM",
+          168
+        ],
+        [
+          "QRH",
+          97
+        ],
+        [
+          "MOS",
+          8
+        ],
+        [
+          "SYN",
+          6
+        ],
+        [
+          "BSA",
+          4
+        ],
+        [
+          "IST",
+          2
+        ]
+      ],
+      "Account_Class": [
+        [
+          "361",
+          26972
+        ],
+        [
+          "388",
+          3594
+        ],
+        [
+          "21",
+          835
+        ],
+        [
+          "92",
+          813
+        ],
+        [
+          "11",
+          613
+        ],
+        [
+          "36",
+          557
+        ],
+        [
+          "136",
+          506
+        ],
+        [
+          "186",
+          456
+        ],
+        [
+          "61",
+          415
+        ],
+        [
+          "191",
+          187
+        ],
+        [
+          "86",
+          169
+        ],
+        [
+          "71",
+          162
+        ],
+        [
+          "1",
+          135
+        ],
+        [
+          "371",
+          97
+        ],
+        [
+          "31",
+          83
+        ],
+        [
+          "364",
+          75
+        ],
+        [
+          "365",
+          62
+        ],
+        [
+          "1436",
+          58
+        ],
+        [
+          "1336",
+          16
+        ],
+        [
+          "391",
+          15
+        ],
+        [
+          "201",
+          13
+        ],
+        [
+          "487",
+          13
+        ],
+        [
+          "1036",
+          13
+        ],
+        [
+          "187",
+          13
+        ],
+        [
+          "87",
+          12
+        ],
+        [
+          "91",
+          11
+        ],
+        [
+          "586",
+          11
+        ],
+        [
+          "390",
+          10
+        ],
+        [
+          "236",
+          7
+        ],
+        [
+          "51",
+          7
+        ],
+        [
+          "2036",
+          6
+        ],
+        [
+          "336",
+          6
+        ],
+        [
+          "1536",
+          6
+        ],
+        [
+          "137",
+          6
+        ],
+        [
+          "1041",
+          5
+        ],
+        [
+          "2336",
+          5
+        ],
+        [
+          "372",
+          4
+        ],
+        [
+          "886",
+          4
+        ],
+        [
+          "2436",
+          4
+        ],
+        [
+          "337",
+          3
+        ],
+        [
+          "437",
+          3
+        ],
+        [
+          "392",
+          3
+        ],
+        [
+          "286",
+          2
+        ],
+        [
+          "101",
+          2
+        ],
+        [
+          "2039",
+          2
+        ],
+        [
+          "488",
+          2
+        ],
+        [
+          "1837",
+          2
+        ],
+        [
+          "12",
+          1
+        ],
+        [
+          "486",
+          1
+        ],
+        [
+          "986",
+          1
+        ],
+        [
+          "52",
+          1
+        ],
+        [
+          "500",
+          1
+        ],
+        [
+          "736",
+          1
+        ],
+        [
+          "374",
+          1
+        ],
+        [
+          "375",
+          1
+        ],
+        [
+          "587",
+          1
+        ],
+        [
+          "203",
+          1
+        ],
+        [
+          "393",
+          1
+        ],
+        [
+          "81",
+          1
+        ]
+      ],
+      "Residency": [
+        [
+          "Resident",
+          35983
+        ],
+        [
+          "NonResident",
+          24
+        ]
+      ]
+    },
+    "duplicate_accounts": 0
+  },
+  "Historical_Trial_Balance  30.09.2026..xlsx": {
+    "rows": 6308,
+    "counts": {
+      "Cur": [
+        [
+          "QAR",
+          4603
+        ],
+        [
+          "None",
+          507
+        ],
+        [
+          "USD",
+          409
+        ],
+        [
+          "EUR",
+          168
+        ],
+        [
+          "GBP",
+          129
+        ],
+        [
+          "SAR",
+          45
+        ],
+        [
+          "AED",
+          39
+        ],
+        [
+          "KWD",
+          29
+        ],
+        [
+          "AUD",
+          26
+        ],
+        [
+          "BHD",
+          25
+        ],
+        [
+          "JPY",
+          25
+        ],
+        [
+          "OMR",
+          24
+        ],
+        [
+          "CHF",
+          24
+        ],
+        [
+          "SGD",
+          23
+        ],
+        [
+          "CAD",
+          23
+        ],
+        [
+          "TRY",
+          22
+        ],
+        [
+          "JOD",
+          22
+        ],
+        [
+          "INR",
+          22
+        ],
+        [
+          "HKD",
+          21
+        ],
+        [
+          "EGP",
+          20
+        ],
+        [
+          "PKR",
+          19
+        ],
+        [
+          "SEK",
+          19
+        ],
+        [
+          "ZAR",
+          18
+        ],
+        [
+          "DKK",
+          17
+        ],
+        [
+          "NOK",
+          15
+        ],
+        [
+          "CNY",
+          14
+        ]
+      ]
+    },
+    "duplicate_accounts": 0
+  }
+}

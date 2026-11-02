@@ -1,0 +1,153 @@
+LDR C:\Users\Test\Downloads\LDR & LTD - Mapping Review.docx
+REVISION COUNTS []
+CORE <?xml version="1.0" encoding="UTF-8" standalone="yes"?><cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:creator>Un-named</dc:creator><cp:lastModifiedBy>Un-named</cp:lastModifiedBy><cp:revision>1</cp:revision><dcterms:created xsi:type="dcterms:W3CDTF">2026-10-22T11:28:59.074Z</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">2026-10-22T11:28:59.085Z</dcterms:modified></cp:coreProperties>
+COMMENTS
+ACCEPTED BODY
+[0] LDR & LTD – Mapping Review
+[1] DKB CBS – QCB credit-to-deposit ratio reporting (LDR and Form 4, LTD breach report). Prepared for DKB Finance, October 2026.
+[2] 1. Scope and evidence
+[3] Mapping reviewed: LDR & LTD (updated Mapping).xlsx: sheet LDR (ratio with weighted funding) and sheet LTD (Form 4, daily breach and penalty report).
+[4] Balances: CAL extract at 31 Aug 2026 and trial balance at 23 Sep 2026, UAT, used to test which balances the rules reach.
+[5] Agreed rules applied: as agreed with DKB Finance on 21 Oct: Murabaha reported gross (principal plus profit); 3713 (CLM) offset by 6050 (CLS) for principal and profit; 6050 excluded from deposits.
+[6] Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures; the values in column C of the LDR sheet are sample values and were not tested.
+[7] 2. Priorities
+[8] #
+[9] Issue
+[10] Why first
+[11] 1
+[12] Penalty bands applied to the wrong side of the limit (C1)
+[13] Penalties would be calculated when the ratio is below 100% and never when it is breached
+[14] 2
+[15] Credit is principal only, while deferred profit is deducted (A1, A2)
+[16] Net credit understated by up to the unearned profit (ACCDEFERREDPFT, about 14.7bn at 31 Aug)
+[17] 3
+[18] Funding side incomplete (B5, B6)
+[19] Weights not applied and other borrowings not included in the denominator total
+[20] 4
+[21] Deposits not aligned with the agreed rules (B1, B2)
+[22] 6050 still included; non-existent balance type; matured deposits missing
+[23] 3. Issues
+[24] A. Numerator: credit
+[25] #
+[26] Issue
+[27] Where
+[28] Impact
+[29] Fix
+[30] A1
+[31] Total direct facilities take principal only, for categories 3000–3999
+[32] LDR L8; LTD B6 (CUR, DUE, NAB, GRC, PDO, DEL, PRE ACCOUNT)
+[33] Deferred profit receivable (REC and aged DEFERREDPFT, about 15.8bn at 31 Aug), the 3713/6050 offset, credit cards and overdrafts are not included
+[34] Use the corrected NBS01 credit facilities definition (gross Murabaha, 3713/6050 offset, cards, overdrafts)
+[35] A2
+[36] The deferred income deduction includes aged deferred profit and is applied to a principal-only total
+[37] LDR L12: ACCDEFERREDPFT plus DUE, GRC, PDO, NAB, DEL, PRE DEFERREDPFT; categories 15501, 15510, 13800–13802 CREDIT
+[38] Unearned profit is deducted although it was never included in credit, understating net credit by up to about 14.7bn (31 Aug); aged deferred profit, which is a receivable, is treated as deferred income
+[39] Once credit is gross (A1), deduct ACCDEFERREDPFT only; keep the aged types in credit. Confirm 13800/13801 (card commissions, about 128m at 23 Sep)
+[40] A3
+[41] Provision categories include non-financing items and miss one financing category
+[42] LDR L10; LTD C6: 15130, 15133–15135, 15151–15154, 13750–13752, 15200–15299
+[43] Includes 13750 ECL – Investments and 15201 Local Cheques sent for Collection Contra (about 113m, not a provision); excludes 15150 Specific Provision on Loans – Standard (about 19m) (23 Sep)
+[44] List financing provision categories explicitly (e.g. 15150–15154, 15211, 15231, 15251); exclude investment and contra categories
+[45] A4
+[46] Income in suspense omits late payment fees
+[47] LDR L11 (SP list complete for profit, including DEL and PRE)
+[48] ACCLATEPAYMENTSP (about 1.0bn at 31 Aug) not deducted
+[49] Add the late payment SP types, consistent with NBS01
+[50] A5
+[51] Acceptances use a narrower range and a different balance type than NBS
+[52] LDR L9: 23000–23099, ACPTCONTRA
+[53] 23100–23999 excluded (ACPTCONTRA about 48m, ACPT about 280m at 31 Aug); NBS Table 35 uses ACPTCONTRABL over 23000–23999
+[54] Align with the corrected NBS acceptances definition; confirm whether bank acceptances (ACPTBANK, about 6.4bn) belong
+[55] B. Denominator: deposits and funding
+[56] #
+[57] Issue
+[58] Where
+[59] Impact
+[60] Fix
+[61] B1
+[62] Deposit balance types include a non-existent type and miss matured deposits
+[63] LDR L14; LTD E6: CREDIT, CURACCOUNT, CURBALANCE
+[64] CURBALANCE does not exist in CAL; PAYACCOUNT (about 340m at 31 Aug) not selected
+[65] Use CREDIT, CURACCOUNT and PAYACCOUNT
+[66] B2
+[67] 6050 (Cash Line Saving) is included in deposits
+[68] LDR L14; LTD E6 (categories 6000–6999 except 6500–6503)
+[69] About 1.75bn (23 Sep) counted as deposits, contrary to the agreed 3713/6050 offset
+[70] Exclude 6050 from deposits
+[71] B3
+[72] Cash margins are excluded from deposits
+[73] LDR L14; LTD E6: excluding 6500–6503
+[74] About 11.35bn (23 Sep), mostly 6502 Cash Margin – Corp
+[75] DKB Finance to confirm the exclusion against the QCB definition
+[76] B4
+[77] "Outside Qatar only" and the exclusion of branches and subsidiaries are not in the rules
+[78] LDR L16–L18 (due to banks), L24–L26 (other borrowings); footnote *
+[79] Domestic counterparties and related entities may be included
+[80] Add a counterparty residence filter and exclude related entities
+[81] B5
+[82] Funding weights (25%, 50%, 100%) are not applied
+[83] LDR C15 = SUM(C16:C18); C19 = SUM(C20:C22)
+[84] Funding counted at 100% in every bucket, unless the sample values are already weighted
+[85] Apply the weights in the calculation
+[86] B6
+[87] Other borrowings are not included in the denominator
+[88] LDR C23 has no formula; C29 = C15 + C14 + C19 + C23
+[89] Rows 24–26 omitted from the total
+[90] Set C23 to the weighted sum of C24:C26
+[91] B7
+[92] Sukuk source appears to select sukuk held, not sukuk issued
+[93] LDR L20–L22: CRSSUKUKT where PLEDGEAGAINST = Borrowing
+[94] Funding from sukuk issued by DKB may be missed
+[95] Confirm the source for sukuk issued
+[96] B8
+[97] Maturity buckets exclude the boundaries
+[98] LDR L16–L26: "greater than 1Y and less than 2Y" etc.
+[99] Funding maturing exactly at 1, 2 or 3 years falls into no bucket
+[100] Use "1 year or more" (≥) boundaries
+[101] C. LTD breach report (Form 4)
+[102] #
+[103] Issue
+[104] Where
+[105] Impact
+[106] Fix
+[107] C1
+[108] Penalty bands are applied to negative excess
+[109] LTD H6: excess = ratio − 100%; bands BETWEEN −0.05 AND 0, −0.10 AND −0.05, −0.20 AND −0.10, < −0.20
+[110] Penalties calculated when the ratio is below the limit; none when it is breached
+[111] Apply the bands to positive excess (0–5%, 5–10%, 10–20%, above 20%); confirm amounts against the QCB circular
+[112] C2
+[113] Deductions are incomplete
+[114] LTD C6 deducts provisions only; the header lists provisions, accrued interest and deferred profits
+[115] Net credit in Form 4 differs from LDR
+[116] Use the same deductions as LDR (after A2–A4)
+[117] C3
+[118] Column labels are swapped
+[119] LTD D5 "Ratio Denominator: Net Credit (3)", E5 "Ratio Numerator: Customer Deposits (4)", ratio = (3)/(4)
+[120] Misleading layout
+[121] Correct the labels
+[122] D. General
+[123] #
+[124] Issue
+[125] Where
+[126] Impact
+[127] Fix
+[128] D1
+[129] Each line carries both an NBS01 item reference and a CAL or ECB rule
+[130] LDR F/G columns (e.g. 1-100-105, 3-300-30103, 2-029-20701, 2-200-20707, 2-200-20801, 2-200-203) next to L8–L14
+[131] Unclear which is implemented; results can differ from NBS01
+[132] Prefer referencing the corrected NBS01 lines, so LDR and NBS01 stay consistent
+[133] D2
+[134] Typos in rule text
+[135] "CATERGORY", "CURACCOUT", "local.debit.mvt"
+[136] Risk if implemented literally
+[137] Correct the rule text
+[138] 4. What is consistent
+[139] Currency handling (local currency for QAR, local equivalent for foreign currency) is applied uniformly.
+[140] The principal list includes all seven types (CUR, GRC, DUE, PDO, NAB, DEL, PRE ACCOUNT).
+[141] Income in suspense lists the SP profit types completely, including DEL and PRE.
+[142] 5. Next steps
+[143] Correct C1 (penalty bands) and B5/B6 (weights, other borrowings) immediately; these are calculation errors independent of the mapping.
+[144] Align credit, deductions, acceptances and deposits with the corrected NBS01 definitions (A1–A5, B1, B2), preferably by referencing the NBS01 lines (D1).
+[145] DKB Finance to confirm B3 (cash margins), B7 (sukuk source) and the card commission categories in A2.
+[146] Rerun and reconcile net credit and deposits to the NBS01 balance sheet at the same date.
+NON CJ REVISIONS

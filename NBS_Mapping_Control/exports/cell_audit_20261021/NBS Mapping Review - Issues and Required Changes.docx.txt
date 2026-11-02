@@ -1,0 +1,145 @@
+NBS Mapping Review – Issues and Required Changes
+DKB CBS – QCB regulatory reporting (NBS01 / NBS001). Draft for discussion, 14 October 2026.
+1. Scope and evidence
+Mapping reviewed: NBS MAPPING - 6 Oct 2026.xlsx (copy last saved 7 Oct 2026). A second version (last modified 28 Sep) is in circulation and differs at least in Tables 12 and 40.
+Balances: CAL extract (CONSOLIDATE.ASST.LIAB) at 31 Aug 2026, UAT. Amounts in QAR equivalent; two records with impossible amounts excluded.
+Reports: NBS01 runs dated 31 Aug 2026 and 7 Oct 2026.
+Ledger: Historical trial balance at 23 Sep 2026 (balances apart from one broken record).
+Caveat. Amounts are indicative (UAT data, dates differ between sources). Cell references refer to the 6 Oct workbook and must be checked against the configured version before changes are made.
+2. Priorities
+#
+Issue
+Why first
+1
+ACCDEFERREDPFT mapped as both asset and liability (A1)
+About 14.7bn double use; confirmed in the 31 Aug run and by the trial balance
+2
+DEL and PRE principal missing from the balance sheet line and Table 12 (B2)
+About 7.7bn missing from credit facilities (in the 7 Oct-saved copy)
+3
+Public Sector rule includes individuals (B4)
+Changes every sector-split table; sector codes must be confirmed before other sector-related changes
+3. Issues
+A. Double counting
+#
+Issue
+Where
+Impact
+Fix
+A1
+ACCDEFERREDPFT is mapped as an asset (netted against RECDEFERREDPFT in accrued income) and as a liability (deferred income)
+Table 19 C10, D10, F10, G10, M10, P10; ASSET - 100 row 107; Table 30 B7, E7
+About 14.7bn. Assets understated. Trial balance deferred income (14.2bn) matches Table 30
+Remove from Table 19 and ASSET - 100 row 107; keep in Table 30
+A2
+DEBIT on categories 1000–1999 in accrued income also picks up overdrawn current accounts
+Table 19 C10 (and the same cells as A1)
+280.4m under the workbook rules (categories 1000–1004); the 31 Aug report shows 289.8m in Overdraft
+Limit DEBIT to categories 13440–13459
+B. Credit facilities
+#
+Issue
+Where
+Impact
+Fix
+B1
+Deferred profit (RECDEFERREDPFT and the aged DUE, GRC, NAB, DEL, PRE DEFERREDPFT types) is not in any credit facility table
+Tables 8, 10, 12, 44; ASSET - 100
+15.8bn. Of the aged types (0.5bn), NAB, GRC and DUE appear only in Table 11 (deferred income, credit classification); DEL and PRE are not mapped anywhere
+Financial Control to decide: Table 8 (as requested) or accrued income (the trial balance accrued income line, 16.3bn, appears to include it); then apply consistently
+B2
+Principal balance-type lists differ between tables
+ASSET - 100 and Table 12 lack DELACCOUNT and PREACCOUNT; Tables 8, 10, 44 include them (7 Oct-saved copy; the 28 Sep copy includes them in Tables 12 and 40)
+7.7bn missing from the balance sheet credit facilities line
+One list of seven principal types for all credit facility tables
+B3
+Murabaha line covers only 3701, 3717, 3704; 3713 (15.8bn), 3709, 3715 and 3740 fall into "Others"
+Table 8 rows 20, 37, 54 and Others rows 27, 44, 61; Table 10
+85.6bn of murabaha reported as "Others"
+Add the categories to the Murabaha line and to the Others exclusion lists in the same change; otherwise double counted
+B4
+Public Sector is defined as all sectors except 2004 and 4000–4004, which includes individuals
+Table 8 and all tables using the same split
+7 Oct run shows retail murabaha (7.7bn) under Public Sector
+Confirm DKB sector codes; redefine the sector sections
+B5
+Table 9 has no balance-type filter
+Table 9 (categories 3000–3899 by industry)
+Table 9 exceeds Table 8 by 18bn (31 Aug) and 64bn (7 Oct)
+Apply the same balance-type list as Table 8
+B6
+Ijara specific balances sit outside the Ijara line, which lists principal types only
+Table 8; Table 19 row 12 (C12, F12, M12) and P10
+PRINCIPALBALANCE (+515m) and RENTALRECEIVABLE (+162m) are mapped in Table 19 Amounts Receivables; ACCUMDEPRECN (-677m) is not mapped anywhere
+Clarify with Temenos what these represent and where the Ijara asset should be reported (Ijara depreciation topic)
+B7
+Workbook and report disagree on individual lines
+Diminishing Musharaka is "No Product Defined" but shows 52.8m; "Loans" rows 14, 31, 48 have no rule but showed 287m on 31 Aug
+Configuration differs from the workbook
+Systems Ltd to explain and align
+C. Other assets and profit
+#
+Issue
+Where
+Impact
+Fix
+C1
+ACCPRINCIPALPFT, DELPRINCIPALPFT and PREPRINCIPALPFT are not mapped anywhere (ACCPRINCIPALPFT appears only as its SP variant)
+Table 19 accrued income
+808.7m
+Add to Table 19 accrued income alongside DUE, GRC and NAB PRINCIPALPFT
+C2
+Late payment fee names do not match CAL: the mapping lists ...LATEPAYMENTFEE, CAL holds ACCLATEPAYMENT and ACCLATEPAYMENTSP
+Table 19 Amounts Receivables
+1.4bn and 1.0bn likely read as zero
+Correct the balance-type names; check ECB naming
+C3
+General completeness gaps
+All tables
+36 balance types with balances at 31 Aug are never named in the mapping (many legitimately out of scope, e.g. commitments and LC contingent types); 26 balance-type names in the mapping do not exist in CAL (e.g. the LATEPAYMENTFEE and ADMINFEE families, PDOACCOUNT)
+Review both lists 
+C4
+Table 19 P10 differs from the other Accrued Income cells: the rule is repeated twice and extended with further types, including PRINCIPALBALANCE and RENTALRECEIVABLE
+Table 19 P10
+Possible double counting within that column
+Align P10 with C10, D10, F10, G10, M10
+D. Cash, deposits, acceptances, liabilities
+#
+Issue
+Where
+Impact
+Fix
+D1
+Balance sheet cash (101) and other assets (109) are zero in both runs while Table 1 shows 451bn (31 Aug) and 578bn (7 Oct) of cash
+ASSET - 100 / Table 100
+Asset side of the balance sheet incomplete
+Link balance sheet lines to their breakdown tables
+D2
+Cash reads Asset Type = DEBIT only; no rule for cash outside Qatar
+Table 1
+Defensible: all 12 companies are in Qatar
+Document the assumption; check for cash accounts with credit balances
+D3
+Matured deposits (PAYACCOUNT) are missing from Table 45; deposit profit payable PAYDEPOSITPFT is not mapped anywhere (ACCDEPOSITPFT is in Table 31); debit balances on 6050 Cash Line Saving are not placed
+Table 45; all tables; category 6050
+PAYACCOUNT 340m; PAYDEPOSITPFT 509.5m; 6050 debit 571m
+Add PAYACCOUNT to Table 45; map PAYDEPOSITPFT (e.g. Table 31 with ACCDEPOSITPFT); decide where 6050 debit balances belong
+D4
+Acceptances read ACPTCONTRABL only
+Table 35 line 03
+263.6m read; CAL also holds ACPT (279.7m), ACPTBANK (6.4bn), DEFPAY (6.4bn)
+Confirm which types belong in acceptances and which in other contingent lines
+D5
+Liabilities side does not hang together (7 Oct run)
+Liabilities sheet / Table 200
+Other Liabilities (277m) smaller than its sub-line Deferred Income (14.0bn); Other Borrowings and AT1 both 1,820.8m; Due to Banks 0 vs 9.9bn in the trial balance; Sukuk 22.4bn vs 9.7bn on the trial balance financing liabilities line
+Review the Liabilities sheet rules
+4. Not mapping issues, but blocking testing
+Broken record under category 3702 (about -128.6 trillion) in the 23 Sep trial balance (catch-all DKBGL.5998). A value of similar size (about 128.2 trillion) appears in Interest / Income in Suspense in the 7 Oct run.
+Contingent pair of about 9 trillion each side on 23201 Inward Collection Documents in the 23 Sep trial balance.
+Large suspense balances in the trial balance (309.7bn assets, 185.5bn liabilities), which make totals unrealistic regardless of the mapping.
+5. Next steps
+Systems Ltd to confirm which mapping version is configured for NBS01 and NBS001.
+Financial Control to decide the open presentation points: B1 (deferred profit), B3 (murabaha classification), B4 (sector codes), B6 (Ijara), D3 (deposits) and D4 (acceptances).
+Raise one change request covering A1, A2, B2, B3, B5, C1, C2, C4 and D3, with current rule, new rule and impact per cell.
+Rerun NBS01 with a trial balance at the same date and reconcile each Table 100 and Table 200 line.

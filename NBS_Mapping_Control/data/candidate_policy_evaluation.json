@@ -1,0 +1,62 @@
+{
+  "groups": {
+    "CLM": {
+      "accounts": 161,
+      "within_1_QAR": 160,
+      "difference_QAR": 138009.4799999485,
+      "max_absolute_difference": 138009.4800000009
+    },
+    "RCM": {
+      "accounts": 1623,
+      "within_1_QAR": 1614,
+      "difference_QAR": -11137916.759999942,
+      "max_absolute_difference": 5069947.550000001
+    }
+  },
+  "exceptions": {
+    "RCM": [
+      {
+        "account": "400001330890",
+        "difference_QAR": -727406.25
+      },
+      {
+        "account": "400001450783",
+        "difference_QAR": -45901.49
+      },
+      {
+        "account": "400001908413",
+        "difference_QAR": -5069947.550000001
+      },
+      {
+        "account": "400001910029",
+        "difference_QAR": -2116582.52
+      },
+      {
+        "account": "400001913411",
+        "difference_QAR": -2337931.1399999997
+      },
+      {
+        "account": "400001927559",
+        "difference_QAR": -95179.2
+      },
+      {
+        "account": "400002041418",
+        "difference_QAR": -279979.65
+      },
+      {
+        "account": "400002067117",
+        "difference_QAR": -419143.22
+      },
+      {
+        "account": "400002090566",
+        "difference_QAR": -45845.74000000069
+      }
+    ],
+    "CLM": [
+      {
+        "account": "400002015680",
+        "difference_QAR": 138009.4800000009
+      }
+    ]
+  }
+}

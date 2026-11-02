@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Section alignment <span class="muted">(Ethix → NBS candidate joins, {{ rows|length }} sections)</span></h1>
+<p class="muted">Aligned by table number and report code, then full hierarchy path within the chosen block. Several tables share report codes and leaf labels repeat, so a join needs the owner's block choice.</p>
+{% for r in rows %}{% set s = r.section %}
+<div class="panel">
+  <h2>{{ s.identity }} · {{ s.title }}
+  {% for p in s.problems %}<span class="tag bad">{{ p }}</span>{% endfor %}
+  <span class="tag {{ r.validity }}">{{ r.decision.action if r.decision else 'NO DECISION' }}</span></h2>
+  <p class="muted">Ethix {{ s.ethix_range }} · block {{ s.ethix_block_key }}</p>
+  <form method="post"><input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="section_id" value="{{ s.section_id }}">
+  {% for c in s.candidates %}<label style="color:inherit"><input type="checkbox" name="block_keys" value="{{ c.block_key }}"
+     {{ 'checked' if r.decision and c.block_key in r.decision.payload.get('block_keys', []) }}> NBS {{ c.nbs_sheet }}!{{ c.nbs_title_cell }} — {{ c.nbs_title }} <span class="muted">({{ c.block_key }}, rows {{ c.block_rows }})</span></label>
+  {% else %}<p><b>No NBS candidate.</b> Decide whether to add this report to the Temenos replication scope.</p>{% endfor %}
+  <div class="filters">
+    <div><label>Action</label><select name="action">{% for a in ACTIONS['SECTION'] %}<option>{{ a }}</option>{% endfor %}</select></div>
+    <div><label>Owner</label><input type="text" name="actor" required></div>
+    <div><label>Approved on</label><input type="date" name="approved_on"></div>
+    <div style="flex:1;min-width:200px"><label>Reason</label><input type="text" name="reason" required></div>
+    <div style="flex:1;min-width:160px"><label>Approval evidence</label><input type="text" name="approval_evidence"></div>
+    <div><button>Record</button></div></div></form>
+</div>{% endfor %}
+{% endblock %}

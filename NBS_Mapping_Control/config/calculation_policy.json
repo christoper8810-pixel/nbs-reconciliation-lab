@@ -1,0 +1,157 @@
+{
+  "config_name": "calculation_policy",
+  "schema_version": 1,
+  "version": "2026-10-14.1",
+  "status": "DRAFT_REQUIRES_OWNER_APPROVAL",
+  "metrics": {
+    "OUTSTANDING": {
+      "kind": "BALANCE_GROUP",
+      "group": "OUTSTANDING",
+      "amount_basis": "CLOSING_STOCK",
+      "status": "OWNER_DEFINED",
+      "note": "12 exact base balances in config/balance_rules.json"
+    },
+    "AMORTIZED_EARNED": {
+      "kind": "BALANCE_GROUP",
+      "group": "AMORTIZED_EARNED",
+      "amount_basis": "CLOSING_STOCK",
+      "status": "OWNER_DEFINED",
+      "note": "5 exact base balances; CLM ACCDEPOSITPFT only via verified CLS link"
+    },
+    "UNEARNED_PROFIT": {
+      "kind": "BALANCE_GROUP",
+      "group": "UNEARNED_PROFIT",
+      "amount_basis": "CLOSING_STOCK",
+      "status": "OWNER_DEFINED",
+      "note": "2 exact base balances; distinct component, never deducted from or added to the legacy carrying amount"
+    },
+    "LOAN_FEES": {
+      "kind": "UNDEFINED",
+      "amount_basis": "CLOSING_STOCK",
+      "status": "UNRESOLVED",
+      "note": "Ethix Loan_Fees_QAR. No T24 fee source, balance identifiers, sign or overlap treatment supplied. Never zero-filled."
+    },
+    "SUSPENSE_SP": {
+      "kind": "UNDEFINED",
+      "amount_basis": "CLOSING_STOCK",
+      "status": "UNRESOLVED",
+      "note": "Table 11 row 25 SP-suffixed list. Separate metric; SP codes are not aliases of base codes."
+    },
+    "ETHIX_LOAN_CARRYING_AMOUNT": {
+      "kind": "COMPOSITE",
+      "expression": "OUTSTANDING + AMORTIZED_EARNED + LOAN_FEES",
+      "amount_basis": "CLOSING_STOCK",
+      "status": "LEGACY_DEFINITION",
+      "note": "Ehab's Outstanding_QAR + Amortized_Earned_QAR + Loan_Fees_QAR (seven cells, five asset rows). Unavailable until every component is available."
+    },
+    "PL_PERIOD_MOVEMENT": {
+      "kind": "UNDEFINED",
+      "amount_basis": "PERIOD_MOVEMENT_YTD",
+      "status": "UNRESOLVED",
+      "note": "Income/expense rows (CONSOLIDATE.PRFT.LOSS). Period/YTD movement logic; never a loan closing-stock measure."
+    }
+  },
+  "amount_bases": {
+    "CLOSING_STOCK": {
+      "approved": false,
+      "adapter": "ecb_closing",
+      "description": "Signed closing balance per contract/balance type at the reporting date."
+    },
+    "PERIOD_MOVEMENT_YTD": {
+      "approved": false,
+      "adapter": null,
+      "description": "Profit-and-loss period or year-to-date movement. Separate adapter required once CONSOLIDATE.PRFT.LOSS fields and period conventions are supplied."
+    }
+  },
+  "ecb_adapter": {
+    "approved": false,
+    "field_source": "UNCONFIRMED: names taken from workbook specification text, not from the bank's ECB schema",
+    "mode": "RECONSTRUCT_FROM_OPENING_AND_MOVEMENTS",
+    "allowed_modes": [
+      "RECONSTRUCT_FROM_OPENING_AND_MOVEMENTS",
+      "CLOSING_SNAPSHOT"
+    ],
+    "fields": {
+      "balance_type": "CURR.ASSET.TYPE",
+      "opening": "OPEN.BALANCE",
+      "credit_movement": "CREDIT.MVMT",
+      "debit_movement": "DEBIT.MVMT",
+      "closing": null
+    },
+    "movement_sign_convention": "AS_SUPPLIED_SIGNED",
+    "date_basis": "BOOK",
+    "allowed_date_bases": [
+      "BOOK",
+      "VALUE"
+    ],
+    "owner_excluded_balance_types": [],
+    "owner_excluded_balance_types_note": "Balance types the owner has explicitly decided are outside these loan metrics. Any other unlisted type on a selected contract is an UNCLASSIFIED exception that blocks that contract's totals.",
+    "sparse_zero_convention": null,
+    "sparse_zero_convention_note": "null means a missing balance type is missing, never zero. To approve a convention, set {\"approved_by\":..., \"approved_on\":..., \"applies_to\":\"BASE_TYPES\"}."
+  },
+  "currency": {
+    "local_currency": "QAR",
+    "fx_source": null,
+    "fx_rate_date_basis": null,
+    "approved": false,
+    "note": "Amounts stay in contract currency. No FX conversion is performed; local-currency equivalents need an approved rate source and date."
+  },
+  "maturity": {
+    "approved": false,
+    "finding_refs": [
+      "NBS-04",
+      "NBS-05"
+    ],
+    "basis": "MATURITY_DATE_MINUS_REPORTING_DATE",
+    "unit": "CALENDAR_DAYS",
+    "overdue_state": "MATURED_OR_OVERDUE",
+    "missing_state": "MISSING_MATURITY_DATE",
+    "note": "Proposed replacement for 'System Date - MATURITY.DATE'. Intervals are inclusive integer-day ranges and must be mutually exclusive and complete from 0 upward. Matured/overdue and missing maturity are separate states requiring owner disposition. 'Without Maturity' (column D) is not assumed to equal missing maturity.",
+    "buckets": [
+      {"code": "UP_TO_1_WEEK", "column": "E", "label": ">1 Week (as headed)", "min_days": 0, "max_days": 7},
+      {"code": "W1_TO_M1", "column": "F", "label": ">1 Week To 1 Month", "min_days": 8, "max_days": 30},
+      {"code": "M1_TO_M3", "column": "G", "label": ">1 to 3 Months", "min_days": 31, "max_days": 90},
+      {"code": "M3_TO_M6", "column": "H", "label": ">3 To 6 Months", "min_days": 91, "max_days": 180},
+      {"code": "M6_TO_Y1", "column": "I", "label": ">6 To 12 Months", "min_days": 181, "max_days": 365},
+      {"code": "Y1_TO_Y2", "column": "J", "label": ">1 Year To 2 Years", "min_days": 366, "max_days": 730},
+      {"code": "Y2_TO_Y5", "column": "K", "label": ">2 Year To 5 Years", "min_days": 731, "max_days": 1825},
+      {"code": "Y5_TO_Y10", "column": "L", "label": ">5 Years To 10 Years", "min_days": 1826, "max_days": 3650},
+      {"code": "Y10_TO_Y20", "column": "M", "label": ">10 Years to 20 Years", "min_days": 3651, "max_days": 7300},
+      {"code": "OVER_Y20", "column": "N", "label": ">20 Years", "min_days": 7301, "max_days": null}
+    ]
+  },
+  "credit_quality": {
+    "approved": false,
+    "finding_refs": [
+      "NBS-06",
+      "NBS-07",
+      "NBS-08"
+    ],
+    "risk_grade_field": "T24.L.INT.RISK.RT",
+    "risk_grade_source": "UNCONFIRMED: CUSTOMER L.INT.RISK.RT per Table 11 text; risk feed conventions require review",
+    "grades": {
+      "GOOD_LOW_RISK": ["1", "2", "3", "4", "5", "6"],
+      "SPECIAL_MENTION": ["7"],
+      "SUBSTANDARD": ["8"],
+      "DOUBTFUL": ["9"],
+      "BAD_DEBTS": ["10"]
+    },
+    "detail_columns": {
+      "GOOD_LOW_RISK": {"DIRECT": "B", "INDIRECT": "C"},
+      "SPECIAL_MENTION": {"DIRECT": "D", "INDIRECT": "E"},
+      "SUBSTANDARD": {"DIRECT": "H", "INDIRECT": "I"},
+      "DOUBTFUL": {"DIRECT": "J", "INDIRECT": "K"},
+      "BAD_DEBTS": {"DIRECT": "L", "INDIRECT": "M"}
+    },
+    "totals": {
+      "F": ["B", "D"],
+      "G": ["C", "E"],
+      "N": ["H", "J", "L"],
+      "O": ["I", "K", "M"],
+      "P": ["F", "N"],
+      "Q": ["G", "O"]
+    },
+    "balance_metric": null,
+    "balance_metric_note": "Risk grade selects the column; the balance component (metric) is chosen independently and identically for every grade once the owner approves it."
+  }
+}

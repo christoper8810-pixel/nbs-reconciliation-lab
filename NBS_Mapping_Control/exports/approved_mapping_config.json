@@ -1,0 +1,33 @@
+{
+  "document": "approved_mapping_configuration",
+  "generated_at": "2026-10-14T10:22:41Z",
+  "statement": "Owner review output. Approval is application state, not bank reconciliation. No amount here certifies an NBS report. Only mappings with explicit, current owner approval and validated selectors, metrics, signs and dependencies are included.",
+  "catalog_version": 1,
+  "sources": {
+    "T24": {
+      "file_name": "NBS MAPPING - 6 Oct 2026.xlsx",
+      "sha256": "7c378f84cb4997490da9c598dab0531b58c3f829f2f98e96243477da506ce339",
+      "file_path": "C:\\Users\\Test\\Downloads\\NBS MAPPING - 6 Oct 2026.xlsx",
+      "rows": 2149,
+      "sheet_count": 50,
+      "imported_from": "original workbook"
+    },
+    "ETHIX": {
+      "file_name": "NBS01 Mapping (Ehab).xlsx",
+      "sha256": "6378da738127324b0ec875cd381732a155d2bfbf0e0e37e3ccdb767b256eb87a",
+      "file_path": "C:\\Users\\Test\\Downloads\\NBS01 Mapping (Ehab).xlsx",
+      "rows": 1864,
+      "sheet_count": 1,
+      "imported_from": "original workbook"
+    }
+  },
+  "config_hashes": {
+    "balance_rules": "a721a440f47ceb5189095b4ce0de48e8f6e8c4fee264b255e18d0544eab23ea4",
+    "calculation_policy": "e22257fa7c7ddadf4661a1cd67740ef9a8933bf7aa64e0c0a7fa25d2e724bac6",
+    "report_selectors": "45d8aaae60be372f077ba20a064d33bfb5be2a1ba497d0fc8daf64a1af5a9019",
+    "finding_classification": "957564ce77926958c062c2550c01f65b9fd4e08881e4ef6b2b00b8cc1c62b8eb"
+  },
+  "balance_rule_version": "owner-2026-10-14-draft",
+  "mapping_count": 0,
+  "mappings": []
+}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Dashboard <span class="muted">catalog v{{ summary.catalog_version }}</span></h1>
+<div class="grid" style="margin-bottom:16px">
+  <div class="stat"><b>{{ summary.populated_rows }}</b><span>populated source rows (coverage, not certified mappings)</span></div>
+  <div class="stat"><b>{{ summary.by_system.T24 }} / {{ summary.by_system.ETHIX }}</b><span>NBS (T24) / Ethix rows</span></div>
+  <div class="stat"><b>{{ summary.rule_rows }}</b><span>rows with rule cells</span></div>
+  <div class="stat"><b>{{ summary.proposed }}</b><span>proposals awaiting owner review</span></div>
+  <div class="stat"><b>{{ summary.states.get('EFFECTIVE', 0) }}</b><span>effective mappings</span></div>
+  <div class="stat"><b>{{ summary.states.get('STALE', 0) }}</b><span>stale decisions (evidence changed)</span></div>
+  <div class="stat"><b>{{ summary.section_problems }} / {{ summary.sections }}</b><span>sections with join problems</span></div>
+  <div class="stat"><b>{{ summary.finding_items }}</b><span>finding queue items</span></div>
+  <div class="stat"><b>{{ summary.global_open_items }}</b><span>open configuration inputs</span></div>
+</div>
+<div class="cols">
+<div class="panel"><h2>Sources</h2>
+<table><tr><th>System</th><th>File</th><th>SHA-256</th><th>Matches supplied evidence</th></tr>
+{% for s, src in summary.sources.items() %}<tr><td>{{ s }}</td><td>{{ src.file_name }}<br><span class="muted">{{ src.imported_from }}</span></td><td class="pre">{{ src.sha256 }}</td>
+<td>{% set m = summary.manifest_check[s] %}<span class="tag {{ 'ok' if m.matches_supplied_evidence_version else 'bad' }}">{{ 'yes' if m.matches_supplied_evidence_version else 'NO - new version' }}</span></td></tr>{% endfor %}
+</table>
+<h3>Mapping states</h3>
+<table>{% for k, v in summary.states|dictsort %}<tr><td><span class="tag {{ k }}">{{ k }}</span></td><td>{{ v }}</td></tr>{% endfor %}</table>
+</div>
+<div class="panel"><h2>Open configuration inputs</h2>
+<table><tr><th>Area</th><th>Item</th><th>Detail</th></tr>
+{% for g in global_items %}<tr><td>{{ g.area }}</td><td>{{ g.item }}</td><td class="muted">{{ g.detail }}</td></tr>{% endfor %}</table>
+</div>
+</div>
+{% endblock %}

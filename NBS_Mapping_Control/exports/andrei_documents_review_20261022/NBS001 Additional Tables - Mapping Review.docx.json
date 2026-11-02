@@ -1,0 +1,739 @@
+{
+  "name": "NBS001 Additional Tables - Mapping Review.docx",
+  "sha256": "34471990bf78a45363a2442010e382fe744ec0a3958a20f951748c1871fadd3b",
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "NBS001 Additional Tables – Mapping Review",
+      "deleted": ""
+    },
+    {
+      "index": 1,
+      "text": "DKB CBS – QCB regulatory reporting (NBS001, Tables 601–625). Prepared for DKB Finance, 21 October 2026.",
+      "deleted": ""
+    },
+    {
+      "index": 2,
+      "text": "1. Scope and evidence",
+      "deleted": ""
+    },
+    {
+      "index": 3,
+      "text": "Mapping reviewed: NBS001 - Add Tables Mapping (1).xlsx: 26 tables, about 3,900 rule cells (combined sheet plus separate sheets for Tables 612–615 and 625).",
+      "deleted": ""
+    },
+    {
+      "index": 4,
+      "text": "Balances: CAL extract (CONSOLIDATE.ASST.LIAB) at 31 Aug 2026, UAT, used to test whether the rules reach the balances that exist. Two records with impossible amounts excluded.",
+      "deleted": ""
+    },
+    {
+      "index": 5,
+      "text": "Reference: Customer sector codes as defined by DKB: Retail 1000–1999, 4000–4004, 6000/6001, 7000/7001; Corporate 2000–2003, 2006, 4005, 5001, 5002; Government 2005; Banks & FI 2004.",
+      "deleted": ""
+    },
+    {
+      "index": 6,
+      "text": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version.",
+      "deleted": ""
+    },
+    {
+      "index": 7,
+      "text": "2. Priorities",
+      "deleted": ""
+    },
+    {
+      "index": 8,
+      "text": "#",
+      "deleted": ""
+    },
+    {
+      "index": 9,
+      "text": "Issue",
+      "deleted": ""
+    },
+    {
+      "index": 10,
+      "text": "Why first",
+      "deleted": ""
+    },
+    {
+      "index": 11,
+      "text": "1",
+      "deleted": ""
+    },
+    {
+      "index": 12,
+      "text": "Credit facilities by maturity (Tables 608/609) map almost none of the actual financing (B1–B4)",
+      "deleted": ""
+    },
+    {
+      "index": 13,
+      "text": "About 95bn of financing principal (31 Aug) falls outside the rules; profit balances are reported as loans",
+      "deleted": ""
+    },
+    {
+      "index": 14,
+      "text": "2",
+      "deleted": ""
+    },
+    {
+      "index": 15,
+      "text": "Cash reported as claims on banks (D2)",
+      "deleted": ""
+    },
+    {
+      "index": 16,
+      "text": "Cash in vault and ATMs (about 115bn at 31 Aug) is selected in the claims-on-banks line of Tables 604/605",
+      "deleted": ""
+    },
+    {
+      "index": 17,
+      "text": "3",
+      "deleted": ""
+    },
+    {
+      "index": 18,
+      "text": "Sector sections (C1, C2)",
+      "deleted": ""
+    },
+    {
+      "index": 19,
+      "text": "Corporate and government financing are excluded from Tables 608/609; definitions differ between NBS001 tables",
+      "deleted": ""
+    },
+    {
+      "index": 20,
+      "text": "4",
+      "deleted": ""
+    },
+    {
+      "index": 21,
+      "text": "ACCDEFERREDPFT on both sides (A1)",
+      "deleted": ""
+    },
+    {
+      "index": 22,
+      "text": "Same double mapping as found in NBS01, repeated across asset and liability tables",
+      "deleted": ""
+    },
+    {
+      "index": 23,
+      "text": "3. Issues",
+      "deleted": ""
+    },
+    {
+      "index": 24,
+      "text": "A. Double counting",
+      "deleted": ""
+    },
+    {
+      "index": 25,
+      "text": "#",
+      "deleted": ""
+    },
+    {
+      "index": 26,
+      "text": "Issue",
+      "deleted": ""
+    },
+    {
+      "index": 27,
+      "text": "Where",
+      "deleted": ""
+    },
+    {
+      "index": 28,
+      "text": "Impact",
+      "deleted": ""
+    },
+    {
+      "index": 29,
+      "text": "Fix",
+      "deleted": ""
+    },
+    {
+      "index": 30,
+      "text": "A1",
+      "deleted": ""
+    },
+    {
+      "index": 31,
+      "text": "ACCDEFERREDPFT is used on the asset side (netted against RECDEFERREDPFT) and on the liability side",
+      "deleted": ""
+    },
+    {
+      "index": 32,
+      "text": "Assets: 608/609 \"01 Loans\", 616/618/621/622 \"03 Others\", 613 \"01 Other Assets\". Liabilities: 623/624 \"01 Deferred Interest / Income\"",
+      "deleted": ""
+    },
+    {
+      "index": 33,
+      "text": "About 14.7bn (31 Aug) used twice; assets understated",
+      "deleted": ""
+    },
+    {
+      "index": 34,
+      "text": "Remove ACCDEFERREDPFT from the asset lines; keep it in deferred interest / income",
+      "deleted": ""
+    },
+    {
+      "index": 35,
+      "text": "A2",
+      "deleted": ""
+    },
+    {
+      "index": 36,
+      "text": "Nostro category 5001 is selected in two lines",
+      "deleted": ""
+    },
+    {
+      "index": 37,
+      "text": "604/605 \".......01 Commercial / Conventional\" and \".......02 Islamic\"",
+      "deleted": ""
+    },
+    {
+      "index": 38,
+      "text": "Nostro balances (5001) counted in both bank types",
+      "deleted": ""
+    },
+    {
+      "index": 39,
+      "text": "Split nostros by bank type (e.g. target 59/60) and select each once",
+      "deleted": ""
+    },
+    {
+      "index": 40,
+      "text": "A3",
+      "deleted": ""
+    },
+    {
+      "index": 41,
+      "text": "In 608/609 the \"01 Loans\" line selects categories 3000–3899, which also covers the Ijara categories used in \"04 Finance Ijara\" without a balance-type filter",
+      "deleted": ""
+    },
+    {
+      "index": 42,
+      "text": "608/609 rows \"01 Loans\" and \"04 Finance Ijara\"",
+      "deleted": ""
+    },
+    {
+      "index": 43,
+      "text": "Ijara profit balances can be counted twice",
+      "deleted": ""
+    },
+    {
+      "index": 44,
+      "text": "Resolve with B2 and B3",
+      "deleted": ""
+    },
+    {
+      "index": 45,
+      "text": "B. Credit facilities by maturity (Tables 608/609)",
+      "deleted": ""
+    },
+    {
+      "index": 46,
+      "text": "#",
+      "deleted": ""
+    },
+    {
+      "index": 47,
+      "text": "Issue",
+      "deleted": ""
+    },
+    {
+      "index": 48,
+      "text": "Where",
+      "deleted": ""
+    },
+    {
+      "index": 49,
+      "text": "Impact",
+      "deleted": ""
+    },
+    {
+      "index": 50,
+      "text": "Fix",
+      "deleted": ""
+    },
+    {
+      "index": 51,
+      "text": "B1",
+      "deleted": ""
+    },
+    {
+      "index": 52,
+      "text": "Islamic finance lines select categories that hold no balances; the actual financing categories are not mapped",
+      "deleted": ""
+    },
+    {
+      "index": 53,
+      "text": "Murabaha – Musawama: 3716; Istisna'a: 3712; Mudaraba: 3711; Diminishing Musharaka: 3707; \"06 Others\": no rule",
+      "deleted": ""
+    },
+    {
+      "index": 54,
+      "text": "About 95.5bn of principal (31 Aug) in 3701, 3704, 3709, 3713, 3715, 3717, 3730, 3740 and others is not reported; only Ijara (3702, 3706, about 4.2bn) is reached",
+      "deleted": ""
+    },
+    {
+      "index": 55,
+      "text": "Map the actual product categories to the lines (as agreed for NBS01 Table 8) and fill \"06 Others\" with the remaining range",
+      "deleted": ""
+    },
+    {
+      "index": 56,
+      "text": "B2",
+      "deleted": ""
+    },
+    {
+      "index": 57,
+      "text": "\"01 Loans\" uses the accrued-income balance types",
+      "deleted": ""
+    },
+    {
+      "index": 58,
+      "text": "608/609 rows \"01 Loans\": ACC/REC DEFERREDPFT, DUE/GRC/NAB PRINCIPALPFT, categories 3000–3899",
+      "deleted": ""
+    },
+    {
+      "index": 59,
+      "text": "Profit balances reported as loans",
+      "deleted": ""
+    },
+    {
+      "index": 60,
+      "text": "Remove the profit types; leave the line empty unless DKB has conventional loans",
+      "deleted": ""
+    },
+    {
+      "index": 61,
+      "text": "B3",
+      "deleted": ""
+    },
+    {
+      "index": 62,
+      "text": "Islamic finance lines have no balance-type filter",
+      "deleted": ""
+    },
+    {
+      "index": 63,
+      "text": "608/609 Islamic finance rows (CATEGORY and SECTOR only)",
+      "deleted": ""
+    },
+    {
+      "index": 64,
+      "text": "All balance types can be picked up, including profit, fees and commitments",
+      "deleted": ""
+    },
+    {
+      "index": 65,
+      "text": "Apply the seven principal types (CUR, GRC, DUE, PDO, NAB, DEL, PRE ACCOUNT), as in Tables 613 and 614",
+      "deleted": ""
+    },
+    {
+      "index": 66,
+      "text": "B4",
+      "deleted": ""
+    },
+    {
+      "index": 67,
+      "text": "Overdraft lines have no rule",
+      "deleted": ""
+    },
+    {
+      "index": 68,
+      "text": "608/609 \"01 Overdraft\" in all three sections",
+      "deleted": ""
+    },
+    {
+      "index": 69,
+      "text": "Overdrafts not reported",
+      "deleted": ""
+    },
+    {
+      "index": 70,
+      "text": "Map overdrawn current accounts (DEBIT on the overdraft categories)",
+      "deleted": ""
+    },
+    {
+      "index": 71,
+      "text": "C. Customer sectors",
+      "deleted": ""
+    },
+    {
+      "index": 72,
+      "text": "#",
+      "deleted": ""
+    },
+    {
+      "index": 73,
+      "text": "Issue",
+      "deleted": ""
+    },
+    {
+      "index": 74,
+      "text": "Where",
+      "deleted": ""
+    },
+    {
+      "index": 75,
+      "text": "Impact",
+      "deleted": ""
+    },
+    {
+      "index": 76,
+      "text": "Fix",
+      "deleted": ""
+    },
+    {
+      "index": 77,
+      "text": "C1",
+      "deleted": ""
+    },
+    {
+      "index": 78,
+      "text": "Sector sections in 608/609 do not match DKB sector codes",
+      "deleted": ""
+    },
+    {
+      "index": 79,
+      "text": "Non-bank = 2004; Public = 1000–1999; Private = 4000–4004",
+      "deleted": ""
+    },
+    {
+      "index": 80,
+      "text": "Retail reported as public sector; corporate (2000–2003, about 27.8bn), government (2005, about 21.2bn) and other sectors (about 6.4bn) excluded (31 Aug principal)",
+      "deleted": ""
+    },
+    {
+      "index": 81,
+      "text": "Public = 2005; Non-bank FI = 2004 (excluding banks); Private = all other customer sectors",
+      "deleted": ""
+    },
+    {
+      "index": 82,
+      "text": "C2",
+      "deleted": ""
+    },
+    {
+      "index": 83,
+      "text": "Sector definitions differ between NBS001 tables",
+      "deleted": ""
+    },
+    {
+      "index": 84,
+      "text": "610/611, 617, 619, 623/624: 2004 / 2005 / all other (consistent with DKB codes). 616, 618, 621, 622: explicit list omitting 5002. 612: government by targets 55–57. 614: list omits 4000–4004, 2005, 2006, 5001, 5002",
+      "deleted": ""
+    },
+    {
+      "index": 85,
+      "text": "Same customer reported in different sectors depending on the table",
+      "deleted": ""
+    },
+    {
+      "index": 86,
+      "text": "Use one sector definition across all NBS001 tables",
+      "deleted": ""
+    },
+    {
+      "index": 87,
+      "text": "D. Claims on central banks and banks (Tables 604/605)",
+      "deleted": ""
+    },
+    {
+      "index": 88,
+      "text": "#",
+      "deleted": ""
+    },
+    {
+      "index": 89,
+      "text": "Issue",
+      "deleted": ""
+    },
+    {
+      "index": 90,
+      "text": "Where",
+      "deleted": ""
+    },
+    {
+      "index": 91,
+      "text": "Impact",
+      "deleted": ""
+    },
+    {
+      "index": 92,
+      "text": "Fix",
+      "deleted": ""
+    },
+    {
+      "index": 93,
+      "text": "D1",
+      "deleted": ""
+    },
+    {
+      "index": 94,
+      "text": "Required Reserve selects categories 5003 and 5004",
+      "deleted": ""
+    },
+    {
+      "index": 95,
+      "text": "604/605 \"...01 Required Reserve\"",
+      "deleted": ""
+    },
+    {
+      "index": 96,
+      "text": "No balances in 5003/5004 at 31 Aug; the QCB reserve sits in 18060/18061 (already changed in the NBS01 tables)",
+      "deleted": ""
+    },
+    {
+      "index": 97,
+      "text": "Use 18060/18061, consistent with NBS01",
+      "deleted": ""
+    },
+    {
+      "index": 98,
+      "text": "D2",
+      "deleted": ""
+    },
+    {
+      "index": 99,
+      "text": "The claims-on-banks line selects cash categories",
+      "deleted": ""
+    },
+    {
+      "index": 100,
+      "text": "604/605 \".......01 Commercial / Conventional\": 10001, 10024, 10025, 12905 (listed twice), 12903, 5003, 5001",
+      "deleted": ""
+    },
+    {
+      "index": 101,
+      "text": "Cash in vault and ATMs (about 114.7bn at 31 Aug) reported as claims on banks",
+      "deleted": ""
+    },
+    {
+      "index": 102,
+      "text": "Remove cash categories; select nostro and placement categories only",
+      "deleted": ""
+    },
+    {
+      "index": 103,
+      "text": "D3",
+      "deleted": ""
+    },
+    {
+      "index": 104,
+      "text": "Clearing account selects category 5002",
+      "deleted": ""
+    },
+    {
+      "index": 105,
+      "text": "604/605 \".....01 Clearing Account\"",
+      "deleted": ""
+    },
+    {
+      "index": 106,
+      "text": "No balances in 5002 at 31 Aug",
+      "deleted": ""
+    },
+    {
+      "index": 107,
+      "text": "Confirm the clearing account category",
+      "deleted": ""
+    },
+    {
+      "index": 108,
+      "text": "E. Deposits and other tables",
+      "deleted": ""
+    },
+    {
+      "index": 109,
+      "text": "#",
+      "deleted": ""
+    },
+    {
+      "index": 110,
+      "text": "Issue",
+      "deleted": ""
+    },
+    {
+      "index": 111,
+      "text": "Where",
+      "deleted": ""
+    },
+    {
+      "index": 112,
+      "text": "Impact",
+      "deleted": ""
+    },
+    {
+      "index": 113,
+      "text": "Fix",
+      "deleted": ""
+    },
+    {
+      "index": 114,
+      "text": "E1",
+      "deleted": ""
+    },
+    {
+      "index": 115,
+      "text": "Deposit balance types include a non-existent type and miss matured deposits",
+      "deleted": ""
+    },
+    {
+      "index": 116,
+      "text": "610/611 and 625: CREDIT, CURACCOUNT, CURBALANCE",
+      "deleted": ""
+    },
+    {
+      "index": 117,
+      "text": "CURBALANCE does not exist in CAL; PAYACCOUNT (about 340m at 31 Aug) not selected",
+      "deleted": ""
+    },
+    {
+      "index": 118,
+      "text": "Use CREDIT, CURACCOUNT and PAYACCOUNT",
+      "deleted": ""
+    },
+    {
+      "index": 119,
+      "text": "E2",
+      "deleted": ""
+    },
+    {
+      "index": 120,
+      "text": "Credit / deposit ratio table is incomplete",
+      "deleted": ""
+    },
+    {
+      "index": 121,
+      "text": "625: rules only for deposits, wakala placements and borrowings",
+      "deleted": ""
+    },
+    {
+      "index": 122,
+      "text": "Credit side of the ratio not mapped",
+      "deleted": ""
+    },
+    {
+      "index": 123,
+      "text": "Map the credit facility side, consistent with Tables 608/609",
+      "deleted": ""
+    },
+    {
+      "index": 124,
+      "text": "E3",
+      "deleted": ""
+    },
+    {
+      "index": 125,
+      "text": "Derivative contracts table has no rules",
+      "deleted": ""
+    },
+    {
+      "index": 126,
+      "text": "620 (42 description lines)",
+      "deleted": ""
+    },
+    {
+      "index": 127,
+      "text": "Table not produced",
+      "deleted": ""
+    },
+    {
+      "index": 128,
+      "text": "Map derivatives (source to be confirmed, e.g. Treasury)",
+      "deleted": ""
+    },
+    {
+      "index": 129,
+      "text": "E4",
+      "deleted": ""
+    },
+    {
+      "index": 130,
+      "text": "Many description lines have no rule",
+      "deleted": ""
+    },
+    {
+      "index": 131,
+      "text": "e.g. 602: 79 of 86 lines; 603: 36 of 42; 604: 41 of 46",
+      "deleted": ""
+    },
+    {
+      "index": 132,
+      "text": "Unclear whether lines are intentionally zero or missing",
+      "deleted": ""
+    },
+    {
+      "index": 133,
+      "text": "Mark intentionally empty lines explicitly",
+      "deleted": ""
+    },
+    {
+      "index": 134,
+      "text": "E5",
+      "deleted": ""
+    },
+    {
+      "index": 135,
+      "text": "Treasury tables read TMS outbound tables",
+      "deleted": ""
+    },
+    {
+      "index": 136,
+      "text": "601–603 (CRSSUKUKT), 606/607 and 625 (CRSMMDEALST)",
+      "deleted": ""
+    },
+    {
+      "index": 137,
+      "text": "Same source gap as seen in NBS01 (Treasury Bills)",
+      "deleted": ""
+    },
+    {
+      "index": 138,
+      "text": "Reconcile outbound tables to the trial balance for each run",
+      "deleted": ""
+    },
+    {
+      "index": 139,
+      "text": "4. What is consistent",
+      "deleted": ""
+    },
+    {
+      "index": 140,
+      "text": "Where principal balance types are listed (Tables 613, 614, 615 and parts of the combined sheet), all seven types are used, including DEL and PRE.",
+      "deleted": ""
+    },
+    {
+      "index": 141,
+      "text": "Several tables already use the DKB sector split correctly (610/611, 617, 619, 623/624); they can serve as the template for C1 and C2.",
+      "deleted": ""
+    },
+    {
+      "index": 142,
+      "text": "5. Next steps",
+      "deleted": ""
+    },
+    {
+      "index": 143,
+      "text": "DKB Finance to confirm the sector definition (C1, C2) and the product-to-line assignment for credit facilities (B1).",
+      "deleted": ""
+    },
+    {
+      "index": 144,
+      "text": "SL to correct Tables 604/605 and 608/609 first (priorities 1–3), then A1, E1–E3.",
+      "deleted": ""
+    },
+    {
+      "index": 145,
+      "text": "Rerun NBS001 and reconcile the credit facilities, deposits and claims-on-banks tables to the NBS01 tables and the trial balance at the same date.",
+      "deleted": ""
+    }
+  ],
+  "comments": [],
+  "insertions": 0,
+  "deletions": 0
+}

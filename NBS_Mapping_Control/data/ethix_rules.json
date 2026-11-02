@@ -1,0 +1,1604 @@
+[
+  {
+    "row": 3,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 4,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 5,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...01 Cash and Precious metals",
+    "rule": "K: All Gl's  Start by 100  Except  1003"
+  },
+  {
+    "row": 7,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Required Reserve",
+    "rule": "K: 1003000010, 1003000011"
+  },
+  {
+    "row": 8,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Others",
+    "rule": "K: 1003000020"
+  },
+  {
+    "row": 11,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Demand and Call",
+    "rule": "K: All Gl's  Start by 11 "
+  },
+  {
+    "row": 12,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 Placements",
+    "rule": "K: 1200000010, 1302000010\nL: inside and outside from Treasury system"
+  },
+  {
+    "row": 13,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......03 Loans / Finance",
+    "rule": "K: Sic Code 44108 from All Loan\nL: inside and outside from all loan file"
+  },
+  {
+    "row": 18,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Issued by Governments",
+    "rule": "K: 1502010005"
+  },
+  {
+    "row": 23,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Issued by Governments",
+    "rule": "K: inside 1500000010, 1502000010, 1502010010\nL: outside 1602000010, 1600000010"
+  },
+  {
+    "row": 25,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......03 Issued by Banks",
+    "rule": "K: inside 1502000011, 1500000011\nL: outside 1602000011, 1600000011"
+  },
+  {
+    "row": 26,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......04 Issued by Others",
+    "rule": "K: inside 1502000012, 1500000012\nL: outside 1600000012, 1602000012, 1602010010, 1600010010"
+  },
+  {
+    "row": 27,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....03 Equity Participation",
+    "rule": "K: inside 1500000001, 1501000001, 1501010001, 1501020001\nL: outside 1600000001, 1600000002, 1600000015, 1601000011, 1601010001, 1603010002"
+  },
+  {
+    "row": 28,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....04 Mutual funds and Others",
+    "rule": "L: outside 1600000003, 1601010005"
+  },
+  {
+    "row": 29,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...05 Credit Facilities",
+    "rule": "K: (All Gl's  Start by 13  Except  1302000010 + Gl's  under 190002 + Gl's  under 190005 + Gl's  under 1904 Except  190401, 1904030002) minus GL's under 2302"
+  },
+  {
+    "row": 33,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......03 Islamic Finance",
+    "rule": "K: from all loan file NonPersonal all sic code start by 441 Except  44108 (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)\nL: outside from all loan file NonPersonal all sic code start by 441 Except  44108 nonresident (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)"
+  },
+  {
+    "row": 35,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Overdraft",
+    "rule": "K: from all loan file Rim 2398 (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)"
+  },
+  {
+    "row": 37,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......03 Islamic Finance",
+    "rule": "K: from all loan file NonPersonal all sic code start by 1,2,3  Except  Rim 2398 (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)\nL: outside from all loan file NonPersonal all sic code start by 1,2,3  nonresident (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)"
+  },
+  {
+    "row": 40,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 Loans and advances",
+    "rule": "K:  from all loan file all account type SYN (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)\nL: outside from all loan file all account type SYN nonresident"
+  },
+  {
+    "row": 41,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......03 Islamic Finance",
+    "rule": "K: from all loan personal + NonPersonal all sic code start by 4 Except  441 + GL  1300050001\nL: outside from all loan personal + NonPersonal all sic code start by 4 Except  441 nonresident (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)"
+  },
+  {
+    "row": 43,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Subsidiaries",
+    "rule": "K: 1503000001, 1503000002, 1503000003, 1503000004, 1503000005, 1503000006, 1503000007"
+  },
+  {
+    "row": 44,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Associates",
+    "rule": "K: 1503010011"
+  },
+  {
+    "row": 45,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...07 Investment in Real Estates",
+    "rule": "K: 1700000001"
+  },
+  {
+    "row": 46,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...08 Net Fixed Assets",
+    "rule": "K: 1800000001, 1801000001, 1801000002, 1801000003, 1801000004, 1801000005, 1803010001, 1804010001, 1804010002 Exclude (2800010001, 2800010002, 2800010003, 2800010004, 2800010005, 2800020001, 2802000001, 2802000002)"
+  },
+  {
+    "row": 48,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Positive F.V. of Derivatives",
+    "rule": "K: 1909500000, 1909500001, 1909501001, 1909502001 "
+  },
+  {
+    "row": 49,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Intangible Assets",
+    "rule": "K: 1802010001, 1802010002, 1802010003, 1802010004, 1802010005 Exclude (2801000001, 2801000002, 2801000003, 2801000004, 2801000005)"
+  },
+  {
+    "row": 50,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....03 Others",
+    "rule": "K: All Gl's  Start by 19 Except  GL  1900020001, 1904000001, 1904000003, 1904000017, 1904000020, 1904000021, 1904030002 and GL Start by (190005, 1908, 1909)"
+  },
+  {
+    "row": 61,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 62,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 65,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 REPO",
+    "rule": "K: 2200000020"
+  },
+  {
+    "row": 69,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Demand and Call",
+    "rule": "K: inside 2100010013, 2100010015, 2100010016, 2100010021, 2100010022\nL: outside 2100010006, 2100010008, 2100010009, 2100010010, 2100010011, 2100010012, 2100010014,2100010019, 2100010020"
+  },
+  {
+    "row": 70,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 Placements",
+    "rule": "K: inside 2200000001, 2305902001\nL: outside  2305901002, 2306001001"
+  },
+  {
+    "row": 71,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......03 Borrowings / Finance",
+    "rule": "L: 2306001010"
+  },
+  {
+    "row": 72,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......04 REPO",
+    "rule": "L: 2306000001"
+  },
+  {
+    "row": 76,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Current and Call",
+    "rule": "K: from all Deposits file NonPersonal all sic code start by 441 account type (CAL, CUR, SAL, WMI)\nL: inside and outside from all Deposits file by Residency"
+  },
+  {
+    "row": 77,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 Saving and Time",
+    "rule": "K: from all Deposits file NonPersonal all sic code start by 441 account type (DHW, MSP, MSS, NTD, PIA, PSV,SAV, SSV, YSV)\nL: inside and outside from all Deposits file by Residency"
+  },
+  {
+    "row": 79,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Current and Call",
+    "rule": "K: from all Deposits file NonPersonal all sic code start by 1,2,3 account type (CAL, CUR, SAL, WMI)\nL: inside and outside from all Deposits file by Residency"
+  },
+  {
+    "row": 80,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 Saving and Time",
+    "rule": "K: from all Deposits file NonPersonal all sic code start by 1,2,3 account type (DHW, MSP, MSS, NTD, PIA, PSV,SAV, SSV, YSV)\nL: inside and outside from all Deposits file by Residency"
+  },
+  {
+    "row": 82,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Current and Call",
+    "rule": "K: from all Deposits file NonPersonal all sic code start by 4 Except 441 + all personal deposits account type (CAL, CUR, SAL, WMI)\nL: inside and outside from all Deposits file by Residency"
+  },
+  {
+    "row": 83,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 Saving and Time",
+    "rule": "K: from all Deposits file NonPersonal all sic code start by 4 Except 441 + all personal deposits account type (DHW, MSP, MSS, NTD, PIA, PSV,SAV, SSV, YSV)\nL: inside and outside from all Deposits file by Residency"
+  },
+  {
+    "row": 92,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...06 Cash Margin",
+    "rule": "K: GL's Start by 2903 Except  2903000002"
+  },
+  {
+    "row": 94,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Specific Loans / Finance",
+    "rule": "K: GL's Start by 23050, 23090"
+  },
+  {
+    "row": 95,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Specific Contingent liabilities",
+    "rule": "K: GL's Start by 23065"
+  },
+  {
+    "row": 100,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....07 Interest / Income in Suspense",
+    "rule": "K: GL's Start by 2301"
+  },
+  {
+    "row": 101,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....08 Expected Credit Loss",
+    "rule": "K: GL's Start by 23055, 23080, 23085"
+  },
+  {
+    "row": 103,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Deffered Interest / Income",
+    "rule": "K: GL's Start by 2300 Except  2300020010, 2300070010"
+  },
+  {
+    "row": 104,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Negative F.V. of Derivatives",
+    "rule": "K: GL's Start by 29095"
+  },
+  {
+    "row": 105,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....03 Net Profit for The Period",
+    "rule": "K: 3800000001"
+  },
+  {
+    "row": 106,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....04 Others",
+    "rule": "K: All Gl's  Start by 29 Except  GL Start by (2903, 29085) + Gl's start by 23040 + GL  2903000002"
+  },
+  {
+    "row": 108,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Paid Up Capital",
+    "rule": "K: 3000000001"
+  },
+  {
+    "row": 109,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Treasury Shares - Nominal -",
+    "rule": "K: 3200000001"
+  },
+  {
+    "row": 110,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....03 Legal Reserve",
+    "rule": "K: 3500000001"
+  },
+  {
+    "row": 111,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....04 Treasury Shares - Prem. / Disc.",
+    "rule": "K: 3200000001"
+  },
+  {
+    "row": 113,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....06 Fair Value Adjustments",
+    "rule": "K: 3503000001\nL: inside and outside from Treasury system"
+  },
+  {
+    "row": 114,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....07 Risk Reserve",
+    "rule": "K: 3502000001"
+  },
+  {
+    "row": 115,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....08 Other Reserves",
+    "rule": "L: inside and outside from Treasury system"
+  },
+  {
+    "row": 116,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....09 Retained Earnings",
+    "rule": "K: 3900000001, 3900000003, 3950000002"
+  },
+  {
+    "row": 117,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...10 Instrument Eligible to Additional Capital",
+    "rule": "K: 3950000001\nL: inside and outside from Treasury system"
+  },
+  {
+    "row": 126,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 127,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 129,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Letters of Guarantee",
+    "rule": "K: 8001000001\nL: inside and outside from Trade Finance"
+  },
+  {
+    "row": 130,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Letters of Credit",
+    "rule": "K: 8000000008, 8000000009\nL: inside and outside from Trade Finance"
+  },
+  {
+    "row": 131,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....03 Acceptances",
+    "rule": "K: 1908500001\nL: inside and outside from Trade Finance"
+  },
+  {
+    "row": 133,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Unutilized Facilities",
+    "rule": "L: Unutilized Report from BO"
+  },
+  {
+    "row": 136,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...03 Derivative Contracts",
+    "rule": "K: 8004000010, 9005000001, 9005000002, 9006000001$, 9006000002$\nL: inside and outside from Treasury system"
+  },
+  {
+    "row": 137,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...04 Assets Under Management",
+    "rule": "K: GL's Start by 9001\nL: inside and outside from Treasury system"
+  },
+  {
+    "row": 147,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 148,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 154,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 Other Banks",
+    "rule": "K: starts 4000, 400102, 400107"
+  },
+  {
+    "row": 157,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........01 Issued by Governments",
+    "rule": "K: 4003020005"
+  },
+  {
+    "row": 162,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........01 Issued by Governments",
+    "rule": "K: 4004020004"
+  },
+  {
+    "row": 165,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........04 Issued by Others",
+    "rule": "K: 4003000004,4003020001,4003050002,4003010005,4003010006,4003010007"
+  },
+  {
+    "row": 166,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....04 From Credit Facilities",
+    "rule": "K: starts with 4001 Except  400102, 400107"
+  },
+  {
+    "row": 188,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 Sukuk",
+    "rule": "K: 4003020002,4003020003"
+  },
+  {
+    "row": 189,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......03 Equity Participation",
+    "rule": "K: 4003010003"
+  },
+  {
+    "row": 190,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......04 Mutual funds and Others",
+    "rule": "K: 4004050001"
+  },
+  {
+    "row": 193,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 Sukuk",
+    "rule": "K: 4003000005"
+  },
+  {
+    "row": 194,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......03 Equity Participation",
+    "rule": "K: 4003010001,4003000001"
+  },
+  {
+    "row": 195,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......04 Mutual funds and Others",
+    "rule": "K: 4003050001"
+  },
+  {
+    "row": 197,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Equity Participation",
+    "rule": "K: 4003000002,4003010002"
+  },
+  {
+    "row": 200,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Subsidiaries",
+    "rule": "K: 4003030001"
+  },
+  {
+    "row": 201,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Associates",
+    "rule": "K: 4004030002"
+  },
+  {
+    "row": 204,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Net Profit ( Loss ) From Sale",
+    "rule": "K: 4500090010"
+  },
+  {
+    "row": 208,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Assets - Liabilities Revaluation",
+    "rule": "K: starts with 40080 "
+  },
+  {
+    "row": 209,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....03 F.V. of Derivatives",
+    "rule": "K: starts 40095"
+  },
+  {
+    "row": 211,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Credit Facilities",
+    "rule": "K: starts with 4005000,4009001,4009002 "
+  },
+  {
+    "row": 212,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Contingent liabilities",
+    "rule": "K: starts with 4005030 "
+  },
+  {
+    "row": 215,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....05 Other Banking Services",
+    "rule": "K: starts with 4005010,4005020,4005090,4005050"
+  },
+  {
+    "row": 221,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....03 Others",
+    "rule": "K: Start  4009000 , 4500000001,4500090008,4500090009"
+  },
+  {
+    "row": 231,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 232,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 248,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........02 Bonds",
+    "rule": "K: starts with 5501"
+  },
+  {
+    "row": 255,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Central Banks",
+    "rule": "K: 5300020020"
+  },
+  {
+    "row": 256,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 Banks",
+    "rule": "K: 5300020010,  5300020040, 560001"
+  },
+  {
+    "row": 261,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........04 Corporates",
+    "rule": "K: starts with 5300010,5300040,5300060,5300050,5300090, 5300020001 "
+  },
+  {
+    "row": 262,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........05 Personal",
+    "rule": "K: starts with 5300000,5300070,5300075, 5300080 "
+  },
+  {
+    "row": 265,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Banks and Financial Inst.",
+    "rule": "K: starts with 5100080,5600050 "
+  },
+  {
+    "row": 268,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....04 Others",
+    "rule": "K: starts with 5100055 "
+  },
+  {
+    "row": 278,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 Islamic Finance",
+    "rule": "K: 5500000001"
+  },
+  {
+    "row": 285,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Specific Contingent liabilities",
+    "rule": "K: 5500008001"
+  },
+  {
+    "row": 290,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......04 Others",
+    "rule": "K: 5500005001"
+  },
+  {
+    "row": 297,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......05 Others",
+    "rule": "K: 5600000001"
+  },
+  {
+    "row": 304,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....07 Expected Credit Loss",
+    "rule": "K: starts with 5500006, 5500007"
+  },
+  {
+    "row": 321,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...04 Written off items",
+    "rule": "K: 5500001001"
+  },
+  {
+    "row": 323,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Fixed Assets",
+    "rule": "K: starts with 52000 "
+  },
+  {
+    "row": 326,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Intangible assets",
+    "rule": "K: 5201000001"
+  },
+  {
+    "row": 327,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......02 The right to use leased assets",
+    "rule": "K: starts with 5202000"
+  },
+  {
+    "row": 330,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Wages and salaries",
+    "rule": "K: starts with 50000 "
+  },
+  {
+    "row": 331,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Social security costs",
+    "rule": "K: 5001000020,5001000030,5001000040"
+  },
+  {
+    "row": 332,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....03 End of service benefits",
+    "rule": "K: 5001000010"
+  },
+  {
+    "row": 333,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....04 Other staff costs",
+    "rule": "K: starts with 50050,50080,50090 "
+  },
+  {
+    "row": 335,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Rental of premises",
+    "rule": "K: starts with 5100000 "
+  },
+  {
+    "row": 336,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Legal and professional fees",
+    "rule": "K: starts with 5100030 "
+  },
+  {
+    "row": 337,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....03 Publicity and marketing",
+    "rule": "K: starts with 5100010 "
+  },
+  {
+    "row": 338,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....04 Communications , utilities and insurance",
+    "rule": "K: starts with 5100002,5100003 "
+  },
+  {
+    "row": 339,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....05 Publications and stationery",
+    "rule": "K: starts with 5100024,5100040 "
+  },
+  {
+    "row": 340,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....06 Allowances of the Board of Directors during the year ",
+    "rule": "K: starts with 5100070 "
+  },
+  {
+    "row": 343,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....09 Others",
+    "rule": "K: starts with 5100001,5100005,5100008,5100011,5100020,5100050,5100060,5100090,5100100,5100200,5600020,5500020,5100021,5100075,5100006,5100007,5100009,5100004,5601010002,5500010001, 5600050010 "
+  },
+  {
+    "row": 346,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....02 Others",
+    "rule": "K: 5500060002"
+  },
+  {
+    "row": 356,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 357,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 358,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Cash on hand",
+    "rule": "K: =+K5"
+  },
+  {
+    "row": 375,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total\nK: Blocked Amt."
+  },
+  {
+    "row": 376,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 378,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".....01 Required Reserve",
+    "rule": "L: =+K7"
+  },
+  {
+    "row": 380,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Clearing Account",
+    "rule": "L: =+K8"
+  },
+  {
+    "row": 387,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........01 Commercial / Conventional",
+    "rule": "L: All Gl's  Start by 11 Except 1101000004"
+  },
+  {
+    "row": 388,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........02 Islamic",
+    "rule": "L: 1101000004"
+  },
+  {
+    "row": 395,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........01 Commercial / Conventional",
+    "rule": "L: details from Treasury system"
+  },
+  {
+    "row": 396,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........02 Islamic",
+    "rule": "L: details from Treasury system"
+  },
+  {
+    "row": 409,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........07 Banks in Q.F.C.",
+    "rule": "L: =+K13"
+  },
+  {
+    "row": 432,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: 1 Week\nC: >1 Week\u00a0 to 1 Month\nD: >1 to 3 Months\nE: >3 to 6 Months\nF: >6 to 12 Months\nG: >1 Year to 2 Years\nH: >2 Years to 5 Years\nI: >5 Years\nJ: Total Amount"
+  },
+  {
+    "row": 433,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "02 Claims on Central Banks",
+    "rule": "K: same Table 2 by maturity from Treasury system"
+  },
+  {
+    "row": 486,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: /01\u00a0\u00a0 Listed\nH: /02\u00a0\u00a0 Unlisted\nN: Grand Total\nQ: Pledged Againest"
+  },
+  {
+    "row": 487,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: 01\u00a0 Inside Qatar\nE: 02\u00a0\u00a0 Outside Qatar\nH: 01\u00a0 Inside Qatar\nK: 02\u00a0\u00a0 Outside Qatar"
+  },
+  {
+    "row": 488,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total\nK: LC\nL: FC\nM: Total\nN: LC\nO: FC\nP: Total\nQ: Repo\nR: Borrowing\nS: Others"
+  },
+  {
+    "row": 489,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Debt Securities",
+    "rule": "T: details from Treasury system match With table 100"
+  },
+  {
+    "row": 523,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: /01\u00a0\u00a0 Listed\nH: /02\u00a0\u00a0 Unlisted\nN: Grand Total\nQ: Pledged Againest"
+  },
+  {
+    "row": 524,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: 01\u00a0 Inside Qatar\nE: 02\u00a0\u00a0 Outside Qatar\nH: 01\u00a0 Inside Qatar\nK: 02\u00a0\u00a0 Outside Qatar"
+  },
+  {
+    "row": 525,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total\nK: LC\nL: FC\nM: Total\nN: LC\nO: FC\nP: Total\nQ: Repo\nR: Borrowing\nS: Others"
+  },
+  {
+    "row": 526,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "03 Equity Participation",
+    "rule": "T: details from Treasury system match With table 100"
+  },
+  {
+    "row": 561,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 562,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 566,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "......02 Sukuk",
+    "rule": "K: 1500000012, 1500000000, 1600000010, 1600000011, 1600000012, 1600010010"
+  },
+  {
+    "row": 567,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "......03 Shares",
+    "rule": "K: 1500000001, 1600000001, 1600000015"
+  },
+  {
+    "row": 573,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "........03 Shares",
+    "rule": "K: 1600000002"
+  },
+  {
+    "row": 574,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "........04 Mutual funds and Others",
+    "rule": "K: 1500000003, 1600000003"
+  },
+  {
+    "row": 578,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "........03 Shares",
+    "rule": "K: 1501010001, 1503000008, 1501000001, 1501020001, 1601000001, 1601000011, 1603010002, 1601010001"
+  },
+  {
+    "row": 579,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "........04 Mutual funds and Others **",
+    "rule": "K: 1601010005"
+  },
+  {
+    "row": 581,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "....01 Debt Securities ( Amortized Cost )",
+    "rule": "K: 1502010005"
+  },
+  {
+    "row": 582,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "....02 Sukuk",
+    "rule": "K: 1502000010, 1502000011, 1502000012, 1602000010, 1602000011, 1602000012, 1602010010"
+  },
+  {
+    "row": 592,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: 1\nC: >1 Week \nD: >1 \nE: >3 \nF: >6 \nG: >1 Year\nH: >5\nI: >10\nJ: Total "
+  },
+  {
+    "row": 593,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: Week\nC: To\nD: to \nE: To\nF: \u00a0\u00a0\u00a0\u00a0\u00a0 To\nG: To\nH: Years \nI: Years\nJ: Amount"
+  },
+  {
+    "row": 594,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "C: 1 Month\nD: 3 Months\nE: 6 Months\nF: 12 Months\nG: 5 Years\nH: To"
+  },
+  {
+    "row": 595,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "H: 10 Years"
+  },
+  {
+    "row": 596,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Debt Securities",
+    "rule": "K: details from Treasury system match With table 100"
+  },
+  {
+    "row": 631,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 632,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 633,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Non-Bank Financial Inst.",
+    "rule": "K: details from All loan by Type match With table 100"
+  },
+  {
+    "row": 670,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........01 Loans",
+    "rule": "L: SYN"
+  },
+  {
+    "row": 676,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........01 Murabaha - Musawma",
+    "rule": "L: All Account Type Except SYN, IST, IJR"
+  },
+  {
+    "row": 677,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........02 Istisna'a",
+    "rule": "L: IST"
+  },
+  {
+    "row": 679,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........04 Finance Ijara",
+    "rule": "L: IJR"
+  },
+  {
+    "row": 682,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...........01 Credit Cards",
+    "rule": "L: 1300050001"
+  },
+  {
+    "row": 691,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 692,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 693,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Non-Bank Financial Inst.",
+    "rule": "K: details from All loan by Sictor match With table 100"
+  },
+  {
+    "row": 713,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "......01 Investment Companies",
+    "rule": "L: 44103"
+  },
+  {
+    "row": 714,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "......02 Finance Companies",
+    "rule": "L: 44105"
+  },
+  {
+    "row": 716,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "......04 Exchange Houses",
+    "rule": "L: 44102"
+  },
+  {
+    "row": 718,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "......06 Insurance Companies",
+    "rule": "L: 44101"
+  },
+  {
+    "row": 723,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "......01 Governments",
+    "rule": "L: Rim 2398"
+  },
+  {
+    "row": 735,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "......01 Governments",
+    "rule": "L: sic start by 1 Except rim 2398"
+  },
+  {
+    "row": 737,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "......03 Government Inst.",
+    "rule": "L: sic start by 2"
+  },
+  {
+    "row": 738,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "......04 Semi Government Inst.",
+    "rule": "L: sic start by 3"
+  },
+  {
+    "row": 751,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "........02 Other Corporates",
+    "rule": "L: Sic start by 4 type SYN"
+  },
+  {
+    "row": 757,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "........01 Small Business",
+    "rule": "L: Sic stat by 4 except 441 details from Risk"
+  },
+  {
+    "row": 758,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "........02 Other Corporates",
+    "rule": "L: Sic stat by 4 except 441 details from Risk"
+  },
+  {
+    "row": 760,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "........01 Personal Against Salary",
+    "rule": "L: all personal loan details from Risk"
+  },
+  {
+    "row": 761,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "........02 Other Personal",
+    "rule": "L: all personal loan details from Risk"
+  },
+  {
+    "row": 769,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Without Maturity\nC: >1 Week\nD: >1 Week To1 Month\nE: >1 to3 Months\nF: >3 To6 Months\nG: >6 To 12 Months\nH: >1 Year To 2 Years\nI: >2 Year To 5 Years\nJ: >5 Years To 10 Years\nK: >10 Years to 20 Years\nL: >20 Years\nM: Total Amount"
+  },
+  {
+    "row": 770,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Non-Bank Financial Inst. ",
+    "rule": "N: Performing Loan by maturity from Risk match with table 11"
+  },
+  {
+    "row": 820,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Good / Low Risk\nD: Special Mentioned\nF: Total Performing\nH: Substandard\nJ: Doubtful\nL: Bad Debts\nN: Total Non-performing\nP: Grand Total"
+  },
+  {
+    "row": 821,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: Direct\nC: Indirect\nD: Direct\nE: Indirect\nF: Direct\nG: Indirect\nH: Direct\nI: Indirect\nJ: Direct\nK: Indirect\nL: Direct\nM: Indirect\nN: Direct\nO: Indirect\nP: Direct\nQ: Indirect"
+  },
+  {
+    "row": 822,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Inside Qatar ",
+    "rule": "R: from BO after upload CRM report from Risk match with table 9"
+  },
+  {
+    "row": 851,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: UP TO 100\nD: > 100 TO 1000\nF: > 1000 TO 2500\nH: > 2500 TO 10000\nJ: > 10000 TO 50000\nL: > 50000 TO 100000\nN: > 100000 TO 500000\nP: > 500000 TO 1000000\nR: > 1000000 \nT: Total"
+  },
+  {
+    "row": 852,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: No.\nC: Amt.\nD: No.\nE: Amt.\nF: No.\nG: Amt.\nH: No.\nI: Amt.\nJ: No.\nK: No.\nL: No.\nM: Amt.\nN: No.\nO: Amt.\nP: No.\nQ: Amt.\nR: No.\nS: Amt.\nT: No.\nU: Amt."
+  },
+  {
+    "row": 853,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Non-Bank Financial Inst.",
+    "rule": "V: from BO match with table 9"
+  },
+  {
+    "row": 884,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Total Credit Facilities\nD: Collaterals"
+  },
+  {
+    "row": 885,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: Secured\nC: Unsecured\nD: Customer Deposits\nE: Gov. Guarantee\nF: Bank Guarantee\nG: Real Estate Mortgages\nH: Car Mortgages\nI: Other Mortgages\nJ: Securities\nK: Other Tangible Collaterals\nL: Total Collaterals"
+  },
+  {
+    "row": 887,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Non-Bank Financial Inst.",
+    "rule": "M: from BO with Risk match with table 9"
+  },
+  {
+    "row": 917,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 918,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 937,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...........01 Investment Companies",
+    "rule": "K: 1503000001"
+  },
+  {
+    "row": 938,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "...........02 Finance Companies",
+    "rule": "K: 1503000002, 1503000003, 1503000004, 1503000005, 1503000006, 1503000007"
+  },
+  {
+    "row": 973,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 974,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 976,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Lands",
+    "rule": "K: 1700000001"
+  },
+  {
+    "row": 989,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nH: Outside Qatar"
+  },
+  {
+    "row": 990,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: Cost\nC: Prov. Of Depreciation\nD: Prov. Of Value decline\nE: Change In Fair Value *\nG: Net Book Value\nH: Cost\nI: Prov. Of Depreciation\nJ: Prov. Of Value decline\nK: Change In Fair Value *\nM: Net Book Value"
+  },
+  {
+    "row": 991,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "E: Positive\nF: Negative\nK: Positive\nL: Negative"
+  },
+  {
+    "row": 993,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".......01 Lands",
+    "rule": "N: 1700000001"
+  },
+  {
+    "row": 1009,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nG: Outside Qatar"
+  },
+  {
+    "row": 1010,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: Cost\nC: Rate Of % Depreciation\nD: Prov. Of Depre.\nE: Prov. Of Value decline\nF: Net Book Value\nG: Cost\nH: Rate Of % Depreciation\nI: Prov. Of Depre.\nJ: Prov. Of Value decline\nK: Net Book Value"
+  },
+  {
+    "row": 1011,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Lands and Buildings",
+    "rule": "L: 1800000001, 1800000002, (2800000001)"
+  },
+  {
+    "row": 1013,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "03 Furniture and Equipments",
+    "rule": "L: 1801000003, 1801000004, (2800010003, 2800010004)"
+  },
+  {
+    "row": 1014,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "04 Computer Equipments",
+    "rule": "L: 1801000002, 1801000005, (2800010002, 2800010005)"
+  },
+  {
+    "row": 1015,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "05 Motor Vehicles",
+    "rule": "L: 1801000001, (2800010001)"
+  },
+  {
+    "row": 1019,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........01 Lands and Buildings",
+    "rule": "L: 1803010001, 1804010001, 1804010002, (2800020001, 2802000001, 2802000002)"
+  },
+  {
+    "row": 1033,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1034,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: Original Cost\nC: Amortization or Impairment UP to Date\nD: Net Book Value\nE: Original Cost\nF: Amortization or Impairment UP to Date\nG: Net Book Value\nH: Original Cost\nI: Amortization or Impairment UP to Date\nJ: Net Book Value"
+  },
+  {
+    "row": 1035,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Goodwill",
+    "rule": "K: 1802010002"
+  },
+  {
+    "row": 1041,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........04 Customers Relations",
+    "rule": "K: 1802010003, (2801000003)"
+  },
+  {
+    "row": 1042,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........05 Other",
+    "rule": "K: 1802010001, 1802010004, 1802010005, (2801000001, 2801000004, 2801000005)"
+  },
+  {
+    "row": 1052,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1053,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1054,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "01 Accrued Income",
+    "rule": "K: 1904010001, 1904010010, 1904010011, 1904010012, 1904030002"
+  },
+  {
+    "row": 1055,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "02 Prepaid Expenses",
+    "rule": "K: starts with 19020 "
+  },
+  {
+    "row": 1056,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "03 Amounts Receivables",
+    "rule": "K: 1900000010, 1900010055, 1900070030, 1900070040, 1901000010, 1903000001, 1903000010, 1903020010, 1903090090, 1900000011, 1900000012, 1900000030, 1900000033"
+  },
+  {
+    "row": 1062,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": ".........03 For Fixed assets",
+    "rule": "K: starts with 19025 "
+  },
+  {
+    "row": 1064,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "07 Suspense Account",
+    "rule": "K: starts with 19070 "
+  },
+  {
+    "row": 1065,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "08 Others",
+    "rule": "K: starts with 19045,19060,19075 "
+  },
+  {
+    "row": 1075,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total\nK: Blocked Amt."
+  },
+  {
+    "row": 1076,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1133,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: 1 Week\nC: >1 Week\u00a0 to 1 Month\nD: >1 to 3 Months\nE: >3 to 6 Months\nF: >6 to 12 Months\nG: >1 Year to 2 Years\nH: >2 Years to 5 Years\nI: >5 Years\nJ: Total Amount"
+  },
+  {
+    "row": 1188,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1189,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1240,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Current and Call\nC: Saving\nD: Time\nK: Total Amount"
+  },
+  {
+    "row": 1241,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "D: 1 Week\nE: >1 Week\u00a0 to 1 Month\nF: >1 to 3 Months\nG: >3 to 6 Months\nH: >6 to 12 Months\nI: >1 Year to 2 Years\nJ: >2 Years"
+  },
+  {
+    "row": 1261,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Total",
+    "rule": "L: =SUM(D1261:J1261)\nM: =SUM(B1261:F1261)\nN: =SUM(G1261:J1261)"
+  },
+  {
+    "row": 1277,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: UP TO 100\nD: > 100 TO 1000\nF: > 1000 TO 2500\nH: > 2500 TO 10000\nJ: > 10000 TO 50000\nL: > 50000 TO 100000\nN: > 100000 TO 500000\nP: > 500000 TO 1000000\nR: > 1000000 \nT: Total"
+  },
+  {
+    "row": 1278,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: No.\nC: Amt.\nD: No.\nE: Amt.\nF: No.\nG: Amt.\nH: No.\nI: Amt.\nJ: No.\nK: No.\nL: No.\nM: Amt.\nN: No.\nO: Amt.\nP: No.\nQ: Amt.\nR: No.\nS: Amt.\nT: No.\nU: Amt."
+  },
+  {
+    "row": 1306,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1307,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1327,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1328,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1346,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: 1 Week\nC: >1 Week\u00a0 to 1 Month\nD: >1 to 3 Months\nE: >3 to 6 Months\nF: >6 to 12 Months\nG: >1 Year to 2 Years\nH: >2 Years to 5 Years\nI: >5 Years to 10 Years\nJ: >10 Year\nK: Total Amount"
+  },
+  {
+    "row": 1373,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1374,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1452,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1453,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: Perform\nC: Non Perform\nD: Total\nE: Perform\nF: Non Perform\nG: Total\nH: Perform\nI: Non Perform\nJ: Total"
+  },
+  {
+    "row": 1477,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1478,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1515,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: LC\nC: FC\nD: Total"
+  },
+  {
+    "row": 1527,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nD: Outside Qatar\nF: Total"
+  },
+  {
+    "row": 1528,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: Positive\nC: Negative\nD: Positive\nE: Negative\nF: Positive\nG: Negative\nH: Net"
+  },
+  {
+    "row": 1545,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1546,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1562,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1563,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1615,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1616,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1639,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Over Draft\nC: Loans and advances \nD: Istisna'a\nE: Mudaraba - Musharaka\nF: Other Islamic Finance\nG: Grand Total\nH: Total Less Than one Year\nI: L.C\nJ: L.G"
+  },
+  {
+    "row": 1674,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Notional Amount\nC: Positive Fair Value\nD: Negative Fair Value\nE: Notional Value at Maturity"
+  },
+  {
+    "row": 1675,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "E: With in 3 Months\nF: 3-12 Months\nG: 1-5 Years\nH: > 5 Years"
+  },
+  {
+    "row": 1706,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1707,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1729,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Deposits *\nC: Loans to Bank\nD: Credit Facilities **\nE: Debt Securities - Sukuk\nF: Others\nG: Equity Participation\nH: Total"
+  },
+  {
+    "row": 1790,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Deposits *\nC: Loans to Bank\nD: Debt Securities - Sukuk\nE: Others\nF: Total"
+  },
+  {
+    "row": 1850,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: /01\u00a0\u00a0 Listed\nE: /02\u00a0\u00a0 Unlisted\nH: Grand Total"
+  },
+  {
+    "row": 1851,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: Total\nE: LC\nF: FC\nG: Total\nH: LC\nI: FC\nJ: Total"
+  },
+  {
+    "row": 1884,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Description",
+    "rule": "B: Inside Qatar\nE: Outside Qatar\nH: Grand Total"
+  },
+  {
+    "row": 1885,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: Profit\nC: (Loss)\nD: Net\nE: Profit\nF: (Loss)\nG: Net\nH: Profit\nI: (Loss)\nJ: Net"
+  },
+  {
+    "row": 1932,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Sector / Subdivision",
+    "rule": "B: Non-Bank Financial Institutions\nD: Government Institutions\nF: Semi-Government Institutions\nH: Private Sector Corporate\nJ: Personal\nL: Total Credit Facilities"
+  },
+  {
+    "row": 1934,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: LC\nE: FC\nF: LC\nG: FC\nH: LC\nI: FC\nJ: LC\nK: FC\nL: LC\nM: FC\nN: Total"
+  },
+  {
+    "row": 2094,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "Sector / Subdivision",
+    "rule": "B: Non-Bank Financial Institutions\nD: Government Institutions\nF: Semi-Government Institutions\nH: Private Sector Corporate\nJ: Personal\nL: Total Deposits"
+  },
+  {
+    "row": 2096,
+    "sheet": "All Reports By Report ID_Templa",
+    "description": "",
+    "rule": "B: LC\nC: FC\nD: LC\nE: FC\nF: LC\nG: FC\nH: LC\nI: FC\nJ: LC\nK: FC\nL: LC\nM: FC\nN: Total"
+  }
+]

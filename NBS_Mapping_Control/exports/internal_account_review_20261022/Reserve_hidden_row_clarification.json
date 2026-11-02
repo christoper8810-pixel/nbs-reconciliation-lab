@@ -1,0 +1,15 @@
+{
+  "source": "C:\\Users\\Test\\Downloads\\NBS MAPPING - 6 Oct 2026.xlsx",
+  "sheet": "ASSET - 100",
+  "hidden_rows": "57:108",
+  "hidden_reserve_cells": [
+    "C64",
+    "D64",
+    "F64",
+    "G64"
+  ],
+  "hidden_text_excerpt": "ASSET TYPE = DEBIT & CATEGORY = 5003 & 5004",
+  "visible_reserve_reference": "='Table 2'!A10",
+  "visible_detail_rule": "Category=  18060 & 18061.\nASSET TYPE = DEBIT\nResidence Criteria will  not be applied for Internal Accounts",
+  "conclusion": "Hidden retained specification conflicts with visible rule. No deployed-report defect established by this comparison."
+}

@@ -1,0 +1,2803 @@
+[
+  {
+    "row": 5,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 01 cash and precious metals",
+    "cells": [
+      {
+        "ref": "K5",
+        "text": "All Gl's  Start by 100  Except  1003",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 7,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 02 claims on central banks > 01 required reserve",
+    "cells": [
+      {
+        "ref": "K7",
+        "text": "1003000010, 1003000011",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 8,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 02 claims on central banks > 02 others",
+    "cells": [
+      {
+        "ref": "K8",
+        "text": 1003000020,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 11,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 03 claims on banks > 01 banks > 01 demand and call",
+    "cells": [
+      {
+        "ref": "K11",
+        "text": "All Gl's  Start by 11 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 12,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 03 claims on banks > 01 banks > 02 placements",
+    "cells": [
+      {
+        "ref": "K12",
+        "text": "1200000010, 1302000010",
+        "formula": ""
+      },
+      {
+        "ref": "L12",
+        "text": "inside and outside from Treasury system",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 13,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 03 claims on banks > 01 banks > 03 loans / finance",
+    "cells": [
+      {
+        "ref": "K13",
+        "text": "Sic Code 44108 from All Loan",
+        "formula": ""
+      },
+      {
+        "ref": "L13",
+        "text": "inside and outside from all loan file",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 18,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 04 securities portfolio > 01 debt securities > 01 issued by governments",
+    "cells": [
+      {
+        "ref": "K18",
+        "text": 1502010005,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 23,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 04 securities portfolio > 02 sukuk > 01 issued by governments",
+    "cells": [
+      {
+        "ref": "K23",
+        "text": "inside 1500000010, 1502000010, 1502010010",
+        "formula": ""
+      },
+      {
+        "ref": "L23",
+        "text": "outside 1602000010, 1600000010",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 25,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 04 securities portfolio > 02 sukuk > 03 issued by banks",
+    "cells": [
+      {
+        "ref": "K25",
+        "text": "inside 1502000011, 1500000011",
+        "formula": ""
+      },
+      {
+        "ref": "L25",
+        "text": "outside 1602000011, 1600000011",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 26,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 04 securities portfolio > 02 sukuk > 04 issued by others",
+    "cells": [
+      {
+        "ref": "K26",
+        "text": "inside 1502000012, 1500000012",
+        "formula": ""
+      },
+      {
+        "ref": "L26",
+        "text": "outside 1600000012, 1602000012, 1602010010, 1600010010",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 27,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 04 securities portfolio > 03 equity participation",
+    "cells": [
+      {
+        "ref": "K27",
+        "text": "inside 1500000001, 1501000001, 1501010001, 1501020001",
+        "formula": ""
+      },
+      {
+        "ref": "L27",
+        "text": "outside 1600000001, 1600000002, 1600000015, 1601000011, 1601010001, 1603010002",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 28,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 04 securities portfolio > 04 mutual funds and others",
+    "cells": [
+      {
+        "ref": "L28",
+        "text": "outside 1600000003, 1601010005",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 29,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 05 credit facilities",
+    "cells": [
+      {
+        "ref": "K29",
+        "text": "(All Gl's  Start by 13  Except  1302000010 + Gl's  under 190002 + Gl's  under 190005 + Gl's  under 1904 Except  190401, 1904030002) minus GL's under 2302",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 33,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 05 credit facilities > 01 non-bank financial inst. > 03 islamic finance",
+    "cells": [
+      {
+        "ref": "K33",
+        "text": "from all loan file NonPersonal all sic code start by 441 Except  44108 (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)",
+        "formula": ""
+      },
+      {
+        "ref": "L33",
+        "text": "outside from all loan file NonPersonal all sic code start by 441 Except  44108 nonresident (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 35,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 05 credit facilities > 02 public sector > 01 overdraft",
+    "cells": [
+      {
+        "ref": "K35",
+        "text": "from all loan file Rim 2398 (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 37,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 05 credit facilities > 02 public sector > 03 islamic finance",
+    "cells": [
+      {
+        "ref": "K37",
+        "text": "from all loan file NonPersonal all sic code start by 1,2,3  Except  Rim 2398 (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)",
+        "formula": ""
+      },
+      {
+        "ref": "L37",
+        "text": "outside from all loan file NonPersonal all sic code start by 1,2,3  nonresident (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 40,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 05 credit facilities > 03 private sector > 02 loans and advances",
+    "cells": [
+      {
+        "ref": "K40",
+        "text": " from all loan file all account type SYN (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)",
+        "formula": ""
+      },
+      {
+        "ref": "L40",
+        "text": "outside from all loan file all account type SYN nonresident",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 41,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 05 credit facilities > 03 private sector > 03 islamic finance",
+    "cells": [
+      {
+        "ref": "K41",
+        "text": "from all loan personal + NonPersonal all sic code start by 4 Except  441 + GL  1300050001",
+        "formula": ""
+      },
+      {
+        "ref": "L41",
+        "text": "outside from all loan personal + NonPersonal all sic code start by 4 Except  441 nonresident (Outstanding_QAR+ Amortized_Earned_QAR + Loan_Fees_QAR)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 43,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 06 investments in subsid. and assoc. > 01 subsidiaries",
+    "cells": [
+      {
+        "ref": "K43",
+        "text": "1503000001, 1503000002, 1503000003, 1503000004, 1503000005, 1503000006, 1503000007",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 44,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 06 investments in subsid. and assoc. > 02 associates",
+    "cells": [
+      {
+        "ref": "K44",
+        "text": 1503010011,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 45,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 07 investment in real estates",
+    "cells": [
+      {
+        "ref": "K45",
+        "text": 1700000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 46,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 08 net fixed assets",
+    "cells": [
+      {
+        "ref": "K46",
+        "text": "1800000001, 1801000001, 1801000002, 1801000003, 1801000004, 1801000005, 1803010001, 1804010001, 1804010002 Exclude (2800010001, 2800010002, 2800010003, 2800010004, 2800010005, 2800020001, 2802000001, 2802000002)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 48,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 09 other assets > 01 positive f.v. of derivatives",
+    "cells": [
+      {
+        "ref": "K48",
+        "text": "1909500000, 1909500001, 1909501001, 1909502001 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 49,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 09 other assets > 02 intangible assets",
+    "cells": [
+      {
+        "ref": "K49",
+        "text": "1802010001, 1802010002, 1802010003, 1802010004, 1802010005 Exclude (2801000001, 2801000002, 2801000003, 2801000004, 2801000005)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 50,
+    "table": "Assets",
+    "path": "dukhan bank - all branches inside qatar > 09 other assets > 03 others",
+    "cells": [
+      {
+        "ref": "K50",
+        "text": "All Gl's  Start by 19 Except  GL  1900020001, 1904000001, 1904000003, 1904000017, 1904000020, 1904000021, 1904030002 and GL Start by (190005, 1908, 1909)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 65,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 01 due to central banks > 02 repo",
+    "cells": [
+      {
+        "ref": "K65",
+        "text": 2200000020,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 69,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 02 due to banks > 01 banks > 01 demand and call",
+    "cells": [
+      {
+        "ref": "K69",
+        "text": "inside 2100010013, 2100010015, 2100010016, 2100010021, 2100010022",
+        "formula": ""
+      },
+      {
+        "ref": "L69",
+        "text": "outside 2100010006, 2100010008, 2100010009, 2100010010, 2100010011, 2100010012, 2100010014,2100010019, 2100010020",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 70,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 02 due to banks > 01 banks > 02 placements",
+    "cells": [
+      {
+        "ref": "K70",
+        "text": "inside 2200000001, 2305902001",
+        "formula": ""
+      },
+      {
+        "ref": "L70",
+        "text": "outside  2305901002, 2306001001",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 71,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 02 due to banks > 01 banks > 03 borrowings / finance",
+    "cells": [
+      {
+        "ref": "L71",
+        "text": 2306001010,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 72,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 02 due to banks > 01 banks > 04 repo",
+    "cells": [
+      {
+        "ref": "L72",
+        "text": 2306000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 76,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 03 customer deposits > 01 non-bank financial inst > 01 current and call",
+    "cells": [
+      {
+        "ref": "K76",
+        "text": "from all Deposits file NonPersonal all sic code start by 441 account type (CAL, CUR, SAL, WMI)",
+        "formula": ""
+      },
+      {
+        "ref": "L76",
+        "text": "inside and outside from all Deposits file by Residency",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 77,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 03 customer deposits > 01 non-bank financial inst > 02 saving and time",
+    "cells": [
+      {
+        "ref": "K77",
+        "text": "from all Deposits file NonPersonal all sic code start by 441 account type (DHW, MSP, MSS, NTD, PIA, PSV,SAV, SSV, YSV)",
+        "formula": ""
+      },
+      {
+        "ref": "L77",
+        "text": "inside and outside from all Deposits file by Residency",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 79,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 03 customer deposits > 02 public sector > 01 current and call",
+    "cells": [
+      {
+        "ref": "K79",
+        "text": "from all Deposits file NonPersonal all sic code start by 1,2,3 account type (CAL, CUR, SAL, WMI)",
+        "formula": ""
+      },
+      {
+        "ref": "L79",
+        "text": "inside and outside from all Deposits file by Residency",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 80,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 03 customer deposits > 02 public sector > 02 saving and time",
+    "cells": [
+      {
+        "ref": "K80",
+        "text": "from all Deposits file NonPersonal all sic code start by 1,2,3 account type (DHW, MSP, MSS, NTD, PIA, PSV,SAV, SSV, YSV)",
+        "formula": ""
+      },
+      {
+        "ref": "L80",
+        "text": "inside and outside from all Deposits file by Residency",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 82,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 03 customer deposits > 03 private sector > 01 current and call",
+    "cells": [
+      {
+        "ref": "K82",
+        "text": "from all Deposits file NonPersonal all sic code start by 4 Except 441 + all personal deposits account type (CAL, CUR, SAL, WMI)",
+        "formula": ""
+      },
+      {
+        "ref": "L82",
+        "text": "inside and outside from all Deposits file by Residency",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 83,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 03 customer deposits > 03 private sector > 02 saving and time",
+    "cells": [
+      {
+        "ref": "K83",
+        "text": "from all Deposits file NonPersonal all sic code start by 4 Except 441 + all personal deposits account type (DHW, MSP, MSS, NTD, PIA, PSV,SAV, SSV, YSV)",
+        "formula": ""
+      },
+      {
+        "ref": "L83",
+        "text": "inside and outside from all Deposits file by Residency",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 92,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 06 cash margin",
+    "cells": [
+      {
+        "ref": "K92",
+        "text": "GL's Start by 2903 Except  2903000002",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 94,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 07 provisions > 01 specific loans / finance",
+    "cells": [
+      {
+        "ref": "K94",
+        "text": "GL's Start by 23050, 23090",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 95,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 07 provisions > 02 specific contingent liabilities",
+    "cells": [
+      {
+        "ref": "K95",
+        "text": "GL's Start by 23065",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 100,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 07 provisions > 07 interest / income in suspense",
+    "cells": [
+      {
+        "ref": "K100",
+        "text": "GL's Start by 2301",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 101,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 07 provisions > 08 expected credit loss",
+    "cells": [
+      {
+        "ref": "K101",
+        "text": "GL's Start by 23055, 23080, 23085",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 103,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 08 other liabilities > 01 deffered interest / income",
+    "cells": [
+      {
+        "ref": "K103",
+        "text": "GL's Start by 2300 Except  2300020010, 2300070010",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 104,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 08 other liabilities > 02 negative f.v. of derivatives",
+    "cells": [
+      {
+        "ref": "K104",
+        "text": "GL's Start by 29095",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 105,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 08 other liabilities > 03 net profit for the period",
+    "cells": [
+      {
+        "ref": "K105",
+        "text": 3800000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 106,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 08 other liabilities > 04 others",
+    "cells": [
+      {
+        "ref": "K106",
+        "text": "All Gl's  Start by 29 Except  GL Start by (2903, 29085) + Gl's start by 23040 + GL  2903000002",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 108,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 09 capital account > 01 paid up capital",
+    "cells": [
+      {
+        "ref": "K108",
+        "text": 3000000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 109,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 09 capital account > 02 treasury shares - nominal -",
+    "cells": [
+      {
+        "ref": "K109",
+        "text": 3200000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 110,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 09 capital account > 03 legal reserve",
+    "cells": [
+      {
+        "ref": "K110",
+        "text": 3500000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 111,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 09 capital account > 04 treasury shares - prem. / disc.",
+    "cells": [
+      {
+        "ref": "K111",
+        "text": 3200000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 113,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 09 capital account > 06 fair value adjustments",
+    "cells": [
+      {
+        "ref": "K113",
+        "text": 3503000001,
+        "formula": ""
+      },
+      {
+        "ref": "L113",
+        "text": "inside and outside from Treasury system",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 114,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 09 capital account > 07 risk reserve",
+    "cells": [
+      {
+        "ref": "K114",
+        "text": 3502000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 115,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 09 capital account > 08 other reserves",
+    "cells": [
+      {
+        "ref": "L115",
+        "text": "inside and outside from Treasury system",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 116,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 09 capital account > 09 retained earnings",
+    "cells": [
+      {
+        "ref": "K116",
+        "text": "3900000001, 3900000003, 3950000002",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 117,
+    "table": "Liabilities",
+    "path": "dukhan bank - all branches inside qatar > 10 instrument eligible to additional capital",
+    "cells": [
+      {
+        "ref": "K117",
+        "text": 3950000001,
+        "formula": ""
+      },
+      {
+        "ref": "L117",
+        "text": "inside and outside from Treasury system",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 129,
+    "table": "Contra Items",
+    "path": "dukhan bank - all branches inside qatar > 01 contingent liabilities > 01 letters of guarantee",
+    "cells": [
+      {
+        "ref": "K129",
+        "text": 8001000001,
+        "formula": ""
+      },
+      {
+        "ref": "L129",
+        "text": "inside and outside from Trade Finance",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 130,
+    "table": "Contra Items",
+    "path": "dukhan bank - all branches inside qatar > 01 contingent liabilities > 02 letters of credit",
+    "cells": [
+      {
+        "ref": "K130",
+        "text": "8000000008, 8000000009",
+        "formula": ""
+      },
+      {
+        "ref": "L130",
+        "text": "inside and outside from Trade Finance",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 131,
+    "table": "Contra Items",
+    "path": "dukhan bank - all branches inside qatar > 01 contingent liabilities > 03 acceptances",
+    "cells": [
+      {
+        "ref": "K131",
+        "text": 1908500001,
+        "formula": ""
+      },
+      {
+        "ref": "L131",
+        "text": "inside and outside from Trade Finance",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 133,
+    "table": "Contra Items",
+    "path": "dukhan bank - all branches inside qatar > 02 commitments > 01 unutilized facilities",
+    "cells": [
+      {
+        "ref": "L133",
+        "text": "Unutilized Report from BO",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 136,
+    "table": "Contra Items",
+    "path": "dukhan bank - all branches inside qatar > 03 derivative contracts",
+    "cells": [
+      {
+        "ref": "K136",
+        "text": "8004000010, 9005000001, 9005000002, 9006000001$, 9006000002$",
+        "formula": ""
+      },
+      {
+        "ref": "L136",
+        "text": "inside and outside from Treasury system",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 137,
+    "table": "Contra Items",
+    "path": "dukhan bank - all branches inside qatar > 04 assets under management",
+    "cells": [
+      {
+        "ref": "K137",
+        "text": "GL's Start by 9001",
+        "formula": ""
+      },
+      {
+        "ref": "L137",
+        "text": "inside and outside from Treasury system",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 154,
+    "table": "Income",
+    "path": "4 income > 01 interest / return received > 02 from claims on banks > 02 other banks",
+    "cells": [
+      {
+        "ref": "K154",
+        "text": "starts 4000, 400102, 400107",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 157,
+    "table": "Income",
+    "path": "4 income > 01 interest / return received > 03 from debt securities - sukuk > 01 from debt securities > 01 issued by governments",
+    "cells": [
+      {
+        "ref": "K157",
+        "text": "4003020005",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 162,
+    "table": "Income",
+    "path": "4 income > 01 interest / return received > 03 from debt securities - sukuk > 02 from sukuk > 01 issued by governments",
+    "cells": [
+      {
+        "ref": "K162",
+        "text": "4004020004",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 165,
+    "table": "Income",
+    "path": "4 income > 01 interest / return received > 03 from debt securities - sukuk > 02 from sukuk > 04 issued by others",
+    "cells": [
+      {
+        "ref": "K165",
+        "text": "4003000004,4003020001,4003050002,4003010005,4003010006,4003010007",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 166,
+    "table": "Income",
+    "path": "4 income > 01 interest / return received > 04 from credit facilities",
+    "cells": [
+      {
+        "ref": "K166",
+        "text": "starts with 4001 Except  400102, 400107",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 188,
+    "table": "Income",
+    "path": "4 income > 02 net profit ( loss ) on securities portfolio > 01 net profit ( loss ) on revaluation > 02 sukuk",
+    "cells": [
+      {
+        "ref": "K188",
+        "text": "4003020002,4003020003",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 189,
+    "table": "Income",
+    "path": "4 income > 02 net profit ( loss ) on securities portfolio > 01 net profit ( loss ) on revaluation > 03 equity participation",
+    "cells": [
+      {
+        "ref": "K189",
+        "text": "4003010003",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 190,
+    "table": "Income",
+    "path": "4 income > 02 net profit ( loss ) on securities portfolio > 01 net profit ( loss ) on revaluation > 04 mutual funds and others",
+    "cells": [
+      {
+        "ref": "K190",
+        "text": "4004050001",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 193,
+    "table": "Income",
+    "path": "4 income > 02 net profit ( loss ) on securities portfolio > 02 net profit ( loss ) from sale > 02 sukuk",
+    "cells": [
+      {
+        "ref": "K193",
+        "text": "4003000005",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 194,
+    "table": "Income",
+    "path": "4 income > 02 net profit ( loss ) on securities portfolio > 02 net profit ( loss ) from sale > 03 equity participation",
+    "cells": [
+      {
+        "ref": "K194",
+        "text": "4003010001,4003000001",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 195,
+    "table": "Income",
+    "path": "4 income > 02 net profit ( loss ) on securities portfolio > 02 net profit ( loss ) from sale > 04 mutual funds and others",
+    "cells": [
+      {
+        "ref": "K195",
+        "text": "4003050001",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 197,
+    "table": "Income",
+    "path": "4 income > 03 dividends received > 01 equity participation",
+    "cells": [
+      {
+        "ref": "K197",
+        "text": "4003000002,4003010002",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 200,
+    "table": "Income",
+    "path": "4 income > 04 net profit ( loss ) from invest. in subsid. and assoc. > 01 subsidiaries",
+    "cells": [
+      {
+        "ref": "K200",
+        "text": "4003030001",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 201,
+    "table": "Income",
+    "path": "4 income > 04 net profit ( loss ) from invest. in subsid. and assoc. > 02 associates",
+    "cells": [
+      {
+        "ref": "K201",
+        "text": "4004030002",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 204,
+    "table": "Income",
+    "path": "4 income > 05 net income from invest. in real estate > 02 net profit ( loss ) from sale",
+    "cells": [
+      {
+        "ref": "K204",
+        "text": "4500090010",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 208,
+    "table": "Income",
+    "path": "4 income > 06 net profit ( loss ) from forex operations > 02 assets - liabilities revaluation",
+    "cells": [
+      {
+        "ref": "K208",
+        "text": "starts with 40080 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 209,
+    "table": "Income",
+    "path": "4 income > 06 net profit ( loss ) from forex operations > 03 f.v. of derivatives",
+    "cells": [
+      {
+        "ref": "K209",
+        "text": "starts 40095",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 211,
+    "table": "Income",
+    "path": "4 income > 07 commission and fees receveid > 01 credit facilities",
+    "cells": [
+      {
+        "ref": "K211",
+        "text": "starts with 4005000,4009001,4009002 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 212,
+    "table": "Income",
+    "path": "4 income > 07 commission and fees receveid > 02 contingent liabilities",
+    "cells": [
+      {
+        "ref": "K212",
+        "text": "starts with 4005030 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 215,
+    "table": "Income",
+    "path": "4 income > 07 commission and fees receveid > 05 other banking services",
+    "cells": [
+      {
+        "ref": "K215",
+        "text": "starts with 4005010,4005020,4005090,4005050",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 221,
+    "table": "Income",
+    "path": "4 income > 08 other income > 03 others",
+    "cells": [
+      {
+        "ref": "K221",
+        "text": "Start  4009000 , 4500000001,4500090008,4500090009",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 248,
+    "table": "Expenses",
+    "path": "5 expenses > 01 interest / return and profit paid > 01 interest / return paid > 04 debt securities - sukuk > 02 bonds",
+    "cells": [
+      {
+        "ref": "K248",
+        "text": "starts with 5501",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 255,
+    "table": "Expenses",
+    "path": "5 expenses > 01 interest / return and profit paid > 02 profit paid on islamic deposits > 01 central banks",
+    "cells": [
+      {
+        "ref": "K255",
+        "text": "5300020020",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 256,
+    "table": "Expenses",
+    "path": "5 expenses > 01 interest / return and profit paid > 02 profit paid on islamic deposits > 02 banks",
+    "cells": [
+      {
+        "ref": "K256",
+        "text": "5300020010,  5300020040, 560001",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 261,
+    "table": "Expenses",
+    "path": "5 expenses > 01 interest / return and profit paid > 02 profit paid on islamic deposits > 03 customer deposits > 04 corporates",
+    "cells": [
+      {
+        "ref": "K261",
+        "text": "starts with 5300010,5300040,5300060,5300050,5300090, 5300020001 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 262,
+    "table": "Expenses",
+    "path": "5 expenses > 01 interest / return and profit paid > 02 profit paid on islamic deposits > 03 customer deposits > 05 personal",
+    "cells": [
+      {
+        "ref": "K262",
+        "text": "starts with 5300000,5300070,5300075, 5300080 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 265,
+    "table": "Expenses",
+    "path": "5 expenses > 02 commission fees paid > 01 banks and financial inst.",
+    "cells": [
+      {
+        "ref": "K265",
+        "text": "starts with 5100080,5600050 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 268,
+    "table": "Expenses",
+    "path": "5 expenses > 02 commission fees paid > 04 others",
+    "cells": [
+      {
+        "ref": "K268",
+        "text": "starts with 5100055 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 278,
+    "table": "Expenses",
+    "path": "5 expenses > 03 provisions > 01 specific loans / finance > 02 islamic finance",
+    "cells": [
+      {
+        "ref": "K278",
+        "text": "5500000001",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 285,
+    "table": "Expenses",
+    "path": "5 expenses > 03 provisions > 02 specific contingent liabilities",
+    "cells": [
+      {
+        "ref": "K285",
+        "text": 5500008001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 290,
+    "table": "Expenses",
+    "path": "5 expenses > 03 provisions > 03 collective impairments > 04 others",
+    "cells": [
+      {
+        "ref": "K290",
+        "text": "5500005001",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 297,
+    "table": "Expenses",
+    "path": "5 expenses > 03 provisions > 05 other investment > 05 others",
+    "cells": [
+      {
+        "ref": "K297",
+        "text": "5600000001",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 304,
+    "table": "Expenses",
+    "path": "5 expenses > 03 provisions > 07 expected credit loss",
+    "cells": [
+      {
+        "ref": "K304",
+        "text": "starts with 5500006, 5500007",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 321,
+    "table": "Expenses",
+    "path": "5 expenses > 04 written off items",
+    "cells": [
+      {
+        "ref": "K321",
+        "text": "5500001001",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 323,
+    "table": "Expenses",
+    "path": "5 expenses > 05 depreciation > 01 fixed assets",
+    "cells": [
+      {
+        "ref": "K323",
+        "text": "starts with 52000 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 326,
+    "table": "Expenses",
+    "path": "5 expenses > 05 depreciation > 03 others > 01 intangible assets",
+    "cells": [
+      {
+        "ref": "K326",
+        "text": 5201000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 327,
+    "table": "Expenses",
+    "path": "5 expenses > 05 depreciation > 03 others > 02 the right to use leased assets",
+    "cells": [
+      {
+        "ref": "K327",
+        "text": "starts with 5202000",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 330,
+    "table": "Expenses",
+    "path": "5 expenses > 06 staff costs > 01 wages and salaries",
+    "cells": [
+      {
+        "ref": "K330",
+        "text": "starts with 50000 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 331,
+    "table": "Expenses",
+    "path": "5 expenses > 06 staff costs > 02 social security costs",
+    "cells": [
+      {
+        "ref": "K331",
+        "text": "5001000020,5001000030,5001000040",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 332,
+    "table": "Expenses",
+    "path": "5 expenses > 06 staff costs > 03 end of service benefits",
+    "cells": [
+      {
+        "ref": "K332",
+        "text": "5001000010",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 333,
+    "table": "Expenses",
+    "path": "5 expenses > 06 staff costs > 04 other staff costs",
+    "cells": [
+      {
+        "ref": "K333",
+        "text": "starts with 50050,50080,50090 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 335,
+    "table": "Expenses",
+    "path": "5 expenses > 07 general administrative expenses > 01 rental of premises",
+    "cells": [
+      {
+        "ref": "K335",
+        "text": "starts with 5100000 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 336,
+    "table": "Expenses",
+    "path": "5 expenses > 07 general administrative expenses > 02 legal and professional fees",
+    "cells": [
+      {
+        "ref": "K336",
+        "text": "starts with 5100030 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 337,
+    "table": "Expenses",
+    "path": "5 expenses > 07 general administrative expenses > 03 publicity and marketing",
+    "cells": [
+      {
+        "ref": "K337",
+        "text": "starts with 5100010 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 338,
+    "table": "Expenses",
+    "path": "5 expenses > 07 general administrative expenses > 04 communications , utilities and insurance",
+    "cells": [
+      {
+        "ref": "K338",
+        "text": "starts with 5100002,5100003 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 339,
+    "table": "Expenses",
+    "path": "5 expenses > 07 general administrative expenses > 05 publications and stationery",
+    "cells": [
+      {
+        "ref": "K339",
+        "text": "starts with 5100024,5100040 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 340,
+    "table": "Expenses",
+    "path": "5 expenses > 07 general administrative expenses > 06 allowances of the board of directors during the year",
+    "cells": [
+      {
+        "ref": "K340",
+        "text": "starts with 5100070 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 343,
+    "table": "Expenses",
+    "path": "5 expenses > 07 general administrative expenses > 09 others",
+    "cells": [
+      {
+        "ref": "K343",
+        "text": "starts with 5100001,5100005,5100008,5100011,5100020,5100050,5100060,5100090,5100100,5100200,5600020,5500020,5100021,5100075,5100006,5100007,5100009,5100004,5601010002,5500010001, 5600050010 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 346,
+    "table": "Expenses",
+    "path": "5 expenses > 08 other expenses > 02 others",
+    "cells": [
+      {
+        "ref": "K346",
+        "text": "5500060002",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 358,
+    "table": 1,
+    "path": "01 cash on hand",
+    "cells": [
+      {
+        "ref": "K358",
+        "text": "All Gl's  Start by 100  Except  1003",
+        "formula": "=+K5"
+      }
+    ]
+  },
+  {
+    "row": 378,
+    "table": 2,
+    "path": "02 claims on central banks > 01 required reserve",
+    "cells": [
+      {
+        "ref": "L378",
+        "text": "1003000010, 1003000011",
+        "formula": "=+K7"
+      }
+    ]
+  },
+  {
+    "row": 380,
+    "table": 2,
+    "path": "02 claims on central banks > 02 others > 01 clearing account",
+    "cells": [
+      {
+        "ref": "L380",
+        "text": 1003000020,
+        "formula": "=+K8"
+      }
+    ]
+  },
+  {
+    "row": 387,
+    "table": 2,
+    "path": "03 claims on banks > 01 banks > 01 demand and call > 01 commercial / conventional",
+    "cells": [
+      {
+        "ref": "L387",
+        "text": "All Gl's  Start by 11 Except 1101000004",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 388,
+    "table": 2,
+    "path": "03 claims on banks > 01 banks > 01 demand and call > 02 islamic",
+    "cells": [
+      {
+        "ref": "L388",
+        "text": 1101000004,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 395,
+    "table": 2,
+    "path": "03 claims on banks > 01 banks > 02 placement > 01 commercial / conventional",
+    "cells": [
+      {
+        "ref": "L395",
+        "text": "details from Treasury system",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 396,
+    "table": 2,
+    "path": "03 claims on banks > 01 banks > 02 placement > 02 islamic",
+    "cells": [
+      {
+        "ref": "L396",
+        "text": "details from Treasury system",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 409,
+    "table": 2,
+    "path": "03 claims on banks > 01 banks > 03 loans / finance > 07 banks in q.f.c.",
+    "cells": [
+      {
+        "ref": "L409",
+        "text": "Sic Code 44108 from All Loan",
+        "formula": "=+K13"
+      }
+    ]
+  },
+  {
+    "row": 433,
+    "table": 3,
+    "path": "02 claims on central banks",
+    "cells": [
+      {
+        "ref": "K433",
+        "text": "same Table 2 by maturity from Treasury system",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 488,
+    "table": 4,
+    "path": "dukhan bank - all branches inside qatar as at xxxx/xx > #rule",
+    "cells": [
+      {
+        "ref": "B488",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "C488",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "D488",
+        "text": "Total",
+        "formula": ""
+      },
+      {
+        "ref": "E488",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "F488",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "G488",
+        "text": "Total",
+        "formula": ""
+      },
+      {
+        "ref": "H488",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "I488",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "J488",
+        "text": "Total",
+        "formula": ""
+      },
+      {
+        "ref": "K488",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "L488",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "M488",
+        "text": "Total",
+        "formula": ""
+      },
+      {
+        "ref": "N488",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "O488",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "P488",
+        "text": "Total",
+        "formula": ""
+      },
+      {
+        "ref": "Q488",
+        "text": "Repo",
+        "formula": ""
+      },
+      {
+        "ref": "R488",
+        "text": "Borrowing",
+        "formula": ""
+      },
+      {
+        "ref": "S488",
+        "text": "Others",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 489,
+    "table": 4,
+    "path": "01 debt securities",
+    "cells": [
+      {
+        "ref": "T489",
+        "text": "details from Treasury system match With table 100",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 525,
+    "table": 5,
+    "path": "dukhan bank - all branches inside qatar as at xxxx/xx > #rule",
+    "cells": [
+      {
+        "ref": "B525",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "C525",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "D525",
+        "text": "Total",
+        "formula": ""
+      },
+      {
+        "ref": "E525",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "F525",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "G525",
+        "text": "Total",
+        "formula": ""
+      },
+      {
+        "ref": "H525",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "I525",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "J525",
+        "text": "Total",
+        "formula": ""
+      },
+      {
+        "ref": "K525",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "L525",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "M525",
+        "text": "Total",
+        "formula": ""
+      },
+      {
+        "ref": "N525",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "O525",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "P525",
+        "text": "Total",
+        "formula": ""
+      },
+      {
+        "ref": "Q525",
+        "text": "Repo",
+        "formula": ""
+      },
+      {
+        "ref": "R525",
+        "text": "Borrowing",
+        "formula": ""
+      },
+      {
+        "ref": "S525",
+        "text": "Others",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 526,
+    "table": 5,
+    "path": "03 equity participation",
+    "cells": [
+      {
+        "ref": "T526",
+        "text": "details from Treasury system match With table 100",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 566,
+    "table": 6,
+    "path": "01 securities measured at fair value > 01 held for trading > 02 sukuk",
+    "cells": [
+      {
+        "ref": "K566",
+        "text": "1500000012, 1500000000, 1600000010, 1600000011, 1600000012, 1600010010",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 567,
+    "table": 6,
+    "path": "01 securities measured at fair value > 01 held for trading > 03 shares",
+    "cells": [
+      {
+        "ref": "K567",
+        "text": "1500000001, 1600000001, 1600000015",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 573,
+    "table": 6,
+    "path": "01 securities measured at fair value > 02 held for non trading > 01 through profit and loss > 03 shares",
+    "cells": [
+      {
+        "ref": "K573",
+        "text": 1600000002,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 574,
+    "table": 6,
+    "path": "01 securities measured at fair value > 02 held for non trading > 01 through profit and loss > 04 mutual funds and others",
+    "cells": [
+      {
+        "ref": "K574",
+        "text": "1500000003, 1600000003",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 578,
+    "table": 6,
+    "path": "01 securities measured at fair value > 02 held for non trading > 02 through equity ( f.v. adjustments ) > 03 shares",
+    "cells": [
+      {
+        "ref": "K578",
+        "text": "1501010001, 1503000008, 1501000001, 1501020001, 1601000001, 1601000011, 1603010002, 1601010001",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 579,
+    "table": 6,
+    "path": "01 securities measured at fair value > 02 held for non trading > 02 through equity ( f.v. adjustments ) > 04 mutual funds and others **",
+    "cells": [
+      {
+        "ref": "K579",
+        "text": 1601010005,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 581,
+    "table": 6,
+    "path": "02 securities measured at cost > 01 debt securities ( amortized cost )",
+    "cells": [
+      {
+        "ref": "K581",
+        "text": 1502010005,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 582,
+    "table": 6,
+    "path": "02 securities measured at cost > 02 sukuk",
+    "cells": [
+      {
+        "ref": "K582",
+        "text": "1502000010, 1502000011, 1502000012, 1602000010, 1602000011, 1602000012, 1602010010",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 594,
+    "table": 7,
+    "path": "dukhan bank- all branches inside qatar as at xxxx/xx > #rule",
+    "cells": [
+      {
+        "ref": "C594",
+        "text": "1 Month",
+        "formula": ""
+      },
+      {
+        "ref": "D594",
+        "text": "3 Months",
+        "formula": ""
+      },
+      {
+        "ref": "E594",
+        "text": "6 Months",
+        "formula": ""
+      },
+      {
+        "ref": "F594",
+        "text": "12 Months",
+        "formula": ""
+      },
+      {
+        "ref": "G594",
+        "text": "5 Years",
+        "formula": ""
+      },
+      {
+        "ref": "H594",
+        "text": "To",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 595,
+    "table": 7,
+    "path": "dukhan bank- all branches inside qatar as at xxxx/xx > #rule",
+    "cells": [
+      {
+        "ref": "H595",
+        "text": "10 Years",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 596,
+    "table": 7,
+    "path": "01 debt securities",
+    "cells": [
+      {
+        "ref": "K596",
+        "text": "details from Treasury system match With table 100",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 633,
+    "table": 8,
+    "path": "01 non-bank financial inst.",
+    "cells": [
+      {
+        "ref": "K633",
+        "text": "details from All loan by Type match With table 100",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 670,
+    "table": 8,
+    "path": "03 private sector > 02 loans and advances > 01 loans",
+    "cells": [
+      {
+        "ref": "L670",
+        "text": "SYN",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 676,
+    "table": 8,
+    "path": "03 private sector > 03 islamic finance > 01 murabaha - musawma",
+    "cells": [
+      {
+        "ref": "L676",
+        "text": "All Account Type Except SYN, IST, IJR",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 677,
+    "table": 8,
+    "path": "03 private sector > 03 islamic finance > 02 istisna'a",
+    "cells": [
+      {
+        "ref": "L677",
+        "text": "IST",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 679,
+    "table": 8,
+    "path": "03 private sector > 03 islamic finance > 04 finance ijara",
+    "cells": [
+      {
+        "ref": "L679",
+        "text": "IJR",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 682,
+    "table": 8,
+    "path": "03 private sector > 03 islamic finance > 06 others > 01 credit cards",
+    "cells": [
+      {
+        "ref": "L682",
+        "text": 1300050001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 693,
+    "table": 9,
+    "path": "01 non-bank financial inst.",
+    "cells": [
+      {
+        "ref": "K693",
+        "text": "details from All loan by Sictor match With table 100",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 713,
+    "table": 9,
+    "path": "01 non-bank financial inst. > 03 islamic finance > 01 investment companies",
+    "cells": [
+      {
+        "ref": "L713",
+        "text": 44103,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 714,
+    "table": 9,
+    "path": "01 non-bank financial inst. > 03 islamic finance > 02 finance companies",
+    "cells": [
+      {
+        "ref": "L714",
+        "text": 44105,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 716,
+    "table": 9,
+    "path": "01 non-bank financial inst. > 03 islamic finance > 04 exchange houses",
+    "cells": [
+      {
+        "ref": "L716",
+        "text": 44102,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 718,
+    "table": 9,
+    "path": "01 non-bank financial inst. > 03 islamic finance > 06 insurance companies",
+    "cells": [
+      {
+        "ref": "L718",
+        "text": 44101,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 723,
+    "table": 9,
+    "path": "02 public sector > 01 overdraft > 01 governments",
+    "cells": [
+      {
+        "ref": "L723",
+        "text": "Rim 2398",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 735,
+    "table": 9,
+    "path": "02 public sector > 03 islamic finance > 01 governments",
+    "cells": [
+      {
+        "ref": "L735",
+        "text": "sic start by 1 Except rim 2398",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 737,
+    "table": 9,
+    "path": "02 public sector > 03 islamic finance > 03 government inst.",
+    "cells": [
+      {
+        "ref": "L737",
+        "text": "sic start by 2",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 738,
+    "table": 9,
+    "path": "02 public sector > 03 islamic finance > 04 semi government inst.",
+    "cells": [
+      {
+        "ref": "L738",
+        "text": "sic start by 3",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 751,
+    "table": 9,
+    "path": "03 private sector > 02 loans and advances > 01 corporates > 02 other corporates",
+    "cells": [
+      {
+        "ref": "L751",
+        "text": "Sic start by 4 type SYN",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 757,
+    "table": 9,
+    "path": "03 private sector > 03 islamic finance > 01 corporates > 01 small business",
+    "cells": [
+      {
+        "ref": "L757",
+        "text": "Sic stat by 4 except 441 details from Risk",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 758,
+    "table": 9,
+    "path": "03 private sector > 03 islamic finance > 01 corporates > 02 other corporates",
+    "cells": [
+      {
+        "ref": "L758",
+        "text": "Sic stat by 4 except 441 details from Risk",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 760,
+    "table": 9,
+    "path": "03 private sector > 03 islamic finance > 02 personal > 01 personal against salary",
+    "cells": [
+      {
+        "ref": "L760",
+        "text": "all personal loan details from Risk",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 761,
+    "table": 9,
+    "path": "03 private sector > 03 islamic finance > 02 personal > 02 other personal",
+    "cells": [
+      {
+        "ref": "L761",
+        "text": "all personal loan details from Risk",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 770,
+    "table": 10,
+    "path": "01 non-bank financial inst.",
+    "cells": [
+      {
+        "ref": "N770",
+        "text": "Performing Loan by maturity from Risk match with table 11",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 822,
+    "table": 11,
+    "path": "01 inside qatar",
+    "cells": [
+      {
+        "ref": "R822",
+        "text": "from BO after upload CRM report from Risk match with table 9",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 853,
+    "table": 12,
+    "path": "01 non-bank financial inst.",
+    "cells": [
+      {
+        "ref": "V853",
+        "text": "from BO match with table 9",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 885,
+    "table": 13,
+    "path": "dukhan bank-all branches inside qatar as at xxxx/xx > #rule",
+    "cells": [
+      {
+        "ref": "B885",
+        "text": "Secured",
+        "formula": ""
+      },
+      {
+        "ref": "C885",
+        "text": "Unsecured",
+        "formula": ""
+      },
+      {
+        "ref": "D885",
+        "text": "Customer Deposits",
+        "formula": ""
+      },
+      {
+        "ref": "E885",
+        "text": "Gov. Guarantee",
+        "formula": ""
+      },
+      {
+        "ref": "F885",
+        "text": "Bank Guarantee",
+        "formula": ""
+      },
+      {
+        "ref": "G885",
+        "text": "Real Estate Mortgages",
+        "formula": ""
+      },
+      {
+        "ref": "H885",
+        "text": "Car Mortgages",
+        "formula": ""
+      },
+      {
+        "ref": "I885",
+        "text": "Other Mortgages",
+        "formula": ""
+      },
+      {
+        "ref": "J885",
+        "text": "Securities",
+        "formula": ""
+      },
+      {
+        "ref": "K885",
+        "text": "Other Tangible Collaterals",
+        "formula": ""
+      },
+      {
+        "ref": "L885",
+        "text": "Total Collaterals",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 887,
+    "table": 13,
+    "path": "01 non-bank financial inst.",
+    "cells": [
+      {
+        "ref": "M887",
+        "text": "from BO with Risk match with table 9",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 937,
+    "table": 14,
+    "path": "01 subsidiaries > 02 other subsidiaries > 02 non-bank financial inst. > 01 investment companies",
+    "cells": [
+      {
+        "ref": "K937",
+        "text": 1503000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 938,
+    "table": 14,
+    "path": "01 subsidiaries > 02 other subsidiaries > 02 non-bank financial inst. > 02 finance companies",
+    "cells": [
+      {
+        "ref": "K938",
+        "text": "1503000002, 1503000003, 1503000004, 1503000005, 1503000006, 1503000007",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 976,
+    "table": 15,
+    "path": "01 held for trading > 01 lands",
+    "cells": [
+      {
+        "ref": "K976",
+        "text": 1700000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 991,
+    "table": 16,
+    "path": "dukhan bank- all branches inside qatar as at xxxx/xx > #rule",
+    "cells": [
+      {
+        "ref": "E991",
+        "text": "Positive",
+        "formula": ""
+      },
+      {
+        "ref": "F991",
+        "text": "Negative",
+        "formula": ""
+      },
+      {
+        "ref": "K991",
+        "text": "Positive",
+        "formula": ""
+      },
+      {
+        "ref": "L991",
+        "text": "Negative",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 993,
+    "table": 16,
+    "path": "01 held for trading > 01 lands",
+    "cells": [
+      {
+        "ref": "N993",
+        "text": 1700000001,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1011,
+    "table": 17,
+    "path": "01 lands and buildings",
+    "cells": [
+      {
+        "ref": "L1011",
+        "text": "1800000001, 1800000002, (2800000001)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1013,
+    "table": 17,
+    "path": "03 furniture and equipments",
+    "cells": [
+      {
+        "ref": "L1013",
+        "text": "1801000003, 1801000004, (2800010003, 2800010004)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1014,
+    "table": 17,
+    "path": "04 computer equipments",
+    "cells": [
+      {
+        "ref": "L1014",
+        "text": "1801000002, 1801000005, (2800010002, 2800010005)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1015,
+    "table": 17,
+    "path": "05 motor vehicles",
+    "cells": [
+      {
+        "ref": "L1015",
+        "text": "1801000001, (2800010001)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1019,
+    "table": 17,
+    "path": "07 others > 01 the right to use leased assets > 01 lands and buildings",
+    "cells": [
+      {
+        "ref": "L1019",
+        "text": "1803010001, 1804010001, 1804010002, (2800020001, 2802000001, 2802000002)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1034,
+    "table": 18,
+    "path": "dukhan bank - all branches inside qatar > #rule",
+    "cells": [
+      {
+        "ref": "B1034",
+        "text": "Original Cost",
+        "formula": ""
+      },
+      {
+        "ref": "C1034",
+        "text": "Amortization or Impairment UP to Date",
+        "formula": ""
+      },
+      {
+        "ref": "D1034",
+        "text": "Net Book Value",
+        "formula": ""
+      },
+      {
+        "ref": "E1034",
+        "text": "Original Cost",
+        "formula": ""
+      },
+      {
+        "ref": "F1034",
+        "text": "Amortization or Impairment UP to Date",
+        "formula": ""
+      },
+      {
+        "ref": "G1034",
+        "text": "Net Book Value",
+        "formula": ""
+      },
+      {
+        "ref": "H1034",
+        "text": "Original Cost",
+        "formula": ""
+      },
+      {
+        "ref": "I1034",
+        "text": "Amortization or Impairment UP to Date",
+        "formula": ""
+      },
+      {
+        "ref": "J1034",
+        "text": "Net Book Value",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1035,
+    "table": 18,
+    "path": "01 goodwill",
+    "cells": [
+      {
+        "ref": "K1035",
+        "text": 1802010002,
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1041,
+    "table": 18,
+    "path": "03 others > 04 customers relations",
+    "cells": [
+      {
+        "ref": "K1041",
+        "text": "1802010003, (2801000003)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1042,
+    "table": 18,
+    "path": "03 others > 05 other",
+    "cells": [
+      {
+        "ref": "K1042",
+        "text": "1802010001, 1802010004, 1802010005, (2801000001, 2801000004, 2801000005)",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1054,
+    "table": 19,
+    "path": "01 accrued income",
+    "cells": [
+      {
+        "ref": "K1054",
+        "text": "1904010001, 1904010010, 1904010011, 1904010012, 1904030002",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1055,
+    "table": 19,
+    "path": "02 prepaid expenses",
+    "cells": [
+      {
+        "ref": "K1055",
+        "text": "starts with 19020 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1056,
+    "table": 19,
+    "path": "03 amounts receivables",
+    "cells": [
+      {
+        "ref": "K1056",
+        "text": "1900000010, 1900010055, 1900070030, 1900070040, 1901000010, 1903000001, 1903000010, 1903020010, 1903090090, 1900000011, 1900000012, 1900000030, 1900000033",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1062,
+    "table": 19,
+    "path": "06 advance payment > 03 for fixed assets",
+    "cells": [
+      {
+        "ref": "K1062",
+        "text": "starts with 19025 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1064,
+    "table": 19,
+    "path": "07 suspense account",
+    "cells": [
+      {
+        "ref": "K1064",
+        "text": "starts with 19070 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1065,
+    "table": 19,
+    "path": "08 others",
+    "cells": [
+      {
+        "ref": "K1065",
+        "text": "starts with 19045,19060,19075 ",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1261,
+    "table": 24,
+    "path": "total",
+    "cells": [
+      {
+        "ref": "L1261",
+        "text": "=SUM(D1261:J1261)",
+        "formula": "=SUM(D1261:J1261)"
+      },
+      {
+        "ref": "M1261",
+        "text": "=SUM(B1261:F1261)",
+        "formula": "=SUM(B1261:F1261)"
+      },
+      {
+        "ref": "N1261",
+        "text": "=SUM(G1261:J1261)",
+        "formula": "=SUM(G1261:J1261)"
+      }
+    ]
+  },
+  {
+    "row": 1932,
+    "table": 44,
+    "path": "sector / subdivision",
+    "cells": [
+      {
+        "ref": "B1932",
+        "text": "Non-Bank Financial Institutions",
+        "formula": ""
+      },
+      {
+        "ref": "D1932",
+        "text": "Government Institutions",
+        "formula": ""
+      },
+      {
+        "ref": "F1932",
+        "text": "Semi-Government Institutions",
+        "formula": ""
+      },
+      {
+        "ref": "H1932",
+        "text": "Private Sector Corporate",
+        "formula": ""
+      },
+      {
+        "ref": "J1932",
+        "text": "Personal",
+        "formula": ""
+      },
+      {
+        "ref": "L1932",
+        "text": "Total Credit Facilities",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 1934,
+    "table": 44,
+    "path": "sector / subdivision > #rule",
+    "cells": [
+      {
+        "ref": "B1934",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "C1934",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "D1934",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "E1934",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "F1934",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "G1934",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "H1934",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "I1934",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "J1934",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "K1934",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "L1934",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "M1934",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "N1934",
+        "text": "Total",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 2094,
+    "table": 45,
+    "path": "sector / subdivision",
+    "cells": [
+      {
+        "ref": "B2094",
+        "text": "Non-Bank Financial Institutions",
+        "formula": ""
+      },
+      {
+        "ref": "D2094",
+        "text": "Government Institutions",
+        "formula": ""
+      },
+      {
+        "ref": "F2094",
+        "text": "Semi-Government Institutions",
+        "formula": ""
+      },
+      {
+        "ref": "H2094",
+        "text": "Private Sector Corporate",
+        "formula": ""
+      },
+      {
+        "ref": "J2094",
+        "text": "Personal",
+        "formula": ""
+      },
+      {
+        "ref": "L2094",
+        "text": "Total Deposits",
+        "formula": ""
+      }
+    ]
+  },
+  {
+    "row": 2096,
+    "table": 45,
+    "path": "sector / subdivision > #rule",
+    "cells": [
+      {
+        "ref": "B2096",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "C2096",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "D2096",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "E2096",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "F2096",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "G2096",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "H2096",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "I2096",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "J2096",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "K2096",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "L2096",
+        "text": "LC",
+        "formula": ""
+      },
+      {
+        "ref": "M2096",
+        "text": "FC",
+        "formula": ""
+      },
+      {
+        "ref": "N2096",
+        "text": "Total",
+        "formula": ""
+      }
+    ]
+  }
+]

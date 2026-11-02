@@ -1,0 +1,47 @@
+{
+  "config_name": "report_selectors",
+  "schema_version": 1,
+  "version": "2026-10-14.1",
+  "status": "DRAFT_REQUIRES_OWNER_APPROVAL",
+  "note": "Structured selector fields. A field must be APPROVED (with approved_by/approved_on) before any mapping that uses it can become effective. Legacy Ethix fields are evidence only and cannot be used in an executable T24 selector.",
+  "fields": {
+    "T24.CATEGORY": {"system": "T24", "value_type": "integer_code", "source": "Account/arrangement CATEGORY (exact table/field to be confirmed by bank)", "status": "PROPOSED", "approved_by": null, "approved_on": null},
+    "T24.PRODUCT": {"system": "T24", "value_type": "code", "source": "AA.ARRANGEMENT PRODUCT", "status": "PROPOSED", "approved_by": null, "approved_on": null},
+    "T24.PRODUCT.LINE": {"system": "T24", "value_type": "code", "source": "AA.ARRANGEMENT PRODUCT.LINE", "status": "PROPOSED", "approved_by": null, "approved_on": null},
+    "T24.SECTOR": {"system": "T24", "value_type": "integer_code", "source": "CUSTOMER SECTOR", "status": "PROPOSED", "approved_by": null, "approved_on": null},
+    "T24.INDUSTRY": {"system": "T24", "value_type": "integer_code", "source": "CUSTOMER INDUSTRY", "status": "PROPOSED", "approved_by": null, "approved_on": null},
+    "T24.TARGET": {"system": "T24", "value_type": "code", "source": "CUSTOMER TARGET", "status": "PROPOSED", "approved_by": null, "approved_on": null},
+    "T24.RESIDENCE": {"system": "T24", "value_type": "code", "source": "CUSTOMER RESIDENCE", "status": "PROPOSED", "approved_by": null, "approved_on": null},
+    "T24.L.INT.RISK.RT": {"system": "T24", "value_type": "code", "source": "CUSTOMER local field L.INT.RISK.RT (risk feed conventions to be confirmed)", "status": "PROPOSED", "approved_by": null, "approved_on": null},
+    "T24.CLM_INDICATOR": {"system": "T24", "value_type": "code", "source": "NOT SUPPLIED: bank CLM indicator field", "status": "UNRESOLVED", "approved_by": null, "approved_on": null},
+    "ETHIX.SIC": {"system": "ETHIX", "value_type": "code", "source": "Ethix SIC code (legacy selector)", "status": "LEGACY_EVIDENCE"},
+    "ETHIX.RIM": {"system": "ETHIX", "value_type": "code", "source": "Ethix RIM number (legacy selector)", "status": "LEGACY_EVIDENCE"},
+    "ETHIX.ACCOUNT_TYPE": {"system": "ETHIX", "value_type": "code", "source": "Ethix account/product type: SYN, IST, IJR (legacy selector)", "status": "LEGACY_EVIDENCE"},
+    "ETHIX.PERSONAL_STATUS": {"system": "ETHIX", "value_type": "code", "source": "Personal / NonPersonal (legacy selector)", "status": "LEGACY_EVIDENCE"},
+    "ETHIX.GL": {"system": "ETHIX", "value_type": "code", "source": "Ethix GL account (legacy selector)", "status": "LEGACY_EVIDENCE"},
+    "ETHIX.RESIDENCY": {"system": "ETHIX", "value_type": "code", "source": "resident / nonresident (legacy selector)", "status": "LEGACY_EVIDENCE"}
+  },
+  "crosswalk": [
+    {"id": "XW-SIC", "legacy_field": "ETHIX.SIC", "candidate_target_fields": ["T24.SECTOR", "T24.INDUSTRY"], "target_field": null, "value_map": null, "status": "UNRESOLVED", "evidence": "Ethix K13 SIC=44108; K33 SIC prefix 441 except 44108; K37 SIC prefix 1,2,3; K41 SIC prefix 4 except 441", "finding_refs": ["E03", "E04"]},
+    {"id": "XW-RIM", "legacy_field": "ETHIX.RIM", "candidate_target_fields": ["T24 CUSTOMER id (exact customer crosswalk)"], "target_field": null, "value_map": null, "status": "UNRESOLVED", "evidence": "Ethix K35 government overdraft RIM2398; K37 excludes RIM2398; L37 nonresident omits the exception", "finding_refs": ["E03"]},
+    {"id": "XW-ACCTYPE", "legacy_field": "ETHIX.ACCOUNT_TYPE", "candidate_target_fields": ["T24.PRODUCT", "T24.CATEGORY"], "target_field": null, "value_map": null, "status": "UNRESOLVED", "evidence": "SYN/IST/IJR in K40, L40, L676, L751", "finding_refs": ["E04", "E05"]},
+    {"id": "XW-PERSONAL", "legacy_field": "ETHIX.PERSONAL_STATUS", "candidate_target_fields": ["T24.SECTOR", "T24.TARGET"], "target_field": null, "value_map": null, "status": "UNRESOLVED", "evidence": "Personal/NonPersonal predicates throughout loan rows", "finding_refs": ["E03"]},
+    {"id": "XW-GL", "legacy_field": "ETHIX.GL", "candidate_target_fields": ["T24.CATEGORY (GL line mapping)"], "target_field": null, "value_map": null, "status": "UNRESOLVED", "evidence": "GL1300050001 added to the K41 private-sector loan population; GL2300 deferred income K103", "finding_refs": ["E04", "E07"]},
+    {"id": "XW-RESIDENCY", "legacy_field": "ETHIX.RESIDENCY", "candidate_target_fields": ["T24.RESIDENCE"], "target_field": null, "value_map": null, "status": "UNRESOLVED", "evidence": "Inside (K) vs outside/nonresident (L) column predicates", "finding_refs": ["E03"]}
+  ],
+  "contradictions": [
+    {"id": "C-RIM2398", "status": "UNRESOLVED", "cells": ["ETHIX!K35", "ETHIX!K37", "ETHIX!L37"], "description": "Resident public-sector Islamic finance (K37) excludes RIM2398; the nonresident variant (L37) omits that exception. Asymmetry must be confirmed or corrected by the owner."},
+    {"id": "C-SYN-PRIVATE", "status": "UNRESOLVED", "cells": ["ETHIX!K40", "ETHIX!L40", "ETHIX!K41", "ETHIX!L41", "ETHIX!L676", "ETHIX!L751"], "description": "SYN loans with NonPersonal SIC prefix 4 can satisfy both K40 and K41 private-sector rules; precedence/partition required. L40 omits the metric expression."},
+    {"id": "C-GL1300050001", "status": "UNRESOLVED", "cells": ["ETHIX!K41"], "description": "K41 mixes a loan-file population with GL1300050001; allocation and overlap with loan balances must be approved."},
+    {"id": "C-3713-OTHERS", "status": "UNRESOLVED", "cells": ["T24!Table 8!B20", "T24!Table 8!B27", "T24!Table 10!B14", "T24!Table 10!B19"], "description": "Category 3713 routes to 'Others' under legacy text predicates. Murabaha/CLM routing is an owner decision; do not alter category filters merely because the balance dictionary changed."}
+  ],
+  "populations": {
+    "LENDING_BASE": {
+      "status": "PROPOSED",
+      "approved_by": null,
+      "approved_on": null,
+      "selector": {"all": [{"field": "T24.CATEGORY", "op": "range", "min": 3000, "max": 3999}]},
+      "note": "Candidate only, from the legacy Table 8 B27 text predicate. The 19 base balance rules apply only to an approved lending population."
+    }
+  }
+}

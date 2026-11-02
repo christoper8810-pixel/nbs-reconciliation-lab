@@ -1,0 +1,16 @@
+[
+  {
+    "source_system": "T24",
+    "file_name": "NBS MAPPING - 6 Oct 2026.xlsx",
+    "sha256": "7c378f84cb4997490da9c598dab0531b58c3f829f2f98e96243477da506ce339",
+    "sheet_count": 50,
+    "source_date_note": "Workbook captions are 2024/10 or xxxx/xx, distinct from mapping file date 6 Oct 2026"
+  },
+  {
+    "source_system": "ETHIX",
+    "file_name": "NBS01 Mapping (Ehab).xlsx",
+    "sha256": "6378da738127324b0ec875cd381732a155d2bfbf0e0e37e3ccdb767b256eb87a",
+    "sheet_count": 1,
+    "source_date_note": "Workbook captions are 2024/10 or xxxx/xx, distinct from mapping file date 6 Oct 2026"
+  }
+]

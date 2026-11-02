@@ -1,0 +1,300 @@
+[
+  {
+    "original": "NBS_Mapping_Review_Clean_Corrections_1.docx",
+    "original_sha256": "4edb60bf286acc565d48628c353da2c7bd024b70e134f4373529ce81008c4a19",
+    "revised": "NBS01 Mapping Review Revised 22Oct2026.docx",
+    "revised_sha256": "4ac96c64e3ff62ff7021272653f957bf220813edaa6721390aa5f0f31f0978a3",
+    "changes": [
+      {
+        "paragraph": 37,
+        "before": "Split the shared category/type predicate into explicit branches. Restrict the accrued-income DEBIT branch to categories 13440-13459 after confirming their definitions. Preserve separately approved selectors for the other profit/interest types. Apply the corresponding correction to ASSET - 100 row 107; do not restrict every loan-profit type to the DEBIT category range.",
+        "after": "Split the shared category/type predicate into explicit branches. Restrict the accrued-income DEBIT branch to categories 13440-13459 after validating their definitions. Move loan-related PRINCIPALPFT to the associated loan lines (C1); preserve separately defined fee and other-income selectors. Apply the same changes to the configured ASSET - 100 expression and auxiliary rules."
+      },
+      {
+        "paragraph": 42,
+        "before": "Align F11 with C11",
+        "after": "Align the resident and non-resident selections. Exclude category 6050 from deposit/prepaid selections; apply the matched ACCCRPROFIT/ACCDEPOSITPFT offset in D3 wherever both are mapped together. Do not report the same linked profit separately as a prepaid asset or profit payable."
+      },
+      {
+        "paragraph": 53,
+        "before": "Use the owner-defined OUTSTANDING group for eligible loan-stock rows: CURACCOUNT, PREACCOUNT, GRCACCOUNT, DELACCOUNT, NABACCOUNT, DUEACCOUNT, DELDEFERREDPFT, GRCDEFERREDPFT, NABDEFERREDPFT, DUEDEFERREDPFT, RECDEFERREDPFT, PREDEFERREDPFT. Remove a separately aggregated RECDEFERREDPFT contribution from accrued income for the same population if already included in outstanding. Approve presentation separately and reconcile the same contract amounts.",
+        "after": "Use the owner-defined OUTSTANDING group: CURACCOUNT, PREACCOUNT, GRCACCOUNT, DELACCOUNT, NABACCOUNT, DUEACCOUNT, DELDEFERREDPFT, GRCDEFERREDPFT, NABDEFERREDPFT, DUEDEFERREDPFT, RECDEFERREDPFT, PREDEFERREDPFT. Add the associated PRINCIPALPFT components under C1 and apply D3 offsets. Remove duplicate RECDEFERREDPFT from accrued income where already in outstanding. Reconcile signed components by contract."
+      },
+      {
+        "paragraph": 58,
+        "before": "Use the 12-code OUTSTANDING group in B1 wherever the row measures outstanding loan stock. Restore DELACCOUNT and PREACCOUNT where omitted. PDOACCOUNT is outside that approved group and requires a separate definition and owner decision. Preserve separate overdraft, suspense, deposit and contingent measures.",
+        "after": "Use the 12-code OUTSTANDING group in B1 for outstanding loan stock, together with the associated PRINCIPALPFT in C1 and offsets in D3. Restore DELACCOUNT and PREACCOUNT. Define PDOACCOUNT separately; do not silently add it to the named group. Preserve separate overdraft, suspense and contingent measures, and exclude 6050 from deposits."
+      },
+      {
+        "paragraph": 63,
+        "before": "Add owner-confirmed category 3713 to Murabaha and exclude it from Others in the same change. Validate 3709, 3715 and 3740 against the bank product/category dictionary before adding them. Category 3713 alone does not establish CLM. Include the conditional linked CLS6050 components only with verified parent/child relationships as described in D3.",
+        "after": "Add owner-confirmed 3713 to Murabaha and remove it from Others in the same change. Offset each 3713 loan with its linked 6050 CREDIT and apply the matched profit offset in D3. Do not require a separate CLM label to apply this confirmed category treatment. Validate 3709, 3715 and 3740 against the product dictionary before assigning them."
+      },
+      {
+        "paragraph": 73,
+        "before": "Apply the owner-defined OUTSTANDING group to eligible loan-stock rows, preserving Table 9 customer, industry, residence and currency dimensions. Keep separately approved measures for other facility types. Reconcile category and population differences with Table 8 before expecting equal totals.",
+        "after": "Use the B1 loan-stock components plus associated PRINCIPALPFT (C1) and linked offsets (D3). Preserve customer, industry, residence and currency dimensions; attribute the linked offset to the related loan. Keep other facility measures distinct. Reconcile the category population with Table 8 before comparing totals."
+      },
+      {
+        "paragraph": 96,
+        "before": "Ordinary ACCPRINCIPALPFT, RECPRINCIPALPFT, DELPRINCIPALPFT and PREPRINCIPALPFT are not named in the mapping (ACCPRINCIPALPFT appears only as its SP variant)",
+        "after": "Loan-related PRINCIPALPFT balances are omitted or treated as separate accrued income instead of following the associated loans"
+      },
+      {
+        "paragraph": 97,
+        "before": "Table 19 accrued income",
+        "after": "Loan lines in Tables 8, 9, 10, 11, 12, 44 and ASSET - 100; Table 19 and its auxiliary rules"
+      },
+      {
+        "paragraph": 98,
+        "before": "Reported 808.7m for the original ACC/DEL/PRE omission; the additional REC impact must be quantified",
+        "after": "The earlier 808.7m ACC/DEL/PRE observation does not quantify the full correction. Inventory all PRINCIPALPFT states and reconcile their loan attribution."
+      },
+      {
+        "paragraph": 99,
+        "before": "Use AMORTIZED_EARNED: ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT. Include REC in the correction. DUEPRINCIPALPFT and NABPRINCIPALPFT require separate treatment because they are outside this group. Keep SP balances separate. Include ACCDEPOSITPFT only for the verified linked CLS6050 CLM case in D3.",
+        "after": "Move all loan-related PRINCIPALPFT states with their loans; remove separate Table 19/other-asset contributions for the same amounts. AMORTIZED_EARNED has ACC, REC, GRC, DEL and PRE PRINCIPALPFT; its five-code definition must not omit DUE, NAB or other valid loan states from reporting. Preserve SP status with the associated loan treatment. Apply D3 offsets and propagate to NBS001 and liquidity mappings."
+      },
+      {
+        "paragraph": 114,
+        "before": "Rebuild both M10 and P10 from the clean approved expression. M10 also repeats the accrued-income predicate; do not copy it into P10 unchanged. Confirm whether these auxiliary columns feed configured processing. Keep fees, Ijara receivables and other-asset components in their separately approved measures.",
+        "after": "Rebuild M10 and P10 consistently with C1 and D3: remove loan-related PRINCIPALPFT and any separately repeated linked profit amounts from accrued income. Confirm whether these auxiliary columns feed configured processing. Keep fees and Ijara receivables in their separately defined measures; do not copy a duplicated predicate."
+      },
+      {
+        "paragraph": 116,
+        "before": "Suspended (SP) balance types for late payment fees and for DEL/PRE profit are not mapped in any table",
+        "after": "SP states are incomplete; loan-related PRINCIPALPFTSP must follow the associated loan treatment rather than a blanket suspended-income rule"
+      },
+      {
+        "paragraph": 117,
+        "before": "Tables 29, 30, 11",
+        "after": "Loan and credit-classification lines; Tables 29, 30, 11 and any separate income/suspense selections"
+      },
+      {
+        "paragraph": 119,
+        "before": "Add the missing SP types to the suspended income tables",
+        "after": "Inventory missing SP types. Keep loan-related PRINCIPALPFTSP with its associated loan and preserve its suspended status; do not also add it to a separate income total. Define ACCLATEPAYMENTSP and DEFERREDPFTSP treatment separately. Check diagnostic/classification disclosures without duplicating the same economic amount in totals."
+      },
+      {
+        "paragraph": 137,
+        "before": "Matured deposits (PAYACCOUNT) are missing from Table 45; deposit profit payable PAYDEPOSITPFT is not mapped anywhere (ACCDEPOSITPFT is in Table 31); debit balances on 6050 Cash Line Saving are not placed",
+        "after": "Matured deposits and payable profit need complete rules; 3713/6050 loan offsets and the exclusion of 6050 from all deposit reporting are not explicit"
+      },
+      {
+        "paragraph": 138,
+        "before": "Table 45; all tables; category 6050",
+        "after": "Category 3713 loan lines; category 6050 CREDIT; ACCCRPROFIT/ACCDEPOSITPFT; all deposit selections, Table 31 and Table 45"
+      },
+      {
+        "paragraph": 139,
+        "before": "PAYACCOUNT 340m; PAYDEPOSITPFT 509.5m; 6050 debit 571m",
+        "after": "Earlier observations: PAYACCOUNT 340m, PAYDEPOSITPFT 509.5m and 6050 debit 571m. These are not the amount of the required CREDIT/profit offsets."
+      },
+      {
+        "paragraph": 140,
+        "before": "Validate PAYACCOUNT for Table 45 and define PAYDEPOSITPFT payable-profit treatment. Separate ordinary deposits from verified CLS6050 accounts linked to Murabaha3713 CLM parents. For that case, ACCDEPOSITPFT is AMORTIZED_EARNED; CREDIT to OUTSTANDING is proposed pending owner review. Check unintended reuse across loan and deposit totals. Decide ordinary 6050 debit treatment separately.",
+        "after": "Offset each category 3713 loan with its linked 6050 CREDIT. Offset matched ACCCRPROFIT and ACCDEPOSITPFT wherever mapped together, using verified signs once. Exclude category 6050 from every deposit rule and total; investigate missing/ambiguous links without a deposit fallback. Retain PAYACCOUNT and PAYDEPOSITPFT corrections for other eligible deposits. Reconcile component reuse and loan attribution."
+      },
+      {
+        "paragraph": 150,
+        "before": "Reconcile liability parents to their component lines using the deployed mapping and same-date trial balance. Resolve category 18001 in both subordinated debt and AT1 selections. Correct Table 21 E19, which repeats RESIDENCE = QA in the outside-Qatar selection. Validate Table 26 subtotal instructions, signs and source populations before confirming monetary impacts.",
+        "after": "Reconcile liability parents to components using same-date sources. Exclude category 6050 from all deposit totals/breakdowns and remove any duplicate linked profit already offset under D3. Resolve 18001 overlap in subordinated debt/AT1; correct Table 21 E19 outside-Qatar residence. Validate Table 26 subtotals, signs and populations before quantifying impacts."
+      },
+      {
+        "paragraph": 157,
+        "before": "The report owner controls the component rules in B1, B2 and C1. Financial Control to confirm presentation and local dictionaries for B1, B3, B4, B6, D3 and D4. Approve the conditional CLS relationship and CREDIT group assignment separately.",
+        "after": "Implement the owner-confirmed 22 October treatment of PRINCIPALPFT, 3713/6050 CREDIT and paired ACCCRPROFIT/ACCDEPOSITPFT across all three mappings. Validate the account links, signs, source dictionaries and remaining product/presentation questions; the confirmed treatment is no longer a pending conditional proposal."
+      },
+      {
+        "paragraph": 158,
+        "before": "Prepare one cell-level change register covering all findings, with the current rule, proposed structured rule, dependent inclusion/exclusion changes, owner decision and reconciliation status. Apply the approved changes together; retain unresolved items explicitly.",
+        "after": "Maintain one cell-level change register across NBS01, NBS001 Additional Tables and LCR & NSFR (Solo): current rule, replacement, dependent references/direct rules, inclusion/exclusion changes and reconciliation status. Apply connected changes together and retain unresolved source/link exceptions explicitly."
+      },
+      {
+        "paragraph": 159,
+        "before": "Rerun NBS01 and NBS001 against trial balances and extracts at the same company, population, reporting date and valuation basis. Reconcile every Table 100 and Table 200 line and its breakdown. Investigate abnormal source records and log any quarantines. Retain the earlier Table 10 maturity-boundary and Table 11 direct/indirect subtotal corrections in scope.",
+        "after": "Rerun all three mappings on the same company, population, reporting date and valuation basis. Reconcile Tables 100/200 and breakdowns, the loan components/offsets and zero category-6050 contribution to deposits. Bridge liquidity totals for cash-flow timing and weights. Investigate abnormal records before quarantine/removal. Retain the Table 10 maturity-boundary and Table 11 subtotal corrections."
+      }
+    ],
+    "added_policy_paragraphs": 6,
+    "general_comments": 1,
+    "added_issue_rows": 0
+  },
+  {
+    "original": "NBS001 Additional Tables - Mapping Review.docx",
+    "original_sha256": "34471990bf78a45363a2442010e382fe744ec0a3958a20f951748c1871fadd3b",
+    "revised": "NBS001 Additional Tables Review Revised 22Oct2026.docx",
+    "revised_sha256": "8de7e4e3f1e7210f9f8aad950adaf38deaa456c8e89858d360a4e469a2ff4676",
+    "changes": [
+      {
+        "paragraph": 13,
+        "before": "About 95bn of financing principal (31 Aug) falls outside the rules; profit balances are reported as loans",
+        "after": "About 95bn of financing principal (31 Aug) falls outside the rules; the loan component and product selections need rebuilding"
+      },
+      {
+        "paragraph": 34,
+        "before": "Remove ACCDEFERREDPFT from the asset lines; keep it in deferred interest / income",
+        "after": "Remove the duplicated ACCDEFERREDPFT asset contribution and keep the defined deferred-income treatment, consistent with NBS01 A1. This does not remove PRINCIPALPFT: report loan-related PRINCIPALPFT with the associated loan and reconcile signed components."
+      },
+      {
+        "paragraph": 43,
+        "before": "Ijara profit balances can be counted twice",
+        "after": "The same Ijara balance, including related PRINCIPALPFT, can be selected in both product lines"
+      },
+      {
+        "paragraph": 44,
+        "before": "Resolve with B2 and B3",
+        "after": "Make the loan/product populations mutually exclusive (B1-B3). Keep related PRINCIPALPFT with its assigned loan product and apply linked offsets once."
+      },
+      {
+        "paragraph": 55,
+        "before": "Map the actual product categories to the lines (as agreed for NBS01 Table 8) and fill \"06 Others\" with the remaining range",
+        "after": "Align product categories with NBS01 Table 8, including 3713 in Murabaha. Fill Others with the remaining eligible population without overlap. Carry the related PRINCIPALPFT with each loan and apply the linked 3713/6050 CREDIT and paired profit offsets (B5)."
+      },
+      {
+        "paragraph": 57,
+        "before": "\"01 Loans\" uses the accrued-income balance types",
+        "after": "The generic Loans line mixes product selection and profit components, overlapping the Islamic finance lines"
+      },
+      {
+        "paragraph": 59,
+        "before": "Profit balances reported as loans",
+        "after": "Incomplete loan selection and possible duplication; loan-related PRINCIPALPFT itself belongs with the loan"
+      },
+      {
+        "paragraph": 60,
+        "before": "Remove the profit types; leave the line empty unless DKB has conventional loans",
+        "after": "Allocate loans to mutually exclusive NBS01-aligned product lines. Keep associated PRINCIPALPFT with each loan, including DUE/GRC/NAB and other valid states; remove its separate other-asset contribution. Resolve deferred profit under A1 and NBS01 B1. Do not delete all profit components or assume the loan line must be empty."
+      },
+      {
+        "paragraph": 64,
+        "before": "All balance types can be picked up, including profit, fees and commitments",
+        "after": "An unrestricted selection can include commitments, unrelated fees and duplicated components; required loan-related PRINCIPALPFT must be retained"
+      },
+      {
+        "paragraph": 65,
+        "before": "Apply the seven principal types (CUR, GRC, DUE, PDO, NAB, DEL, PRE ACCOUNT), as in Tables 613 and 614",
+        "after": "Use the NBS01 loan-stock components, including its 12-code OUTSTANDING group, plus related PRINCIPALPFT and the linked offsets in B5. Define PDOACCOUNT separately. Preserve SP status, maturity and sector dimensions. Exclude unrelated fees/commitments and duplicate other-asset contributions; seven principal types alone are not the complete loan measure."
+      },
+      {
+        "paragraph": 86,
+        "before": "Use one sector definition across all NBS001 tables",
+        "after": "Use one sector definition across NBS001. Attribute linked 6050 offsets and related profit to the associated 3713 loan sector so the net loan is not split into a deposit sector."
+      },
+      {
+        "paragraph": 115,
+        "before": "Deposit balance types include a non-existent type and miss matured deposits",
+        "after": "Deposit selections omit matured balances and do not explicitly exclude category 6050"
+      },
+      {
+        "paragraph": 116,
+        "before": "610/611 and 625: CREDIT, CURACCOUNT, CURBALANCE",
+        "after": "Tables 610/611, 625 and every deposit total/breakdown or dependent deposit selection"
+      },
+      {
+        "paragraph": 117,
+        "before": "CURBALANCE does not exist in CAL; PAYACCOUNT (about 340m at 31 Aug) not selected",
+        "after": "CURBALANCE is absent from the sampled CAL; PAYACCOUNT (about 340m at 31 Aug) is missed. Category 6050 would also be misreported if admitted as a deposit."
+      },
+      {
+        "paragraph": 118,
+        "before": "Use CREDIT, CURACCOUNT and PAYACCOUNT",
+        "after": "Exclude CATEGORY = 6050 before applying CREDIT, CURACCOUNT and PAYACCOUNT to other eligible deposits. Check CURBALANCE against the versioned dictionary before replacing it. Apply the exclusion to totals, maturity/sector splits and the Table 625 deposit denominator; no 6050 deposit fallback for unresolved links. Apply the matched profit offset wherever the pair is mapped together."
+      },
+      {
+        "paragraph": 123,
+        "before": "Map the credit facility side, consistent with Tables 608/609",
+        "after": "Build credit from Tables 608/609 with related PRINCIPALPFT and linked 3713/6050 and profit offsets. Build the deposit denominator from eligible deposits excluding all 6050. Trace each component once; do not deduct the same offset again when deriving the ratio."
+      },
+      {
+        "paragraph": 140,
+        "before": "Where principal balance types are listed (Tables 613, 614, 615 and parts of the combined sheet), all seven types are used, including DEL and PRE.",
+        "after": "Tables 613, 614, 615 and parts of the combined sheet list seven principal types, including DEL and PRE. This is useful coverage but not a complete loan measure: align the component definitions with NBS01 and include related PRINCIPALPFT and linked offsets wherever the same loan stock is measured."
+      },
+      {
+        "paragraph": 144,
+        "before": "SL to correct Tables 604/605 and 608/609 first (priorities 1–3), then A1, E1–E3.",
+        "after": "SL to correct Tables 604/605 and rebuild 608/609, applying the confirmed PRINCIPALPFT and linked-offset rules in the same release. Propagate them to all relevant asset lines, then complete A1 and E1-E3. Exclude category 6050 throughout the deposit selections."
+      },
+      {
+        "paragraph": 145,
+        "before": "Rerun NBS001 and reconcile the credit facilities, deposits and claims-on-banks tables to the NBS01 tables and the trial balance at the same date.",
+        "after": "Rerun NBS001 and reconcile loan components, offsets, deposits and claims on banks to NBS01 and same-date sources. Test every deposit total/breakdown for zero 6050 contribution. Apply the connected changes to LCR & NSFR and reconcile timing/weight differences. Track unmatched links as exceptions."
+      }
+    ],
+    "added_policy_paragraphs": 6,
+    "general_comments": 1,
+    "added_issue_rows": 1
+  },
+  {
+    "original": "LCR & NSFR (Solo) - Mapping Review.docx",
+    "original_sha256": "33cdacc9c6d48740b270f74bbe627ad7de4bbc2bcf7691cd60babc4e9370bbc3",
+    "revised": "LCR and NSFR Solo Review Revised 22Oct2026.docx",
+    "revised_sha256": "acfc3828572dcae636ef0eb64e20fa440024c75c88026e9dd98b98a963e9ec3e",
+    "changes": [
+      {
+        "paragraph": 42,
+        "before": "Use the installments scheduled within 30 days (payment schedule); DKB Finance to confirm",
+        "after": "Use scheduled installments within the next 30 days. Apply the confirmed loan components and linked offsets to the eligible cash flows, including the PRINCIPALPFT due with each loan payment. Do not substitute the full accounting loan stock for scheduled receipts; validate the payment-schedule source."
+      },
+      {
+        "paragraph": 53,
+        "before": "Filter on SECTOR = 1000–1999, 4000–4004, 6000/6001, 7000/7001",
+        "after": "Filter on SECTOR = 1000-1999, 4000-4004, 6000/6001, 7000/7001, with CATEGORY <> 6050 applied to both clauses and all deposit subgroups. Keep the same exclusion in NSFR deposit funding."
+      },
+      {
+        "paragraph": 106,
+        "before": "Keep one definition per line; if NBS references are kept, sequence the fixes after NBS01/NBS001",
+        "after": "Keep one controlling definition per line and align its NBS reference and direct CAL/ECB alternative with the same NBS01 components, linked offsets and category exclusions. Update dependent schedules together with NBS001. Preserve each liquidity metric's cash-flow timing and weights; do not add both alternatives."
+      },
+      {
+        "paragraph": 111,
+        "before": "Depends on the NBS01 corrections; reconcile to the trial balance",
+        "after": "Reconcile the corrected NBS01 asset basis and the NSFR residual. Move related PRINCIPALPFT into the associated loan stock and remove it from separate other assets. Apply the linked offsets once; bridge NSFR classifications and weights to the trial balance."
+      },
+      {
+        "paragraph": 113,
+        "before": "Deposit balance types include a non-existent type and miss matured deposits",
+        "after": "Deposit rules miss matured balances and do not explicitly exclude category 6050"
+      },
+      {
+        "paragraph": 114,
+        "before": "LCR_00 C50–C58; NSFR_00 C13–C21: CREDIT, CURACCOUNT, CURBALANCE",
+        "after": "LCR_00 C50-C58; NSFR_00 C13-C21, all related deposit lines, totals and supporting schedules"
+      },
+      {
+        "paragraph": 115,
+        "before": "CURBALANCE does not exist in CAL; PAYACCOUNT (about 340m at 31 Aug) not selected",
+        "after": "CURBALANCE is absent from the sampled CAL; PAYACCOUNT (about 340m at 31 Aug) is missed. Admitting 6050 would also misstate deposit outflows/funding."
+      },
+      {
+        "paragraph": 116,
+        "before": "Use CREDIT, CURACCOUNT and PAYACCOUNT",
+        "after": "Apply CATEGORY <> 6050 before selecting CREDIT, CURACCOUNT and PAYACCOUNT for other eligible deposits. Check CURBALANCE against the versioned dictionary. Exclude 6050 from every deposit outflow, deposit funding/ASF selection and supporting total, including referenced NBS populations. Do not return unmatched 6050 balances to deposits."
+      },
+      {
+        "paragraph": 124,
+        "before": "Term deposits (6600–6999) are covered through the second (\"ADD\") clause of the deposit rules.",
+        "after": "Term deposits (6600-6999) are covered by the second ADD clause. Apply CATEGORY <> 6050 to all deposit clauses and their combined totals; retain the maturity correction in A1."
+      },
+      {
+        "paragraph": 129,
+        "before": "SL to correct A1, B1, C1, D1 and E3 first; then the remaining items.",
+        "after": "SL to correct A1, B1, C1, D1 and E3, together with E5/E6 and every dependent reference. Apply the confirmed loan/profit offsets and deposit exclusion consistently with the NBS01/NBS001 release."
+      },
+      {
+        "paragraph": 130,
+        "before": "Agree for each line whether the NBS reference or the CAL rule applies (E1), and sequence after the NBS01/NBS001 corrections.",
+        "after": "Identify one controlling rule per line (E1). Reflect every NBS01 change in NBS001 Additional Tables and this liquidity mapping wherever the population is shared; check both NBS references and direct CAL/ECB definitions."
+      },
+      {
+        "paragraph": 131,
+        "before": "Rerun LCR and NSFR and reconcile HQLA (cash, QCB reserves) and the deposit outflows to the trial balance at the same date.",
+        "after": "Rerun LCR and NSFR on the same reporting date. Reconcile HQLA, underlying loan stock and eligible deposit funding to corrected NBS01/NBS001 and the trial balance. Bridge scheduled cash flows and weights separately. Test zero 6050 contribution to deposit outflows/funding, each linked offset once, and unmatched-link exceptions."
+      }
+    ],
+    "added_policy_paragraphs": 6,
+    "general_comments": 1,
+    "added_issue_rows": 2
+  }
+]

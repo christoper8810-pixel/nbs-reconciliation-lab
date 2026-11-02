@@ -1,0 +1,893 @@
+{
+  "label": "LDR",
+  "path": "C:\\Users\\Test\\Downloads\\LDR & LTD - Mapping Review.docx",
+  "counts": [],
+  "paragraphs": [
+    {
+      "index": 0,
+      "accepted": "LDR & LTD – Mapping Review",
+      "original": "LDR & LTD – Mapping Review",
+      "all": "LDR & LTD – Mapping Review"
+    },
+    {
+      "index": 1,
+      "accepted": "DKB CBS – QCB credit-to-deposit ratio reporting (LDR and Form 4, LTD breach report). Prepared for DKB Finance, October 2026.",
+      "original": "DKB CBS – QCB credit-to-deposit ratio reporting (LDR and Form 4, LTD breach report). Prepared for DKB Finance, October 2026.",
+      "all": "DKB CBS – QCB credit-to-deposit ratio reporting (LDR and Form 4, LTD breach report). Prepared for DKB Finance, October 2026."
+    },
+    {
+      "index": 2,
+      "accepted": "1. Scope and evidence",
+      "original": "1. Scope and evidence",
+      "all": "1. Scope and evidence"
+    },
+    {
+      "index": 3,
+      "accepted": "Mapping reviewed: LDR & LTD (updated Mapping).xlsx: sheet LDR (ratio with weighted funding) and sheet LTD (Form 4, daily breach and penalty report).",
+      "original": "Mapping reviewed: LDR & LTD (updated Mapping).xlsx: sheet LDR (ratio with weighted funding) and sheet LTD (Form 4, daily breach and penalty report).",
+      "all": "Mapping reviewed: LDR & LTD (updated Mapping).xlsx: sheet LDR (ratio with weighted funding) and sheet LTD (Form 4, daily breach and penalty report)."
+    },
+    {
+      "index": 4,
+      "accepted": "Balances: CAL extract at 31 Aug 2026 and trial balance at 23 Sep 2026, UAT, used to test which balances the rules reach.",
+      "original": "Balances: CAL extract at 31 Aug 2026 and trial balance at 23 Sep 2026, UAT, used to test which balances the rules reach.",
+      "all": "Balances: CAL extract at 31 Aug 2026 and trial balance at 23 Sep 2026, UAT, used to test which balances the rules reach."
+    },
+    {
+      "index": 5,
+      "accepted": "Agreed rules applied: as agreed with DKB Finance on 21 Oct: Murabaha reported gross (principal plus profit); 3713 (CLM) offset by 6050 (CLS) for principal and profit; 6050 excluded from deposits.",
+      "original": "Agreed rules applied: as agreed with DKB Finance on 21 Oct: Murabaha reported gross (principal plus profit); 3713 (CLM) offset by 6050 (CLS) for principal and profit; 6050 excluded from deposits.",
+      "all": "Agreed rules applied: as agreed with DKB Finance on 21 Oct: Murabaha reported gross (principal plus profit); 3713 (CLM) offset by 6050 (CLS) for principal and profit; 6050 excluded from deposits."
+    },
+    {
+      "index": 6,
+      "accepted": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures; the values in column C of the LDR sheet are sample values and were not tested.",
+      "original": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures; the values in column C of the LDR sheet are sample values and were not tested.",
+      "all": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures; the values in column C of the LDR sheet are sample values and were not tested."
+    },
+    {
+      "index": 7,
+      "accepted": "2. Priorities",
+      "original": "2. Priorities",
+      "all": "2. Priorities"
+    },
+    {
+      "index": 8,
+      "accepted": "#",
+      "original": "#",
+      "all": "#"
+    },
+    {
+      "index": 9,
+      "accepted": "Issue",
+      "original": "Issue",
+      "all": "Issue"
+    },
+    {
+      "index": 10,
+      "accepted": "Why first",
+      "original": "Why first",
+      "all": "Why first"
+    },
+    {
+      "index": 11,
+      "accepted": "1",
+      "original": "1",
+      "all": "1"
+    },
+    {
+      "index": 12,
+      "accepted": "Penalty bands applied to the wrong side of the limit (C1)",
+      "original": "Penalty bands applied to the wrong side of the limit (C1)",
+      "all": "Penalty bands applied to the wrong side of the limit (C1)"
+    },
+    {
+      "index": 13,
+      "accepted": "Penalties would be calculated when the ratio is below 100% and never when it is breached",
+      "original": "Penalties would be calculated when the ratio is below 100% and never when it is breached",
+      "all": "Penalties would be calculated when the ratio is below 100% and never when it is breached"
+    },
+    {
+      "index": 14,
+      "accepted": "2",
+      "original": "2",
+      "all": "2"
+    },
+    {
+      "index": 15,
+      "accepted": "Credit is principal only, while deferred profit is deducted (A1, A2)",
+      "original": "Credit is principal only, while deferred profit is deducted (A1, A2)",
+      "all": "Credit is principal only, while deferred profit is deducted (A1, A2)"
+    },
+    {
+      "index": 16,
+      "accepted": "Net credit understated by up to the unearned profit (ACCDEFERREDPFT, about 14.7bn at 31 Aug)",
+      "original": "Net credit understated by up to the unearned profit (ACCDEFERREDPFT, about 14.7bn at 31 Aug)",
+      "all": "Net credit understated by up to the unearned profit (ACCDEFERREDPFT, about 14.7bn at 31 Aug)"
+    },
+    {
+      "index": 17,
+      "accepted": "3",
+      "original": "3",
+      "all": "3"
+    },
+    {
+      "index": 18,
+      "accepted": "Funding side incomplete (B5, B6)",
+      "original": "Funding side incomplete (B5, B6)",
+      "all": "Funding side incomplete (B5, B6)"
+    },
+    {
+      "index": 19,
+      "accepted": "Weights not applied and other borrowings not included in the denominator total",
+      "original": "Weights not applied and other borrowings not included in the denominator total",
+      "all": "Weights not applied and other borrowings not included in the denominator total"
+    },
+    {
+      "index": 20,
+      "accepted": "4",
+      "original": "4",
+      "all": "4"
+    },
+    {
+      "index": 21,
+      "accepted": "Deposits not aligned with the agreed rules (B1, B2)",
+      "original": "Deposits not aligned with the agreed rules (B1, B2)",
+      "all": "Deposits not aligned with the agreed rules (B1, B2)"
+    },
+    {
+      "index": 22,
+      "accepted": "6050 still included; non-existent balance type; matured deposits missing",
+      "original": "6050 still included; non-existent balance type; matured deposits missing",
+      "all": "6050 still included; non-existent balance type; matured deposits missing"
+    },
+    {
+      "index": 23,
+      "accepted": "3. Issues",
+      "original": "3. Issues",
+      "all": "3. Issues"
+    },
+    {
+      "index": 24,
+      "accepted": "A. Numerator: credit",
+      "original": "A. Numerator: credit",
+      "all": "A. Numerator: credit"
+    },
+    {
+      "index": 25,
+      "accepted": "#",
+      "original": "#",
+      "all": "#"
+    },
+    {
+      "index": 26,
+      "accepted": "Issue",
+      "original": "Issue",
+      "all": "Issue"
+    },
+    {
+      "index": 27,
+      "accepted": "Where",
+      "original": "Where",
+      "all": "Where"
+    },
+    {
+      "index": 28,
+      "accepted": "Impact",
+      "original": "Impact",
+      "all": "Impact"
+    },
+    {
+      "index": 29,
+      "accepted": "Fix",
+      "original": "Fix",
+      "all": "Fix"
+    },
+    {
+      "index": 30,
+      "accepted": "A1",
+      "original": "A1",
+      "all": "A1"
+    },
+    {
+      "index": 31,
+      "accepted": "Total direct facilities take principal only, for categories 3000–3999",
+      "original": "Total direct facilities take principal only, for categories 3000–3999",
+      "all": "Total direct facilities take principal only, for categories 3000–3999"
+    },
+    {
+      "index": 32,
+      "accepted": "LDR L8; LTD B6 (CUR, DUE, NAB, GRC, PDO, DEL, PRE ACCOUNT)",
+      "original": "LDR L8; LTD B6 (CUR, DUE, NAB, GRC, PDO, DEL, PRE ACCOUNT)",
+      "all": "LDR L8; LTD B6 (CUR, DUE, NAB, GRC, PDO, DEL, PRE ACCOUNT)"
+    },
+    {
+      "index": 33,
+      "accepted": "Deferred profit receivable (REC and aged DEFERREDPFT, about 15.8bn at 31 Aug), the 3713/6050 offset, credit cards and overdrafts are not included",
+      "original": "Deferred profit receivable (REC and aged DEFERREDPFT, about 15.8bn at 31 Aug), the 3713/6050 offset, credit cards and overdrafts are not included",
+      "all": "Deferred profit receivable (REC and aged DEFERREDPFT, about 15.8bn at 31 Aug), the 3713/6050 offset, credit cards and overdrafts are not included"
+    },
+    {
+      "index": 34,
+      "accepted": "Use the corrected NBS01 credit facilities definition (gross Murabaha, 3713/6050 offset, cards, overdrafts)",
+      "original": "Use the corrected NBS01 credit facilities definition (gross Murabaha, 3713/6050 offset, cards, overdrafts)",
+      "all": "Use the corrected NBS01 credit facilities definition (gross Murabaha, 3713/6050 offset, cards, overdrafts)"
+    },
+    {
+      "index": 35,
+      "accepted": "A2",
+      "original": "A2",
+      "all": "A2"
+    },
+    {
+      "index": 36,
+      "accepted": "The deferred income deduction includes aged deferred profit and is applied to a principal-only total",
+      "original": "The deferred income deduction includes aged deferred profit and is applied to a principal-only total",
+      "all": "The deferred income deduction includes aged deferred profit and is applied to a principal-only total"
+    },
+    {
+      "index": 37,
+      "accepted": "LDR L12: ACCDEFERREDPFT plus DUE, GRC, PDO, NAB, DEL, PRE DEFERREDPFT; categories 15501, 15510, 13800–13802 CREDIT",
+      "original": "LDR L12: ACCDEFERREDPFT plus DUE, GRC, PDO, NAB, DEL, PRE DEFERREDPFT; categories 15501, 15510, 13800–13802 CREDIT",
+      "all": "LDR L12: ACCDEFERREDPFT plus DUE, GRC, PDO, NAB, DEL, PRE DEFERREDPFT; categories 15501, 15510, 13800–13802 CREDIT"
+    },
+    {
+      "index": 38,
+      "accepted": "Unearned profit is deducted although it was never included in credit, understating net credit by up to about 14.7bn (31 Aug); aged deferred profit, which is a receivable, is treated as deferred income",
+      "original": "Unearned profit is deducted although it was never included in credit, understating net credit by up to about 14.7bn (31 Aug); aged deferred profit, which is a receivable, is treated as deferred income",
+      "all": "Unearned profit is deducted although it was never included in credit, understating net credit by up to about 14.7bn (31 Aug); aged deferred profit, which is a receivable, is treated as deferred income"
+    },
+    {
+      "index": 39,
+      "accepted": "Once credit is gross (A1), deduct ACCDEFERREDPFT only; keep the aged types in credit. Confirm 13800/13801 (card commissions, about 128m at 23 Sep)",
+      "original": "Once credit is gross (A1), deduct ACCDEFERREDPFT only; keep the aged types in credit. Confirm 13800/13801 (card commissions, about 128m at 23 Sep)",
+      "all": "Once credit is gross (A1), deduct ACCDEFERREDPFT only; keep the aged types in credit. Confirm 13800/13801 (card commissions, about 128m at 23 Sep)"
+    },
+    {
+      "index": 40,
+      "accepted": "A3",
+      "original": "A3",
+      "all": "A3"
+    },
+    {
+      "index": 41,
+      "accepted": "Provision categories include non-financing items and miss one financing category",
+      "original": "Provision categories include non-financing items and miss one financing category",
+      "all": "Provision categories include non-financing items and miss one financing category"
+    },
+    {
+      "index": 42,
+      "accepted": "LDR L10; LTD C6: 15130, 15133–15135, 15151–15154, 13750–13752, 15200–15299",
+      "original": "LDR L10; LTD C6: 15130, 15133–15135, 15151–15154, 13750–13752, 15200–15299",
+      "all": "LDR L10; LTD C6: 15130, 15133–15135, 15151–15154, 13750–13752, 15200–15299"
+    },
+    {
+      "index": 43,
+      "accepted": "Includes 13750 ECL – Investments and 15201 Local Cheques sent for Collection Contra (about 113m, not a provision); excludes 15150 Specific Provision on Loans – Standard (about 19m) (23 Sep)",
+      "original": "Includes 13750 ECL – Investments and 15201 Local Cheques sent for Collection Contra (about 113m, not a provision); excludes 15150 Specific Provision on Loans – Standard (about 19m) (23 Sep)",
+      "all": "Includes 13750 ECL – Investments and 15201 Local Cheques sent for Collection Contra (about 113m, not a provision); excludes 15150 Specific Provision on Loans – Standard (about 19m) (23 Sep)"
+    },
+    {
+      "index": 44,
+      "accepted": "List financing provision categories explicitly (e.g. 15150–15154, 15211, 15231, 15251); exclude investment and contra categories",
+      "original": "List financing provision categories explicitly (e.g. 15150–15154, 15211, 15231, 15251); exclude investment and contra categories",
+      "all": "List financing provision categories explicitly (e.g. 15150–15154, 15211, 15231, 15251); exclude investment and contra categories"
+    },
+    {
+      "index": 45,
+      "accepted": "A4",
+      "original": "A4",
+      "all": "A4"
+    },
+    {
+      "index": 46,
+      "accepted": "Income in suspense omits late payment fees",
+      "original": "Income in suspense omits late payment fees",
+      "all": "Income in suspense omits late payment fees"
+    },
+    {
+      "index": 47,
+      "accepted": "LDR L11 (SP list complete for profit, including DEL and PRE)",
+      "original": "LDR L11 (SP list complete for profit, including DEL and PRE)",
+      "all": "LDR L11 (SP list complete for profit, including DEL and PRE)"
+    },
+    {
+      "index": 48,
+      "accepted": "ACCLATEPAYMENTSP (about 1.0bn at 31 Aug) not deducted",
+      "original": "ACCLATEPAYMENTSP (about 1.0bn at 31 Aug) not deducted",
+      "all": "ACCLATEPAYMENTSP (about 1.0bn at 31 Aug) not deducted"
+    },
+    {
+      "index": 49,
+      "accepted": "Add the late payment SP types, consistent with NBS01",
+      "original": "Add the late payment SP types, consistent with NBS01",
+      "all": "Add the late payment SP types, consistent with NBS01"
+    },
+    {
+      "index": 50,
+      "accepted": "A5",
+      "original": "A5",
+      "all": "A5"
+    },
+    {
+      "index": 51,
+      "accepted": "Acceptances use a narrower range and a different balance type than NBS",
+      "original": "Acceptances use a narrower range and a different balance type than NBS",
+      "all": "Acceptances use a narrower range and a different balance type than NBS"
+    },
+    {
+      "index": 52,
+      "accepted": "LDR L9: 23000–23099, ACPTCONTRA",
+      "original": "LDR L9: 23000–23099, ACPTCONTRA",
+      "all": "LDR L9: 23000–23099, ACPTCONTRA"
+    },
+    {
+      "index": 53,
+      "accepted": "23100–23999 excluded (ACPTCONTRA about 48m, ACPT about 280m at 31 Aug); NBS Table 35 uses ACPTCONTRABL over 23000–23999",
+      "original": "23100–23999 excluded (ACPTCONTRA about 48m, ACPT about 280m at 31 Aug); NBS Table 35 uses ACPTCONTRABL over 23000–23999",
+      "all": "23100–23999 excluded (ACPTCONTRA about 48m, ACPT about 280m at 31 Aug); NBS Table 35 uses ACPTCONTRABL over 23000–23999"
+    },
+    {
+      "index": 54,
+      "accepted": "Align with the corrected NBS acceptances definition; confirm whether bank acceptances (ACPTBANK, about 6.4bn) belong",
+      "original": "Align with the corrected NBS acceptances definition; confirm whether bank acceptances (ACPTBANK, about 6.4bn) belong",
+      "all": "Align with the corrected NBS acceptances definition; confirm whether bank acceptances (ACPTBANK, about 6.4bn) belong"
+    },
+    {
+      "index": 55,
+      "accepted": "B. Denominator: deposits and funding",
+      "original": "B. Denominator: deposits and funding",
+      "all": "B. Denominator: deposits and funding"
+    },
+    {
+      "index": 56,
+      "accepted": "#",
+      "original": "#",
+      "all": "#"
+    },
+    {
+      "index": 57,
+      "accepted": "Issue",
+      "original": "Issue",
+      "all": "Issue"
+    },
+    {
+      "index": 58,
+      "accepted": "Where",
+      "original": "Where",
+      "all": "Where"
+    },
+    {
+      "index": 59,
+      "accepted": "Impact",
+      "original": "Impact",
+      "all": "Impact"
+    },
+    {
+      "index": 60,
+      "accepted": "Fix",
+      "original": "Fix",
+      "all": "Fix"
+    },
+    {
+      "index": 61,
+      "accepted": "B1",
+      "original": "B1",
+      "all": "B1"
+    },
+    {
+      "index": 62,
+      "accepted": "Deposit balance types include a non-existent type and miss matured deposits",
+      "original": "Deposit balance types include a non-existent type and miss matured deposits",
+      "all": "Deposit balance types include a non-existent type and miss matured deposits"
+    },
+    {
+      "index": 63,
+      "accepted": "LDR L14; LTD E6: CREDIT, CURACCOUNT, CURBALANCE",
+      "original": "LDR L14; LTD E6: CREDIT, CURACCOUNT, CURBALANCE",
+      "all": "LDR L14; LTD E6: CREDIT, CURACCOUNT, CURBALANCE"
+    },
+    {
+      "index": 64,
+      "accepted": "CURBALANCE does not exist in CAL; PAYACCOUNT (about 340m at 31 Aug) not selected",
+      "original": "CURBALANCE does not exist in CAL; PAYACCOUNT (about 340m at 31 Aug) not selected",
+      "all": "CURBALANCE does not exist in CAL; PAYACCOUNT (about 340m at 31 Aug) not selected"
+    },
+    {
+      "index": 65,
+      "accepted": "Use CREDIT, CURACCOUNT and PAYACCOUNT",
+      "original": "Use CREDIT, CURACCOUNT and PAYACCOUNT",
+      "all": "Use CREDIT, CURACCOUNT and PAYACCOUNT"
+    },
+    {
+      "index": 66,
+      "accepted": "B2",
+      "original": "B2",
+      "all": "B2"
+    },
+    {
+      "index": 67,
+      "accepted": "6050 (Cash Line Saving) is included in deposits",
+      "original": "6050 (Cash Line Saving) is included in deposits",
+      "all": "6050 (Cash Line Saving) is included in deposits"
+    },
+    {
+      "index": 68,
+      "accepted": "LDR L14; LTD E6 (categories 6000–6999 except 6500–6503)",
+      "original": "LDR L14; LTD E6 (categories 6000–6999 except 6500–6503)",
+      "all": "LDR L14; LTD E6 (categories 6000–6999 except 6500–6503)"
+    },
+    {
+      "index": 69,
+      "accepted": "About 1.75bn (23 Sep) counted as deposits, contrary to the agreed 3713/6050 offset",
+      "original": "About 1.75bn (23 Sep) counted as deposits, contrary to the agreed 3713/6050 offset",
+      "all": "About 1.75bn (23 Sep) counted as deposits, contrary to the agreed 3713/6050 offset"
+    },
+    {
+      "index": 70,
+      "accepted": "Exclude 6050 from deposits",
+      "original": "Exclude 6050 from deposits",
+      "all": "Exclude 6050 from deposits"
+    },
+    {
+      "index": 71,
+      "accepted": "B3",
+      "original": "B3",
+      "all": "B3"
+    },
+    {
+      "index": 72,
+      "accepted": "Cash margins are excluded from deposits",
+      "original": "Cash margins are excluded from deposits",
+      "all": "Cash margins are excluded from deposits"
+    },
+    {
+      "index": 73,
+      "accepted": "LDR L14; LTD E6: excluding 6500–6503",
+      "original": "LDR L14; LTD E6: excluding 6500–6503",
+      "all": "LDR L14; LTD E6: excluding 6500–6503"
+    },
+    {
+      "index": 74,
+      "accepted": "About 11.35bn (23 Sep), mostly 6502 Cash Margin – Corp",
+      "original": "About 11.35bn (23 Sep), mostly 6502 Cash Margin – Corp",
+      "all": "About 11.35bn (23 Sep), mostly 6502 Cash Margin – Corp"
+    },
+    {
+      "index": 75,
+      "accepted": "DKB Finance to confirm the exclusion against the QCB definition",
+      "original": "DKB Finance to confirm the exclusion against the QCB definition",
+      "all": "DKB Finance to confirm the exclusion against the QCB definition"
+    },
+    {
+      "index": 76,
+      "accepted": "B4",
+      "original": "B4",
+      "all": "B4"
+    },
+    {
+      "index": 77,
+      "accepted": "\"Outside Qatar only\" and the exclusion of branches and subsidiaries are not in the rules",
+      "original": "\"Outside Qatar only\" and the exclusion of branches and subsidiaries are not in the rules",
+      "all": "\"Outside Qatar only\" and the exclusion of branches and subsidiaries are not in the rules"
+    },
+    {
+      "index": 78,
+      "accepted": "LDR L16–L18 (due to banks), L24–L26 (other borrowings); footnote *",
+      "original": "LDR L16–L18 (due to banks), L24–L26 (other borrowings); footnote *",
+      "all": "LDR L16–L18 (due to banks), L24–L26 (other borrowings); footnote *"
+    },
+    {
+      "index": 79,
+      "accepted": "Domestic counterparties and related entities may be included",
+      "original": "Domestic counterparties and related entities may be included",
+      "all": "Domestic counterparties and related entities may be included"
+    },
+    {
+      "index": 80,
+      "accepted": "Add a counterparty residence filter and exclude related entities",
+      "original": "Add a counterparty residence filter and exclude related entities",
+      "all": "Add a counterparty residence filter and exclude related entities"
+    },
+    {
+      "index": 81,
+      "accepted": "B5",
+      "original": "B5",
+      "all": "B5"
+    },
+    {
+      "index": 82,
+      "accepted": "Funding weights (25%, 50%, 100%) are not applied",
+      "original": "Funding weights (25%, 50%, 100%) are not applied",
+      "all": "Funding weights (25%, 50%, 100%) are not applied"
+    },
+    {
+      "index": 83,
+      "accepted": "LDR C15 = SUM(C16:C18); C19 = SUM(C20:C22)",
+      "original": "LDR C15 = SUM(C16:C18); C19 = SUM(C20:C22)",
+      "all": "LDR C15 = SUM(C16:C18); C19 = SUM(C20:C22)"
+    },
+    {
+      "index": 84,
+      "accepted": "Funding counted at 100% in every bucket, unless the sample values are already weighted",
+      "original": "Funding counted at 100% in every bucket, unless the sample values are already weighted",
+      "all": "Funding counted at 100% in every bucket, unless the sample values are already weighted"
+    },
+    {
+      "index": 85,
+      "accepted": "Apply the weights in the calculation",
+      "original": "Apply the weights in the calculation",
+      "all": "Apply the weights in the calculation"
+    },
+    {
+      "index": 86,
+      "accepted": "B6",
+      "original": "B6",
+      "all": "B6"
+    },
+    {
+      "index": 87,
+      "accepted": "Other borrowings are not included in the denominator",
+      "original": "Other borrowings are not included in the denominator",
+      "all": "Other borrowings are not included in the denominator"
+    },
+    {
+      "index": 88,
+      "accepted": "LDR C23 has no formula; C29 = C15 + C14 + C19 + C23",
+      "original": "LDR C23 has no formula; C29 = C15 + C14 + C19 + C23",
+      "all": "LDR C23 has no formula; C29 = C15 + C14 + C19 + C23"
+    },
+    {
+      "index": 89,
+      "accepted": "Rows 24–26 omitted from the total",
+      "original": "Rows 24–26 omitted from the total",
+      "all": "Rows 24–26 omitted from the total"
+    },
+    {
+      "index": 90,
+      "accepted": "Set C23 to the weighted sum of C24:C26",
+      "original": "Set C23 to the weighted sum of C24:C26",
+      "all": "Set C23 to the weighted sum of C24:C26"
+    },
+    {
+      "index": 91,
+      "accepted": "B7",
+      "original": "B7",
+      "all": "B7"
+    },
+    {
+      "index": 92,
+      "accepted": "Sukuk source appears to select sukuk held, not sukuk issued",
+      "original": "Sukuk source appears to select sukuk held, not sukuk issued",
+      "all": "Sukuk source appears to select sukuk held, not sukuk issued"
+    },
+    {
+      "index": 93,
+      "accepted": "LDR L20–L22: CRSSUKUKT where PLEDGEAGAINST = Borrowing",
+      "original": "LDR L20–L22: CRSSUKUKT where PLEDGEAGAINST = Borrowing",
+      "all": "LDR L20–L22: CRSSUKUKT where PLEDGEAGAINST = Borrowing"
+    },
+    {
+      "index": 94,
+      "accepted": "Funding from sukuk issued by DKB may be missed",
+      "original": "Funding from sukuk issued by DKB may be missed",
+      "all": "Funding from sukuk issued by DKB may be missed"
+    },
+    {
+      "index": 95,
+      "accepted": "Confirm the source for sukuk issued",
+      "original": "Confirm the source for sukuk issued",
+      "all": "Confirm the source for sukuk issued"
+    },
+    {
+      "index": 96,
+      "accepted": "B8",
+      "original": "B8",
+      "all": "B8"
+    },
+    {
+      "index": 97,
+      "accepted": "Maturity buckets exclude the boundaries",
+      "original": "Maturity buckets exclude the boundaries",
+      "all": "Maturity buckets exclude the boundaries"
+    },
+    {
+      "index": 98,
+      "accepted": "LDR L16–L26: \"greater than 1Y and less than 2Y\" etc.",
+      "original": "LDR L16–L26: \"greater than 1Y and less than 2Y\" etc.",
+      "all": "LDR L16–L26: \"greater than 1Y and less than 2Y\" etc."
+    },
+    {
+      "index": 99,
+      "accepted": "Funding maturing exactly at 1, 2 or 3 years falls into no bucket",
+      "original": "Funding maturing exactly at 1, 2 or 3 years falls into no bucket",
+      "all": "Funding maturing exactly at 1, 2 or 3 years falls into no bucket"
+    },
+    {
+      "index": 100,
+      "accepted": "Use \"1 year or more\" (≥) boundaries",
+      "original": "Use \"1 year or more\" (≥) boundaries",
+      "all": "Use \"1 year or more\" (≥) boundaries"
+    },
+    {
+      "index": 101,
+      "accepted": "C. LTD breach report (Form 4)",
+      "original": "C. LTD breach report (Form 4)",
+      "all": "C. LTD breach report (Form 4)"
+    },
+    {
+      "index": 102,
+      "accepted": "#",
+      "original": "#",
+      "all": "#"
+    },
+    {
+      "index": 103,
+      "accepted": "Issue",
+      "original": "Issue",
+      "all": "Issue"
+    },
+    {
+      "index": 104,
+      "accepted": "Where",
+      "original": "Where",
+      "all": "Where"
+    },
+    {
+      "index": 105,
+      "accepted": "Impact",
+      "original": "Impact",
+      "all": "Impact"
+    },
+    {
+      "index": 106,
+      "accepted": "Fix",
+      "original": "Fix",
+      "all": "Fix"
+    },
+    {
+      "index": 107,
+      "accepted": "C1",
+      "original": "C1",
+      "all": "C1"
+    },
+    {
+      "index": 108,
+      "accepted": "Penalty bands are applied to negative excess",
+      "original": "Penalty bands are applied to negative excess",
+      "all": "Penalty bands are applied to negative excess"
+    },
+    {
+      "index": 109,
+      "accepted": "LTD H6: excess = ratio − 100%; bands BETWEEN −0.05 AND 0, −0.10 AND −0.05, −0.20 AND −0.10, < −0.20",
+      "original": "LTD H6: excess = ratio − 100%; bands BETWEEN −0.05 AND 0, −0.10 AND −0.05, −0.20 AND −0.10, < −0.20",
+      "all": "LTD H6: excess = ratio − 100%; bands BETWEEN −0.05 AND 0, −0.10 AND −0.05, −0.20 AND −0.10, < −0.20"
+    },
+    {
+      "index": 110,
+      "accepted": "Penalties calculated when the ratio is below the limit; none when it is breached",
+      "original": "Penalties calculated when the ratio is below the limit; none when it is breached",
+      "all": "Penalties calculated when the ratio is below the limit; none when it is breached"
+    },
+    {
+      "index": 111,
+      "accepted": "Apply the bands to positive excess (0–5%, 5–10%, 10–20%, above 20%); confirm amounts against the QCB circular",
+      "original": "Apply the bands to positive excess (0–5%, 5–10%, 10–20%, above 20%); confirm amounts against the QCB circular",
+      "all": "Apply the bands to positive excess (0–5%, 5–10%, 10–20%, above 20%); confirm amounts against the QCB circular"
+    },
+    {
+      "index": 112,
+      "accepted": "C2",
+      "original": "C2",
+      "all": "C2"
+    },
+    {
+      "index": 113,
+      "accepted": "Deductions are incomplete",
+      "original": "Deductions are incomplete",
+      "all": "Deductions are incomplete"
+    },
+    {
+      "index": 114,
+      "accepted": "LTD C6 deducts provisions only; the header lists provisions, accrued interest and deferred profits",
+      "original": "LTD C6 deducts provisions only; the header lists provisions, accrued interest and deferred profits",
+      "all": "LTD C6 deducts provisions only; the header lists provisions, accrued interest and deferred profits"
+    },
+    {
+      "index": 115,
+      "accepted": "Net credit in Form 4 differs from LDR",
+      "original": "Net credit in Form 4 differs from LDR",
+      "all": "Net credit in Form 4 differs from LDR"
+    },
+    {
+      "index": 116,
+      "accepted": "Use the same deductions as LDR (after A2–A4)",
+      "original": "Use the same deductions as LDR (after A2–A4)",
+      "all": "Use the same deductions as LDR (after A2–A4)"
+    },
+    {
+      "index": 117,
+      "accepted": "C3",
+      "original": "C3",
+      "all": "C3"
+    },
+    {
+      "index": 118,
+      "accepted": "Column labels are swapped",
+      "original": "Column labels are swapped",
+      "all": "Column labels are swapped"
+    },
+    {
+      "index": 119,
+      "accepted": "LTD D5 \"Ratio Denominator: Net Credit (3)\", E5 \"Ratio Numerator: Customer Deposits (4)\", ratio = (3)/(4)",
+      "original": "LTD D5 \"Ratio Denominator: Net Credit (3)\", E5 \"Ratio Numerator: Customer Deposits (4)\", ratio = (3)/(4)",
+      "all": "LTD D5 \"Ratio Denominator: Net Credit (3)\", E5 \"Ratio Numerator: Customer Deposits (4)\", ratio = (3)/(4)"
+    },
+    {
+      "index": 120,
+      "accepted": "Misleading layout",
+      "original": "Misleading layout",
+      "all": "Misleading layout"
+    },
+    {
+      "index": 121,
+      "accepted": "Correct the labels",
+      "original": "Correct the labels",
+      "all": "Correct the labels"
+    },
+    {
+      "index": 122,
+      "accepted": "D. General",
+      "original": "D. General",
+      "all": "D. General"
+    },
+    {
+      "index": 123,
+      "accepted": "#",
+      "original": "#",
+      "all": "#"
+    },
+    {
+      "index": 124,
+      "accepted": "Issue",
+      "original": "Issue",
+      "all": "Issue"
+    },
+    {
+      "index": 125,
+      "accepted": "Where",
+      "original": "Where",
+      "all": "Where"
+    },
+    {
+      "index": 126,
+      "accepted": "Impact",
+      "original": "Impact",
+      "all": "Impact"
+    },
+    {
+      "index": 127,
+      "accepted": "Fix",
+      "original": "Fix",
+      "all": "Fix"
+    },
+    {
+      "index": 128,
+      "accepted": "D1",
+      "original": "D1",
+      "all": "D1"
+    },
+    {
+      "index": 129,
+      "accepted": "Each line carries both an NBS01 item reference and a CAL or ECB rule",
+      "original": "Each line carries both an NBS01 item reference and a CAL or ECB rule",
+      "all": "Each line carries both an NBS01 item reference and a CAL or ECB rule"
+    },
+    {
+      "index": 130,
+      "accepted": "LDR F/G columns (e.g. 1-100-105, 3-300-30103, 2-029-20701, 2-200-20707, 2-200-20801, 2-200-203) next to L8–L14",
+      "original": "LDR F/G columns (e.g. 1-100-105, 3-300-30103, 2-029-20701, 2-200-20707, 2-200-20801, 2-200-203) next to L8–L14",
+      "all": "LDR F/G columns (e.g. 1-100-105, 3-300-30103, 2-029-20701, 2-200-20707, 2-200-20801, 2-200-203) next to L8–L14"
+    },
+    {
+      "index": 131,
+      "accepted": "Unclear which is implemented; results can differ from NBS01",
+      "original": "Unclear which is implemented; results can differ from NBS01",
+      "all": "Unclear which is implemented; results can differ from NBS01"
+    },
+    {
+      "index": 132,
+      "accepted": "Prefer referencing the corrected NBS01 lines, so LDR and NBS01 stay consistent",
+      "original": "Prefer referencing the corrected NBS01 lines, so LDR and NBS01 stay consistent",
+      "all": "Prefer referencing the corrected NBS01 lines, so LDR and NBS01 stay consistent"
+    },
+    {
+      "index": 133,
+      "accepted": "D2",
+      "original": "D2",
+      "all": "D2"
+    },
+    {
+      "index": 134,
+      "accepted": "Typos in rule text",
+      "original": "Typos in rule text",
+      "all": "Typos in rule text"
+    },
+    {
+      "index": 135,
+      "accepted": "\"CATERGORY\", \"CURACCOUT\", \"local.debit.mvt\"",
+      "original": "\"CATERGORY\", \"CURACCOUT\", \"local.debit.mvt\"",
+      "all": "\"CATERGORY\", \"CURACCOUT\", \"local.debit.mvt\""
+    },
+    {
+      "index": 136,
+      "accepted": "Risk if implemented literally",
+      "original": "Risk if implemented literally",
+      "all": "Risk if implemented literally"
+    },
+    {
+      "index": 137,
+      "accepted": "Correct the rule text",
+      "original": "Correct the rule text",
+      "all": "Correct the rule text"
+    },
+    {
+      "index": 138,
+      "accepted": "4. What is consistent",
+      "original": "4. What is consistent",
+      "all": "4. What is consistent"
+    },
+    {
+      "index": 139,
+      "accepted": "Currency handling (local currency for QAR, local equivalent for foreign currency) is applied uniformly.",
+      "original": "Currency handling (local currency for QAR, local equivalent for foreign currency) is applied uniformly.",
+      "all": "Currency handling (local currency for QAR, local equivalent for foreign currency) is applied uniformly."
+    },
+    {
+      "index": 140,
+      "accepted": "The principal list includes all seven types (CUR, GRC, DUE, PDO, NAB, DEL, PRE ACCOUNT).",
+      "original": "The principal list includes all seven types (CUR, GRC, DUE, PDO, NAB, DEL, PRE ACCOUNT).",
+      "all": "The principal list includes all seven types (CUR, GRC, DUE, PDO, NAB, DEL, PRE ACCOUNT)."
+    },
+    {
+      "index": 141,
+      "accepted": "Income in suspense lists the SP profit types completely, including DEL and PRE.",
+      "original": "Income in suspense lists the SP profit types completely, including DEL and PRE.",
+      "all": "Income in suspense lists the SP profit types completely, including DEL and PRE."
+    },
+    {
+      "index": 142,
+      "accepted": "5. Next steps",
+      "original": "5. Next steps",
+      "all": "5. Next steps"
+    },
+    {
+      "index": 143,
+      "accepted": "Correct C1 (penalty bands) and B5/B6 (weights, other borrowings) immediately; these are calculation errors independent of the mapping.",
+      "original": "Correct C1 (penalty bands) and B5/B6 (weights, other borrowings) immediately; these are calculation errors independent of the mapping.",
+      "all": "Correct C1 (penalty bands) and B5/B6 (weights, other borrowings) immediately; these are calculation errors independent of the mapping."
+    },
+    {
+      "index": 144,
+      "accepted": "Align credit, deductions, acceptances and deposits with the corrected NBS01 definitions (A1–A5, B1, B2), preferably by referencing the NBS01 lines (D1).",
+      "original": "Align credit, deductions, acceptances and deposits with the corrected NBS01 definitions (A1–A5, B1, B2), preferably by referencing the NBS01 lines (D1).",
+      "all": "Align credit, deductions, acceptances and deposits with the corrected NBS01 definitions (A1–A5, B1, B2), preferably by referencing the NBS01 lines (D1)."
+    },
+    {
+      "index": 145,
+      "accepted": "DKB Finance to confirm B3 (cash margins), B7 (sukuk source) and the card commission categories in A2.",
+      "original": "DKB Finance to confirm B3 (cash margins), B7 (sukuk source) and the card commission categories in A2.",
+      "all": "DKB Finance to confirm B3 (cash margins), B7 (sukuk source) and the card commission categories in A2."
+    },
+    {
+      "index": 146,
+      "accepted": "Rerun and reconcile net credit and deposits to the NBS01 balance sheet at the same date.",
+      "original": "Rerun and reconcile net credit and deposits to the NBS01 balance sheet at the same date.",
+      "all": "Rerun and reconcile net credit and deposits to the NBS01 balance sheet at the same date."
+    }
+  ],
+  "comments": [],
+  "revisions": [],
+  "extra": {},
+  "props": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><cp:coreProperties xmlns:cp=\"http://schemas.openxmlformats.org/package/2006/metadata/core-properties\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:dcterms=\"http://purl.org/dc/terms/\" xmlns:dcmitype=\"http://purl.org/dc/dcmitype/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><dc:creator>Un-named</dc:creator><cp:lastModifiedBy>Un-named</cp:lastModifiedBy><cp:revision>1</cp:revision><dcterms:created xsi:type=\"dcterms:W3CDTF\">2026-10-22T11:28:59.074Z</dcterms:created><dcterms:modified xsi:type=\"dcterms:W3CDTF\">2026-10-22T11:28:59.085Z</dcterms:modified></cp:coreProperties>"
+}

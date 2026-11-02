@@ -1,0 +1,807 @@
+{
+ "accounts": {
+  "LOAN": {
+   "accounts": 36007,
+   "gls": 49,
+   "customers": 23644,
+   "absolute_balance_qar": "94230106916.68",
+   "by_breakdown": {
+    "residency (Inside/Outside Qatar)": {
+     "gls": 49,
+     "gls_spanning_several_cells": 6,
+     "balance_in_mixed_gls_qar": "43889015792.19",
+     "minimum_misplaced_by_any_gl_mapping_qar": "2081554308.22",
+     "minimum_misplaced_pct": 2.21,
+     "largest_gls": [
+      {
+       "gl": "1301010001",
+       "misplaced_qar": "1914775081.21",
+       "cells": 2
+      },
+      {
+       "gl": "1306010001",
+       "misplaced_qar": "158939760.15",
+       "cells": 2
+      },
+      {
+       "gl": "1301050001",
+       "misplaced_qar": "6772749.04",
+       "cells": 2
+      },
+      {
+       "gl": "1300010001",
+       "misplaced_qar": "1028997.12",
+       "cells": 2
+      },
+      {
+       "gl": "1300010002",
+       "misplaced_qar": "32720.70",
+       "cells": 2
+      }
+     ]
+    },
+    "currency (LC/FC)": {
+     "gls": 49,
+     "gls_spanning_several_cells": 4,
+     "balance_in_mixed_gls_qar": "31989563479.07",
+     "minimum_misplaced_by_any_gl_mapping_qar": "9112094269.37",
+     "minimum_misplaced_pct": 9.67,
+     "largest_gls": [
+      {
+       "gl": "1306010002",
+       "misplaced_qar": "7781241378.50",
+       "cells": 2
+      },
+      {
+       "gl": "1301010001",
+       "misplaced_qar": "1111025393.68",
+       "cells": 2
+      },
+      {
+       "gl": "1306010001",
+       "misplaced_qar": "158939760.15",
+       "cells": 2
+      },
+      {
+       "gl": "1301009001",
+       "misplaced_qar": "60887737.04",
+       "cells": 2
+      },
+      {
+       "gl": "1300000002",
+       "misplaced_qar": "0.00",
+       "cells": 1
+      }
+     ]
+    },
+    "economic sector (Tables 044/045 columns)": {
+     "gls": 49,
+     "gls_spanning_several_cells": 9,
+     "balance_in_mixed_gls_qar": "57912499376.11",
+     "minimum_misplaced_by_any_gl_mapping_qar": "17471107040.17",
+     "minimum_misplaced_pct": 18.54,
+     "largest_gls": [
+      {
+       "gl": "1301050001",
+       "misplaced_qar": "8519313075.40",
+       "cells": 5
+      },
+      {
+       "gl": "1306050001",
+       "misplaced_qar": "3019871708.12",
+       "cells": 4
+      },
+      {
+       "gl": "1301010001",
+       "misplaced_qar": "2996644085.07",
+       "cells": 4
+      },
+      {
+       "gl": "1306010001",
+       "misplaced_qar": "1498672785.42",
+       "cells": 4
+      },
+      {
+       "gl": "1306007001",
+       "misplaced_qar": "851011479.07",
+       "cells": 3
+      }
+     ]
+    },
+    "industry code (Table 044 rows)": {
+     "gls": 49,
+     "gls_spanning_several_cells": 33,
+     "balance_in_mixed_gls_qar": "68564667559.72",
+     "minimum_misplaced_by_any_gl_mapping_qar": "41967647320.18",
+     "minimum_misplaced_pct": 44.54,
+     "largest_gls": [
+      {
+       "gl": "1301050001",
+       "misplaced_qar": "23698619252.91",
+       "cells": 51
+      },
+      {
+       "gl": "1301010001",
+       "misplaced_qar": "6022316685.85",
+       "cells": 8
+      },
+      {
+       "gl": "1306050001",
+       "misplaced_qar": "5623722359.41",
+       "cells": 12
+      },
+      {
+       "gl": "1306010001",
+       "misplaced_qar": "1498672785.42",
+       "cells": 6
+      },
+      {
+       "gl": "1301007001",
+       "misplaced_qar": "1048619104.82",
+       "cells": 44
+      }
+     ]
+    },
+    "remaining maturity (Tables 010/024)": {
+     "gls": 49,
+     "gls_spanning_several_cells": 31,
+     "balance_in_mixed_gls_qar": "92348837638.47",
+     "minimum_misplaced_by_any_gl_mapping_qar": "38426855464.14",
+     "minimum_misplaced_pct": 40.78,
+     "largest_gls": [
+      {
+       "gl": "1301050001",
+       "misplaced_qar": "17286937768.30",
+       "cells": 10
+      },
+      {
+       "gl": "1306050001",
+       "misplaced_qar": "7938785205.64",
+       "cells": 10
+      },
+      {
+       "gl": "1301010001",
+       "misplaced_qar": "5119526396.06",
+       "cells": 8
+      },
+      {
+       "gl": "1306010001",
+       "misplaced_qar": "1698709602.03",
+       "cells": 7
+      },
+      {
+       "gl": "1300010001",
+       "misplaced_qar": "1372625175.72",
+       "cells": 9
+      }
+     ]
+    },
+    "facility size band (Tables 012/025)": {
+     "gls": 49,
+     "gls_spanning_several_cells": 37,
+     "balance_in_mixed_gls_qar": "92487259946.48",
+     "minimum_misplaced_by_any_gl_mapping_qar": "39327997588.03",
+     "minimum_misplaced_pct": 41.74,
+     "largest_gls": [
+      {
+       "gl": "1301050001",
+       "misplaced_qar": "19175605682.80",
+       "cells": 9
+      },
+      {
+       "gl": "1306050001",
+       "misplaced_qar": "7077814221.32",
+       "cells": 9
+      },
+      {
+       "gl": "1301010001",
+       "misplaced_qar": "3806167192.18",
+       "cells": 7
+      },
+      {
+       "gl": "1300010001",
+       "misplaced_qar": "1267070557.12",
+       "cells": 3
+      },
+      {
+       "gl": "1306007001",
+       "misplaced_qar": "1175528173.84",
+       "cells": 8
+      }
+     ]
+    },
+    "product / account type": {
+     "gls": 49,
+     "gls_spanning_several_cells": 4,
+     "balance_in_mixed_gls_qar": "511898392.92",
+     "minimum_misplaced_by_any_gl_mapping_qar": "36808966.98",
+     "minimum_misplaced_pct": 0.04,
+     "largest_gls": [
+      {
+       "gl": "1301000002",
+       "misplaced_qar": "20566819.44",
+       "cells": 2
+      },
+      {
+       "gl": "1301000001",
+       "misplaced_qar": "10781613.79",
+       "cells": 2
+      },
+      {
+       "gl": "1303000001",
+       "misplaced_qar": "5146085.83",
+       "cells": 2
+      },
+      {
+       "gl": "1303000002",
+       "misplaced_qar": "314447.92",
+       "cells": 2
+      },
+      {
+       "gl": "1300000002",
+       "misplaced_qar": "0.00",
+       "cells": 1
+      }
+     ]
+    },
+    "combined: residency x currency x sector x maturity": {
+     "gls": 49,
+     "gls_spanning_several_cells": 31,
+     "balance_in_mixed_gls_qar": "92348837638.47",
+     "minimum_misplaced_by_any_gl_mapping_qar": "52226704181.38",
+     "minimum_misplaced_pct": 55.42,
+     "largest_gls": [
+      {
+       "gl": "1301050001",
+       "misplaced_qar": "21872642429.79",
+       "cells": 20
+      },
+      {
+       "gl": "1306050001",
+       "misplaced_qar": "8333314899.75",
+       "cells": 19
+      },
+      {
+       "gl": "1306010002",
+       "misplaced_qar": "8271190660.25",
+       "cells": 6
+      },
+      {
+       "gl": "1301010001",
+       "misplaced_qar": "5683651141.48",
+       "cells": 11
+      },
+      {
+       "gl": "1306010001",
+       "misplaced_qar": "1724709601.80",
+       "cells": 12
+      }
+     ]
+    }
+   }
+  },
+  "DEPOSIT": {
+   "accounts": 236428,
+   "gls": 88,
+   "customers": 176656,
+   "absolute_balance_qar": "89866412784.13",
+   "by_breakdown": {
+    "residency (Inside/Outside Qatar)": {
+     "gls": 88,
+     "gls_spanning_several_cells": 37,
+     "balance_in_mixed_gls_qar": "68570389419.95",
+     "minimum_misplaced_by_any_gl_mapping_qar": "723941823.54",
+     "minimum_misplaced_pct": 0.81,
+     "largest_gls": [
+      {
+       "gl": "2006020005",
+       "misplaced_qar": "188916341.04",
+       "cells": 2
+      },
+      {
+       "gl": "2001030002",
+       "misplaced_qar": "176660000.00",
+       "cells": 2
+      },
+      {
+       "gl": "2001030001",
+       "misplaced_qar": "109245000.00",
+       "cells": 2
+      },
+      {
+       "gl": "2006020001",
+       "misplaced_qar": "56679307.47",
+       "cells": 2
+      },
+      {
+       "gl": "2001000001",
+       "misplaced_qar": "37618685.14",
+       "cells": 2
+      }
+     ]
+    },
+    "currency (LC/FC)": {
+     "gls": 88,
+     "gls_spanning_several_cells": 40,
+     "balance_in_mixed_gls_qar": "68473305664.40",
+     "minimum_misplaced_by_any_gl_mapping_qar": "18636651203.84",
+     "minimum_misplaced_pct": 20.74,
+     "largest_gls": [
+      {
+       "gl": "2006020005",
+       "misplaced_qar": "6746022582.07",
+       "cells": 2
+      },
+      {
+       "gl": "2001030002",
+       "misplaced_qar": "3280828477.04",
+       "cells": 2
+      },
+      {
+       "gl": "2001030001",
+       "misplaced_qar": "2559355666.17",
+       "cells": 2
+      },
+      {
+       "gl": "2001010001",
+       "misplaced_qar": "1695576643.45",
+       "cells": 2
+      },
+      {
+       "gl": "2002000001",
+       "misplaced_qar": "1363172071.38",
+       "cells": 2
+      }
+     ]
+    },
+    "economic sector (Tables 044/045 columns)": {
+     "gls": 88,
+     "gls_spanning_several_cells": 32,
+     "balance_in_mixed_gls_qar": "64676338606.82",
+     "minimum_misplaced_by_any_gl_mapping_qar": "19443216794.27",
+     "minimum_misplaced_pct": 21.64,
+     "largest_gls": [
+      {
+       "gl": "2001030001",
+       "misplaced_qar": "4625092310.55",
+       "cells": 5
+      },
+      {
+       "gl": "2001030002",
+       "misplaced_qar": "3806224093.15",
+       "cells": 5
+      },
+      {
+       "gl": "2001030005",
+       "misplaced_qar": "3116170065.25",
+       "cells": 5
+      },
+      {
+       "gl": "2001010001",
+       "misplaced_qar": "2812279754.46",
+       "cells": 5
+      },
+      {
+       "gl": "2001030003",
+       "misplaced_qar": "1431963271.88",
+       "cells": 5
+      }
+     ]
+    },
+    "industry code (Table 044 rows)": {
+     "gls": 88,
+     "gls_spanning_several_cells": 71,
+     "balance_in_mixed_gls_qar": "73570851344.56",
+     "minimum_misplaced_by_any_gl_mapping_qar": "35156135465.25",
+     "minimum_misplaced_pct": 39.12,
+     "largest_gls": [
+      {
+       "gl": "2001030002",
+       "misplaced_qar": "6337199093.15",
+       "cells": 45
+      },
+      {
+       "gl": "2001030005",
+       "misplaced_qar": "5794342113.85",
+       "cells": 32
+      },
+      {
+       "gl": "2001030001",
+       "misplaced_qar": "5603165541.67",
+       "cells": 44
+      },
+      {
+       "gl": "2001010001",
+       "misplaced_qar": "3385979914.85",
+       "cells": 91
+      },
+      {
+       "gl": "2006020005",
+       "misplaced_qar": "2608546033.18",
+       "cells": 20
+      }
+     ]
+    },
+    "remaining maturity (Tables 010/024)": {
+     "gls": 88,
+     "gls_spanning_several_cells": 29,
+     "balance_in_mixed_gls_qar": "53123065290.59",
+     "minimum_misplaced_by_any_gl_mapping_qar": "19741622916.95",
+     "minimum_misplaced_pct": 21.97,
+     "largest_gls": [
+      {
+       "gl": "2006020005",
+       "misplaced_qar": "4987459709.89",
+       "cells": 7
+      },
+      {
+       "gl": "2001030005",
+       "misplaced_qar": "4116200229.06",
+       "cells": 6
+      },
+      {
+       "gl": "2001030001",
+       "misplaced_qar": "3920455345.97",
+       "cells": 3
+      },
+      {
+       "gl": "2001030002",
+       "misplaced_qar": "2231516671.07",
+       "cells": 4
+      },
+      {
+       "gl": "2001030003",
+       "misplaced_qar": "1447524642.75",
+       "cells": 4
+      }
+     ]
+    },
+    "facility size band (Tables 012/025)": {
+     "gls": 88,
+     "gls_spanning_several_cells": 69,
+     "balance_in_mixed_gls_qar": "73578786763.22",
+     "minimum_misplaced_by_any_gl_mapping_qar": "41233975048.67",
+     "minimum_misplaced_pct": 45.88,
+     "largest_gls": [
+      {
+       "gl": "2006020005",
+       "misplaced_qar": "8255214328.68",
+       "cells": 9
+      },
+      {
+       "gl": "2001030005",
+       "misplaced_qar": "4850485566.88",
+       "cells": 8
+      },
+      {
+       "gl": "2001030002",
+       "misplaced_qar": "4759780510.18",
+       "cells": 7
+      },
+      {
+       "gl": "2001030001",
+       "misplaced_qar": "4408035205.09",
+       "cells": 9
+      },
+      {
+       "gl": "2001010001",
+       "misplaced_qar": "3391516323.94",
+       "cells": 10
+      }
+     ]
+    },
+    "product / account type": {
+     "gls": 88,
+     "gls_spanning_several_cells": 12,
+     "balance_in_mixed_gls_qar": "13788682989.85",
+     "minimum_misplaced_by_any_gl_mapping_qar": "1040563389.39",
+     "minimum_misplaced_pct": 1.16,
+     "largest_gls": [
+      {
+       "gl": "2006000001",
+       "misplaced_qar": "753135738.55",
+       "cells": 2
+      },
+      {
+       "gl": "2006010001",
+       "misplaced_qar": "209023737.43",
+       "cells": 2
+      },
+      {
+       "gl": "2001010001",
+       "misplaced_qar": "31329903.35",
+       "cells": 2
+      },
+      {
+       "gl": "2001000001",
+       "misplaced_qar": "30629205.28",
+       "cells": 6
+      },
+      {
+       "gl": "2005010090",
+       "misplaced_qar": "7460937.43",
+       "cells": 2
+      }
+     ]
+    },
+    "combined: residency x currency x sector x maturity": {
+     "gls": 88,
+     "gls_spanning_several_cells": 58,
+     "balance_in_mixed_gls_qar": "72432711190.42",
+     "minimum_misplaced_by_any_gl_mapping_qar": "40244946489.26",
+     "minimum_misplaced_pct": 44.78,
+     "largest_gls": [
+      {
+       "gl": "2006020005",
+       "misplaced_qar": "7794502156.46",
+       "cells": 19
+      },
+      {
+       "gl": "2001030001",
+       "misplaced_qar": "6349295205.09",
+       "cells": 20
+      },
+      {
+       "gl": "2001030002",
+       "misplaced_qar": "6313199093.15",
+       "cells": 26
+      },
+      {
+       "gl": "2001030005",
+       "misplaced_qar": "5934071671.08",
+       "cells": 27
+      },
+      {
+       "gl": "2001010001",
+       "misplaced_qar": "3268534240.36",
+       "cells": 16
+      }
+     ]
+    }
+   }
+  },
+  "TRIAL_BALANCE_ATTRIBUTES": {
+   "populated_fields": {
+    "residency": 0,
+    "country": 0,
+    "industry": 0,
+    "maturity": 0,
+    "rim": 0,
+    "risk": 0,
+    "currency": 5801,
+    "gl": 5801
+   },
+   "note": "The GL trial balance carries GL, currency and amount only: no residency, sector, maturity, customer or risk attribute"
+  }
+ },
+ "cells": {
+  "total": {
+   "cells": 17014,
+   "nonzero_cells": 2478
+  },
+  "by_requirement": [
+   {
+    "requirement": "country",
+    "meaning": "Counterparty country (GCC subsets)",
+    "cells": 4940,
+    "nonzero_cells": 248,
+    "share_of_cells_pct": 29.0,
+    "abs_amount_thousands": "17373151",
+    "tables": [
+     "002",
+     "009",
+     "014",
+     "019",
+     "021",
+     "023",
+     "029",
+     "031",
+     "100",
+     "200",
+     "300",
+     "400",
+     "500"
+    ]
+   },
+   {
+    "requirement": "residency",
+    "meaning": "Counterparty residency (Inside/Outside Qatar)",
+    "cells": 3690,
+    "nonzero_cells": 828,
+    "share_of_cells_pct": 21.7,
+    "abs_amount_thousands": "2492009432",
+    "tables": [
+     "001",
+     "002",
+     "006",
+     "008",
+     "009",
+     "014",
+     "015",
+     "016",
+     "017",
+     "018",
+     "019",
+     "021",
+     "023",
+     "026",
+     "027",
+     "029",
+     "030",
+     "031",
+     "032",
+     "033",
+     "034",
+     "035",
+     "036",
+     "039",
+     "043",
+     "100",
+     "200",
+     "300",
+     "400",
+     "500"
+    ]
+   },
+   {
+    "requirement": "sector",
+    "meaning": "Counterparty economic sector",
+    "cells": 3159,
+    "nonzero_cells": 539,
+    "share_of_cells_pct": 18.6,
+    "abs_amount_thousands": "1824086583",
+    "tables": [
+     "044",
+     "045"
+    ]
+   },
+   {
+    "requirement": "maturity",
+    "meaning": "Remaining maturity per contract",
+    "cells": 1785,
+    "nonzero_cells": 245,
+    "share_of_cells_pct": 10.5,
+    "abs_amount_thousands": "625538901.355",
+    "tables": [
+     "003",
+     "007",
+     "010",
+     "022",
+     "024",
+     "028",
+     "038"
+    ]
+   },
+   {
+    "requirement": "listing",
+    "meaning": "Listed / unlisted instrument",
+    "cells": 1315,
+    "nonzero_cells": 73,
+    "share_of_cells_pct": 7.7,
+    "abs_amount_thousands": "64914965",
+    "tables": [
+     "004",
+     "005",
+     "042"
+    ]
+   },
+   {
+    "requirement": "gl_structure_only",
+    "meaning": "No counterparty/contract attribute (GL-derivable if the GL chart is granular enough)",
+    "cells": 955,
+    "nonzero_cells": 66,
+    "share_of_cells_pct": 5.6,
+    "abs_amount_thousands": "182636500",
+    "tables": [
+     "002",
+     "017",
+     "021",
+     "024",
+     "037",
+     "040",
+     "041"
+    ]
+   },
+   {
+    "requirement": "count",
+    "meaning": "Customer/facility counts",
+    "cells": 360,
+    "nonzero_cells": 169,
+    "share_of_cells_pct": 2.1,
+    "abs_amount_thousands": "0",
+    "tables": [
+     "012",
+     "025"
+    ]
+   },
+   {
+    "requirement": "size",
+    "meaning": "Facility/customer amount band",
+    "cells": 360,
+    "nonzero_cells": 169,
+    "share_of_cells_pct": 2.1,
+    "abs_amount_thousands": "450652156",
+    "tables": [
+     "012",
+     "025"
+    ]
+   },
+   {
+    "requirement": "collateral",
+    "meaning": "Collateral type per facility",
+    "cells": 220,
+    "nonzero_cells": 71,
+    "share_of_cells_pct": 1.3,
+    "abs_amount_thousands": "485014002",
+    "tables": [
+     "013"
+    ]
+   },
+   {
+    "requirement": "risk",
+    "meaning": "Credit classification / risk grade",
+    "cells": 190,
+    "nonzero_cells": 64,
+    "share_of_cells_pct": 1.1,
+    "abs_amount_thousands": "253161310",
+    "tables": [
+     "011"
+    ]
+   },
+   {
+    "requirement": "derivative",
+    "meaning": "Derivative notional / fair value per contract",
+    "cells": 40,
+    "nonzero_cells": 6,
+    "share_of_cells_pct": 0.2,
+    "abs_amount_thousands": "854280",
+    "tables": [
+     "038"
+    ]
+   }
+  ]
+ },
+ "qcb_rules": {
+  "rules": 2664,
+  "by_kind": {
+   "ADDITIONAL_TABLE (60x not in BO workbook)": 1218,
+   "BASE_SCHEDULE_TO_DETAIL": 467,
+   "CROSS_DIMENSION_SAME_POPULATION": 252,
+   "INEQUALITY": 346,
+   "WITHIN_TABLE_CROSS_MEASURE": 365,
+   "CROSS_TABLE_SAME_MEASURE": 16
+  },
+  "cross_dimension_examples": [
+   {
+    "qcb_code": "115",
+    "rule": "$002{1-002-1020201}#INSIDE_LC+INSIDE_FC+OUTSIDE_LC+OUTSIDE_FC# = $003{1-003-1020201}#ONE_WEEK+ONE_WEEK_TO_1_MONTH+ONE_TO_3_MONTHS+THREE_TO_6_MONTHS+SIX_TO_12_MONTHS+ONE_TO_2_YEARS+TWO_TO_5_YEARS+OVER_5_YEARS#"
+   },
+   {
+    "qcb_code": "116",
+    "rule": "$002{1-002-1020202}#INSIDE_LC+INSIDE_FC+OUTSIDE_LC+OUTSIDE_FC# = $003{1-003-1020202}#ONE_WEEK+ONE_WEEK_TO_1_MONTH+ONE_TO_3_MONTHS+THREE_TO_6_MONTHS+SIX_TO_12_MONTHS+ONE_TO_2_YEARS+TWO_TO_5_YEARS+OVER_5_YEARS#"
+   },
+   {
+    "qcb_code": "117",
+    "rule": "$002{1-002-1020203}#INSIDE_LC+INSIDE_FC+OUTSIDE_LC+OUTSIDE_FC# = $003{1-003-1020203}#ONE_WEEK+ONE_WEEK_TO_1_MONTH+ONE_TO_3_MONTHS+THREE_TO_6_MONTHS+SIX_TO_12_MONTHS+ONE_TO_2_YEARS+TWO_TO_5_YEARS+OVER_5_YEARS#"
+   },
+   {
+    "qcb_code": "118",
+    "rule": "$002{1-002-1020204}#INSIDE_LC+INSIDE_FC+OUTSIDE_LC+OUTSIDE_FC# = $003{1-003-1020204}#ONE_WEEK+ONE_WEEK_TO_1_MONTH+ONE_TO_3_MONTHS+THREE_TO_6_MONTHS+SIX_TO_12_MONTHS+ONE_TO_2_YEARS+TWO_TO_5_YEARS+OVER_5_YEARS#"
+   },
+   {
+    "qcb_code": "134",
+    "rule": "$002{1-002-103010101}#INSIDE_LC+INSIDE_FC+OUTSIDE_LC+OUTSIDE_FC# = $003{1-003-103010101}#ONE_WEEK+ONE_WEEK_TO_1_MONTH+ONE_TO_3_MONTHS+THREE_TO_6_MONTHS+SIX_TO_12_MONTHS+ONE_TO_2_YEARS+TWO_TO_5_YEARS+OVER_5_YEARS#"
+   },
+   {
+    "qcb_code": "135",
+    "rule": "$002{1-002-103010102}#INSIDE_LC+INSIDE_FC+OUTSIDE_LC+OUTSIDE_FC# = $003{1-003-103010102}#ONE_WEEK+ONE_WEEK_TO_1_MONTH+ONE_TO_3_MONTHS+THREE_TO_6_MONTHS+SIX_TO_12_MONTHS+ONE_TO_2_YEARS+TWO_TO_5_YEARS+OVER_5_YEARS#"
+   }
+  ],
+  "note": "CROSS_DIMENSION_SAME_POPULATION rules require one population to add up identically when split by different contract attributes (e.g. Table 009 by product = Table 012 by size band = Table 013 by collateral = Table 044 by sector). A GL mapping can satisfy them only if every GL lies wholly inside one cell of every breakdown."
+ },
+ "legacy_gl_sql": {
+  "classification_groups": 37,
+  "bo_items": 1648,
+  "note": "The supplied Ethix balance-sheet SQL maps GLs into 37 groups / 37 output lines; it contains no residency, sector, maturity, size, count or risk logic."
+ }
+}

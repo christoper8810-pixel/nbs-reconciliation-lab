@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block content %}
+{% set p = item.proposal %}{% set d = evaluation.decision %}
+<h1>{{ item.business_id }} <span class="tag {{ evaluation.state }}">{{ evaluation.state }}</span> <span class="tag {{ evaluation.validity }}">decision {{ evaluation.validity }}</span></h1>
+<div class="cols">
+<div class="panel">
+  <h2>Source evidence</h2>
+  <table>
+    <tr><th>Source</th><td>{{ item.source_system }} · {{ item.source_file }}<br><span class="muted">sha256 {{ item.source_hash }}</span></td></tr>
+    <tr><th>Location</th><td>{{ item.sheet }} row {{ item.source_row }} · source ID {{ item.source_id }}</td></tr>
+    <tr><th>Block</th><td>{{ item.block_title or '(before first title)' }} <span class="muted">{{ item.block_key }} @ {{ item.block_title_coord }}</span></td></tr>
+    <tr><th>Hierarchy</th><td>{{ item.hierarchy_path }}</td></tr>
+    <tr><th>Fingerprint</th><td class="pre">{{ item.fingerprint }}</td></tr>
+  </table>
+  <h3>Cells</h3>
+  <table><tr><th>Cell</th><th>Column header</th><th>Value (inert text)</th></tr>
+  {% for c in item.cells %}<tr><td>{{ c.coord }}<br><span class="muted">{{ c.type }}</span></td><td>{{ c.header or '' }}</td>
+  <td class="pre">{{ c.value }}{% if c.alias %}
+[alias {{ c.alias.status }} → {{ c.alias.chain|join(' → ') }}: {{ c.alias.value }}]{% endif %}{% if c.note %}
+[comment] {{ c.note }}{% endif %}{% if c.merge %}
+[merged {{ c.merge }}]{% endif %}</td></tr>{% endfor %}</table>
+  {% if findings %}<h3>Findings on this row</h3>
+  <table>{% for f in findings %}<tr><td><a href="{{ url_for('findings', _anchor=f.item_id) }}">{{ f.finding_id }}</a> {{ f.cell }}</td><td><span class="tag">{{ f.kind }}</span> {{ f.finding_title }}</td></tr>{% endfor %}</table>{% endif %}
+</div>
+<div class="panel">
+  <h2>Proposal <span class="tag">{{ p.status }}</span></h2>
+  <table>
+    <tr><th>Metric</th><td>{{ p.metric_expression or '—' }}</td></tr>
+    <tr><th>Basis</th><td>{{ p.basis or '—' }}</td></tr>
+    <tr><th>Amount basis</th><td>{{ p.amount_basis or '—' }}</td></tr>
+    <tr><th>Selector</th><td><span class="tag">{{ p.selector_status }}</span>{% if p.selectors %}<pre>{{ json.dumps(p.selectors, indent=1) }}</pre>{% endif %}</td></tr>
+    <tr><th>Source tables</th><td>{{ p.source_tables|join(', ') }}</td></tr>
+    {% if p.token_diff %}<tr><th>Identifiers</th><td>
+      legacy: {{ p.token_diff.legacy_tokens|join(', ') }}<br>
+      owner codes missing from legacy: {{ p.token_diff.missing_from_legacy|join(', ') or 'none' }}<br>
+      legacy outside proposed group: {{ p.token_diff.legacy_outside_best_group|join(', ') or 'none' }}<br>
+      unknown (need local definition): <b>{{ p.token_diff.unknown|join(', ') or 'none' }}</b></td></tr>{% endif %}
+    {% if p.cell_token_diffs %}<tr><th>Per cell</th><td>{% for c in p.cell_token_diffs %}{{ c.coord }} [{{ c.header }}]: {{ c.legacy_tokens|join(', ') }}<br>{% endfor %}</td></tr>{% endif %}
+    {% if p.formula_corrections %}<tr><th>Corrections</th><td>{% for c in p.formula_corrections %}<div><b>{{ c.coord }}</b> <span class="tag bad">{{ c.kind }}</span><br><span class="pre">{{ c.legacy }}</span><br>→ <span class="pre">{{ c.proposed }}</span></div>{% endfor %}</td></tr>{% endif %}
+    <tr><th>Dependencies</th><td>{{ p.dependencies|join('; ') or '—' }}</td></tr>
+    <tr><th>Notes</th><td>{{ p.notes|join('; ') or '—' }}</td></tr>
+    {% if item.nbs_row_candidates is defined %}<tr><th>NBS row candidates</th><td>{% for c in item.nbs_row_candidates %}<a href="{{ url_for('mapping', business_id=c.business_id) }}">{{ c.sheet }}!{{ c.row }}</a> <span class="muted">{{ c.block_key }} · {{ c.match }}</span><br>{% else %}none (full-path match only; leaf labels are not joined){% endfor %}</td></tr>{% endif %}
+  </table>
+  <h2 style="margin-top:14px">Effectiveness</h2>
+  {% if evaluation.reasons %}<ul class="reasons">{% for r in evaluation.reasons %}<li>{{ r }}</li>{% endfor %}</ul>{% else %}<p>No blocking reasons.</p>{% endif %}
+  {% if d %}<h3>Current decision v{{ d.version }}: {{ d.action }}</h3>
+  <p class="muted">{{ d.actor }} · approved_on {{ d.approved_on }} · evidence {{ d.approval_evidence }} · {{ d.origin }} · {{ d.recorded_at }}</p>
+  <p>{{ d.reason }}</p>{% if d.payload.spec %}<pre>{{ json.dumps(d.payload.spec, indent=1) }}</pre>{% endif %}{% endif %}
+</div>
+</div>
+<div class="panel">
+  <h2>Record owner decision</h2>
+  <form method="post">
+  <input type="hidden" name="csrf" value="{{ csrf_token }}">
+  <div class="cols"><div>
+    <label>Action</label><select name="action">{% for a in ACTIONS['MAPPING'] %}<option>{{ a }}</option>{% endfor %}</select>
+    <label>Owner name</label><input type="text" name="actor" required>
+    <label>Approved on (required for approvals)</label><input type="date" name="approved_on">
+    <label>Reason</label><input type="text" name="reason" required>
+    <label>Approval evidence (minute, email, ticket reference)</label><input type="text" name="approval_evidence">
+  </div><div>
+    <label>Metric expression (APPROVE_OVERRIDE; defaults to proposal for APPROVE_PROPOSAL)</label>
+    <select name="metric_expression"><option value="">(proposal)</option>{% for m, spec in metrics.items() %}<option value="{{ m }}">{{ m }} — {{ spec.status }}</option>{% endfor %}</select>
+    <label>Amount basis</label><select name="amount_basis"><option value="">(proposal)</option>{% for b in bases %}<option>{{ b }}</option>{% endfor %}</select>
+    <label>Structured selector JSON (fields: {% for f, spec in fields.items() if spec.system == 'T24' %}{{ f }}{{ ', ' if not loop.last }}{% endfor %})</label>
+    <textarea name="selectors" rows="5" placeholder='{"field": "T24.CATEGORY", "op": "in", "values": ["3701"]}'></textarea>
+    <label>Exclusive group (rows that must not share a contract)</label><input type="text" name="exclusive_group">
+    <div class="cols"><div><label>Effective from</label><input type="date" name="effective_from"></div><div><label>Effective to</label><input type="date" name="effective_to"></div></div>
+    {% if item.source_system == 'ETHIX' and item.nbs_row_candidates %}<label>NBS target rows</label>
+    {% for c in item.nbs_row_candidates %}<label style="color:inherit"><input type="checkbox" name="nbs_target_business_ids" value="{{ c.business_id }}"> {{ c.sheet }}!{{ c.row }} ({{ c.block_key }})</label>{% endfor %}{% endif %}
+  </div></div>
+  <button>Record decision</button>
+  </form>
+</div>
+<div class="panel">
+  <h2>History</h2>
+  <table><tr><th>v</th><th>Action</th><th>Owner</th><th>Approved on</th><th>Reason</th><th>Origin</th><th>Fingerprint</th><th>Recorded</th></tr>
+  {% for h in history %}<tr><td>{{ h.version }}</td><td>{{ h.action }}</td><td>{{ h.actor }}</td><td>{{ h.approved_on or '' }}</td><td>{{ h.reason }}</td><td>{{ h.origin }}{% if h.rollback_of_version is not none %} (→v{{ h.rollback_of_version }}){% endif %}</td>
+  <td class="pre">{{ (h.evidence_fingerprint or '')[:12] }}{% if h.evidence_fingerprint and h.evidence_fingerprint != item.fingerprint %} <span class="tag bad">stale</span>{% endif %}</td><td>{{ h.recorded_at }}</td></tr>{% else %}<tr><td colspan="8" class="muted">No decisions yet.</td></tr>{% endfor %}</table>
+  {% if history %}<form method="post" class="filters"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+    <div><label>Roll back to version (0 = no decision)</label><input type="text" name="rollback_to" size="4"></div>
+    <div><label>Owner</label><input type="text" name="actor" required></div><div style="flex:1"><label>Reason</label><input type="text" name="reason" required></div>
+    <div><button class="secondary">Roll back</button></div></form>{% endif %}
+</div>
+{% endblock %}

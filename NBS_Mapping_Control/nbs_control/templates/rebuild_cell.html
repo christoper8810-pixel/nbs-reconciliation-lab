@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% block content %}
+<h1>{{ target.table }} · {{ target.item_code }} · {{ measure }}</h1>
+<p>{{ target.description }} · semantic {{ semantic }} · mapping {{ target.status }} / {{ target.method }} {{ target.legacy_rule_id or '' }}</p>
+<div class="panel"><p>Generated (QAR, pre-round): <b>{{ micro_text(cell[0]) if cell[0] is not none else 'unavailable' }}</b> · status <span class="tag">{{ cell[1] }}</span> · source {{ cell[2] }}</p>
+<ul>{% for i in issues %}<li>{{ i }}</li>{% endfor %}</ul>
+<p>{% for inc,n,s in totals %}{{ 'Included' if inc else 'Excluded / exception' }}: {{ n }} records, {{ micro_text(s) if s is not none else '–' }} QAR. {% endfor %}</p>
+<p><a href="{{ url_for('rebuild_cell', run_id=run_id, target=target.target_id, measure=measure, format='csv') }}">Download contributions CSV</a> · <a href="{{ url_for('rebuild_table', run_id=run_id, table=target.table) }}">Back to table</a></p></div>
+<div class="panel"><table><tr><th>Fact / row id</th><th>Source</th><th>Account / source ID</th><th>Semantic</th><th>Amount QAR</th><th>Included</th><th>Reason</th></tr>
+{% for x in contrib %}<tr><td>{{ x[0] }}</td><td>{{ x[1] }}</td><td>{{ x[2] }}</td><td>{{ x[3] }}</td><td>{{ micro_text(x[4]) if x[4] is not none else '' }}</td><td>{{ 'yes' if x[5] else 'no' }}</td><td>{{ x[6] or '' }}</td></tr>{% endfor %}</table>
+<p class="muted">At most 2,000 records shown; the CSV has the same limit per request.</p></div>{% endblock %}

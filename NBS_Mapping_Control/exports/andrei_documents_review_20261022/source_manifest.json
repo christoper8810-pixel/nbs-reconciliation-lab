@@ -1,0 +1,18 @@
+{
+  "zip": "C:/Users/Test/Downloads/OneDrive_1_10-22-2026.zip",
+  "zip_sha256": "4e81944dbec0c607ddf3bea4c95e4042468bf496e81d0c447ab3f5cda9ea4355",
+  "documents": [
+    {
+      "filename": "NBS_Mapping_Review_Clean_Corrections_1.docx",
+      "sha256": "4edb60bf286acc565d48628c353da2c7bd024b70e134f4373529ce81008c4a19"
+    },
+    {
+      "filename": "NBS001 Additional Tables - Mapping Review.docx",
+      "sha256": "34471990bf78a45363a2442010e382fe744ec0a3958a20f951748c1871fadd3b"
+    },
+    {
+      "filename": "LCR & NSFR (Solo) - Mapping Review.docx",
+      "sha256": "33cdacc9c6d48740b270f74bbe627ad7de4bbc2bcf7691cd60babc4e9370bbc3"
+    }
+  ]
+}

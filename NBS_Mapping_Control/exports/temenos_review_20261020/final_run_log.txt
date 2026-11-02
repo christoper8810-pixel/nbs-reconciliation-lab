@@ -1,0 +1,249 @@
+Preparing stock facts (read-only bank database)
+Calculating targets
+Comparing with reference versions
+Writing Excel workbook
+{
+  "run_id": "20261020-55a063da",
+  "statuses": {
+    "DRAFT_CANDIDATE_PREVIEW": 895,
+    "UNAVAILABLE": 13866,
+    "PARTIAL": 2253
+  },
+  "summary": {
+    "bo": {
+      "reference_cells": 10831,
+      "nonzero_reference_cells": 2009,
+      "nonzero_reference_abs": "6246978803.355",
+      "nonzero_reference_generated": 838,
+      "nonzero_reference_generated_abs": "2668141675",
+      "nonzero_reference_unavailable_abs": "3578837128.355",
+      "abs_difference_on_comparable": "521431111.384249976",
+      "within_tolerance_nonzero": 304,
+      "categories": {
+        "POPULATION_OR_MAPPING_UNREVIEWED": 383,
+        "WITHIN_TOLERANCE": 1956,
+        "GENERATED_UNAVAILABLE": 6683,
+        "MISSING_FEED_OR_MAPPING": 1171,
+        "COMPONENT": 314,
+        "ROUNDING": 303,
+        "FEE": 21
+      }
+    },
+    "live": {
+      "reference_cells": 4910,
+      "nonzero_reference_cells": 1930,
+      "nonzero_reference_abs": "7011536891",
+      "nonzero_reference_generated": 1591,
+      "nonzero_reference_generated_abs": "6774180659",
+      "nonzero_reference_unavailable_abs": "237356232",
+      "abs_difference_on_comparable": "1261109507.310885862",
+      "within_tolerance_nonzero": 499,
+      "categories": {
+        "POPULATION_OR_MAPPING_UNREVIEWED": 645,
+        "WITHIN_TOLERANCE": 2366,
+        "GENERATED_UNAVAILABLE": 811,
+        "UNKNOWN": 115,
+        "ROUNDING": 425,
+        "COMPONENT": 548
+      }
+    },
+    "coverage": {
+      "001": {
+        "DRAFT_CANDIDATE_PREVIEW": 4,
+        "UNAVAILABLE": 16
+      },
+      "002": {
+        "UNAVAILABLE": 766,
+        "DRAFT_CANDIDATE_PREVIEW": 12,
+        "PARTIAL": 4
+      },
+      "003": {
+        "UNAVAILABLE": 368
+      },
+      "004": {
+        "UNAVAILABLE": 621
+      },
+      "005": {
+        "UNAVAILABLE": 598
+      },
+      "006": {
+        "UNAVAILABLE": 84
+      },
+      "007": {
+        "UNAVAILABLE": 216
+      },
+      "008": {
+        "PARTIAL": 84,
+        "DRAFT_CANDIDATE_PREVIEW": 12,
+        "UNAVAILABLE": 108
+      },
+      "009": {
+        "PARTIAL": 160,
+        "UNAVAILABLE": 936,
+        "DRAFT_CANDIDATE_PREVIEW": 8
+      },
+      "010": {
+        "PARTIAL": 231,
+        "DRAFT_CANDIDATE_PREVIEW": 33,
+        "UNAVAILABLE": 165
+      },
+      "011": {
+        "UNAVAILABLE": 180,
+        "PARTIAL": 10
+      },
+      "012": {
+        "PARTIAL": 234,
+        "UNAVAILABLE": 162
+      },
+      "013": {
+        "UNAVAILABLE": 220
+      },
+      "014": {
+        "UNAVAILABLE": 768
+      },
+      "015": {
+        "DRAFT_CANDIDATE_PREVIEW": 24
+      },
+      "016": {
+        "UNAVAILABLE": 60
+      },
+      "017": {
+        "UNAVAILABLE": 182
+      },
+      "018": {
+        "UNAVAILABLE": 32
+      },
+      "019": {
+        "UNAVAILABLE": 172,
+        "DRAFT_CANDIDATE_PREVIEW": 20
+      },
+      "020": {
+        "UNAVAILABLE": 1
+      },
+      "021": {
+        "UNAVAILABLE": 791,
+        "DRAFT_CANDIDATE_PREVIEW": 8
+      },
+      "022": {
+        "UNAVAILABLE": 360
+      },
+      "023": {
+        "DRAFT_CANDIDATE_PREVIEW": 132,
+        "UNAVAILABLE": 492
+      },
+      "024": {
+        "DRAFT_CANDIDATE_PREVIEW": 54,
+        "UNAVAILABLE": 162
+      },
+      "025": {
+        "DRAFT_CANDIDATE_PREVIEW": 108,
+        "UNAVAILABLE": 216
+      },
+      "026": {
+        "UNAVAILABLE": 40
+      },
+      "027": {
+        "UNAVAILABLE": 32
+      },
+      "028": {
+        "UNAVAILABLE": 144
+      },
+      "029": {
+        "UNAVAILABLE": 414
+      },
+      "030": {
+        "UNAVAILABLE": 56
+      },
+      "031": {
+        "UNAVAILABLE": 134,
+        "DRAFT_CANDIDATE_PREVIEW": 4
+      },
+      "032": {
+        "UNAVAILABLE": 6
+      },
+      "033": {
+        "UNAVAILABLE": 28
+      },
+      "034": {
+        "UNAVAILABLE": 24
+      },
+      "035": {
+        "UNAVAILABLE": 60,
+        "DRAFT_CANDIDATE_PREVIEW": 112
+      },
+      "036": {
+        "UNAVAILABLE": 52
+      },
+      "037": {
+        "UNAVAILABLE": 208
+      },
+      "038": {
+        "UNAVAILABLE": 140
+      },
+      "039": {
+        "UNAVAILABLE": 48
+      },
+      "040": {
+        "UNAVAILABLE": 288
+      },
+      "041": {
+        "UNAVAILABLE": 192
+      },
+      "042": {
+        "UNAVAILABLE": 96
+      },
+      "043": {
+        "UNAVAILABLE": 152
+      },
+      "044": {
+        "UNAVAILABLE": 1183,
+        "PARTIAL": 1482
+      },
+      "045": {
+        "UNAVAILABLE": 182,
+        "DRAFT_CANDIDATE_PREVIEW": 312
+      },
+      "100": {
+        "UNAVAILABLE": 696,
+        "PARTIAL": 48,
+        "DRAFT_CANDIDATE_PREVIEW": 8
+      },
+      "200": {
+        "UNAVAILABLE": 860,
+        "DRAFT_CANDIDATE_PREVIEW": 36
+      },
+      "300": {
+        "UNAVAILABLE": 58,
+        "DRAFT_CANDIDATE_PREVIEW": 8
+      },
+      "400": {
+        "UNAVAILABLE": 438
+      },
+      "500": {
+        "UNAVAILABLE": 660
+      }
+    }
+  },
+  "category_reporting_basis": {
+    "effective_reporting_date": "2026-09-30",
+    "basis": "OWNER_CONFIRMED_SOURCE_POLICY",
+    "policy_id": "CATEG-2026-09-30-OWNER",
+    "policy_version": 1,
+    "authority": "Explicit clarification from the human owner in this conversation (2026-10-17); reconfirmed by owner in the rebuild instruction",
+    "raw_booking_dates": [
+      "2026-10-01"
+    ],
+    "raw_processing_dates": [
+      "2026-10-01"
+    ]
+  },
+  "excel": {
+    "file": "NBS_Rebuild_2026-09-30.xlsx",
+    "verification": {
+      "checked_cells": 17014,
+      "problems": [],
+      "problem_count": 0,
+      "status": "PASS"
+    }
+  }
+}

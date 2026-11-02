@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Exports</h1>
+<div class="cols">
+<div class="panel"><h2>Generate</h2>
+<p class="muted">Writes three separate outputs plus the owner review workbook: source-versus-proposed differences, unresolved exceptions, the approved (effective-only) mapping configuration, and NBS_Owner_Review.xlsx.</p>
+<form method="post"><input type="hidden" name="csrf" value="{{ csrf_token }}"><button>Generate exports</button></form>
+<h3>Files</h3><ul>{% for f in files %}<li><a href="{{ url_for('download', name=f) }}">{{ f }}</a></li>{% else %}<li class="muted">None yet</li>{% endfor %}</ul></div>
+<div class="panel"><h2>Import owner workbook edits</h2>
+<p class="muted">Upload an edited NBS_Owner_Review.xlsx. Each amber row is validated like a UI decision; rows with changed evidence are refused as stale.</p>
+<form method="post" action="{{ url_for('import_workbook') }}" enctype="multipart/form-data"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<input type="file" name="workbook" accept=".xlsx"><label>Default owner (if a row has none)</label><input type="text" name="actor"><button>Import decisions</button></form></div>
+</div>
+<div class="panel"><h2>Remaining bank inputs</h2>
+<table><tr><th>#</th><th>Input</th><th>Exact field / definition</th></tr>{% for a, b in bank_inputs %}<tr><td>{{ loop.index }}</td><td>{{ a }}</td><td>{{ b }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{
+  "tests_run": 192,
+  "skipped": 2,
+  "failures": 0,
+  "original_links": 1548,
+  "nbs_items": 1649,
+  "tables": 50,
+  "original_unique_cells": 5444,
+  "gl_completed_run": 54,
+  "gl_mapping_version": 6,
+  "workbook_formula_errors": 0,
+  "source_workbook_hashes_verified": true,
+  "browser_checks": [
+    "original source view",
+    "50-table navigation",
+    "balance-type search",
+    "guarantee original/current type comparison"
+  ],
+  "patch_checks": [
+    "old files backed up",
+    "owner mapping untouched",
+    "custom config preserved",
+    "forced zero assumption disabled"
+  ],
+  "latest_run": "20261020-55a063da",
+  "statuses": {
+    "DRAFT_CANDIDATE_PREVIEW": 895,
+    "UNAVAILABLE": 13866,
+    "PARTIAL": 2253
+  },
+  "export_verification": {
+    "checked_cells": 17014,
+    "problems": [],
+    "problem_count": 0,
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "validated_on": "2026-10-15",
+  "tests": 116,
+  "test_result": "passed",
+  "ECB_account_rows": 294906,
+  "source_hashes_unchanged": {
+    "LOAN": true,
+    "DEPOSIT": true,
+    "TB": true,
+    "ECB": true
+  },
+  "report_summary": {
+    "as_of": "2026-09-30",
+    "units": "QAR thousands (counts remain counts)",
+    "report_sections": 49,
+    "rows": 1641,
+    "rows_with_amounts": 707,
+    "states": {
+      "PARTIAL": 484,
+      "UNAVAILABLE": 893,
+      "PROVISIONAL": 264
+    },
+    "numeric_reference_cells": 16421,
+    "numeric_generated_cells": 6493,
+    "comparable_cells": 6311,
+    "within_one_thousand": 3892,
+    "fully_reconciled": false
+  },
+  "checks": {
+    "joined_loans": 35973,
+    "joined_deposits": 236427,
+    "unresolved_clm_links": 7,
+    "shared_clm_children": 0,
+    "clm_linked": 161,
+    "missing_balance_columns": {
+      "OUTSTANDING": [
+        "NABACCOUNT",
+        "NABDEFERREDPFT"
+      ],
+      "AMORTIZED_EARNED": [
+        "RECPRINCIPALPFT"
+      ],
+      "UNEARNED_PROFIT": [
+        "DEFERREDPFT"
+      ]
+    },
+    "unknown_consol_key": 30367,
+    "maturity_missing_loans": 0,
+    "maturity_overdue_loans": 627,
+    "commitment_only_loan_accounts": 19,
+    "industry_differences": {
+      "DEPOSIT": 166,
+      "LOAN": 30
+    },
+    "loan_currency_conflicts": 0,
+    "deposit_currency_conflicts": 0
+  },
+  "excel_tabs": [
+    "Overview",
+    "Generated NBS",
+    "Ethix reference",
+    "Comparison",
+    "Mapping notes"
+  ],
+  "excel_error_cells": [],
+  "excel_all_five_tabs_rendered_and_reviewed": true,
+  "excel_all_amounts_verified": {
+    "numeric_cells_verified": 22914,
+    "compared_rows_verified": 16603
+  },
+  "native_Excel_execution": false,
+  "browser_report_mapping_and_download_controls_verified": true,
+  "browser_actual_ECB_upload_job": "3effe2e014eb6bb8",
+  "browser_actual_ECB_upload_status": "Complete",
+  "bank_reconciliation_complete": false,
+  "browser_excel_export_job": "c50efda0cc6b5b95",
+  "browser_excel_export_result": {
+    "job": "c50efda0cc6b5b95",
+    "phase": "Complete",
+    "summary": {
+      "file": "NBS_Generated_September_2026.xlsx",
+      "verification": {
+        "numeric_cells_verified": 22914,
+        "compared_rows_verified": 16603
+      },
+      "process_return_code": 3221226505
+    }
+  },
+  "workbook_download_verified": {
+    "status": 200,
+    "bytes": 1395127,
+    "zip_CRC_valid": true
+  }
+}

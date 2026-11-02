@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}NBS Mapping Control{% endblock %}</title>
+<style>
+:root{--bg:#f6f7f9;--panel:#fff;--ink:#1d2330;--muted:#5b6475;--line:#d9dde4;--accent:#1f5fa8;--ok:#1d7a46;--warn:#9a6200;--bad:#b42318;--amber:#fff4d6}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+header{background:#18243a;color:#fff;padding:10px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+header b{margin-right:12px}header a{color:#cfe0ff;text-decoration:none}header a:hover{color:#fff}
+main{padding:18px 20px;max-width:1500px;margin:auto}
+.banner{background:var(--amber);border:1px solid #e8cf86;padding:8px 12px;border-radius:6px;margin-bottom:14px;font-size:13px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:16px}
+h1{font-size:20px;margin:0 0 12px}h2{font-size:16px;margin:0 0 10px}h3{font-size:14px;margin:12px 0 6px}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:#eef1f5;position:sticky;top:0}td.pre,pre{white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,Consolas,monospace;font-size:12px}
+pre{background:#f3f4f6;padding:8px;border-radius:6px;max-height:420px;overflow:auto}
+.tag{display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600;background:#e7ebf1;color:#344}
+.EFFECTIVE,.CURRENT,.ok{background:#dcf2e5;color:var(--ok)}.STALE,.ORPHANED,.APPROVED_BLOCKED,.bad{background:#fde3e1;color:var(--bad)}
+.NO_DECISION,.NONE,.DEFERRED,.warn{background:#fff0cf;color:var(--warn)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}.stat b{display:block;font-size:22px}
+.stat span{color:var(--muted);font-size:12px}
+form.inline{display:inline}label{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+input[type=text],input[type=date],select,textarea{width:100%;padding:6px 8px;border:1px solid var(--line);border-radius:6px;font:inherit;background:#fff}
+textarea{font-family:ui-monospace,Consolas,monospace;font-size:12px}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:7px 14px;font:inherit;cursor:pointer;margin-top:8px}
+button.secondary{background:#5b6475}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:900px){.cols{grid-template-columns:1fr}}
+.flash{padding:8px 12px;border-radius:6px;margin-bottom:8px}.flash.ok{border:1px solid #9fd8b6}.flash.error{background:#fde3e1;border:1px solid #f2b8b3;color:var(--bad)}
+.muted{color:var(--muted)}a{color:var(--accent)}.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:end}.filters>*{width:auto}
+.reasons li{font-family:ui-monospace,Consolas,monospace;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <b>NBS</b>
+  <a href="{{ url_for('nbs_home') }}">Home</a>
+  <a href="{{ url_for('nbs_load') }}">1 Load files</a>
+  <a href="{{ url_for('nbs_report') }}">2 NBS report</a>
+  <a href="{{ url_for('nbs_temenos') }}">Original Temenos logic</a>
+  <a href="{{ url_for('nbs_balance_types') }}">3 Balance types</a>
+  <a href="{{ url_for('nbs_downloads') }}">4 Downloads</a>
+  <a href="{{ url_for('rebuild_explore') }}">Explore sources</a>
+  <details style="display:inline-block;position:relative"><summary style="cursor:pointer;color:#cfe0ff">More</summary>
+  <div style="position:absolute;z-index:9;background:#18243a;padding:8px 12px;border-radius:6px;display:flex;flex-direction:column;gap:4px;min-width:240px">
+  <a href="{{ url_for('rebuild_home') }}">Runs and checks</a>
+  <a href="{{ url_for('rebuild_mappings') }}">All mappings (list)</a>
+  <a href="{{ url_for('rebuild_policies') }}">Reporting basis and duplicates</a>
+  <a href="{{ url_for('rebuild_specification') }}">Stakeholder mapping file</a>
+  <a href="{{ url_for('dashboard') }}">Older owner-review pages</a>
+  <a href="{{ url_for('reports') }}">Older report generator (template layout)</a>
+  <a href="{{ url_for('config_index') }}">Configuration files</a>
+  </div></details>
+</header>
+<main>
+<div class="banner">Owner review application. Workbook text is evidence only and is never executed. Approval here is application state, not bank reconciliation; no output certifies an NBS report.</div>
+{% for category, message in get_flashed_messages(with_categories=true) %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}
+{% block content %}{% endblock %}
+</main>
+</body>
+</html>

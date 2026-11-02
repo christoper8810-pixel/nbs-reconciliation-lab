@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Edit {{ name }}</h1>
+<form method="post" class="panel"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+  <textarea name="text" rows="34" spellcheck="false">{{ text }}</textarea>
+  <div class="filters"><div><label>Owner</label><input type="text" name="actor" required></div>
+  <div style="flex:1"><label>Reason for change</label><input type="text" name="reason" required></div>
+  <div><button>Validate and save new version</button></div></div>
+</form>
+{% if versions %}<form method="post" class="panel filters"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+  <div><label>Restore saved version</label><select name="restore">{% for v in versions %}<option>{{ v }}</option>{% endfor %}</select></div>
+  <div><label>Owner</label><input type="text" name="actor" required></div>
+  <div style="flex:1"><label>Reason</label><input type="text" name="reason" required></div>
+  <div><button class="secondary">Restore as new version</button></div></form>{% endif %}
+{% endblock %}

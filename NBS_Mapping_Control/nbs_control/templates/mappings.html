@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ {'proposed':'Proposed rules','effective':'Effective rules','unresolved':'Unresolved mappings','rules':'All rule rows','decided':'Rows with decisions'}.get(view, view) }} <span class="muted">({{ total }})</span></h1>
+<form class="panel filters" method="get">
+  <input type="hidden" name="view" value="{{ view }}">
+  <div><label>View</label><select name="view">{% for v in ['proposed','rules','decided','effective','unresolved','all'] %}<option {{ 'selected' if v==view }}>{{ v }}</option>{% endfor %}</select></div>
+  <div><label>Source</label><select name="system"><option value="">all</option>{% for s in ['T24','ETHIX'] %}<option {{ 'selected' if s==system }}>{{ s }}</option>{% endfor %}</select></div>
+  <div><label>State</label><select name="state"><option value="">all</option>{% for s in states %}<option {{ 'selected' if s==state }}>{{ s }}</option>{% endfor %}</select></div>
+  <div><label>Sort</label><select name="sort">{% for s in ['source','state','id'] %}<option {{ 'selected' if s==sort }}>{{ s }}</option>{% endfor %}</select></div>
+  <div style="flex:1;min-width:220px"><label>Search (ID, sheet, path, rule text, metric)</label><input type="text" name="q" value="{{ q }}"></div>
+  <div><button>Filter</button></div>
+</form>
+<div class="panel">
+<table>
+<tr><th>Business ID</th><th>Source</th><th>Location</th><th>Hierarchy path</th><th>Proposed</th><th>State</th><th>Reasons</th></tr>
+{% for e in rows %}{% set i = e.item %}
+<tr>
+<td><a href="{{ url_for('mapping', business_id=i.business_id) }}">{{ i.business_id }}</a></td>
+<td>{{ i.source_system }}</td><td>{{ i.sheet }}!{{ i.source_row }}<br><span class="muted">{{ i.kind }}</span></td>
+<td>{{ i.hierarchy_path or i.description }}</td>
+<td>{{ i.proposal.metric_expression or '' }}{% if i.finding_refs %}<br><span class="tag warn">{{ i.finding_refs|join(', ') }}</span>{% endif %}</td>
+<td><span class="tag {{ e.state }}">{{ e.state }}</span></td>
+<td class="pre">{{ e.reasons[:4]|join('\n') }}{% if e.reasons|length > 4 %}
+… +{{ e.reasons|length - 4 }}{% endif %}</td>
+</tr>{% else %}<tr><td colspan="7" class="muted">Nothing in this view.</td></tr>{% endfor %}
+</table>
+<p>Page {{ page }} of {{ pages }}
+{% if page > 1 %}<a href="{{ url_for('mappings', view=view, system=system, q=q, state=state, sort=sort, page=page-1) }}">previous</a>{% endif %}
+{% if page < pages %}<a href="{{ url_for('mappings', view=view, system=system, q=q, state=state, sort=sort, page=page+1) }}">next</a>{% endif %}</p>
+</div>
+{% endblock %}

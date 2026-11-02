@@ -1,0 +1,142 @@
+{
+  "review_date": "2026-10-17",
+  "revision": "Owner-confirmed 30 September category balances despite 1 October raw dates",
+  "purpose": "Updated new-source inspection and Claude coding brief; existing project required",
+  "files": [
+    {
+      "archive_path": "CLAUDE_NBS_REBUILD_BRIEF_20261017.md",
+      "bytes": 27118,
+      "sha256": "dd3e1e88a2c4871affc03a91906a948220db831440ae3f9534749c4d7804da81"
+    },
+    {
+      "archive_path": "analyze_bo_review.py",
+      "bytes": 6836,
+      "sha256": "b8730f80eb7b2367204450ccfef47c374659e389a562c4dbe1dfe37aab17484a"
+    },
+    {
+      "archive_path": "audit_rebuild_sources.py",
+      "bytes": 16694,
+      "sha256": "63d220b71fb80daa7e6b43195c60de3eef56517e69706ac4d206d02bfd7b4216"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/HANDOFF_README.md",
+      "bytes": 2429,
+      "sha256": "61dafd4064cb4864be0834fc5b1f3b7fd9c50433556a4456bd6f5c3bd120e8ed"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/NBS_SOURCE_REVIEW.md",
+      "bytes": 16978,
+      "sha256": "192389139084d042058e98a067149df8ebdadf781ac8aac8686385c94868123b"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/audit_manifest.json",
+      "bytes": 807,
+      "sha256": "212760e31906a14fe6339271c7d97f8b316452dd36f55a6fcd9e7d2164918375"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/balance_sheet_case_rules.csv",
+      "bytes": 4544,
+      "sha256": "037158e933eacc991a8afcfa112ce9d2958b7e388534233ca26680d3da3267ae"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/balance_sheet_output_lines.csv",
+      "bytes": 1422,
+      "sha256": "e6bcce0468f2ad7fc3c55e2b1888615b5be571d3b5c2604cf6e1642ce7bf2ac1"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/bo_hierarchy_diagnostics.csv",
+      "bytes": 5786,
+      "sha256": "0e7d08431fe75376a918533cf721d770f69ceea0ab57abdc2ef5e0efb79f5493"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/bo_normalized_rows.json",
+      "bytes": 1383295,
+      "sha256": "7f2482c16c3dd7eb6c5783428cd870a5ae7183b43bb3b55e13ee06a59db981f2"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/bo_profile.json",
+      "bytes": 47399,
+      "sha256": "fd7023e88d113e31e5106c1924d5c4d688efaff1af22cd476b07f32ca6ad1491"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/bo_reference_cells.csv",
+      "bytes": 1343891,
+      "sha256": "ebcb64d4b01e3bd5805bb84d40d5d50ad3f570edef3b87d89f16b8a28c7b908c"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/bo_relationship_findings.json",
+      "bytes": 6844,
+      "sha256": "fed36387a805bc41f9c201ff3f9da594e5a24b202def41f970dd13a7013a8cb1"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/bo_table_inventory.csv",
+      "bytes": 3931,
+      "sha256": "52f33262fcabf46a5668ebeeb86faf25a72e611e8e327acdec64967f1206ddeb"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/bo_to_current_mapping_candidates.csv",
+      "bytes": 228820,
+      "sha256": "83477fd814cf2664e325498d7aba47adbe7badc48b97d70eef21006f42cbbfbd"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/bo_vs_current_scope.csv",
+      "bytes": 702,
+      "sha256": "675c939ffb3e9ca5e42062788a1c9b16e6eb5ff341749ede3cbb2a3daa46b37a"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/bo_vs_earlier_reference_base_differences.csv",
+      "bytes": 19439,
+      "sha256": "6878746717a2a1e3997a2b6719943cb9a3fc1fdf0f9964cf3224ec0337852358"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/bs_source_extracted.sql",
+      "bytes": 10414,
+      "sha256": "61e6c5100fdb6fa32f758587c5ca9b72cd1f0c8f4294633f39dd31211249b32f"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/category_profile.json",
+      "bytes": 59841,
+      "sha256": "eee326cae46438c387b47cb966de8f45a68d6ea5c8a3464028e3cbca57ab5883"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/category_repeated_export_groups.csv",
+      "bytes": 326862,
+      "sha256": "9ab3fec7976b3a7533db82f1c55ce023b26535fff191debcdc07848ded0fc109"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/category_totals.csv",
+      "bytes": 9034,
+      "sha256": "98058ed6c30224cd226816ab6d960b9691ea872c54413d8c099a6eb0d66176aa"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/reporting_basis_owner_confirmation.json",
+      "bytes": 1680,
+      "sha256": "659dcfba32de57e6594d8b03f075ab38e60eb40b8c346bae5f6e679aca065acd"
+    },
+    {
+      "archive_path": "exports/rebuild_review_20261017/review_validation.json",
+      "bytes": 3398,
+      "sha256": "b96bf2d2169913c105750cf66ddb27309d1754cb8a84a96088f19240442e2c34"
+    },
+    {
+      "archive_path": "inputs/BO_QCB_NBS_Report.xlsx",
+      "bytes": 176975,
+      "sha256": "ad30f4607a615e7d671143ee1244e6eb179b6e53ffb429e397d76ab0cb607ebf"
+    },
+    {
+      "archive_path": "inputs/Mock3_UAT3 Categ Entry Extract (1).xlsx",
+      "bytes": 6678305,
+      "sha256": "a9dc0021a2cd9551802129fbb2277161178b971c38cbede07d93824d9a2f6ac1"
+    },
+    {
+      "archive_path": "inputs/bs.docx",
+      "bytes": 25344,
+      "sha256": "80a2c59d84e8ad2110b0e55c74976c004b2372857e3c8cc71710cd08667f4069"
+    },
+    {
+      "archive_path": "verify_rebuild_review.py",
+      "bytes": 8003,
+      "sha256": "80bce26d8734e3743123d8fb8900591d36de852788ad7d8757344ae26c32ba65"
+    }
+  ]
+}

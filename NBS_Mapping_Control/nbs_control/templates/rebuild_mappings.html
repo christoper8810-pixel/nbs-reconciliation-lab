@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block content %}
+<h1>Target mappings (version {{ version }})</h1>
+<form class="filters" method="get"><div><label>Table</label><select name="table"><option value="">All</option>{% for t in tables %}<option {{ 'selected' if t==table }}>{{ t }}</option>{% endfor %}</select></div>
+<div><label>Status</label><select name="status"><option value="">All</option>{% for s in statuses %}<option {{ 'selected' if s==status }}>{{ s }}</option>{% endfor %}</select></div>
+<div><label>Search</label><input type="text" name="q" value="{{ q }}"></div><button>Filter</button></form>
+<p class="muted">{{ total }} targets{% if total>500 %} (first 500 shown){% endif %}. UNRESOLVED items form the review queue; DRAFT_CANDIDATE items are unreviewed exact-path matches.</p>
+<div class="panel"><table><tr><th>Target</th><th>Description</th><th>Status</th><th>Method</th><th>Legacy rule</th><th>Evidence</th></tr>
+{% for t in rows %}<tr><td><a href="{{ url_for('rebuild_mapping', tid=t.target_id) }}">{{ t.target_id }}</a></td><td>{{ t.description }}</td><td><span class="tag">{{ t.status }}</span></td>
+<td>{{ t.method }}<br><a href="{{ url_for('rebuild_builder', tid=t.target_id) }}">Logic builder</a></td><td>{{ t.legacy_rule_id or '' }}</td><td class="muted">{{ t.evidence }}</td></tr>{% endfor %}</table></div>{% endblock %}

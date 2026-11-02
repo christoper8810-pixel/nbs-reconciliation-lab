@@ -1,0 +1,244 @@
+NBS001 C:\Users\Test\Downloads\NBS001_Additional_Tables_Review_Tracked_CJ_22Oct2026_AV comments.docx
+REVISION COUNTS [{"author": "Christopher Joseph", "type": "pPrChange", "count": 39}, {"author": "Christopher Joseph", "type": "rPrChange", "count": 1}, {"author": "Christopher Joseph", "type": "ins", "count": 147}, {"author": "Christopher Joseph", "type": "trPrChange", "count": 27}, {"author": "Christopher Joseph", "type": "del", "count": 110}]
+CORE <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:creator>Christopher Joseph</dc:creator><cp:lastModifiedBy>Christopher Joseph</cp:lastModifiedBy><cp:revision>3</cp:revision><dcterms:created xsi:type="dcterms:W3CDTF">2026-10-21T07:57:00Z</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">2026-10-22T16:49:12Z</dcterms:modified></cp:coreProperties>
+COMMENTS
+COMMENT 0 | Christopher Joseph | 2026-10-22T16:49:12Z | p11-11
+All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+SELECTED: All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+CONTEXT:
+[9] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[10] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+[11] All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+[12] The figures below are retained historical UAT observations. They are not recalculated impacts of these changes. Apply the confirmed treatment above wherever an earlier recommendation would conflict with it.
+[13] 2. Priorities
+COMMENT 1 | Andrei Vassjutinski | 2026-10-25T09:08:55Z | p9-9
+Profit offset pair: at 31 Aug, 6050 carries ACCCRPROFIT (9.7m) and 3713 carries ACCPRINCIPALPFT and the aged PRINCIPALPFT types; neither carries ACCDEPOSITPFT. As written, the ACCCRPROFIT/ACCDEPOSITPFT offset would not trigger. Should it be ACCCRPROFIT (6050) against PRINCIPALPFT (3713)?
+SELECTED: Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+CONTEXT:
+[7] Confirmed mapping changes on 22 October 2026
+[8] PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+[9] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[10] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+[11] All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+COMMENT 2 | Andrei Vassjutinski | 2026-10-25T09:08:55Z | p9-9
+6050 DEBIT: the rule offsets 3713 with 6050 CREDIT (about 1.9bn). 6050 also holds debit balances (about -571m at 31 Aug), which are excluded from deposits but have no destination. Please confirm their treatment.
+SELECTED: Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+CONTEXT:
+[7] Confirmed mapping changes on 22 October 2026
+[8] PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+[9] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[10] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+[11] All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+COMMENT 3 | Andrei Vassjutinski | 2026-10-25T09:08:55Z | p9-9
+Link level: CAL is aggregated by consol key, so a loan/account-level 3713-6050 link needs the arrangement or account link (ECB/AA). SL should confirm the source; otherwise the offset can only be applied at category level.
+SELECTED: Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+CONTEXT:
+[7] Confirmed mapping changes on 22 October 2026
+[8] PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+[9] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[10] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+[11] All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+COMMENT 4 | Andrei Vassjutinski | 2026-10-25T09:08:55Z | p8-8
+PRINCIPALPFT with loans: agreed; this also corrects my original B2 fix. The NBS01 review (C1) still puts ACC/DEL/PRE PRINCIPALPFT in Table 19 accrued income; I am updating it to this rule. The GL keeps them in accrued income (1935), so the trial balance bridge needs this item (about 1.05bn at 31 Aug).
+SELECTED: PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+CONTEXT:
+[6] Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version.
+[7] Confirmed mapping changes on 22 October 2026
+[8] PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+[9] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[10] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+COMMENT 5 | Andrei Vassjutinski | 2026-10-25T09:08:55Z | p8-8
+Explicit list needed: RECPRINCIPALPFT is not present in CAL at 31 Aug, and SL cannot implement "other locally defined states". Could we list the exact balance types?
+SELECTED: PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+CONTEXT:
+[6] Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version.
+[7] Confirmed mapping changes on 22 October 2026
+[8] PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+[9] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[10] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+COMMENT 6 | Andrei Vassjutinski | 2026-10-25T09:08:56Z | p74-74
+PDOACCOUNT: "define separately" does not say where it goes. Should it be part of the loan stock (as in the seven principal types) even though OUTSTANDING excludes it?
+SELECTED: ApplyUse the NBS01 loan-stock components, including its 12-code OUTSTANDING group, plus related PRINCIPALPFT and the linked offsets in B5. Define PDOACCOUNT separately. Preserve SP status, maturity and sector dimensions. Exclude unrelated fees/commitments and duplicate other-asset contributions; seven principal types (CUR,alone GRC,are DUE,not PDO,the NAB,complete DEL,loan PRE ACCOUNT), as in Tables 613 and 614measure.
+CONTEXT:
+[72] 608/609 Islamic finance rows (CATEGORY and SECTOR only)
+[73] An unrestricted selection can include commitments, unrelated fees and duplicated components; required loan-related PRINCIPALPFT must be retained
+[74] Use the NBS01 loan-stock components, including its 12-code OUTSTANDING group, plus related PRINCIPALPFT and the linked offsets in B5. Define PDOACCOUNT separately. Preserve SP status, maturity and sector dimensions. Exclude unrelated fees/commitments and duplicate other-asset contributions; seven principal types alone are not the complete loan measure.
+[75] B4
+[76] Overdraft lines have no rule
+COMMENT 7 | Andrei Vassjutinski | 2026-10-25T09:08:56Z | p95-95
+Sector definitions: on 21 Oct we agreed retail first, then industry codes for non-retail (441 for non-bank FIs). C1 and C2 still recommend sector codes (2004/2005); should they be rewritten on the industry-code basis?
+SELECTED: Public = 2005; Non-bank FI = 2004 (excluding banks); Private = all other customer sectors
+CONTEXT:
+[93] Non-bank = 2004; Public = 1000–1999; Private = 4000–4004
+[94] Retail reported as public sector; corporate (2000–2003, about 27.8bn), government (2005, about 21.2bn) and other sectors (about 6.4bn) excluded (31 Aug principal)
+[95] Public = 2005; Non-bank FI = 2004 (excluding banks); Private = all other customer sectors
+[96] C2
+[97] Sector definitions differ between NBS001 tables
+ACCEPTED BODY
+[0] NBS001 Additional Tables – Mapping Review
+[1] DKB CBS – QCB regulatory reporting (NBS001, Tables 601–625). Prepared for DKB Finance, 21 October 2026. Revised 22 October 2026.
+[2] 1. Scope and evidence
+[3] Mapping reviewed: NBS001 - Add Tables Mapping (1).xlsx: 26 tables, about 3,900 rule cells (combined sheet plus separate sheets for Tables 612–615 and 625).
+[4] Balances: CAL extract (CONSOLIDATE.ASST.LIAB) at 31 Aug 2026, UAT, used to test whether the rules reach the balances that exist. Two records with impossible amounts excluded.
+[5] Reference: Customer sector codes as defined by DKB: Retail 1000–1999, 4000–4004, 6000/6001, 7000/7001; Corporate 2000–2003, 2006, 4005, 5001, 5002; Government 2005; Banks & FI 2004.
+[6] Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version.
+[7] Confirmed mapping changes on 22 October 2026
+[8] PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+[9] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[10] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+[11] All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+[12] The figures below are retained historical UAT observations. They are not recalculated impacts of these changes. Apply the confirmed treatment above wherever an earlier recommendation would conflict with it.
+[13] 2. Priorities
+[14] #
+[15] Issue
+[16] Why first
+[17] 1
+[18] Credit facilities by maturity (Tables 608/609) map almost none of the actual financing (B1–B4)
+[19] About 95bn of financing principal (31 Aug) falls outside the rules; the loan component and product selections need rebuilding
+[20] 2
+[21] Cash reported as claims on banks (D2)
+[22] Cash in vault and ATMs (about 115bn at 31 Aug) is selected in the claims-on-banks line of Tables 604/605
+[23] 3
+[24] Sector sections (C1, C2)
+[25] Corporate and government financing are excluded from Tables 608/609; definitions differ between NBS001 tables
+[26] 4
+[27] ACCDEFERREDPFT on both sides (A1)
+[28] Same double mapping as found in NBS01, repeated across asset and liability tables
+[29] 5
+[30] Loan component and linked-offset alignment with NBS01 (B2, B3, B5, E1)
+[31] Include related PRINCIPALPFT; net linked 3713/6050 and paired profit; exclude 6050 from deposits
+[32] 3. Issues
+[33] A. Double counting
+[34] #
+[35] Issue
+[36] Where
+[37] Impact
+[38] Fix
+[39] A1
+[40] ACCDEFERREDPFT is used on the asset side (netted against RECDEFERREDPFT) and on the liability side
+[41] Assets: 608/609 "01 Loans", 616/618/621/622 "03 Others", 613 "01 Other Assets". Liabilities: 623/624 "01 Deferred Interest / Income"
+[42] About 14.7bn (31 Aug) used twice; assets understated
+[43] Remove the duplicated ACCDEFERREDPFT asset contribution and keep the defined deferred-income treatment, consistent with NBS01 A1. This does not remove PRINCIPALPFT: report loan-related PRINCIPALPFT with the associated loan and reconcile signed components.
+[44] A2
+[45] Nostro category 5001 is selected in two lines
+[46] 604/605 ".......01 Commercial / Conventional" and ".......02 Islamic"
+[47] Nostro balances (5001) counted in both bank types
+[48] Split nostros by bank type (e.g. target 59/60) and select each once
+[49] A3
+[50] In 608/609 the "01 Loans" line selects categories 3000–3899, which also covers the Ijara categories used in "04 Finance Ijara" without a balance-type filter
+[51] 608/609 rows "01 Loans" and "04 Finance Ijara"
+[52] The same Ijara balance, including related PRINCIPALPFT, can be selected in both product lines
+[53] Make the loan/product populations mutually exclusive (B1-B3). Keep related PRINCIPALPFT with its assigned loan product and apply linked offsets once.
+[54] B. Credit facilities by maturity (Tables 608/609)
+[55] #
+[56] Issue
+[57] Where
+[58] Impact
+[59] Fix
+[60] B1
+[61] Islamic finance lines select categories that hold no balances; the actual financing categories are not mapped
+[62] Murabaha – Musawama: 3716; Istisna'a: 3712; Mudaraba: 3711; Diminishing Musharaka: 3707; "06 Others": no rule
+[63] About 95.5bn of principal (31 Aug) in 3701, 3704, 3709, 3713, 3715, 3717, 3730, 3740 and others is not reported; only Ijara (3702, 3706, about 4.2bn) is reached
+[64] Align product categories with NBS01 Table 8, including 3713 in Murabaha. Fill Others with the remaining eligible population without overlap. Carry the related PRINCIPALPFT with each loan and apply the linked 3713/6050 CREDIT and paired profit offsets (B5).
+[65] B2
+[66] The generic Loans line mixes product selection and profit components, overlapping the Islamic finance lines
+[67] 608/609 rows "01 Loans": ACC/REC DEFERREDPFT, DUE/GRC/NAB PRINCIPALPFT, categories 3000–3899
+[68] Incomplete loan selection and possible duplication; loan-related PRINCIPALPFT itself belongs with the loan
+[69] Allocate loans to mutually exclusive NBS01-aligned product lines. Keep associated PRINCIPALPFT with each loan, including DUE/GRC/NAB and other valid states; remove its separate other-asset contribution. Resolve deferred profit under A1 and NBS01 B1. Do not delete all profit components or assume the loan line must be empty.
+[70] B3
+[71] Islamic finance lines have no balance-type filter
+[72] 608/609 Islamic finance rows (CATEGORY and SECTOR only)
+[73] An unrestricted selection can include commitments, unrelated fees and duplicated components; required loan-related PRINCIPALPFT must be retained
+[74] Use the NBS01 loan-stock components, including its 12-code OUTSTANDING group, plus related PRINCIPALPFT and the linked offsets in B5. Define PDOACCOUNT separately. Preserve SP status, maturity and sector dimensions. Exclude unrelated fees/commitments and duplicate other-asset contributions; seven principal types alone are not the complete loan measure.
+[75] B4
+[76] Overdraft lines have no rule
+[77] 608/609 "01 Overdraft" in all three sections
+[78] Overdrafts not reported
+[79] Map overdrawn current accounts (DEBIT on the overdraft categories)
+[80] B5
+[81] Category 3713 requires linked 6050 CREDIT and paired profit offsets
+[82] All 3713 loan-stock selections, Tables 608/609, 613-615 and 625; other asset/profit lines using the same population
+[83] Gross loan/offset amounts or duplicated profit can distort loan totals and the credit/deposit ratio
+[84] Offset each 3713 loan with its linked 6050 CREDIT. Offset ACCCRPROFIT against matched ACCDEPOSITPFT wherever mapped together. Use verified signed components once, retain the loan dimensions and flag unmatched links. Remove duplicated profit from other assets and exclude all 6050 from deposits.
+[85] C. Customer sectors
+[86] #
+[87] Issue
+[88] Where
+[89] Impact
+[90] Fix
+[91] C1
+[92] Sector sections in 608/609 do not match DKB sector codes
+[93] Non-bank = 2004; Public = 1000–1999; Private = 4000–4004
+[94] Retail reported as public sector; corporate (2000–2003, about 27.8bn), government (2005, about 21.2bn) and other sectors (about 6.4bn) excluded (31 Aug principal)
+[95] Public = 2005; Non-bank FI = 2004 (excluding banks); Private = all other customer sectors
+[96] C2
+[97] Sector definitions differ between NBS001 tables
+[98] 610/611, 617, 619, 623/624: 2004 / 2005 / all other (consistent with DKB codes). 616, 618, 621, 622: explicit list omitting 5002. 612: government by targets 55–57. 614: list omits 4000–4004, 2005, 2006, 5001, 5002
+[99] Same customer reported in different sectors depending on the table
+[100] Use one sector definition across NBS001. Attribute linked 6050 offsets and related profit to the associated 3713 loan sector so the net loan is not split into a deposit sector.
+[101] D. Claims on central banks and banks (Tables 604/605)
+[102] #
+[103] Issue
+[104] Where
+[105] Impact
+[106] Fix
+[107] D1
+[108] Required Reserve selects categories 5003 and 5004
+[109] 604/605 "...01 Required Reserve"
+[110] No balances in 5003/5004 at 31 Aug; the QCB reserve sits in 18060/18061 (already changed in the NBS01 tables)
+[111] Use 18060/18061, consistent with NBS01
+[112] D2
+[113] The claims-on-banks line selects cash categories
+[114] 604/605 ".......01 Commercial / Conventional": 10001, 10024, 10025, 12905 (listed twice), 12903, 5003, 5001
+[115] Cash in vault and ATMs (about 114.7bn at 31 Aug) reported as claims on banks
+[116] Remove cash categories; select nostro and placement categories only
+[117] D3
+[118] Clearing account selects category 5002
+[119] 604/605 ".....01 Clearing Account"
+[120] No balances in 5002 at 31 Aug
+[121] Confirm the clearing account category
+[122] E. Deposits and other tables
+[123] #
+[124] Issue
+[125] Where
+[126] Impact
+[127] Fix
+[128] E1
+[129] Deposit selections omit matured balances and do not explicitly exclude category 6050
+[130] Tables 610/611, 625 and every deposit total/breakdown or dependent deposit selection
+[131] CURBALANCE is absent from the sampled CAL; PAYACCOUNT (about 340m at 31 Aug) is missed. Category 6050 would also be misreported if admitted as a deposit.
+[132] Exclude CATEGORY = 6050 before applying CREDIT, CURACCOUNT and PAYACCOUNT to other eligible deposits. Check CURBALANCE against the versioned dictionary before replacing it. Apply the exclusion to totals, maturity/sector splits and the Table 625 deposit denominator; no 6050 deposit fallback for unresolved links. Apply the matched profit offset wherever the pair is mapped together.
+[133] E2
+[134] Credit / deposit ratio table is incomplete
+[135] 625: rules only for deposits, wakala placements and borrowings
+[136] Credit side of the ratio not mapped
+[137] Build credit from Tables 608/609 with related PRINCIPALPFT and linked 3713/6050 and profit offsets. Build the deposit denominator from eligible deposits excluding all 6050. Trace each component once; do not deduct the same offset again when deriving the ratio.
+[138] E3
+[139] Derivative contracts table has no rules
+[140] 620 (42 description lines)
+[141] Table not produced
+[142] Map derivatives (source to be confirmed, e.g. Treasury)
+[143] E4
+[144] Many description lines have no rule
+[145] e.g. 602: 79 of 86 lines; 603: 36 of 42; 604: 41 of 46
+[146] Unclear whether lines are intentionally zero or missing
+[147] Mark intentionally empty lines explicitly
+[148] E5
+[149] Treasury tables read TMS outbound tables
+[150] 601–603 (CRSSUKUKT), 606/607 and 625 (CRSMMDEALST)
+[151] Same source gap as seen in NBS01 (Treasury Bills)
+[152] Reconcile outbound tables to the trial balance for each run
+[153] 4. What is consistent
+[154] Tables 613, 614, 615 and parts of the combined sheet list seven principal types, including DEL and PRE. This is useful coverage but not a complete loan measure: align the component definitions with NBS01 and include related PRINCIPALPFT and linked offsets wherever the same loan stock is measured.
+[155] Several tables already use the DKB sector split correctly (610/611, 617, 619, 623/624); they can serve as the template for C1 and C2.
+[156] 5. Next steps
+[157] DKB Finance to confirm the sector definition (C1, C2) and the product-to-line assignment for credit facilities (B1).
+[158] SL to correct Tables 604/605 and rebuild 608/609, applying the confirmed PRINCIPALPFT and linked-offset rules in the same release. Propagate them to all relevant asset lines, then complete A1 and E1-E3. Exclude category 6050 throughout the deposit selections.
+[159] Rerun NBS001 and reconcile loan components, offsets, deposits and claims on banks to NBS01 and same-date sources. Test every deposit total/breakdown for zero 6050 contribution. Apply the connected changes to LCR & NSFR and reconcile timing/weight differences. Track unmatched links as exceptions.
+[160] 6. Implementation checks
+[161] Trace every valid loan-related PRINCIPALPFT state to its loan line and SP status. Confirm that the same amount is not also added to accrued income or other assets.
+[162] Reconcile each 3713 loan to its linked 6050 CREDIT and each jointly mapped ACCCRPROFIT/ACCDEPOSITPFT pair. Verify source signs, unique component use and all unmatched or ambiguous links; do not remove repeated source entries without investigating their identities.
+[163] Demonstrate zero category-6050 contribution to every deposit total, breakdown and ratio, and to LCR deposit outflows and NSFR deposit funding. Include direct rules, referenced cells and supporting schedules.
+[164] Reconcile the shared components across all three mappings on the same reporting basis. Explain differences caused by report dimensions, scheduled cash flows and regulatory weights. Record the changed cells, old/new rules and test evidence before release.
+NON CJ REVISIONS

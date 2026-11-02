@@ -1,0 +1,37 @@
+{
+ "at": "2026-10-17T18:27:21+00:00",
+ "actor": "system (from owner confirmation file)",
+ "reason": "Initial owner-confirmed basis policy",
+ "before": null,
+ "after": {
+  "schema_version": 1,
+  "version": 1,
+  "policies": [
+   {
+    "policy_id": "CATEG-2026-09-30-OWNER",
+    "dataset": "CATEG_ENTRY",
+    "source_sha256": "a9dc0021a2cd9551802129fbb2277161178b971c38cbede07d93824d9a2f6ac1",
+    "filename": "Mock3_UAT3 Categ Entry Extract (1).xlsx",
+    "raw_booking_date": "2026-10-01",
+    "raw_processing_date": "2026-10-01",
+    "effective_reporting_date": "2026-09-30",
+    "enabled": true,
+    "status": "OWNER_CONFIRMED",
+    "authority": "Explicit clarification from the human owner in this conversation (2026-10-17); reconfirmed by owner in the rebuild instruction",
+    "owner_statement": "categ entries are on 1 oct by it is still 30 Sepetember balances",
+    "evidence": "C:/Users/Test/Desktop/NBS_Mapping_Control/exports/rebuild_review_20261017/reporting_basis_owner_confirmation.json",
+    "scope": "This exact source hash only; never applied to other uploads",
+    "not_established": [
+     "Duplicate and subentry sequence treatment",
+     "Whether the source covers all required September or YTD populations",
+     "The accounting role of DC and charge-off records",
+     "Whether particular stock and movement measures overlap",
+     "All remaining NBS mappings, signs and calculations"
+    ]
+   }
+  ],
+  "updated_at": "2026-10-17T18:27:21+00:00",
+  "updated_by": "system (from owner confirmation file)",
+  "reason": "Initial owner-confirmed basis policy"
+ }
+}

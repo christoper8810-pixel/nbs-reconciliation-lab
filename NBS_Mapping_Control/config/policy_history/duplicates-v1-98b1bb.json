@@ -1,0 +1,21 @@
+{
+ "at": "2026-10-17T18:27:21+00:00",
+ "actor": "system",
+ "reason": "Initial provisional duplicate policy (no deduplication)",
+ "before": null,
+ "after": {
+  "schema_version": 1,
+  "version": 1,
+  "default_treatment": "UNRESOLVED_RETAIN_ALL",
+  "treatments": {
+   "UNRESOLVED_RETAIN_ALL": "Every exported row counts; repeated groups are reported as unresolved sensitivity",
+   "RETAIN_ALL_CONFIRMED_SUBENTRIES": "Owner/evidence confirms the identical rows are separate subentries",
+   "COUNT_ONCE": "Owner/evidence confirms identical rows are export duplicates; excess rows are excluded with reason"
+  },
+  "decisions": {},
+  "note": "Decisions are keyed by value fingerprint, never by row position. No row is deleted.",
+  "updated_at": "2026-10-17T18:27:21+00:00",
+  "updated_by": "system",
+  "reason": "Initial provisional duplicate policy (no deduplication)"
+ }
+}

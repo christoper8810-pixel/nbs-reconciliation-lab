@@ -1,0 +1,25 @@
+{% extends "base.html" %}{% block title %}NBS report{% endblock %}{% block content %}
+<style>.side{position:sticky;top:8px;max-height:85vh;overflow:auto;font-size:12px}.side a{display:block;padding:3px 6px;border-radius:4px;text-decoration:none}
+.side a.on{background:#1f5fa8;color:#fff}.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.diffbad{color:#b42318}.diffok{color:#1d7a46}
+.logic{font-size:12px;max-width:520px}.lay{display:grid;grid-template-columns:260px 1fr;gap:14px}td.h0{font-weight:700}</style>
+<h1>2. NBS report</h1>
+<p><a href="{{ url_for('nbs_temenos',table=table) }}"><b>Original Temenos mapping: exact cells and current-rule differences</b></a></p>
+{% if stale %}<div class="flash error">These figures are from an earlier configuration. Changed: {{ stale|join(', ') }}. Generate a new run before presenting them as current.</div>{% endif %}
+<div class="lay"><div class="side panel">{% for x in tables %}<a href="{{ url_for('nbs_report', table=x, compare='1' if compare else None) }}" class="{{ 'on' if x==table }}">Table {{ x }} – {{ titles[x][:60] }}</a>{% endfor %}</div>
+<div><h2>Table {{ table }} – {{ titles[table] }}</h2>
+<p class="muted">QAR thousands (counts as counts). {% if run %}Figures from run {{ run.run_id }} ({{ run.created_at[:16] }}).{% else %}No run yet – generate figures on the home page.{% endif %}
+<a href="{{ url_for('nbs_report', table=table, compare=None if compare else '1', all='1' if show_all else None) }}">{{ 'Hide' if compare else 'Show' }} BO comparison</a> ·
+<a href="{{ url_for('nbs_report', table=table, compare='1' if compare else None, all=None if show_all else '1') }}">{{ 'Hide' if show_all else 'Show' }} country/GCC columns</a>
+<br>Each line shows how it is calculated: the source, the accounts selected (T24 category, sector, residency …) and the exact balance types added up
+(− means the T24 balance is sign-reversed; * means that type is not in the ECB extract).</p>
+<div class="panel" style="overflow:auto"><table><tr><th>Code</th><th>Line</th>{% for h in cols %}<th class="num">{{ h }}</th>{% endfor %}<th>How it is calculated</th></tr>
+{% for r in rows %}<tr><td class="pre">{{ r.t.item_code }}</td><td class="{{ 'h0' if r.depth<=1 }}" style="padding-left:{{ 8 + r.depth*14 }}px">{{ r.t.description }}</td>
+{% for c in r.cells %}<td class="num">{% if c.gen is not none %}{{ '{:,.0f}'.format(c.gen) }}{% else %}<span class="muted">n.a.</span>{% endif %}
+{% if c.status=='PARTIAL' %}<br><span class="tag warn" title="Required balance types or source inputs are missing; this amount is incomplete.">PARTIAL</span>{% endif %}
+{% if compare %}<br><span class="muted">BO {{ '{:,.0f}'.format(c.bo) if c.bo is not none else '–' }}</span>{% if c.diff is not none and c.diff|abs > 0.5 %}<br><span class="diffbad">Δ {{ '{:,.0f}'.format(c.diff) }}</span>{% elif c.diff is not none %}<br><span class="diffok">✓</span>{% endif %}{% endif %}</td>{% endfor %}
+<td class="logic">{{ r.logic.how }}{% if r.logic.source %}<br><b>{{ r.logic.source }}</b>{% endif %}
+{% if r.types_text %}<br><b>Balance types:</b> <span class="pre">{{ r.types_text }}</span>{% endif %}
+{% if r.logic.accounts %}<details><summary>Accounts and split</summary><b>Accounts:</b> {{ r.logic.accounts }}<br><b>Split:</b> {{ r.logic.split }}
+{% if r.logic.inherited %}<br><b>Also applied:</b> {{ r.logic.inherited }}{% endif %}</details>{% endif %}
+<a href="{{ url_for('rebuild_builder', tid=r.t.target_id) }}">Change</a> · <span class="tag">{{ r.t.status }}</span></td></tr>{% endfor %}</table></div></div></div>
+{% endblock %}

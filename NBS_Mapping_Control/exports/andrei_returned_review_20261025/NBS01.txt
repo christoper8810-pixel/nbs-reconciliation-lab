@@ -1,0 +1,333 @@
+NBS01 C:\Users\Test\Downloads\NBS01_Mapping_Review_Tracked_CJ_22Oct2026_AV comments v2.docx
+REVISION COUNTS [{"author": "Christopher Joseph", "type": "pPrChange", "count": 29}, {"author": "Christopher Joseph", "type": "rPrChange", "count": 1}, {"author": "Christopher Joseph", "type": "ins", "count": 223}, {"author": "Christopher Joseph", "type": "tblPrChange", "count": 5}, {"author": "Christopher Joseph", "type": "trPrChange", "count": 29}, {"author": "Christopher Joseph", "type": "tcPrChange", "count": 137}, {"author": "Christopher Joseph", "type": "del", "count": 198}, {"author": "Andrei Vassjutinski", "type": "ins", "count": 55}]
+CORE <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:creator></dc:creator><cp:lastModifiedBy>Christopher Joseph</cp:lastModifiedBy><cp:revision>9</cp:revision><dcterms:created xsi:type="dcterms:W3CDTF">2026-10-19T09:39:00Z</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">2026-10-22T17:18:00Z</dcterms:modified></cp:coreProperties>
+COMMENTS
+COMMENT 13 | Christopher Joseph | 2026-10-22T16:49:00Z | p12-12
+All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+SELECTED: All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+CONTEXT:
+[10] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[11] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+[12] All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+[13] The figures below are retained historical UAT observations. They are not recalculated impacts of these changes. Apply the confirmed treatment above wherever an earlier recommendation would conflict with it.
+[14] 2. Priorities
+COMMENT 14 | Andrei Vassjutinski | 2026-10-25T09:56:10Z | p10-10
+Profit offset pair: at 31 Aug, 6050 carries ACCCRPROFIT (9.7m) and 3713 carries ACCPRINCIPALPFT and the aged PRINCIPALPFT types; neither carries ACCDEPOSITPFT. As written, the ACCCRPROFIT/ACCDEPOSITPFT offset would not trigger. Should it be ACCCRPROFIT (6050) against PRINCIPALPFT (3713)?
+SELECTED: Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+CONTEXT:
+[8] Confirmed mapping changes on 22 October 2026
+[9] PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+[10] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[11] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+[12] All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+COMMENT 15 | Andrei Vassjutinski | 2026-10-25T09:56:10Z | p10-10
+Link level: CAL is aggregated by consol key, so a loan/account-level 3713-6050 link needs the arrangement or account link (ECB/AA). SL should confirm the source; otherwise the offset can only be applied at category level.
+SELECTED: Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+CONTEXT:
+[8] Confirmed mapping changes on 22 October 2026
+[9] PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+[10] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[11] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+[12] All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+COMMENT 16 | Andrei Vassjutinski | 2026-10-25T09:56:11Z | p9-9
+Explicit list needed: RECPRINCIPALPFT is not present in CAL at 31 Aug, and SL cannot implement "other locally defined states". Could we list the exact balance types?
+SELECTED: PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+CONTEXT:
+[7] Caveat. Amounts are indicative (UAT data, dates differ between sources). Cell references refer to the 6 Oct workbook and must be checked against the configured version before changes are made. Monetary impacts below remain reported UAT observations pending independent same-date reconciliation. Confirm the deployed NBS01/NBS001 rules and the signed gross/net presentation before activation. Owner-defined balance groups do not alone determine regulatory presentation.
+[8] Confirmed mapping changes on 22 October 2026
+[9] PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+[10] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[11] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+COMMENT 17 | Andrei Vassjutinski | 2026-10-25T09:56:11Z | p149-149
+6050 DEBIT: the previous D3 text said to decide the ordinary 6050 debit treatment separately; the new text only excludes 6050 from deposits and offsets the CREDIT side. The debit balances (about -571m at 31 Aug) now have no instruction. Please confirm where they go.
+SELECTED: ValidateOffset each category 3713 loan with its linked 6050 CREDIT. Offset matched ACCCRPROFIT and ACCDEPOSITPFT wherever mapped together, using verified signs once. Exclude category 6050 from every deposit rule and total; investigate missing/ambiguous links without a deposit fallback. Retain PAYACCOUNT and PAYDEPOSITPFT corrections for Tableother 45eligible deposits. Reconcile component reuse and define PAYDEPOSITPFT payable-profit treatment. Separate ordinary deposits from verified CLS6050 accounts linked to Murabaha3713 CLM parents. For that case, ACCDEPOSITPFT is AMORTIZED_EARNED; CREDIT to OUTSTANDING is proposed pending owner review. Check unintended reuse across loan and deposit totals. Decide ordinary 6050 debit treatment separately.attribution.
+CONTEXT:
+[147] Category 3713 loan lines; category 6050 CREDIT; ACCCRPROFIT/ACCDEPOSITPFT; all deposit selections, Table 31 and Table 45
+[148] Earlier observations: PAYACCOUNT 340m, PAYDEPOSITPFT 509.5m and 6050 debit 571m. These are not the amount of the required CREDIT/profit offsets.
+[149] Offset each category 3713 loan with its linked 6050 CREDIT. Offset matched ACCCRPROFIT and ACCDEPOSITPFT wherever mapped together, using verified signs once. Exclude category 6050 from every deposit rule and total; investigate missing/ambiguous links without a deposit fallback. Retain PAYACCOUNT and PAYDEPOSITPFT corrections for other eligible deposits. Reconcile component reuse and loan attribution.
+[150] D4
+[151] Acceptances read ACPTCONTRABL only
+COMMENT 18 | Andrei Vassjutinski | 2026-10-25T09:56:11Z | p67-67
+PDOACCOUNT: "define separately; do not silently add" gives no destination. Table 8 currently includes PDOACCOUNT, so it could drop out of the loan stock. Should it be added to the loan components?
+SELECTED: Use the 12-code OUTSTANDING group in B1 wherever the row measuresfor outstanding loan stock.stock, together with the associated PRINCIPALPFT in C1 and offsets in D3. Restore DELACCOUNT and PREACCOUNTPREACCOUNT. where omitted.Define PDOACCOUNT isseparately; outsidedo thatnot approvedsilently groupadd andit requiresto athe separatenamed definition and owner decision.group. Preserve separate overdraft, suspense, depositsuspense and contingent measures.measures, and exclude 6050 from deposits.
+CONTEXT:
+[65] ASSET - 100 and Table 12 lack DELACCOUNT and PREACCOUNT; Tables 8, 10, 44 include them (7 Oct-saved copy; the 28 Sep copy includes them in Tables 12 and 40)
+[66] 7.7bn missing from the balance sheet credit facilities line
+[67] Use the 12-code OUTSTANDING group in B1 for outstanding loan stock, together with the associated PRINCIPALPFT in C1 and offsets in D3. Restore DELACCOUNT and PREACCOUNT. Define PDOACCOUNT separately; do not silently add it to the named group. Preserve separate overdraft, suspense and contingent measures, and exclude 6050 from deposits.
+[68] B3
+[69] Murabaha line covers only 3701, 3717, 3704; 3713 (15.8bn), 3709, 3715 and 3740 fall into "Others"
+COMMENT 19 | Andrei Vassjutinski | 2026-10-25T09:56:11Z | p128-128
+Income in suspense: SP types should stay in gross loans and also remain in income in suspense (Table 200 line 20707, Table 29) as the offsetting deduction. The LDR mapping deducts exactly these SP types. Could we make clear that "do not also add it to a separate income total" does not remove them from income in suspense?
+SELECTED: Add theInventory missing SP typestypes. Keep loan-related PRINCIPALPFTSP with its associated loan and preserve its suspended status; do not also add it to thea suspendedseparate income tablestotal. Define ACCLATEPAYMENTSP and DEFERREDPFTSP treatment separately. Check diagnostic/classification disclosures without duplicating the same economic amount in totals.
+CONTEXT:
+[126] Loan and credit-classification lines; Tables 29, 30, 11 and any separate income/suspense selections
+[127] ACCLATEPAYMENTSP about 1.0bn (31 Aug) unmapped; DEL/PRE PRINCIPALPFTSP and DEFERREDPFTSP not listed
+[128] Inventory missing SP types. Keep loan-related PRINCIPALPFTSP with its associated loan and preserve its suspended status; do not also add it to a separate income total. Define ACCLATEPAYMENTSP and DEFERREDPFTSP treatment separately. Check diagnostic/classification disclosures without duplicating the same economic amount in totals.
+[129] D. Cash, deposits, acceptances, liabilities
+[130] #
+COMMENT 20 | Andrei Vassjutinski | 2026-10-25T09:56:11Z | p77-77
+Sector classification: on 21 Oct we agreed retail first, then industry codes for non-retail (441 for non-bank FIs). B4 still refers to confirming the bank sector codes; should it be rewritten on the industry-code basis?
+SELECTED: Replace the catch-all exclusion with an approved, exhaustive and mutually exclusive sector classification. Confirm the bank sector codes. Resolve Table 8 E37, which selects sector 2004 inside the Public Sector block whose E28 excludes it. Apply the approved classification consistently across all sector-based tables and totals.
+CONTEXT:
+[75] Table 8 and all tables using the same split
+[76] 7 Oct run shows retail murabaha (7.7bn) under Public Sector
+[77] Replace the catch-all exclusion with an approved, exhaustive and mutually exclusive sector classification. Confirm the bank sector codes. Resolve Table 8 E37, which selects sector 2004 inside the Public Sector block whose E28 excludes it. Apply the approved classification consistently across all sector-based tables and totals.
+[78] B5
+[79] Table 9 has no balance-type filter
+ACCEPTED BODY
+[0] NBS Mapping Review – Issues and Required Changes
+[1] DKB CBS – QCB regulatory reporting (NBS01 / NBS001). Revised 22 October 2026.
+[2] 1. Scope and evidence
+[3] Mapping reviewed: NBS MAPPING - 6 Oct 2026.xlsx (copy last saved 7 Oct 2026). A second version (last modified 28 Sep) is in circulation and differs at least in Tables 12 and 40.
+[4] Balances: CAL extract (CONSOLIDATE.ASST.LIAB) at 31 Aug 2026, UAT. Amounts in QAR equivalent; two records with impossible amounts excluded.
+[5] Reports: NBS01 runs dated 31 Aug 2026 and 7 Oct 2026.
+[6] Ledger: Historical trial balance at 23 Sep 2026 (balances apart from one broken record).
+[7] Caveat. Amounts are indicative (UAT data, dates differ between sources). Cell references refer to the 6 Oct workbook and must be checked against the configured version before changes are made. Monetary impacts below remain reported UAT observations pending independent same-date reconciliation. Confirm the deployed NBS01/NBS001 rules and the signed gross/net presentation before activation. Owner-defined balance groups do not alone determine regulatory presentation.
+[8] Confirmed mapping changes on 22 October 2026
+[9] PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.
+[10] Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.
+[11] Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.
+[12] All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.
+[13] The figures below are retained historical UAT observations. They are not recalculated impacts of these changes. Apply the confirmed treatment above wherever an earlier recommendation would conflict with it.
+[14] 2. Priorities
+[15] #
+[16] Issue
+[17] Why first
+[18] 1
+[19] ACCDEFERREDPFT mapped as both asset and liability (A1)
+[20] About 14.7bn double use; confirmed in the 31 Aug run and by the trial balance
+[21] 2
+[22] DEL and PRE principal missing from the balance sheet line and Table 12 (B2)
+[23] About 7.7bn missing from credit facilities (in the 7 Oct-saved copy)
+[24] 3
+[25] Public Sector rule includes individuals (B4)
+[26] Changes every sector-split table; sector codes must be confirmed before other sector-related changes
+[27] 4
+[28] Loan-related PRINCIPALPFT and linked 3713/6050 offsets (C1, D3)
+[29] Keep related profit with loans, apply matched offsets once and exclude 6050 from every deposit population
+[30] 3. Issues
+[31] A. Double counting
+[32] #
+[33] Issue
+[34] Where
+[35] Impact
+[36] 		Fix	
+[37] A1
+[38] ACCDEFERREDPFT is mapped as an asset (netted against RECDEFERREDPFT in accrued income) and as a liability (deferred income)
+[39] Table 19 C10, D10, F10, G10, M10, P10; ASSET - 100 row 107; Table 30 B7, E7
+[40] Reported about 14.7bn. Potential asset understatement requires same-date signed-amount reconciliation. Reported trial balance deferred income (14.2bn) matches Table 30
+[41] Remove ACCDEFERREDPFT from the loan earned-income expression in Table 19 and the corresponding ASSET - 100 expression. Keep UNEARNED_PROFIT as DEFERREDPFT + ACCDEFERREDPFT. Confirm its approved presentation in Table 30, accounting signs and virtual-balance composition before activation. Check duplicate economic amounts within totals; appearance in two report sections alone does not establish an error.
+[42] A2
+[43] DEBIT on categories 1000–1999 in accrued income also picks up overdrawn current accounts
+[44] Table 19 C10 (and the same cells as A1)
+[45] 280.4m under the workbook rules (categories 1000–1004); the 31 Aug report shows 289.8m in Overdraft
+[46] Split the shared category/type predicate into explicit branches. Restrict the accrued-income DEBIT branch to categories 13440-13459 after validating their definitions. Move loan-related PRINCIPALPFT to the associated loan lines (C1); preserve separately defined fee and other-income selectors. Apply the same changes to the configured ASSET - 100 expression and auxiliary rules.
+[47] A3
+[48] Prepaid Expenses uses different rules inside and outside Qatar: C11 takes ACCDEPOSITPFT for categories 6640–6649 only, F11 for all of 6000–6999
+[49] Table 19 C11, F11; Table 31 row 19 (Profit Payable)
+[50] About 16m of deposit profit payable to non-resident customers (31 Aug) reported as a prepaid asset and as profit payable
+[51] Align the resident and non-resident selections. Exclude category 6050 from deposit/prepaid selections; apply the matched ACCCRPROFIT/ACCDEPOSITPFT offset in D3 wherever both are mapped together. Do not report the same linked profit separately as a prepaid asset or profit payable.
+[52] B. Credit facilities
+[53] #
+[54] Issue
+[55] Where
+[56] Impact
+[57] Fix
+[58] B1
+[59] Deferred profit (RECDEFERREDPFT and the aged DUE, GRC, NAB, DEL, PRE DEFERREDPFT types) is not in any credit facility table
+[60] Tables 8, 10, 12, 44; ASSET - 100
+[61] 15.8bn. Of the aged types (0.5bn), NAB, GRC and DUE appear only in Table 11 (deferred income, credit classification); DEL and PRE are not mapped anywhere
+[62] Use the owner-defined OUTSTANDING group: CURACCOUNT, PREACCOUNT, GRCACCOUNT, DELACCOUNT, NABACCOUNT, DUEACCOUNT, DELDEFERREDPFT, GRCDEFERREDPFT, NABDEFERREDPFT, DUEDEFERREDPFT, RECDEFERREDPFT, PREDEFERREDPFT. Add the associated PRINCIPALPFT components under C1 and apply D3 offsets. Remove duplicate RECDEFERREDPFT from accrued income where already in outstanding. Reconcile signed components by contract.
+[63] B2
+[64] Principal balance-type lists differ between tables
+[65] ASSET - 100 and Table 12 lack DELACCOUNT and PREACCOUNT; Tables 8, 10, 44 include them (7 Oct-saved copy; the 28 Sep copy includes them in Tables 12 and 40)
+[66] 7.7bn missing from the balance sheet credit facilities line
+[67] Use the 12-code OUTSTANDING group in B1 for outstanding loan stock, together with the associated PRINCIPALPFT in C1 and offsets in D3. Restore DELACCOUNT and PREACCOUNT. Define PDOACCOUNT separately; do not silently add it to the named group. Preserve separate overdraft, suspense and contingent measures, and exclude 6050 from deposits.
+[68] B3
+[69] Murabaha line covers only 3701, 3717, 3704; 3713 (15.8bn), 3709, 3715 and 3740 fall into "Others"
+[70] Table 8 rows 20, 37, 54 and Others rows 27, 44, 61; Table 10
+[71] 85.6bn of murabaha reported as "Others"
+[72] Add owner-confirmed 3713 to Murabaha and remove it from Others in the same change. Offset each 3713 loan with its linked 6050 CREDIT and apply the matched profit offset in D3. Do not require a separate CLM label to apply this confirmed category treatment. Validate 3709, 3715 and 3740 against the product dictionary before assigning them.
+[73] B4
+[74] Public Sector is defined as all sectors except 2004 and 4000–4004, which includes individuals
+[75] Table 8 and all tables using the same split
+[76] 7 Oct run shows retail murabaha (7.7bn) under Public Sector
+[77] Replace the catch-all exclusion with an approved, exhaustive and mutually exclusive sector classification. Confirm the bank sector codes. Resolve Table 8 E37, which selects sector 2004 inside the Public Sector block whose E28 excludes it. Apply the approved classification consistently across all sector-based tables and totals.
+[78] B5
+[79] Table 9 has no balance-type filter
+[80] Table 9 (categories 3000–3899 by industry)
+[81] Table 9 exceeds Table 8 by 18bn (31 Aug) and 64bn (7 Oct)
+[82] Use the B1 loan-stock components plus associated PRINCIPALPFT (C1) and linked offsets (D3). Preserve customer, industry, residence and currency dimensions; attribute the linked offset to the related loan. Keep other facility measures distinct. Reconcile the category population with Table 8 before comparing totals.
+[83] B6
+[84] Ijara specific balances sit outside the Ijara line, which lists principal types only
+[85] Table 8; Table 19 row 12 (C12, F12, M12) and P10
+[86] PRINCIPALBALANCE (+515m) and RENTALRECEIVABLE (+162m) are mapped in Table 19 Amounts Receivables; ACCUMDEPRECN (-677m) is not mapped anywhere
+[87] Confirm the definitions and reporting treatment of PRINCIPALBALANCE, RENTALRECEIVABLE and ACCUMDEPRECN with Temenos and Financial Control. Approve gross/net presentation, signs and any overlap with loan components before moving these balances into the Ijara line.
+[88] B7
+[89] Workbook and report disagree on individual lines
+[90] Diminishing Musharaka is "No Product Defined" but shows 52.8m; "Loans" rows 14, 31, 48 have no rule but showed 287m on 31 Aug
+[91] Configuration differs from the workbook
+[92] Compare the deployed NBS01/NBS001 rules with the approved workbook version. Explain and align populated lines whose workbook rules are blank or state No Product Defined. Record the configured rule, source population and approved replacement per line.
+[93] B8
+[94] The Overdraft rule covers categories 1000–1004 only. Other overdrawn current accounts (e.g. 1102 Islamic Overdraft – Corporate) fall into Table 19 Accrued Income through DEBIT 1000–1999, and 13410 Commodity Murabaha falls into Table 19 Amounts Receivables (13400–13429)
+[95] Table 8 Overdraft (B12, E12); Table 19 C10, C12
+[96] 13410 about 0.6bn and 1102 about 18m (23 Sep) reported as other assets instead of credit facilities
+[97] Extend the Overdraft rule to all overdraft categories and map 13410 to credit facilities; Financial Control to confirm
+[98] C. Other assets and profit
+[99] #
+[100] Issue
+[101] Where
+[102] Impact
+[103] Fix
+[104] C1
+[105] Loan-related PRINCIPALPFT balances are omitted or treated as separate accrued income instead of following the associated loans
+[106] Loan lines in Tables 8, 9, 10, 11, 12, 44 and ASSET - 100; Table 19 and its auxiliary rules
+[107] The earlier 808.7m ACC/DEL/PRE observation does not quantify the full correction. Inventory all PRINCIPALPFT states and reconcile their loan attribution.
+[108] Move all loan-related PRINCIPALPFT states with their loans; remove separate Table 19/other-asset contributions for the same amounts. AMORTIZED_EARNED has ACC, REC, GRC, DEL and PRE PRINCIPALPFT; its five-code definition must not omit DUE, NAB or other valid loan states from reporting. Preserve SP status with the associated loan treatment. Apply D3 offsets and propagate to NBS001 and liquidity mappings.
+[109] C2
+[110] Late payment fee names do not match CAL: the mapping lists ...LATEPAYMENTFEE, CAL holds ACCLATEPAYMENT and ACCLATEPAYMENTSP
+[111] Table 19 Amounts Receivables
+[112] 1.4bn and 1.0bn likely read as zero
+[113] Validate the exact CAL and ECB names and the separate SP definition before changing the fee selectors. Do not assume an alias or replace every fee state with one observed name. Define Ehab report LOAN_FEES separately; late-payment penalties are not an established equivalent.
+[114] C3
+[115] General completeness gaps
+[116] All tables
+[117] 36 balance types with balances at 31 Aug are never named in the mapping (many legitimately out of scope, e.g. commitments and LC contingent types); 26 balance-type names in the mapping do not exist in CAL (e.g. the LATEPAYMENTFEE and ADMINFEE families, PDOACCOUNT)
+[118] Compare the mapping with the versioned local balance dictionary and same-date CAL/ECB inventories. Classify observed types as mapped, intentionally excluded or unresolved. A type absent from one CAL extract is not sufficient evidence that its ECB mapping is invalid. Quantify gaps from the supporting extracts.
+[119] C4
+[120] Table 19 M10 and P10 both repeat the accrued-income rule. P10 also appends other components, including PRINCIPALBALANCE and RENTALRECEIVABLE
+[121] Table 19 M10 and P10; configured use of these auxiliary columns to be confirmed
+[122] Possible duplicate contribution if these columns are consumed by configured processing
+[123] Rebuild M10 and P10 consistently with C1 and D3: remove loan-related PRINCIPALPFT and any separately repeated linked profit amounts from accrued income. Confirm whether these auxiliary columns feed configured processing. Keep fees and Ijara receivables in their separately defined measures; do not copy a duplicated predicate.
+[124] C5
+[125] SP states are incomplete; loan-related PRINCIPALPFTSP must follow the associated loan treatment rather than a blanket suspended-income rule
+[126] Loan and credit-classification lines; Tables 29, 30, 11 and any separate income/suspense selections
+[127] ACCLATEPAYMENTSP about 1.0bn (31 Aug) unmapped; DEL/PRE PRINCIPALPFTSP and DEFERREDPFTSP not listed
+[128] Inventory missing SP types. Keep loan-related PRINCIPALPFTSP with its associated loan and preserve its suspended status; do not also add it to a separate income total. Define ACCLATEPAYMENTSP and DEFERREDPFTSP treatment separately. Check diagnostic/classification disclosures without duplicating the same economic amount in totals.
+[129] D. Cash, deposits, acceptances, liabilities
+[130] #
+[131] Issue
+[132] Where
+[133] Impact
+[134] Fix
+[135] D1
+[136] Balance sheet cash (101) and other assets (109) are zero in both runs while Table 1 shows 451bn (31 Aug) and 578bn (7 Oct) of cash
+[137] ASSET - 100 / Table 100
+[138] Asset side of the balance sheet incomplete
+[139] Check the configured mapping block and numeric roll-ups before attributing zero balances to missing mapping. ASSET - 100 contains explicit cash/other-asset rules in hidden rows 57-108. Connect summary lines to approved breakdown amounts and reconcile matching company, population, date and valuation basis.
+[140] D2
+[141] Cash reads Asset Type = DEBIT only; no rule for cash outside Qatar
+[142] Table 1
+[143] Assumption to validate: all 12 companies are in Qatar
+[144] Validate and document the all-Qatar cash assumption and the reporting residence basis. Check credit-balance cash accounts and reconcile the cash category scope between Table 1 and ASSET - 100. Implement approved exceptions rather than assuming blank outside-Qatar rules are sufficient.
+[145] D3
+[146] Matured deposits and payable profit need complete rules; 3713/6050 loan offsets and the exclusion of 6050 from all deposit reporting are not explicit
+[147] Category 3713 loan lines; category 6050 CREDIT; ACCCRPROFIT/ACCDEPOSITPFT; all deposit selections, Table 31 and Table 45
+[148] Earlier observations: PAYACCOUNT 340m, PAYDEPOSITPFT 509.5m and 6050 debit 571m. These are not the amount of the required CREDIT/profit offsets.
+[149] Offset each category 3713 loan with its linked 6050 CREDIT. Offset matched ACCCRPROFIT and ACCDEPOSITPFT wherever mapped together, using verified signs once. Exclude category 6050 from every deposit rule and total; investigate missing/ambiguous links without a deposit fallback. Retain PAYACCOUNT and PAYDEPOSITPFT corrections for other eligible deposits. Reconcile component reuse and loan attribution.
+[150] D4
+[151] Acceptances read ACPTCONTRABL only
+[152] Table 35 line 03
+[153] 263.6m read; CAL also holds ACPT (279.7m), ACPTBANK (6.4bn), DEFPAY (6.4bn)
+[154] Confirm which balances represent acceptance exposure, contra entries and lifecycle states. Reconcile ACPTCONTRABL, ACPT, ACPTBANK and DEFPAY before expanding the mapping so the same economic exposure is not counted twice.
+[155] D5
+[156] Liabilities side does not hang together (7 Oct run)
+[157] Liabilities sheet / Table 200
+[158] Other Liabilities (277m) smaller than its sub-line Deferred Income (14.0bn); Other Borrowings and AT1 both 1,820.8m; Due to Banks 0 vs 9.9bn in the trial balance; Sukuk 22.4bn vs 9.7bn on the trial balance financing liabilities line
+[159] Reconcile liability parents to components using same-date sources. Exclude category 6050 from all deposit totals/breakdowns and remove any duplicate linked profit already offset under D3. Resolve 18001 overlap in subordinated debt/AT1; correct Table 21 E19 outside-Qatar residence. Validate Table 26 subtotals, signs and populations before quantifying impacts.
+[160] D6
+[161] Cash on hand excludes the internal cash categories
+[162] Table 1 B9, C9: Category = 10000–10025, DEBIT
+[163] 12907 Cash Vaulting at G4S (about 98m) and 12906 Cash in Transit not included (23 Sep). Raised by DKB Finance, 22 Oct
+[164] Add 12903–12907 to cash on hand, consistent with Ehab's cash rule
+[165] D7
+[166] Clearing account uses a single account route
+[167] Table 2 B12, E12: Category = 5002, DEBIT
+[168] 5002 holds no balances; internal clearing accounts use 18062 (about 2.6m at 23 Sep); 5002 is the QAR customer-account route. Raised by DKB Finance, 22 Oct
+[169] Define the two routes separately: 18062 for internal clearing, 5002 for the QAR customer-account route
+[170] D8
+[171] Lands mapped to the wrong category
+[172] Table 15 B10: Category = 11320, DEBIT
+[173] 11320 holds no balances; Ethix GL 1700000001 maps to 13337 Inv. Properties – Land (about 132m at 23 Sep). Raised by DKB Finance, 22 Oct
+[174] Correct to 13337
+[175] D9
+[176] Intangible amortisation includes a building depreciation category
+[177] Table 18 C16: Category = 11572, 11573, 11550, CREDIT
+[178] 11550 (building depreciation) holds no balances; 11570 Accumulated Amortisation (about 25m at 23 Sep) is missing. Raised by DKB Finance, 22 Oct
+[179] Replace 11550 with 11570; confirm that 11571 (customer relationships, about 419m) is mapped in its own line
+[180] D10
+[181] Investments in subsidiaries and associates use the wrong categories
+[182] Table 14 C28: Category = 11902, 11908
+[183] Ethix finance-company GLs map to 11901–11907: 11901 TFI (about 436m), 11902 FFC (about 1.65bn), 11903 FLC (about 63m), 11904–11907 small; 11908 holds no balances (23 Sep). Raised by DKB Finance, 22 Oct
+[184] Report TFI as an investment entity, associates under other, FLC as per NBS; exclude 11908
+[185] 4. Not mapping issues, but blocking testing
+[186] Broken record under category 3702 (about -128.6 trillion) in the 23 Sep trial balance (catch-all DKBGL.5998). A value of similar size (about 128.2 trillion) appears in Interest / Income in Suspense in the 7 Oct run.
+[187] Contingent pair of about 9 trillion each side on 23201 Inward Collection Documents in the 23 Sep trial balance.
+[188] Large suspense balances in the trial balance (309.7bn assets, 185.5bn liabilities), which make totals unrealistic regardless of the mapping.
+[189] 5. Next steps
+[190] Systems Ltd to identify the deployed mapping version separately for NBS01 and NBS001, including configuration identity, source workbook hash and effective date. Match every proposed cell change to that version before implementation.
+[191] Implement the owner-confirmed 22 October treatment of PRINCIPALPFT, 3713/6050 CREDIT and paired ACCCRPROFIT/ACCDEPOSITPFT across all three mappings. Validate the account links, signs, source dictionaries and remaining product/presentation questions; the confirmed treatment is no longer a pending conditional proposal.
+[192] Maintain one cell-level change register across NBS01, NBS001 Additional Tables and LCR & NSFR (Solo): current rule, replacement, dependent references/direct rules, inclusion/exclusion changes and reconciliation status. Apply connected changes together and retain unresolved source/link exceptions explicitly.
+[193] Rerun all three mappings on the same company, population, reporting date and valuation basis. Reconcile Tables 100/200 and breakdowns, the loan components/offsets and zero category-6050 contribution to deposits. Bridge liquidity totals for cash-flow timing and weights. Investigate abnormal records before quarantine/removal. Retain the Table 10 maturity-boundary and Table 11 subtotal corrections.
+[194] 6. Implementation checks
+[195] Trace every valid loan-related PRINCIPALPFT state to its loan line and SP status. Confirm that the same amount is not also added to accrued income or other assets.
+[196] Reconcile each 3713 loan to its linked 6050 CREDIT and each jointly mapped ACCCRPROFIT/ACCDEPOSITPFT pair. Verify source signs, unique component use and all unmatched or ambiguous links; do not remove repeated source entries without investigating their identities.
+[197] Demonstrate zero category-6050 contribution to every deposit total, breakdown and ratio, and to LCR deposit outflows and NSFR deposit funding. Include direct rules, referenced cells and supporting schedules.
+[198] Reconcile the shared components across all three mappings on the same reporting basis. Explain differences caused by report dimensions, scheduled cash flows and regulatory weights. Record the changed cells, old/new rules and test evidence before release.
+NON CJ REVISIONS
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": null}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 160}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "D6", "paragraph": 160}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 161}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Cash on hand excludes the internal cash categories", "paragraph": 161}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 162}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Table 1 B9, C9: Category = 10000–10025, DEBIT", "paragraph": 162}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 163}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "12907 Cash Vaulting at G4S (about 98m) and 12906 Cash in Transit not included (23 Sep). Raised by DKB Finance, 22 Oct", "paragraph": 163}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 164}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Add 12903–12907 to cash on hand, consistent with Ehab's cash rule", "paragraph": 164}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": null}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 165}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "D7", "paragraph": 165}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 166}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Clearing account uses a single account route", "paragraph": 166}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 167}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Table 2 B12, E12: Category = 5002, DEBIT", "paragraph": 167}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 168}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "5002 holds no balances; internal clearing accounts use 18062 (about 2.6m at 23 Sep); 5002 is the QAR customer-account route. Raised by DKB Finance, 22 Oct", "paragraph": 168}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 169}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Define the two routes separately: 18062 for internal clearing, 5002 for the QAR customer-account route", "paragraph": 169}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": null}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 170}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "D8", "paragraph": 170}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 171}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Lands mapped to the wrong category", "paragraph": 171}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 172}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Table 15 B10: Category = 11320, DEBIT", "paragraph": 172}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 173}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "11320 holds no balances; Ethix GL 1700000001 maps to 13337 Inv. Properties – Land (about 132m at 23 Sep). Raised by DKB Finance, 22 Oct", "paragraph": 173}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 174}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Correct to 13337", "paragraph": 174}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": null}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 175}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "D9", "paragraph": 175}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 176}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Intangible amortisation includes a building depreciation category", "paragraph": 176}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 177}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Table 18 C16: Category = 11572, 11573, 11550, CREDIT", "paragraph": 177}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 178}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "11550 (building depreciation) holds no balances; 11570 Accumulated Amortisation (about 25m at 23 Sep) is missing. Raised by DKB Finance, 22 Oct", "paragraph": 178}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 179}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Replace 11550 with 11570; confirm that 11571 (customer relationships, about 419m) is mapped in its own line", "paragraph": 179}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": null}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 180}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "D10", "paragraph": 180}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 181}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Investments in subsidiaries and associates use the wrong categories", "paragraph": 181}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 182}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Table 14 C28: Category = 11902, 11908", "paragraph": 182}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 183}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Ethix finance-company GLs map to 11901–11907: 11901 TFI (about 436m), 11902 FFC (about 1.65bn), 11903 FLC (about 63m), 11904–11907 small; 11908 holds no balances (23 Sep). Raised by DKB Finance, 22 Oct", "paragraph": 183}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "", "paragraph": 184}
+{"type": "ins", "author": "Andrei Vassjutinski", "date": "2026-10-23T09:00:00Z", "text": "Report TFI as an investment entity, associates under other, FLC as per NBS; exclude 11908", "paragraph": 184}

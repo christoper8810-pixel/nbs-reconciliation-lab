@@ -1,0 +1,38 @@
+{% extends "base.html" %}{% block content %}
+<h1>{{ t.table }} · {{ t.item_code }} · {{ t.description }}</h1>
+<p class="muted">Target identity: {{ t.target_id }} (parent {{ t.parent_code or '—' }}). Candidates: {{ t.candidate_ids|join(', ') or 'none' }} ({{ t.candidate_basis }}).
+Saving creates a new mapping version with your reason; previous runs are kept.</p>
+<p><a href="{{ url_for('rebuild_builder', tid=t.target_id) }}"><b>Open in logic builder</b></a> – build this item from ECB, loan/deposit, trial balance, GL Report lines or category entries with pick-lists and a BO preview.</p>
+{% if preview %}<div class="panel"><h2>Preview (not saved)</h2><p>{{ preview.included_records }} of {{ preview.matched_records }} matched records included.</p>
+<table><tr><th>Measure</th><th>Current</th><th>Status</th><th>Proposed</th><th>Status</th></tr>
+{% for r in preview.rows %}<tr><td>{{ r.measure }}</td><td>{{ r.old if r.old is not none else 'n.a.' }}</td><td>{{ r.old_status }}</td><td><b>{{ r.new if r.new is not none else 'n.a.' }}</b></td><td>{{ r.new_status }}</td></tr>{% endfor %}</table>
+<ul>{% for i in preview.issues %}<li>{{ i }}</li>{% endfor %}</ul></div>{% endif %}
+<form method="post" class="panel"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<div class="cols"><div>
+<label>Mapping status</label><select name="status">{% for s in statuses %}<option {{ 'selected' if s==t.status }}>{{ s }}</option>{% endfor %}</select>
+<p class="muted">DRAFT_CANDIDATE values are previews only. PROVISIONAL: you have reviewed the definition but it is not final. APPROVED: reviewed and evidenced.</p>
+<label>Calculation method</label><select name="method">{% for s in methods %}<option {{ 'selected' if s==t.method }}>{{ s }}</option>{% endfor %}</select>
+<label>Stock rule ID (LEGACY_RULE: ECB/loan/deposit/TB account population)</label><input type="text" name="legacy_rule_id" value="{{ t.legacy_rule_id or '' }}">
+{% if rule %}<p class="muted">Rule {{ rule.id }}: source {{ rule.source }}, measure {{ rule.measure }}, layout {{ rule.get('layout') or 'geo' }}, template row {{ rule.row }} ({{ rule.description }}).
+<a href="{{ url_for('report_mapping', key=rule.id) }}">Edit that account population</a>.</p>{% endif %}
+<label>Date basis</label><select name="date_basis">{% for s in date_bases %}<option {{ 'selected' if s==t.date_basis }}>{{ s }}</option>{% endfor %}</select>
+<div class="cols"><div><label>Effective from</label><input type="date" name="effective_from" value="{{ t.effective_from or '' }}"></div><div><label>Effective to</label><input type="date" name="effective_to" value="{{ t.effective_to or '' }}"></div></div>
+<label>Evidence</label><textarea name="evidence" rows="3">{{ t.evidence }}</textarea>
+</div><div>
+<h2>Category events (CATEG_EVENTS method)</h2>
+<p class="muted">Exact codes separated by commas. PL.CATEGORY and PRODUCT.CATEGORY are different code lists. A population must be chosen; all events is never implicit.</p>
+{% for f,label in form_fields %}<div class="cols"><div><label>{{ label }} – include</label><input type="text" name="inc_{{ f }}"></div><div><label>exclude</label><input type="text" name="exc_{{ f }}"></div></div>{% endfor %}
+<div class="cols"><div><label>Sign</label><select name="sign"><option value="1" {{ 'selected' if (t.categ or {}).get('sign',1)==1 }}>As booked (+1)</option><option value="-1" {{ 'selected' if (t.categ or {}).get('sign')==-1 }}>Reverse (−1)</option></select></div>
+<div><label>Geography basis</label><select name="geography">{% for g in geographies %}<option {{ 'selected' if g==(t.categ or {}).get('geography','UNKNOWN') }}>{{ g }}</option>{% endfor %}</select></div></div>
+<details><summary>Advanced: current filter (JSON)</summary><textarea name="advanced_filter" rows="8" placeholder="Leave blank to use the fields above">{{ filter_text if t.categ else '' }}</textarea>
+<p class="muted">Fields: {{ categ_fields|join(', ') }}. Operators: eq, in, prefix, blank, not_blank. Groups: all, any, not.</p></details>
+</div></div>
+<h2>Owner overrides (manual adjustments)</h2><p class="muted">“Value” enters a deliberate amount in report units (money in QAR thousands; counts as counts) — 0 is a deliberate zero. “Empty” records an intentionally blank cell. Both need a reason and are labelled MANUALLY_ADJUSTED.</p>
+<table><tr><th>Measure</th><th>Kind</th><th>Override</th><th>Value</th><th>Reason</th></tr>
+{% for h,m in measures.items() %}{% set ov=(t.overrides or {}).get(h) %}<tr><td>{{ h }}</td><td>{{ m.kind }}{% if not m.primary %} (subset){% endif %}</td>
+<td><select name="ov_mode_{{ h }}"><option value="">None</option><option value="value" {{ 'selected' if ov and ov.value is not none }}>Value</option><option value="empty" {{ 'selected' if ov and ov.value is none }}>Empty</option></select></td>
+<td><input type="text" name="ov_value_{{ h }}" value="{{ ov.value if ov and ov.value is not none else '' }}"></td><td><input type="text" name="ov_reason_{{ h }}" value="{{ ov.reason if ov else '' }}"></td></tr>{% endfor %}</table>
+<div class="cols"><div><label>Your name</label><input type="text" name="actor"></div><div><label>Reason for change</label><input type="text" name="reason"></div></div>
+<button name="action" value="preview" class="secondary">Preview effect</button> <button name="action" value="save">Save new version</button></form>
+<div class="panel"><h2>History</h2><table><tr><th>When</th><th>Who</th><th>Version</th><th>Reason</th></tr>{% for h in history|reverse %}<tr><td>{{ h.at }}</td><td>{{ h.actor }}</td><td>{{ h.version }}</td><td>{{ h.reason }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

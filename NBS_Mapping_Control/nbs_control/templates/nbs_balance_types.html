@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% block title %}Balance types{% endblock %}{% block content %}
+<h1>3. Balance types</h1>
+<p class="muted">Every T24 balance type in the ECB file (asset types), its total over all accounts (QAR, T24 sign), the owner groups and product policies that use it,
+how many NBS lines take it and which GL Report lines use it. Types listed in a group but missing from the ECB file are shown at the end.</p>
+<div class="panel"><h2>How the loan and deposit amounts are built</h2><table>{% for a,b in measures %}<tr><td><b>{{ a }}</b></td><td>{{ b }}</td></tr>{% endfor %}</table></div>
+<form method="post" class="panel"><input type="hidden" name="csrf" value="{{ csrf_token }}"><h2>Owner balance groups (editable)</h2>
+<p class="muted">These groups decide which balance types make up loan balances. Change the list (space or comma separated), give your name and reason, save; the previous version is kept.</p>
+{% for g, ts in groups.items() %}<label><b>{{ g }}</b></label><input type="text" name="group_{{ g }}" value="{{ ts|join(' ') }}">{% endfor %}
+<div class="cols"><div><label>Your name</label><input type="text" name="actor"></div><div><label>Reason</label><input type="text" name="reason"></div></div>
+<button>Save groups</button></form>
+<div class="panel" style="overflow:auto"><table><tr><th>Balance type</th><th class="num">Accounts</th><th class="num">Total (QAR)</th><th>Owner groups</th><th>Product policies</th><th>NBS lines using it</th><th>GL Report lines</th></tr>
+{% for r in rows %}<tr><td class="pre"><b>{{ r.type }}</b>{% if not r.in_extract %} <span class="tag bad">not in ECB file</span>{% endif %}</td>
+<td class="num">{{ '{:,}'.format(r.records) }}</td><td class="num">{{ '{:,.0f}'.format(r.amount) if r.amount is not none else '' }}</td>
+<td>{{ r.groups|join(', ') }}</td><td>{{ r.policies|join(', ') }}</td>
+<td>{{ r.nbs_lines }}{% for e in r.examples %}<br><a href="{{ url_for('rebuild_builder', tid=e) }}">{{ e }}</a>{% endfor %}</td>
+<td class="muted">{{ r.gl_lines[:6]|join(', ') }}{% if r.gl_lines|length > 6 %} …{% endif %}</td></tr>{% endfor %}</table></div>
+{% endblock %}

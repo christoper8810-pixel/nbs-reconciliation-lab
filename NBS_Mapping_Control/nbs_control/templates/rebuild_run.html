@@ -1,0 +1,18 @@
+{% extends "base.html" %}{% block content %}
+<h1>Run {{ m.run_id }} {% if m.label %}· {{ m.label }}{% endif %}</h1>
+{% if stale %}<div class="flash error">Stale: {{ stale|join(', ') }} changed after this run.</div>{% endif %}
+<div class="banner">Not a complete or reconciled NBS. Draft candidate values are previews of unreviewed mappings; unavailable cells are blank, never zero.</div>
+<div class="cols"><div class="panel"><h2>Run manifest</h2>
+<p>Report date <b>{{ m.period.report_date }}</b> ({{ m.period.period_start }} – {{ m.period.period_end }}). {{ m.period.as_of_convention }}. {{ m.period.flows }}.</p>
+<p>Unit: {{ m.monetary_unit }}. Tolerance: {{ m.tolerance }}.</p>
+<p>Category basis: <b>{{ m.category_reporting_basis.basis if m.category_reporting_basis }}</b> → {{ m.category_reporting_basis.effective_reporting_date if m.category_reporting_basis }}
+(raw booking {{ m.category_reporting_basis.raw_booking_dates|join(',') if m.category_reporting_basis }}; policy {{ m.category_reporting_basis.policy_id if m.category_reporting_basis }} v{{ m.category_reporting_basis.policy_version if m.category_reporting_basis }})</p>
+<p>References: BO {{ m.reference_versions.bo }} · live {{ m.reference_versions.live }} · mapping version {{ m.mapping_version }} · duplicate policy v{{ m.duplicate_policy_version }}</p>
+<h3>Cell statuses</h3><table>{% for k,v in m.statuses.items() %}<tr><td>{{ k }}</td><td>{{ v }}</td></tr>{% endfor %}</table>
+{% if m.excel %}<p>Excel: {{ m.excel.file }} · validation <span class="tag {{ 'ok' if m.excel.verification.status=='PASS' else 'bad' }}">{{ m.excel.verification.status }}</span> ({{ m.excel.verification.checked_cells }} cells checked)</p>{% endif %}
+</div><div class="panel"><h2>Materiality vs BO (primary money cells)</h2><pre>{{ json.dumps(m.summary.bo, indent=1) }}</pre>
+<h2>Materiality vs earlier live report</h2><pre>{{ json.dumps(m.summary.live, indent=1) }}</pre></div></div>
+<div class="panel"><h2>Tables</h2>{% for t in tables %}<a href="{{ url_for('rebuild_table', run_id=m.run_id, table=t) }}">{{ t }}</a> {% endfor %}</div>
+<div class="panel"><h2>Downloads</h2>{% for f in files %}{% if f!='run.sqlite' %}<a href="{{ url_for('rebuild_download', run_id=m.run_id, name=f) }}">{{ f }}</a><br>{% endif %}{% endfor %}</div>
+<div class="panel"><h2>Controls</h2>{% for k,v in controls.items() %}<details><summary><b>{{ k }}</b></summary><pre>{{ json.dumps(v, indent=1) }}</pre></details>{% endfor %}</div>
+{% endblock %}

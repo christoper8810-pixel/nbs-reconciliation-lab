@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block title %}Mapping specification{% endblock %}{% block content %}
+<h1>Stakeholder mapping specification</h1>
+<p class="muted">One Excel workbook (plus JSON and CSV copies) describing every NBS target: account population in plain words, balance definition, breakdown,
+inherited dimensions, QCB rules, evidence, status and review flags, with the figures of the latest run. Reviewers fill the amber comment/decision columns
+and return it to the mapping owner. Unreviewed drafts are labelled as such; nothing in the file certifies a figure.</p>
+<form method="post" class="panel"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<label><input type="checkbox" name="enhance"> First refresh evidence-based drafts (structural code crosswalk, selector distinctness, QCB rules). Owner-edited mappings are never changed.</label>
+<label><input type="checkbox" name="gl"> Recalculate the "why not a GL mapping" evidence from the bank files</label>
+<button>Build specification</button></form>
+<div class="panel"><h2>Files</h2>{% for f in files %}<a href="{{ url_for('rebuild_specification_file', name=f) }}">{{ f }}</a><br>{% else %}<p>None yet.</p>{% endfor %}</div>
+<p><a href="{{ url_for('rebuild_home') }}">Back to rebuild</a></p>{% endblock %}

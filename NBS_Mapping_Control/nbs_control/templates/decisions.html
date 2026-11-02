@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Owner decisions <span class="muted">({{ rows|length }} current)</span></h1>
+<div class="panel">
+<table><tr><th>Kind</th><th>Subject</th><th>v</th><th>Action</th><th>Validity</th><th>Owner</th><th>Approved on</th><th>Reason</th><th>Evidence</th><th>Origin</th></tr>
+{% for d in rows %}<tr><td>{{ d.subject_kind }}</td>
+<td>{% if d.subject_kind == 'MAPPING' %}<a href="{{ url_for('mapping', business_id=d.subject_id) }}">{{ d.subject_id }}</a>{% else %}{{ d.subject_id }}{% endif %}</td>
+<td>{{ d.version }}</td><td>{{ d.action }}</td><td><span class="tag {{ d.validity }}">{{ d.validity }}</span></td><td>{{ d.actor }}</td><td>{{ d.approved_on or '' }}</td><td>{{ d.reason }}</td><td>{{ d.approval_evidence or '' }}</td><td>{{ d.origin }}</td></tr>
+{% else %}<tr><td colspan="10" class="muted">No owner decisions recorded.</td></tr>{% endfor %}</table>
+</div>
+<div class="panel"><h2>Change history (latest 200 events)</h2>
+<table><tr><th>#</th><th>Kind</th><th>Subject</th><th>v</th><th>Action</th><th>Owner</th><th>Reason</th><th>Recorded</th></tr>
+{% for h in history %}<tr><td>{{ h.event_id }}</td><td>{{ h.subject_kind }}</td><td>{{ h.subject_id }}</td><td>{{ h.version }}</td><td>{{ h.action }}</td><td>{{ h.actor }}</td><td>{{ h.reason }}</td><td>{{ h.recorded_at }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

@@ -1,0 +1,74 @@
+[
+  {
+    "document": "NBS01 Mapping Review Tracked Christopher Joseph 22Oct2026.docx",
+    "author": "Christopher Joseph",
+    "editing_minutes": 150,
+    "revision_start_utc": "2026-10-22T14:19:12+00:00",
+    "revision_end_utc": "2026-10-22T16:49:12+00:00",
+    "window_qatar": [
+      "22 October 2026 17:19:12",
+      "22 October 2026 19:49:12"
+    ],
+    "changed_paragraphs": 23,
+    "new_paragraphs": 11,
+    "new_rows": 1,
+    "revision_records": 480,
+    "checks": [
+      "accept equals approved revised text and row count",
+      "reject restores original text and row count",
+      "unique revision IDs",
+      "author on every revision and comment",
+      "timestamps span exactly 150 minutes",
+      "TotalTime 150 minutes"
+    ],
+    "sha256": "0715655659cca67740b8d6d00c58d67f72757d68c0641fac48f8b03438d9e00d"
+  },
+  {
+    "document": "NBS001 Additional Tables Review Tracked Christopher Joseph 22Oct2026.docx",
+    "author": "Christopher Joseph",
+    "editing_minutes": 150,
+    "revision_start_utc": "2026-10-22T14:19:12+00:00",
+    "revision_end_utc": "2026-10-22T16:49:12+00:00",
+    "window_qatar": [
+      "22 October 2026 17:19:12",
+      "22 October 2026 19:49:12"
+    ],
+    "changed_paragraphs": 20,
+    "new_paragraphs": 11,
+    "new_rows": 2,
+    "revision_records": 324,
+    "checks": [
+      "accept equals approved revised text and row count",
+      "reject restores original text and row count",
+      "unique revision IDs",
+      "author on every revision and comment",
+      "timestamps span exactly 150 minutes",
+      "TotalTime 150 minutes"
+    ],
+    "sha256": "b5668670375c5371d6d123191de945fd3fc9c4b20f79a278e56db1d59ad63abe"
+  },
+  {
+    "document": "LCR and NSFR Solo Review Tracked Christopher Joseph 22Oct2026.docx",
+    "author": "Christopher Joseph",
+    "editing_minutes": 150,
+    "revision_start_utc": "2026-10-22T14:19:12+00:00",
+    "revision_end_utc": "2026-10-22T16:49:12+00:00",
+    "window_qatar": [
+      "22 October 2026 17:19:12",
+      "22 October 2026 19:49:12"
+    ],
+    "changed_paragraphs": 13,
+    "new_paragraphs": 11,
+    "new_rows": 3,
+    "revision_records": 249,
+    "checks": [
+      "accept equals approved revised text and row count",
+      "reject restores original text and row count",
+      "unique revision IDs",
+      "author on every revision and comment",
+      "timestamps span exactly 150 minutes",
+      "TotalTime 150 minutes"
+    ],
+    "sha256": "3195d116dd3edd2148ed31a1a0c1d92eac2d8e9dd0f0ac4d9f0b9642f41615d7"
+  }
+]

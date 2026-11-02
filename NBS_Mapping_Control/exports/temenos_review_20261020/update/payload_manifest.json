@@ -1,0 +1,19 @@
+{
+  "nbs_control/logic_text.py": "dd9ae66b2b18ec4fa08b33100820bc816fd16ac9cbcd2f3d8dc98a8c68bbbd48",
+  "nbs_control/rebuild_engine.py": "9953f5b8c6b76a99f245ba8e47bd0822a74f5d01fbfc392368c9380b9e9bbc23",
+  "nbs_control/mapping_export.py": "2d897bd5009db67c2253278f67cae9548f05c0d2c1bac552b1698b64409387d8",
+  "nbs_control/temenos_review.py": "bff41522a09bc614c141c64b535a1982ae651d3e9953270c00d5a4f27695ba70",
+  "nbs_control/nbs_web.py": "f6d5b89db82f7fbdaae91e4a1705a518736c0ca04673e89016d76fc9cf91c119",
+  "nbs_control/builder_web.py": "b9f5983dc2390bf178d4b2094293d3b196abfb96573b71dcc53bb0a90f4977f3",
+  "nbs_control/templates/base.html": "7ef822ffc0f26175044bd1b98c2b7dea6fb8a130bbb8c33571d8a9649670426d",
+  "nbs_control/templates/nbs_report.html": "65b4966116b252286dd08d2cdda9ca0b1217a5a95b3c96304036bf1087176865",
+  "nbs_control/templates/nbs_temenos.html": "ec9401d248b78126daddb06010c9ae17b606438ad381e9d998a1380f3a818878",
+  "nbs_control/templates/rebuild_builder.html": "73a07e1dc6c4c37360efbeb78c2984fee3ba06873b3dbcee9e7635cb4d5667d1",
+  "nbs_control/templates/nbs_downloads.html": "9a6e6957c8ae91f0853ce918b44bfd45f35af87fbaf4c460cdb8f864725eaa03",
+  "data/catalogs/catalog-0001.json": "5ce4f7948a43acdec1282c10e9d4653db3bc2b3e9a1fe799213ddacbc5680666",
+  "exports/temenos_review_20261020/NBS_Temenos_Mapping_Review.json": "92b22d4ecdab1265aab236043c40eed206da5e991e9165c2f88328c8f0f39309",
+  "exports/temenos_review_20261020/NBS_Temenos_Mapping_for_21Oct2026.xlsx": "5a660259866309c6cdf27583c5d9545f36c5f38aee2a943160002c4ed9a555d7",
+  "exports/temenos_review_20261020/NBS_Temenos_Presentation.html": "77b81988135325ea6ca89ddb4e19a154905d17f7c2af3f06d848fe2a62d26e54",
+  "exports/temenos_review_20261020/READ_ME_FIRST.md": "45fc21f1004f3f2901b9afa795171b5bc99ea572c34120716e2b840548d37b20",
+  "tests/test_temenos_review.py": "8908c543d05d5a35fd7d6fc893d0ca5c27d74bfa9443bb29f6b7be5e8044a5f8"
+}

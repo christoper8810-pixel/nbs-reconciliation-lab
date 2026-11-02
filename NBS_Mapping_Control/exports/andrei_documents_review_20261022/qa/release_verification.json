@@ -1,0 +1,54 @@
+{
+  "document_checks": "PASS",
+  "originals": "byte-for-byte match to supplied ZIP and initial hashes",
+  "layout": "22 rendered pages visually reviewed",
+  "renderer": "Apache OpenOffice 4.1.16 in a private local profile, then bundled Poppler PNG rendering",
+  "packaged_renderer_diagnosis": "Bundled render_docx.py could not locate soffice.exe; local alternate conversion used",
+  "calculations": "Document rules reviewed; financial impacts not recalculated and production mappings not changed",
+  "package": "C:\\Users\\Test\\Desktop\\NBS_Mapping_Control\\exports\\andrei_documents_review_20261022\\Andrei Three Revised Mapping Reviews 22Oct2026.zip",
+  "package_sha256": "7b4d4dc87fa372b85074c355542aa39664fa0dc484e05e9a7200e55f62c86b17",
+  "documents": [
+    {
+      "document": "NBS01 Mapping Review Revised 22Oct2026.docx",
+      "result": "PASS",
+      "checks": [
+        "original hash unchanged",
+        "DOCX ZIP integrity and reader load",
+        "one general comment with valid anchors and relationships",
+        "all requested policies present",
+        "contradictory recommendations removed",
+        "unmodified source paragraphs preserved",
+        "table structures preserved"
+      ],
+      "sha256": "4ac96c64e3ff62ff7021272653f957bf220813edaa6721390aa5f0f31f0978a3"
+    },
+    {
+      "document": "NBS001 Additional Tables Review Revised 22Oct2026.docx",
+      "result": "PASS",
+      "checks": [
+        "original hash unchanged",
+        "DOCX ZIP integrity and reader load",
+        "one general comment with valid anchors and relationships",
+        "all requested policies present",
+        "contradictory recommendations removed",
+        "unmodified source paragraphs preserved",
+        "table structures preserved"
+      ],
+      "sha256": "8de7e4e3f1e7210f9f8aad950adaf38deaa456c8e89858d360a4e469a2ff4676"
+    },
+    {
+      "document": "LCR and NSFR Solo Review Revised 22Oct2026.docx",
+      "result": "PASS",
+      "checks": [
+        "original hash unchanged",
+        "DOCX ZIP integrity and reader load",
+        "one general comment with valid anchors and relationships",
+        "all requested policies present",
+        "contradictory recommendations removed",
+        "unmodified source paragraphs preserved",
+        "table structures preserved"
+      ],
+      "sha256": "acfc3828572dcae636ef0eb64e20fa440024c75c88026e9dd98b98a963e9ec3e"
+    }
+  ]
+}

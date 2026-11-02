@@ -1,0 +1,62 @@
+{
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "All focused trace rows are INTERNAL",
+      "result": "PASS"
+    },
+    {
+      "check": "Sixth segment always ten text digits",
+      "result": "PASS"
+    },
+    {
+      "check": "Explicit code counts reconcile",
+      "result": "PASS"
+    },
+    {
+      "check": "Current INTERNAL clearing selects only 18062",
+      "result": "PASS"
+    },
+    {
+      "check": "All reserve internal rows use 18060 or 18061",
+      "result": "PASS"
+    },
+    {
+      "check": "Internal account category matches every comparable numeric category field",
+      "result": "PASS"
+    },
+    {
+      "check": "Department example preserves distinct field meanings",
+      "result": "PASS"
+    },
+    {
+      "check": "Five repeated keys investigated without row removal",
+      "result": "PASS"
+    },
+    {
+      "check": "Five code exceptions listed without removal",
+      "result": "PASS"
+    },
+    {
+      "check": "All 897 Other T24 INTERNAL rows retained",
+      "result": "PASS"
+    },
+    {
+      "check": "Original unchanged EHAB",
+      "result": "PASS"
+    },
+    {
+      "check": "Original unchanged SYSTEMS",
+      "result": "PASS"
+    },
+    {
+      "check": "Original unchanged GL_CURRENT_BASE",
+      "result": "PASS"
+    },
+    {
+      "check": "Original unchanged GL_09SEP",
+      "result": "PASS"
+    }
+  ]
+}

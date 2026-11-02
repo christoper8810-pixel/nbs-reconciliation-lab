@@ -1,0 +1,37 @@
+{% extends "base.html" %}{% block title %}NBS rebuild{% endblock %}{% block content %}
+<h1>NBS rebuild (BO item codes)</h1>
+<p class="muted">Targets are keyed by BO table + QCB item code. BO and the earlier live report are comparison references only; generated amounts never read them.
+Draft candidates are unreviewed and never certified.</p>
+{% if stale %}<div class="flash error">The latest run is <b>stale</b>: {{ stale|join(', ') }} changed since it was generated. Regenerate to apply.</div>{% endif %}
+<div class="grid">
+{% for k,v in mapping_counts.items() %}<div class="stat"><b>{{ v }}</b><span>targets {{ k }}</span></div>{% endfor %}
+{% if latest %}{% for k,v in latest.statuses.items() %}<div class="stat"><b>{{ v }}</b><span>cells {{ k }} (latest run)</span></div>{% endfor %}{% endif %}
+</div>
+<div class="cols">
+<div class="panel"><h2>1. Sources</h2>
+<p>Choose the ECB, loan, deposit, trial-balance, GL mapping, category-entry, BO, live NBS and QCB rule files <b>from this computer</b>, then build and import.</p>
+<p><a href="{{ url_for('rebuild_sources') }}"><b>Sources</b></a> · <a href="{{ url_for('rebuild_explore') }}"><b>Explore sources</b></a> (totals by category, sector, balance type, GL, DKBGL line, PL category…)</p>
+<p class="muted">To build an item's logic from these sources, open it from <a href="{{ url_for('rebuild_mappings') }}">mappings</a> and choose “Logic builder”.</p></div><div class="panel"><h2>2. Generate a run</h2>
+<form method="post" action="{{ url_for('rebuild_start') }}"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<label>Report date</label><input type="date" name="report_date" value="2026-09-30">
+<label>BO reference version</label><select name="bo_ref">{% for r in refs if r[1]=='ETHIX_BO_NBS' %}<option>{{ r[0] }}</option>{% endfor %}</select>
+<label>Run label</label><input type="text" name="label"><label>Your name</label><input type="text" name="actor">
+<button>Generate, compare and export</button></form>
+<p class="muted">A full run takes several minutes. Previous runs are kept unchanged.</p>
+<p><a href="{{ url_for('rebuild_specification') }}"><b>Stakeholder mapping specification</b></a> · <a href="{{ url_for('rebuild_mappings') }}">Review and edit mappings</a> · <a href="{{ url_for('rebuild_policies') }}">Reporting basis and duplicate policies</a></p></div>
+</div>
+<div class="panel"><h2>Reporting basis</h2>
+{% if basis %}{% for pol in basis.policies %}<p><span class="tag {{ 'ok' if pol.enabled else 'bad' }}">{{ 'ENABLED' if pol.enabled else 'DISABLED' }}</span>
+<b>{{ pol.policy_id }}</b>: {{ pol.filename }} ({{ pol.source_sha256[:12] }}…) raw booking/processing {{ pol.raw_booking_date }} → effective reporting date <b>{{ pol.effective_reporting_date }}</b>.
+{{ pol.authority }}. {{ pol.scope }}. Policy version {{ basis.version }}.</p>
+<p class="muted">Not established by this confirmation: {{ pol.not_established|join('; ') }}</p>{% endfor %}{% endif %}
+{% if dup %}<p>Duplicate treatment: <span class="tag warn">{{ dup.default_treatment }}</span> · {{ dup.decisions|length }} fingerprint decisions · version {{ dup.version }}</p>{% endif %}
+</div>
+<div class="panel"><h2>Sources</h2><table><tr><th>Dataset</th><th>File(s)</th><th>SHA-256</th><th>Imported</th><th>Rows / records</th></tr>
+{% for s in sources %}<tr><td>{{ s.dataset }}</td><td>{{ s.aliases|join(' ; ') }}</td><td class="pre">{{ s.source_sha256 }}</td><td>{{ s.imported_at }}</td>
+<td>{{ (s.summary or {}).get('rows') or (s.summary or {}).get('standard_item_rows') or (s.summary or {}).get('numeric_cells') }}</td></tr>{% endfor %}</table>
+<h3>Reference versions</h3><table>{% for r in refs %}<tr><td>{{ r[0] }}</td><td>{{ r[1] }}</td><td>{{ r[2] }}</td><td>{{ r[3] }}</td><td>{{ r[4] }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Runs</h2><table><tr><th>Run</th><th>Label</th><th>Created</th><th>Mapping version</th><th>Category basis</th></tr>
+{% for m in runs %}<tr><td><a href="{{ url_for('rebuild_runview', run_id=m.run_id) }}">{{ m.run_id }}</a></td><td>{{ m.label }}</td><td>{{ m.created_at }}</td><td>{{ m.mapping_version }}</td>
+<td>{{ (m.category_reporting_basis or {}).get('basis') }} {{ (m.category_reporting_basis or {}).get('effective_reporting_date') }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

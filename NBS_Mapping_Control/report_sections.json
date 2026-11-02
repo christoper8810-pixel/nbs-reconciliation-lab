@@ -1,0 +1,1129 @@
+[
+  {
+    "section_kind": "base_report",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1,
+    "title": "Assets As At xxxx/xx",
+    "table_number": null,
+    "report_id": null,
+    "base_report": "Assets",
+    "nbs_sheet_hint": "ASSET - 100",
+    "end_row": 58,
+    "title_cell": "A1",
+    "range": "A1:V58",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "ASSET - 100",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Assets As At 2024/10",
+        "nbs_report_id": null,
+        "join_basis": "base report identity; owner must verify row hierarchy/dimensions",
+        "report_id_matches": null
+      },
+      {
+        "nbs_sheet": "ASSET - 100",
+        "nbs_title_cell": "A57",
+        "nbs_title": "Assets As At 2024/10",
+        "nbs_report_id": null,
+        "join_basis": "base report identity; owner must verify row hierarchy/dimensions",
+        "report_id_matches": null
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "base_report",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 59,
+    "title": "Liabilities As At xxxx/xx",
+    "table_number": null,
+    "report_id": null,
+    "base_report": "Liabilities",
+    "nbs_sheet_hint": "Liabilities",
+    "end_row": 123,
+    "title_cell": "A59",
+    "range": "A59:V123",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Liabilities",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Liabilities As At 2024/10",
+        "nbs_report_id": null,
+        "join_basis": "base report identity; owner must verify row hierarchy/dimensions",
+        "report_id_matches": null
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "base_report",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 124,
+    "title": "Contra Items As At xxxx/xx",
+    "table_number": null,
+    "report_id": null,
+    "base_report": "Contra Items",
+    "nbs_sheet_hint": "CONTRA ITEMS",
+    "end_row": 144,
+    "title_cell": "A124",
+    "range": "A124:V144",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "CONTRA ITEMS",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Contra Items As At 2024/10",
+        "nbs_report_id": null,
+        "join_basis": "base report identity; owner must verify row hierarchy/dimensions",
+        "report_id_matches": null
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "base_report",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 145,
+    "title": "Income As At xxxx/xx",
+    "table_number": null,
+    "report_id": null,
+    "base_report": "Income",
+    "nbs_sheet_hint": "Income",
+    "end_row": 228,
+    "title_cell": "A145",
+    "range": "A145:V228",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Income",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Income As At 2024/10",
+        "nbs_report_id": null,
+        "join_basis": "base report identity; owner must verify row hierarchy/dimensions",
+        "report_id_matches": null
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "base_report",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 229,
+    "title": "Expenses As At xxxx/xx",
+    "table_number": null,
+    "report_id": null,
+    "base_report": "Expenses",
+    "nbs_sheet_hint": "Expense",
+    "end_row": 353,
+    "title_cell": "A229",
+    "range": "A229:V353",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Expense",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Expenses As At 2024/10",
+        "nbs_report_id": null,
+        "join_basis": "base report identity; owner must verify row hierarchy/dimensions",
+        "report_id_matches": null
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 354,
+    "title": "Table (1) - (101) Cash and Precious Metals As At xxxx/xx",
+    "table_number": 1,
+    "report_id": "101",
+    "end_row": 372,
+    "title_cell": "A354",
+    "range": "A354:V372",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 1",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (1) - (101) Cash and Precious Metals As At 2024/10",
+        "nbs_report_id": "101",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 373,
+    "title": "Table (2) - (102,103) Breakdown of claims on central banks and banks As At xxxx/xx",
+    "table_number": 2,
+    "report_id": "102,103",
+    "end_row": 429,
+    "title_cell": "A373",
+    "range": "A373:V429",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 2",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (2) - (102,103) Breakdown of claims on central banks and banks As At 2024/10",
+        "nbs_report_id": "102,103",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 430,
+    "title": "Table (3) - (102,103) Breakdown of claims on central banks and banks by Maturity",
+    "table_number": 3,
+    "report_id": "102,103",
+    "end_row": 483,
+    "title_cell": "A430",
+    "range": "A430:V483",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 3",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (3) - (102,103) Breakdown of claims on central banks and banks by Maturity",
+        "nbs_report_id": "102,103",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 484,
+    "title": "Table (4) - (104) Breakdown of Debt Securities - Sukuk",
+    "table_number": 4,
+    "report_id": "104",
+    "end_row": 520,
+    "title_cell": "A484",
+    "range": "A484:V520",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 4 ",
+        "nbs_title_cell": "A4",
+        "nbs_title": "Table (4) - (104) Breakdown of Debt Securities - Sukuk",
+        "nbs_report_id": "104",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 521,
+    "title": "Table (5) - ( ) Breakdown of Equity Participations and Mutual funds and Others",
+    "table_number": 5,
+    "report_id": null,
+    "end_row": 558,
+    "title_cell": "A521",
+    "range": "A521:V558",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 5",
+        "nbs_title_cell": "B2",
+        "nbs_title": "Table (5) - ( ) Breakdown of Equity Participations and Mutual funds and Others",
+        "nbs_report_id": null,
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 559,
+    "title": "Table (6) - (104) Accounting Classification of Securities Portfolio As At xxxx/xx",
+    "table_number": 6,
+    "report_id": "104",
+    "end_row": 589,
+    "title_cell": "A559",
+    "range": "A559:V589",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 6",
+        "nbs_title_cell": "B3",
+        "nbs_title": "Table (6) - (104) Accounting Classification of Securities Portfolio As At 2024/10",
+        "nbs_report_id": "104",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      },
+      {
+        "nbs_sheet": "Table 6",
+        "nbs_title_cell": "B34",
+        "nbs_title": "Table (6) - (104) Accounting Classification of Securities Portfolio As At 2024/10",
+        "nbs_report_id": "104",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 590,
+    "title": "Table (7) - ( ) Breakdown of Debt Securities - Sukuk by Maturity",
+    "table_number": 7,
+    "report_id": null,
+    "end_row": 628,
+    "title_cell": "A590",
+    "range": "A590:V628",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 7",
+        "nbs_title_cell": "B2",
+        "nbs_title": "Table (7) - ( ) Breakdown of Debt Securities - Sukuk by Maturity",
+        "nbs_report_id": null,
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 629,
+    "title": "Table (8) - (105) Breakdown of Credit Facilities by Type of Facilities As At xxxx/xx",
+    "table_number": 8,
+    "report_id": "105",
+    "end_row": 688,
+    "title_cell": "A629",
+    "range": "A629:V688",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 8",
+        "nbs_title_cell": "A3",
+        "nbs_title": "Table (8) - (105) Breakdown of Credit Facilities by Type of Facilities As At 2024/10",
+        "nbs_report_id": "105",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 689,
+    "title": "Table (9) - (105) Breakdown of Credit Facilities by Type of Customer As At xxxx/xx",
+    "table_number": 9,
+    "report_id": "105",
+    "end_row": 766,
+    "title_cell": "A689",
+    "range": "A689:V766",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 9",
+        "nbs_title_cell": "A2",
+        "nbs_title": "Table (9) - (105) Breakdown of Credit Facilities by Type of Customer As At 2024/10",
+        "nbs_report_id": "105",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 767,
+    "title": "Table (10) - (105) Breakdown of Performing Credit Facilities by maturity",
+    "table_number": 10,
+    "report_id": "105",
+    "end_row": 817,
+    "title_cell": "A767",
+    "range": "A767:V817",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 10",
+        "nbs_title_cell": "A2",
+        "nbs_title": "Table (10) - (105) Breakdown of Performing Credit Facilities by maturity",
+        "nbs_report_id": "105",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 818,
+    "title": "Table (11) - (105) Credit Classification According to quality",
+    "table_number": 11,
+    "report_id": "105",
+    "end_row": 848,
+    "title_cell": "A818",
+    "range": "A818:V848",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 11",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (11) - (105) Credit Classification According to quality",
+        "nbs_report_id": "105",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 849,
+    "title": "Table (12) - (105) Breakdown of Credit Facilities by Amount Denominations",
+    "table_number": 12,
+    "report_id": "105",
+    "end_row": 881,
+    "title_cell": "A849",
+    "range": "A849:V881",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 12",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (12) - (105) Breakdown of Credit Facilities by Amount Denominations",
+        "nbs_report_id": "105",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 882,
+    "title": "Table (13) - (105) Breakdown of Tangible Collaterals * Against Credit Facilities",
+    "table_number": 13,
+    "report_id": "105",
+    "end_row": 914,
+    "title_cell": "A882",
+    "range": "A882:V914",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 13",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (13) - (105) Breakdown of Tangible Collaterals * Against Credit Facilities",
+        "nbs_report_id": "105",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 915,
+    "title": "Table (14) - (106) Breakdown of Investments in Subsid. and Assoc. (Equity Participation) As At xxxx/xx",
+    "table_number": 14,
+    "report_id": "106",
+    "end_row": 970,
+    "title_cell": "A915",
+    "range": "A915:V970",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "TABLE 14 ",
+        "nbs_title_cell": "B3",
+        "nbs_title": "Table (14) - (106) Breakdown of Investments in Subsid. and Assoc. (Equity Participation) As At 2024/10",
+        "nbs_report_id": "106",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 971,
+    "title": "Table (15) - (107) Breakdown of Investments in Real Estates As At xxxx/xx",
+    "table_number": 15,
+    "report_id": "107",
+    "end_row": 986,
+    "title_cell": "A971",
+    "range": "A971:V986",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 15",
+        "nbs_title_cell": "A4",
+        "nbs_title": "Table (15) - (107) Breakdown of Investments in Real Estates As At 2024/10",
+        "nbs_report_id": "107",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 987,
+    "title": "Table (16) - (107) Breakdown of Investments in Real Estates",
+    "table_number": 16,
+    "report_id": "107",
+    "end_row": 1006,
+    "title_cell": "A987",
+    "range": "A987:V1006",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 16",
+        "nbs_title_cell": "A2",
+        "nbs_title": "Table (16) - (107) Breakdown of Investments in Real Estates",
+        "nbs_report_id": "107",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1007,
+    "title": "Table (17) - (108) Breakdown of Net Fixed Assets ",
+    "table_number": 17,
+    "report_id": "108",
+    "end_row": 1030,
+    "title_cell": "A1007",
+    "range": "A1007:V1030",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 17 ",
+        "nbs_title_cell": "A3",
+        "nbs_title": "Table (17) - (108) Breakdown of Net Fixed Assets ",
+        "nbs_report_id": "108",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1031,
+    "title": "Table (18) - (10902) Breakdown of Intangible Assets in Other Assets As At xxxx/xx",
+    "table_number": 18,
+    "report_id": "10902",
+    "end_row": 1049,
+    "title_cell": "A1031",
+    "range": "A1031:V1049",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "TABLE 18",
+        "nbs_title_cell": "A4",
+        "nbs_title": "Table (18) - (10902) Breakdown of Intangible Assets in Other Assets As At 2024/10",
+        "nbs_report_id": "10902",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1050,
+    "title": "Table (19) - (10903) Breakdown of Others in Other Assets",
+    "table_number": 19,
+    "report_id": "10903",
+    "end_row": 1072,
+    "title_cell": "A1050",
+    "range": "A1050:V1072",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "TABLE 19",
+        "nbs_title_cell": "B3",
+        "nbs_title": "Table (19) - (10903) Breakdown of Others in Other Assets",
+        "nbs_report_id": "10903",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1073,
+    "title": "Table (21) - (201,202) Breakdown of  Due to Central Banks and Due to Banks As At xxxx/xx",
+    "table_number": 21,
+    "report_id": "201,202",
+    "end_row": 1130,
+    "title_cell": "A1073",
+    "range": "A1073:V1130",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 21",
+        "nbs_title_cell": "A2",
+        "nbs_title": "Table (21) - (201,202) Breakdown of  Due to Central Banks and Due to Banks As At 2024/10",
+        "nbs_report_id": "201,202",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1131,
+    "title": "Table (22) - (201 , 202) Breakdown of  Due to Central Banks and Due to Banks by Maturity",
+    "table_number": 22,
+    "report_id": "201,202",
+    "end_row": 1185,
+    "title_cell": "A1131",
+    "range": "A1131:V1185",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 22",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (22) - (201 , 202) Breakdown of  Due to Central Banks and Due to Banks by Maturity",
+        "nbs_report_id": "201,202",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1186,
+    "title": "Table (23) - (203) Breakdown of Customer Deposits by Type of Customer",
+    "table_number": 23,
+    "report_id": "203",
+    "end_row": 1237,
+    "title_cell": "A1186",
+    "range": "A1186:V1237",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 23",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (23) - (203) Breakdown of Customer Deposits by Type of Customer",
+        "nbs_report_id": "203",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1238,
+    "title": "Table (24) - (203) Breakdown of Customer Deposits by maturity",
+    "table_number": 24,
+    "report_id": "203",
+    "end_row": 1274,
+    "title_cell": "A1238",
+    "range": "A1238:V1274",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 24",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (24) - (203) Breakdown of Customer Deposits by maturity",
+        "nbs_report_id": "203",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1275,
+    "title": "Table (25) - (203) Breakdown of customers deposits by Amount Denominations",
+    "table_number": 25,
+    "report_id": "203",
+    "end_row": 1303,
+    "title_cell": "A1275",
+    "range": "A1275:V1303",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 25",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (25) - (203) Breakdown of customers deposits by Amount Denominations",
+        "nbs_report_id": "203",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1304,
+    "title": "Table (26) - (205) Breakdown of Other Borrowings/Finance As At xxxx/xx",
+    "table_number": 26,
+    "report_id": "205",
+    "end_row": 1324,
+    "title_cell": "A1304",
+    "range": "A1304:V1324",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 26",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (26) - (205) Breakdown of Other Borrowings/Finance As At 2024/10",
+        "nbs_report_id": "205",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      },
+      {
+        "nbs_sheet": "Table 26",
+        "nbs_title_cell": "A20",
+        "nbs_title": "Table (26) - (205) Breakdown of Other Borrowings/Finance As At 2024/10",
+        "nbs_report_id": "205",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1325,
+    "title": "Table (27) - (206) Breakdown of Cash Margin As At xxxx/xx",
+    "table_number": 27,
+    "report_id": "206",
+    "end_row": 1343,
+    "title_cell": "A1325",
+    "range": "A1325:V1343",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 27",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (27) - (206) Breakdown of Cash Margin As At 2024/10",
+        "nbs_report_id": "206",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1344,
+    "title": "Table (28) - (204-205) Breakdown of Debt Securities - Sukuk & Other Borrowings/Finance by Maturity",
+    "table_number": 28,
+    "report_id": "204-205",
+    "end_row": 1370,
+    "title_cell": "A1344",
+    "range": "A1344:V1370",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 28",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (28) - (204-205) Breakdown of Debt Securities - Sukuk & Other Borrowings/Finance by Maturity",
+        "nbs_report_id": "204-205",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      },
+      {
+        "nbs_sheet": "Table 28",
+        "nbs_title_cell": "A28",
+        "nbs_title": "Table (28) - (204-205) Breakdown of Debt Securities - Sukuk & Other Borrowings/Finance by Maturity",
+        "nbs_report_id": "204-205",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1371,
+    "title": "Table (29) - (207) Breakdown of Provisions As At xxxx/xx",
+    "table_number": 29,
+    "report_id": "207",
+    "end_row": 1449,
+    "title_cell": "A1371",
+    "range": "A1371:V1449",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 29",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (29) - (207) Breakdown of Provisions As At 2024/10",
+        "nbs_report_id": "207",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1450,
+    "title": "Table (30) - (20801) Breakdown of Deferred Interest/Income in Other Liabilities As At xxxx/xx",
+    "table_number": 30,
+    "report_id": "20801",
+    "end_row": 1474,
+    "title_cell": "A1450",
+    "range": "A1450:V1474",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 30",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (30) - (20801) Breakdown of Deferred Interest/Income in Other Liabilities As At 2024/10",
+        "nbs_report_id": "20801",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1475,
+    "title": "Table (31) - (20804) Breakdown of Others in Other Liabilities As At xxxx/xx",
+    "table_number": 31,
+    "report_id": "20804",
+    "end_row": 1512,
+    "title_cell": "A1475",
+    "range": "A1475:V1512",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 31",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (31) - (20804) Breakdown of Others in Other Liabilities As At 2024/10",
+        "nbs_report_id": "20804",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1513,
+    "title": "Table (32) - (20901) Breakdown of Paid Up Capital",
+    "table_number": 32,
+    "report_id": "20901",
+    "end_row": 1524,
+    "title_cell": "A1513",
+    "range": "A1513:V1524",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 32",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (32) - (20901) Breakdown of Paid Up Capital",
+        "nbs_report_id": "20901",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1525,
+    "title": "Table (33) - (20906) Breakdown of Fair Value Adjustments ",
+    "table_number": 33,
+    "report_id": "20906",
+    "end_row": 1542,
+    "title_cell": "A1525",
+    "range": "A1525:V1542",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 33",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (33) - (20906) Breakdown of Fair Value Adjustments ",
+        "nbs_report_id": "20906",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1543,
+    "title": "Table (34) - (20908) Breakdown of Other Reserves As At xxxx/xx",
+    "table_number": 34,
+    "report_id": "20908",
+    "end_row": 1559,
+    "title_cell": "A1543",
+    "range": "A1543:V1559",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 34",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (34) - (20908) Breakdown of Other Reserves As At 2024/10",
+        "nbs_report_id": "20908",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1560,
+    "title": "Table (35) - (301) Breakdown of Contingent liabilities As At xxxx/xx",
+    "table_number": 35,
+    "report_id": "301",
+    "end_row": 1612,
+    "title_cell": "A1560",
+    "range": "A1560:V1612",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 35",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (35) - (301) Breakdown of Contingent liabilities As At 2024/10",
+        "nbs_report_id": "301",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1613,
+    "title": "Table (36) - (302) Breakdown of Commitments As At xxxx/xx",
+    "table_number": 36,
+    "report_id": "302",
+    "end_row": 1636,
+    "title_cell": "A1613",
+    "range": "A1613:V1636",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 36",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (36) - (302) Breakdown of Commitments As At 2024/10",
+        "nbs_report_id": "302",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1637,
+    "title": "Table (37) - (30201) Breakdown of Unutilized Facilities ",
+    "table_number": 37,
+    "report_id": "30201",
+    "end_row": 1671,
+    "title_cell": "A1637",
+    "range": "A1637:V1671",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 37",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (37) - (30201) Breakdown of Unutilized Facilities ",
+        "nbs_report_id": "30201",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      },
+      {
+        "nbs_sheet": "Table 37",
+        "nbs_title_cell": "A38",
+        "nbs_title": "Table (37) - (30201) Breakdown of Unutilized Facilities ",
+        "nbs_report_id": "30201",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1672,
+    "title": "Table (38) - (303) Breakdown of Derivative Contracts ",
+    "table_number": 38,
+    "report_id": "303",
+    "end_row": 1703,
+    "title_cell": "A1672",
+    "range": "A1672:V1703",
+    "nbs_section_candidates": [],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1704,
+    "title": "Table (39) - (304) Breakdown of Assets Under Management ",
+    "table_number": 39,
+    "report_id": "304",
+    "end_row": 1726,
+    "title_cell": "A1704",
+    "range": "A1704:V1726",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 39",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (39) - (304) Breakdown of Assets Under Management ",
+        "nbs_report_id": "304",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1727,
+    "title": "Table (40) - (   ) Total Exposure to Subsidiaries and Associates. ",
+    "table_number": 40,
+    "report_id": null,
+    "end_row": 1787,
+    "title_cell": "A1727",
+    "range": "A1727:V1787",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 40",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (40) - (   ) Total Exposure to Subsidiaries and Associates. ",
+        "nbs_report_id": null,
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1788,
+    "title": "Table (41) - (   ) Details of Amount Due to Subsidiaries and Associates. ",
+    "table_number": 41,
+    "report_id": null,
+    "end_row": 1847,
+    "title_cell": "A1788",
+    "range": "A1788:V1847",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 41",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (41) - (   ) Details of Amount Due to Subsidiaries and Associates. ",
+        "nbs_report_id": null,
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1848,
+    "title": "Table (42) - (   ) Breakdown of Securities Portfolio in Q.F.C Institution",
+    "table_number": 42,
+    "report_id": null,
+    "end_row": 1881,
+    "title_cell": "A1848",
+    "range": "A1848:V1881",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 42",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (42) - (   ) Breakdown of Securities Portfolio in Q.F.C Institution",
+        "nbs_report_id": null,
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      },
+      {
+        "nbs_sheet": "Table 42",
+        "nbs_title_cell": "A33",
+        "nbs_title": "Table (42) - (   ) Breakdown of Securities Portfolio in Q.F.C Institution",
+        "nbs_report_id": null,
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1882,
+    "title": "Table (43) - (402) Breakdown of  Net Profit (Loss) on Securities Portfolio As At xxxx/xx",
+    "table_number": 43,
+    "report_id": "402",
+    "end_row": 1929,
+    "title_cell": "A1882",
+    "range": "A1882:V1929",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 43",
+        "nbs_title_cell": "B3",
+        "nbs_title": "Table (43) - (402) Breakdown of  Net Profit (Loss) on Securities Portfolio As At xxxx/xx",
+        "nbs_report_id": "402",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 1930,
+    "title": "Table (44) - (105)  Breakdown of Credit Facilities by Economic Sectors",
+    "table_number": 44,
+    "report_id": "105",
+    "end_row": 2091,
+    "title_cell": "A1930",
+    "range": "A1930:V2091",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 44",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (44) - (105)  Breakdown of Credit Facilities by Economic Sectors",
+        "nbs_report_id": "105",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  },
+  {
+    "section_kind": "detail_table",
+    "source_sheet": "All Reports By Report ID_Templa",
+    "start_row": 2092,
+    "title": "Table (45) - (203)  Breakdown of Customer Deposits by Economic Sectors",
+    "table_number": 45,
+    "report_id": "203",
+    "end_row": 2135,
+    "title_cell": "A2092",
+    "range": "A2092:V2135",
+    "nbs_section_candidates": [
+      {
+        "nbs_sheet": "Table 45",
+        "nbs_title_cell": "A1",
+        "nbs_title": "Table (45) - (203)  Breakdown of Customer Deposits by Economic Sectors",
+        "nbs_report_id": "203",
+        "join_basis": "table_number + report_id",
+        "report_id_matches": true
+      }
+    ],
+    "row_join_approved": false
+  }
+]

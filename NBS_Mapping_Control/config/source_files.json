@@ -1,0 +1,98 @@
+{
+ "schema_version": 1,
+ "files": {
+  "ECB": {
+   "file": "inputs/ECB_BALANCE Asset type wise (30.09.2026).xlsx",
+   "sha256": "1d127921c28f104bc6440ff40f1062f1238c660293ec64a5d834a44343aa74a3",
+   "bytes": 13982011,
+   "chosen_by": "system: initial registration",
+   "chosen_at": "2026-10-19T08:42:08+00:00"
+  },
+  "LOAN": {
+   "file": "inputs/All Loan 30.09.2026.xlsx",
+   "sha256": "30c4b8bd38bebc91b74fb028b5f26eb4be180733626ee5bd576388f314636e57",
+   "bytes": 13680980,
+   "chosen_by": "system: initial registration",
+   "chosen_at": "2026-10-19T08:42:08+00:00"
+  },
+  "DEPOSIT": {
+   "file": "inputs/All Deposit 30.09.2026..xlsx",
+   "sha256": "31c79f4f46a29f46b795684b934359d9af8d79bd04e23eacbfff86e5122940e8",
+   "bytes": 38736060,
+   "chosen_by": "system: initial registration",
+   "chosen_at": "2026-10-19T08:42:09+00:00"
+  },
+  "TB": {
+   "file": "inputs/Historical_Trial_Balance  30.09.2026..xlsx",
+   "sha256": "c5c7622a49fcaf3bbb8d8f57fe6ff46d5050d70ca7055f0c7d80bb66cce923cd",
+   "bytes": 451982,
+   "chosen_by": "system: initial registration",
+   "chosen_at": "2026-10-19T08:42:09+00:00"
+  },
+  "GL_MAPPING": {
+   "file": "inputs/GL mapping 30 Sept 2026 ( please dont refer for the any other purpose other than migration (1) (1).xlsx",
+   "sha256": "cef45e5fc3bdfb5fa674e26dde562975ce4cbf5eddca7de4cb510d62f733887a",
+   "bytes": 9036575,
+   "chosen_by": "system: initial registration",
+   "chosen_at": "2026-10-19T08:42:09+00:00"
+  },
+  "CATEG_ENTRY": {
+   "file": "inputs/Mock3_UAT3 Categ Entry Extract (1).xlsx",
+   "sha256": "a9dc0021a2cd9551802129fbb2277161178b971c38cbede07d93824d9a2f6ac1",
+   "bytes": 6678305,
+   "chosen_by": "system: initial registration",
+   "chosen_at": "2026-10-19T08:42:09+00:00"
+  },
+  "BO": {
+   "file": "inputs/BO_QCB_NBS_Report.xlsx",
+   "sha256": "ad30f4607a615e7d671143ee1244e6eb179b6e53ffb429e397d76ab0cb607ebf",
+   "bytes": 176975,
+   "chosen_by": "system: initial registration",
+   "chosen_at": "2026-10-19T08:42:09+00:00"
+  },
+  "LIVE": {
+   "file": "inputs/NBS01 Sep 2026 English.xlsx",
+   "sha256": "8841476f6195f6a408bffcafcfe325bff77b69815f90758c5224dfc7c8418651",
+   "bytes": 149659,
+   "chosen_by": "test",
+   "chosen_at": "2026-10-19T10:20:07+00:00"
+  },
+  "QCB_RULES": [
+   {
+    "file": "data/qcb_validations/List of Additional Table NBS active validations 07082019 .xlsx",
+    "sha256": "e1a32eaea7f19d7fc49e8554163dfd4faa39cbc36ab0d88a4775a731e7e6f6d0",
+    "bytes": 60499,
+    "chosen_by": "system: initial registration",
+    "chosen_at": "2026-10-19T08:42:09+00:00"
+   },
+   {
+    "file": "data/qcb_validations/List of Additional Table NBS active validations 21072019.xlsx",
+    "sha256": "6fff3b52f394a16354465da47418a2ac6070bbb7f79a87dbcab4e70f41f3cab8",
+    "bytes": 58264,
+    "chosen_by": "system: initial registration",
+    "chosen_at": "2026-10-19T08:42:09+00:00"
+   },
+   {
+    "file": "data/qcb_validations/List of Additional Table NBS active validations 23072019 .xlsx",
+    "sha256": "e96af88075b622530e817e5dcb93ad082ea2d67c42f8133d73bc81ff66cb1f3b",
+    "bytes": 58430,
+    "chosen_by": "system: initial registration",
+    "chosen_at": "2026-10-19T08:42:09+00:00"
+   },
+   {
+    "file": "data/qcb_validations/List of NBS active validations 24042018.xlsx",
+    "sha256": "9b98581318a799a4212ce592b04c25baf9d204d034958639cd2dbb202e8c0ac2",
+    "bytes": 82989,
+    "chosen_by": "system: initial registration",
+    "chosen_at": "2026-10-19T08:42:09+00:00"
+   },
+   {
+    "file": "data/qcb_validations/matching (List of NBS active validations) 26042012.xlsx",
+    "sha256": "ad35f3dd814b6127f38fb7c65c3da3d517827eff671c655ce8c6e39a6d45e46b",
+    "bytes": 56819,
+    "chosen_by": "system: initial registration",
+    "chosen_at": "2026-10-19T08:42:09+00:00"
+   }
+  ]
+ }
+}

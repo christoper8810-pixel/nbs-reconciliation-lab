@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Versioned configuration</h1>
+<div class="panel"><p class="muted">Balance dictionary, report selectors and calculation policy live in config/*.json. Every save is validated, the previous file is kept in config/history and the change is logged. Proposals are rebuilt on the next import.</p>
+<table><tr><th>Document</th><th>Content hash</th></tr>
+{% for n in names %}<tr><td><a href="{{ url_for('config_edit', name=n) }}">{{ n }}</a></td><td class="pre">{{ hashes[n] }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Change log</h2>
+<table><tr><th>When</th><th>Document</th><th>Owner</th><th>Reason</th><th>Previous → new hash</th></tr>
+{% for h in history %}<tr><td>{{ h.at }}</td><td>{{ h.config }}</td><td>{{ h.actor }}</td><td>{{ h.reason }}</td><td class="pre">{{ (h.previous_hash or '')[:10] }} → {{ h.new_hash[:10] }}</td></tr>{% else %}<tr><td colspan="5" class="muted">No changes yet.</td></tr>{% endfor %}</table></div>
+{% endblock %}

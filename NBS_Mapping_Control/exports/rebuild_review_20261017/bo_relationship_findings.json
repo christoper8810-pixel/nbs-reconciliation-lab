@@ -1,0 +1,359 @@
+{
+  "crosswalk_candidates": {
+    "UNREVIEWED_EXACT_PATH_CANDIDATE": 1037,
+    "UNRESOLVED": 611
+  },
+  "base_comparison_changed_cells": 97,
+  "hierarchy_differences": 31,
+  "hierarchy_differences_over_one_display_unit": 2,
+  "intangible": {
+    "bo_asset_gross": "896109",
+    "detail_gross_top_level_only": "896109",
+    "detail_signed_amortization": "-603699",
+    "detail_net": "292410",
+    "asset_gross_less_detail_net": "603699",
+    "caveat": "Gross and net are different measures. Do not force equality without confirming intended NBS presentation."
+  },
+  "bo_root_four_primary_columns": {
+    "assets": "128899398",
+    "liabilities_capital": "123151838",
+    "assets_less_liabilities_capital": "5747560",
+    "caveat": "Source control difference; investigate inclusion/formulas/adjustments before treating either total as correct."
+  },
+  "special_table_020": [
+    [
+      1,
+      {}
+    ],
+    [
+      2,
+      {
+        "C": "Table (20) "
+      }
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      4,
+      {
+        "B": "Table Code",
+        "C": "Acquistion No",
+        "D": "Provision Amount",
+        "E": "Net Value",
+        "F": "Report Date"
+      }
+    ],
+    [
+      5,
+      {
+        "B": "020",
+        "C": "0",
+        "D": "0",
+        "E": "0",
+        "F": "46295"
+      }
+    ],
+    [
+      6,
+      {}
+    ]
+  ],
+  "scope": [
+    {
+      "table": "001",
+      "bo_rows": 5,
+      "current_rows": 6,
+      "difference": -1
+    },
+    {
+      "table": "002",
+      "bo_rows": 46,
+      "current_rows": 47,
+      "difference": -1
+    },
+    {
+      "table": "003",
+      "bo_rows": 46,
+      "current_rows": 47,
+      "difference": -1
+    },
+    {
+      "table": "004",
+      "bo_rows": 27,
+      "current_rows": 27,
+      "difference": 0
+    },
+    {
+      "table": "005",
+      "bo_rows": 26,
+      "current_rows": 23,
+      "difference": 3
+    },
+    {
+      "table": "006",
+      "bo_rows": 21,
+      "current_rows": 20,
+      "difference": 1
+    },
+    {
+      "table": "007",
+      "bo_rows": 27,
+      "current_rows": 28,
+      "difference": -1
+    },
+    {
+      "table": "008",
+      "bo_rows": 51,
+      "current_rows": 53,
+      "difference": -2
+    },
+    {
+      "table": "009",
+      "bo_rows": 69,
+      "current_rows": 64,
+      "difference": 5
+    },
+    {
+      "table": "010",
+      "bo_rows": 39,
+      "current_rows": 40,
+      "difference": -1
+    },
+    {
+      "table": "011",
+      "bo_rows": 19,
+      "current_rows": 21,
+      "difference": -2
+    },
+    {
+      "table": "012",
+      "bo_rows": 22,
+      "current_rows": 22,
+      "difference": 0
+    },
+    {
+      "table": "013",
+      "bo_rows": 22,
+      "current_rows": 22,
+      "difference": 0
+    },
+    {
+      "table": "014",
+      "bo_rows": 48,
+      "current_rows": 49,
+      "difference": -1
+    },
+    {
+      "table": "015",
+      "bo_rows": 6,
+      "current_rows": 7,
+      "difference": -1
+    },
+    {
+      "table": "016",
+      "bo_rows": 6,
+      "current_rows": 7,
+      "difference": -1
+    },
+    {
+      "table": "017",
+      "bo_rows": 7,
+      "current_rows": 14,
+      "difference": -7
+    },
+    {
+      "table": "018",
+      "bo_rows": 8,
+      "current_rows": 9,
+      "difference": -1
+    },
+    {
+      "table": "019",
+      "bo_rows": 12,
+      "current_rows": 14,
+      "difference": -2
+    },
+    {
+      "table": "021",
+      "bo_rows": 47,
+      "current_rows": 48,
+      "difference": -1
+    },
+    {
+      "table": "022",
+      "bo_rows": 45,
+      "current_rows": 46,
+      "difference": -1
+    },
+    {
+      "table": "023",
+      "bo_rows": 39,
+      "current_rows": 40,
+      "difference": -1
+    },
+    {
+      "table": "024",
+      "bo_rows": 24,
+      "current_rows": 26,
+      "difference": -2
+    },
+    {
+      "table": "025",
+      "bo_rows": 18,
+      "current_rows": 19,
+      "difference": -1
+    },
+    {
+      "table": "026",
+      "bo_rows": 10,
+      "current_rows": 11,
+      "difference": -1
+    },
+    {
+      "table": "027",
+      "bo_rows": 8,
+      "current_rows": 8,
+      "difference": 0
+    },
+    {
+      "table": "028",
+      "bo_rows": 16,
+      "current_rows": 17,
+      "difference": -1
+    },
+    {
+      "table": "029",
+      "bo_rows": 69,
+      "current_rows": 70,
+      "difference": -1
+    },
+    {
+      "table": "030",
+      "bo_rows": 14,
+      "current_rows": 15,
+      "difference": -1
+    },
+    {
+      "table": "031",
+      "bo_rows": 23,
+      "current_rows": 25,
+      "difference": -2
+    },
+    {
+      "table": "032",
+      "bo_rows": 3,
+      "current_rows": 3,
+      "difference": 0
+    },
+    {
+      "table": "033",
+      "bo_rows": 7,
+      "current_rows": 8,
+      "difference": -1
+    },
+    {
+      "table": "034",
+      "bo_rows": 6,
+      "current_rows": 7,
+      "difference": -1
+    },
+    {
+      "table": "035",
+      "bo_rows": 43,
+      "current_rows": 44,
+      "difference": -1
+    },
+    {
+      "table": "036",
+      "bo_rows": 13,
+      "current_rows": 14,
+      "difference": -1
+    },
+    {
+      "table": "037",
+      "bo_rows": 26,
+      "current_rows": 27,
+      "difference": -1
+    },
+    {
+      "table": "038",
+      "bo_rows": 20,
+      "current_rows": 20,
+      "difference": 0
+    },
+    {
+      "table": "039",
+      "bo_rows": 12,
+      "current_rows": 13,
+      "difference": -1
+    },
+    {
+      "table": "040",
+      "bo_rows": 48,
+      "current_rows": 52,
+      "difference": -4
+    },
+    {
+      "table": "041",
+      "bo_rows": 48,
+      "current_rows": 51,
+      "difference": -3
+    },
+    {
+      "table": "042",
+      "bo_rows": 24,
+      "current_rows": 25,
+      "difference": -1
+    },
+    {
+      "table": "043",
+      "bo_rows": 38,
+      "current_rows": 39,
+      "difference": -1
+    },
+    {
+      "table": "044",
+      "bo_rows": 205,
+      "current_rows": 152,
+      "difference": 53
+    },
+    {
+      "table": "045",
+      "bo_rows": 38,
+      "current_rows": 40,
+      "difference": -2
+    },
+    {
+      "table": "100",
+      "bo_rows": 47,
+      "current_rows": 47,
+      "difference": 0
+    },
+    {
+      "table": "200",
+      "bo_rows": 56,
+      "current_rows": 56,
+      "difference": 0
+    },
+    {
+      "table": "300",
+      "bo_rows": 11,
+      "current_rows": 11,
+      "difference": 0
+    },
+    {
+      "table": "400",
+      "bo_rows": 73,
+      "current_rows": 72,
+      "difference": 1
+    },
+    {
+      "table": "500",
+      "bo_rows": 110,
+      "current_rows": 115,
+      "difference": -5
+    }
+  ]
+}

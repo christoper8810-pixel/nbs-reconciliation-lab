@@ -1,0 +1,13 @@
+{
+ "schema_version": 1,
+ "version": 1,
+ "purpose": "Corrections to balance-type names in legacy population rules. Applied at calculation time and noted on every affected cell. Owner group members (config/balance_rules.json) are never aliased; missing owner types stay missing.",
+ "typos": {
+  "CONTDRBL": {"to": "CONTDBBL", "evidence": "CONTDRBL is not an ECB balance type. CONTDBBL is the only type one letter away; in categories 28002/28003 it holds the guarantee amount (mirror of CONTDB) while CONTCR is empty.", "status": "PROVISIONAL"},
+  "CREDIIT": {"to": "CREDIT", "evidence": "Misspelling of the CREDIT balance type.", "status": "PROVISIONAL"}
+ },
+ "not_balance_types": {
+  "words": ["ACCOUNTS", "APPLIED", "BE", "CRITERIA", "FOR", "INTERNAL", "NOT", "RESIDENCE", "WILL", "CURBALANCE", "CUSTOMER"],
+  "evidence": "Words captured from explanatory sentences in the legacy mapping text (e.g. 'criteria for residence will be applied'); they are not ECB balance types and are dropped from the component list."
+ }
+}

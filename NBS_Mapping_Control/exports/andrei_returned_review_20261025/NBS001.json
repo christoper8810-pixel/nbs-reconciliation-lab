@@ -1,0 +1,3160 @@
+{
+  "label": "NBS001",
+  "path": "C:\\Users\\Test\\Downloads\\NBS001_Additional_Tables_Review_Tracked_CJ_22Oct2026_AV comments.docx",
+  "counts": [
+    {
+      "author": "Christopher Joseph",
+      "type": "pPrChange",
+      "count": 39
+    },
+    {
+      "author": "Christopher Joseph",
+      "type": "rPrChange",
+      "count": 1
+    },
+    {
+      "author": "Christopher Joseph",
+      "type": "ins",
+      "count": 147
+    },
+    {
+      "author": "Christopher Joseph",
+      "type": "trPrChange",
+      "count": 27
+    },
+    {
+      "author": "Christopher Joseph",
+      "type": "del",
+      "count": 110
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "accepted": "NBS001 Additional Tables – Mapping Review",
+      "original": "NBS001 Additional Tables – Mapping Review",
+      "all": "NBS001 Additional Tables – Mapping Review"
+    },
+    {
+      "index": 1,
+      "accepted": "DKB CBS – QCB regulatory reporting (NBS001, Tables 601–625). Prepared for DKB Finance, 21 October 2026. Revised 22 October 2026.",
+      "original": "DKB CBS – QCB regulatory reporting (NBS001, Tables 601–625). Prepared for DKB Finance, 21 October 2026.",
+      "all": "DKB CBS – QCB regulatory reporting (NBS001, Tables 601–625). Prepared for DKB Finance, 21 October 2026. Revised 22 October 2026."
+    },
+    {
+      "index": 2,
+      "accepted": "1. Scope and evidence",
+      "original": "1. Scope and evidence",
+      "all": "1. Scope and evidence"
+    },
+    {
+      "index": 3,
+      "accepted": "Mapping reviewed: NBS001 - Add Tables Mapping (1).xlsx: 26 tables, about 3,900 rule cells (combined sheet plus separate sheets for Tables 612–615 and 625).",
+      "original": "Mapping reviewed: NBS001 - Add Tables Mapping (1).xlsx: 26 tables, about 3,900 rule cells (combined sheet plus separate sheets for Tables 612–615 and 625).",
+      "all": "Mapping reviewed: NBS001 - Add Tables Mapping (1).xlsx: 26 tables, about 3,900 rule cells (combined sheet plus separate sheets for Tables 612–615 and 625)."
+    },
+    {
+      "index": 4,
+      "accepted": "Balances: CAL extract (CONSOLIDATE.ASST.LIAB) at 31 Aug 2026, UAT, used to test whether the rules reach the balances that exist. Two records with impossible amounts excluded.",
+      "original": "Balances: CAL extract (CONSOLIDATE.ASST.LIAB) at 31 Aug 2026, UAT, used to test whether the rules reach the balances that exist. Two records with impossible amounts excluded.",
+      "all": "Balances: CAL extract (CONSOLIDATE.ASST.LIAB) at 31 Aug 2026, UAT, used to test whether the rules reach the balances that exist. Two records with impossible amounts excluded."
+    },
+    {
+      "index": 5,
+      "accepted": "Reference: Customer sector codes as defined by DKB: Retail 1000–1999, 4000–4004, 6000/6001, 7000/7001; Corporate 2000–2003, 2006, 4005, 5001, 5002; Government 2005; Banks & FI 2004.",
+      "original": "Reference: Customer sector codes as defined by DKB: Retail 1000–1999, 4000–4004, 6000/6001, 7000/7001; Corporate 2000–2003, 2006, 4005, 5001, 5002; Government 2005; Banks & FI 2004.",
+      "all": "Reference: Customer sector codes as defined by DKB: Retail 1000–1999, 4000–4004, 6000/6001, 7000/7001; Corporate 2000–2003, 2006, 4005, 5001, 5002; Government 2005; Banks & FI 2004."
+    },
+    {
+      "index": 6,
+      "accepted": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version.",
+      "original": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version.",
+      "all": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version."
+    },
+    {
+      "index": 7,
+      "accepted": "Confirmed mapping changes on 22 October 2026",
+      "original": "",
+      "all": "Confirmed mapping changes on 22 October 2026"
+    },
+    {
+      "index": 8,
+      "accepted": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.",
+      "original": "",
+      "all": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts."
+    },
+    {
+      "index": 9,
+      "accepted": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.",
+      "original": "",
+      "all": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice."
+    },
+    {
+      "index": 10,
+      "accepted": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.",
+      "original": "",
+      "all": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount."
+    },
+    {
+      "index": 11,
+      "accepted": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.",
+      "original": "",
+      "all": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences."
+    },
+    {
+      "index": 12,
+      "accepted": "The figures below are retained historical UAT observations. They are not recalculated impacts of these changes. Apply the confirmed treatment above wherever an earlier recommendation would conflict with it.",
+      "original": "",
+      "all": "The figures below are retained historical UAT observations. They are not recalculated impacts of these changes. Apply the confirmed treatment above wherever an earlier recommendation would conflict with it."
+    },
+    {
+      "index": 13,
+      "accepted": "2. Priorities",
+      "original": "2. Priorities",
+      "all": "2. Priorities"
+    },
+    {
+      "index": 14,
+      "accepted": "#",
+      "original": "#",
+      "all": "#"
+    },
+    {
+      "index": 15,
+      "accepted": "Issue",
+      "original": "Issue",
+      "all": "Issue"
+    },
+    {
+      "index": 16,
+      "accepted": "Why first",
+      "original": "Why first",
+      "all": "Why first"
+    },
+    {
+      "index": 17,
+      "accepted": "1",
+      "original": "1",
+      "all": "1"
+    },
+    {
+      "index": 18,
+      "accepted": "Credit facilities by maturity (Tables 608/609) map almost none of the actual financing (B1–B4)",
+      "original": "Credit facilities by maturity (Tables 608/609) map almost none of the actual financing (B1–B4)",
+      "all": "Credit facilities by maturity (Tables 608/609) map almost none of the actual financing (B1–B4)"
+    },
+    {
+      "index": 19,
+      "accepted": "About 95bn of financing principal (31 Aug) falls outside the rules; the loan component and product selections need rebuilding",
+      "original": "About 95bn of financing principal (31 Aug) falls outside the rules; profit balances are reported as loans",
+      "all": "About 95bn of financing principal (31 Aug) falls outside the rules; profitthe balancesloan arecomponent reportedand asproduct loansselections need rebuilding"
+    },
+    {
+      "index": 20,
+      "accepted": "2",
+      "original": "2",
+      "all": "2"
+    },
+    {
+      "index": 21,
+      "accepted": "Cash reported as claims on banks (D2)",
+      "original": "Cash reported as claims on banks (D2)",
+      "all": "Cash reported as claims on banks (D2)"
+    },
+    {
+      "index": 22,
+      "accepted": "Cash in vault and ATMs (about 115bn at 31 Aug) is selected in the claims-on-banks line of Tables 604/605",
+      "original": "Cash in vault and ATMs (about 115bn at 31 Aug) is selected in the claims-on-banks line of Tables 604/605",
+      "all": "Cash in vault and ATMs (about 115bn at 31 Aug) is selected in the claims-on-banks line of Tables 604/605"
+    },
+    {
+      "index": 23,
+      "accepted": "3",
+      "original": "3",
+      "all": "3"
+    },
+    {
+      "index": 24,
+      "accepted": "Sector sections (C1, C2)",
+      "original": "Sector sections (C1, C2)",
+      "all": "Sector sections (C1, C2)"
+    },
+    {
+      "index": 25,
+      "accepted": "Corporate and government financing are excluded from Tables 608/609; definitions differ between NBS001 tables",
+      "original": "Corporate and government financing are excluded from Tables 608/609; definitions differ between NBS001 tables",
+      "all": "Corporate and government financing are excluded from Tables 608/609; definitions differ between NBS001 tables"
+    },
+    {
+      "index": 26,
+      "accepted": "4",
+      "original": "4",
+      "all": "4"
+    },
+    {
+      "index": 27,
+      "accepted": "ACCDEFERREDPFT on both sides (A1)",
+      "original": "ACCDEFERREDPFT on both sides (A1)",
+      "all": "ACCDEFERREDPFT on both sides (A1)"
+    },
+    {
+      "index": 28,
+      "accepted": "Same double mapping as found in NBS01, repeated across asset and liability tables",
+      "original": "Same double mapping as found in NBS01, repeated across asset and liability tables",
+      "all": "Same double mapping as found in NBS01, repeated across asset and liability tables"
+    },
+    {
+      "index": 29,
+      "accepted": "5",
+      "original": "",
+      "all": "5"
+    },
+    {
+      "index": 30,
+      "accepted": "Loan component and linked-offset alignment with NBS01 (B2, B3, B5, E1)",
+      "original": "",
+      "all": "Loan component and linked-offset alignment with NBS01 (B2, B3, B5, E1)"
+    },
+    {
+      "index": 31,
+      "accepted": "Include related PRINCIPALPFT; net linked 3713/6050 and paired profit; exclude 6050 from deposits",
+      "original": "",
+      "all": "Include related PRINCIPALPFT; net linked 3713/6050 and paired profit; exclude 6050 from deposits"
+    },
+    {
+      "index": 32,
+      "accepted": "3. Issues",
+      "original": "3. Issues",
+      "all": "3. Issues"
+    },
+    {
+      "index": 33,
+      "accepted": "A. Double counting",
+      "original": "A. Double counting",
+      "all": "A. Double counting"
+    },
+    {
+      "index": 34,
+      "accepted": "#",
+      "original": "#",
+      "all": "#"
+    },
+    {
+      "index": 35,
+      "accepted": "Issue",
+      "original": "Issue",
+      "all": "Issue"
+    },
+    {
+      "index": 36,
+      "accepted": "Where",
+      "original": "Where",
+      "all": "Where"
+    },
+    {
+      "index": 37,
+      "accepted": "Impact",
+      "original": "Impact",
+      "all": "Impact"
+    },
+    {
+      "index": 38,
+      "accepted": "Fix",
+      "original": "Fix",
+      "all": "Fix"
+    },
+    {
+      "index": 39,
+      "accepted": "A1",
+      "original": "A1",
+      "all": "A1"
+    },
+    {
+      "index": 40,
+      "accepted": "ACCDEFERREDPFT is used on the asset side (netted against RECDEFERREDPFT) and on the liability side",
+      "original": "ACCDEFERREDPFT is used on the asset side (netted against RECDEFERREDPFT) and on the liability side",
+      "all": "ACCDEFERREDPFT is used on the asset side (netted against RECDEFERREDPFT) and on the liability side"
+    },
+    {
+      "index": 41,
+      "accepted": "Assets: 608/609 \"01 Loans\", 616/618/621/622 \"03 Others\", 613 \"01 Other Assets\". Liabilities: 623/624 \"01 Deferred Interest / Income\"",
+      "original": "Assets: 608/609 \"01 Loans\", 616/618/621/622 \"03 Others\", 613 \"01 Other Assets\". Liabilities: 623/624 \"01 Deferred Interest / Income\"",
+      "all": "Assets: 608/609 \"01 Loans\", 616/618/621/622 \"03 Others\", 613 \"01 Other Assets\". Liabilities: 623/624 \"01 Deferred Interest / Income\""
+    },
+    {
+      "index": 42,
+      "accepted": "About 14.7bn (31 Aug) used twice; assets understated",
+      "original": "About 14.7bn (31 Aug) used twice; assets understated",
+      "all": "About 14.7bn (31 Aug) used twice; assets understated"
+    },
+    {
+      "index": 43,
+      "accepted": "Remove the duplicated ACCDEFERREDPFT asset contribution and keep the defined deferred-income treatment, consistent with NBS01 A1. This does not remove PRINCIPALPFT: report loan-related PRINCIPALPFT with the associated loan and reconcile signed components.",
+      "original": "Remove ACCDEFERREDPFT from the asset lines; keep it in deferred interest / income",
+      "all": "Remove the duplicated ACCDEFERREDPFT fromasset contribution and keep the assetdefined lines;deferred-income keeptreatment, itconsistent inwith deferredNBS01 interestA1. /This incomedoes not remove PRINCIPALPFT: report loan-related PRINCIPALPFT with the associated loan and reconcile signed components."
+    },
+    {
+      "index": 44,
+      "accepted": "A2",
+      "original": "A2",
+      "all": "A2"
+    },
+    {
+      "index": 45,
+      "accepted": "Nostro category 5001 is selected in two lines",
+      "original": "Nostro category 5001 is selected in two lines",
+      "all": "Nostro category 5001 is selected in two lines"
+    },
+    {
+      "index": 46,
+      "accepted": "604/605 \".......01 Commercial / Conventional\" and \".......02 Islamic\"",
+      "original": "604/605 \".......01 Commercial / Conventional\" and \".......02 Islamic\"",
+      "all": "604/605 \".......01 Commercial / Conventional\" and \".......02 Islamic\""
+    },
+    {
+      "index": 47,
+      "accepted": "Nostro balances (5001) counted in both bank types",
+      "original": "Nostro balances (5001) counted in both bank types",
+      "all": "Nostro balances (5001) counted in both bank types"
+    },
+    {
+      "index": 48,
+      "accepted": "Split nostros by bank type (e.g. target 59/60) and select each once",
+      "original": "Split nostros by bank type (e.g. target 59/60) and select each once",
+      "all": "Split nostros by bank type (e.g. target 59/60) and select each once"
+    },
+    {
+      "index": 49,
+      "accepted": "A3",
+      "original": "A3",
+      "all": "A3"
+    },
+    {
+      "index": 50,
+      "accepted": "In 608/609 the \"01 Loans\" line selects categories 3000–3899, which also covers the Ijara categories used in \"04 Finance Ijara\" without a balance-type filter",
+      "original": "In 608/609 the \"01 Loans\" line selects categories 3000–3899, which also covers the Ijara categories used in \"04 Finance Ijara\" without a balance-type filter",
+      "all": "In 608/609 the \"01 Loans\" line selects categories 3000–3899, which also covers the Ijara categories used in \"04 Finance Ijara\" without a balance-type filter"
+    },
+    {
+      "index": 51,
+      "accepted": "608/609 rows \"01 Loans\" and \"04 Finance Ijara\"",
+      "original": "608/609 rows \"01 Loans\" and \"04 Finance Ijara\"",
+      "all": "608/609 rows \"01 Loans\" and \"04 Finance Ijara\""
+    },
+    {
+      "index": 52,
+      "accepted": "The same Ijara balance, including related PRINCIPALPFT, can be selected in both product lines",
+      "original": "Ijara profit balances can be counted twice",
+      "all": "The same Ijara profitbalance, balancesincluding related PRINCIPALPFT, can be countedselected twicein both product lines"
+    },
+    {
+      "index": 53,
+      "accepted": "Make the loan/product populations mutually exclusive (B1-B3). Keep related PRINCIPALPFT with its assigned loan product and apply linked offsets once.",
+      "original": "Resolve with B2 and B3",
+      "all": "ResolveMake the loan/product populations mutually exclusive (B1-B3). Keep related PRINCIPALPFT with B2its assigned loan product and B3apply linked offsets once."
+    },
+    {
+      "index": 54,
+      "accepted": "B. Credit facilities by maturity (Tables 608/609)",
+      "original": "B. Credit facilities by maturity (Tables 608/609)",
+      "all": "B. Credit facilities by maturity (Tables 608/609)"
+    },
+    {
+      "index": 55,
+      "accepted": "#",
+      "original": "#",
+      "all": "#"
+    },
+    {
+      "index": 56,
+      "accepted": "Issue",
+      "original": "Issue",
+      "all": "Issue"
+    },
+    {
+      "index": 57,
+      "accepted": "Where",
+      "original": "Where",
+      "all": "Where"
+    },
+    {
+      "index": 58,
+      "accepted": "Impact",
+      "original": "Impact",
+      "all": "Impact"
+    },
+    {
+      "index": 59,
+      "accepted": "Fix",
+      "original": "Fix",
+      "all": "Fix"
+    },
+    {
+      "index": 60,
+      "accepted": "B1",
+      "original": "B1",
+      "all": "B1"
+    },
+    {
+      "index": 61,
+      "accepted": "Islamic finance lines select categories that hold no balances; the actual financing categories are not mapped",
+      "original": "Islamic finance lines select categories that hold no balances; the actual financing categories are not mapped",
+      "all": "Islamic finance lines select categories that hold no balances; the actual financing categories are not mapped"
+    },
+    {
+      "index": 62,
+      "accepted": "Murabaha – Musawama: 3716; Istisna'a: 3712; Mudaraba: 3711; Diminishing Musharaka: 3707; \"06 Others\": no rule",
+      "original": "Murabaha – Musawama: 3716; Istisna'a: 3712; Mudaraba: 3711; Diminishing Musharaka: 3707; \"06 Others\": no rule",
+      "all": "Murabaha – Musawama: 3716; Istisna'a: 3712; Mudaraba: 3711; Diminishing Musharaka: 3707; \"06 Others\": no rule"
+    },
+    {
+      "index": 63,
+      "accepted": "About 95.5bn of principal (31 Aug) in 3701, 3704, 3709, 3713, 3715, 3717, 3730, 3740 and others is not reported; only Ijara (3702, 3706, about 4.2bn) is reached",
+      "original": "About 95.5bn of principal (31 Aug) in 3701, 3704, 3709, 3713, 3715, 3717, 3730, 3740 and others is not reported; only Ijara (3702, 3706, about 4.2bn) is reached",
+      "all": "About 95.5bn of principal (31 Aug) in 3701, 3704, 3709, 3713, 3715, 3717, 3730, 3740 and others is not reported; only Ijara (3702, 3706, about 4.2bn) is reached"
+    },
+    {
+      "index": 64,
+      "accepted": "Align product categories with NBS01 Table 8, including 3713 in Murabaha. Fill Others with the remaining eligible population without overlap. Carry the related PRINCIPALPFT with each loan and apply the linked 3713/6050 CREDIT and paired profit offsets (B5).",
+      "original": "Map the actual product categories to the lines (as agreed for NBS01 Table 8) and fill \"06 Others\" with the remaining range",
+      "all": "Map the actualAlign product categories to the lines (as agreed forwith NBS01 Table 8)8, andincluding fill3713 \"06in Others\"Murabaha. Fill Others with the remaining rangeeligible population without overlap. Carry the related PRINCIPALPFT with each loan and apply the linked 3713/6050 CREDIT and paired profit offsets (B5)."
+    },
+    {
+      "index": 65,
+      "accepted": "B2",
+      "original": "B2",
+      "all": "B2"
+    },
+    {
+      "index": 66,
+      "accepted": "The generic Loans line mixes product selection and profit components, overlapping the Islamic finance lines",
+      "original": "\"01 Loans\" uses the accrued-income balance types",
+      "all": "\"01The Loans\"generic usesLoans line mixes product selection and profit components, overlapping the accrued-incomeIslamic balancefinance typeslines"
+    },
+    {
+      "index": 67,
+      "accepted": "608/609 rows \"01 Loans\": ACC/REC DEFERREDPFT, DUE/GRC/NAB PRINCIPALPFT, categories 3000–3899",
+      "original": "608/609 rows \"01 Loans\": ACC/REC DEFERREDPFT, DUE/GRC/NAB PRINCIPALPFT, categories 3000–3899",
+      "all": "608/609 rows \"01 Loans\": ACC/REC DEFERREDPFT, DUE/GRC/NAB PRINCIPALPFT, categories 3000–3899"
+    },
+    {
+      "index": 68,
+      "accepted": "Incomplete loan selection and possible duplication; loan-related PRINCIPALPFT itself belongs with the loan",
+      "original": "Profit balances reported as loans",
+      "all": "ProfitIncomplete balancesloan reportedselection asand loanspossible duplication; loan-related PRINCIPALPFT itself belongs with the loan"
+    },
+    {
+      "index": 69,
+      "accepted": "Allocate loans to mutually exclusive NBS01-aligned product lines. Keep associated PRINCIPALPFT with each loan, including DUE/GRC/NAB and other valid states; remove its separate other-asset contribution. Resolve deferred profit under A1 and NBS01 B1. Do not delete all profit components or assume the loan line must be empty.",
+      "original": "Remove the profit types; leave the line empty unless DKB has conventional loans",
+      "all": "RemoveAllocate loans to mutually exclusive NBS01-aligned product lines. Keep associated PRINCIPALPFT with each loan, including DUE/GRC/NAB and other valid states; remove its separate other-asset contribution. Resolve deferred profit under A1 and NBS01 B1. Do not delete all profit components or assume the profit types; leave theloan line emptymust unlessbe DKB has conventional loansempty."
+    },
+    {
+      "index": 70,
+      "accepted": "B3",
+      "original": "B3",
+      "all": "B3"
+    },
+    {
+      "index": 71,
+      "accepted": "Islamic finance lines have no balance-type filter",
+      "original": "Islamic finance lines have no balance-type filter",
+      "all": "Islamic finance lines have no balance-type filter"
+    },
+    {
+      "index": 72,
+      "accepted": "608/609 Islamic finance rows (CATEGORY and SECTOR only)",
+      "original": "608/609 Islamic finance rows (CATEGORY and SECTOR only)",
+      "all": "608/609 Islamic finance rows (CATEGORY and SECTOR only)"
+    },
+    {
+      "index": 73,
+      "accepted": "An unrestricted selection can include commitments, unrelated fees and duplicated components; required loan-related PRINCIPALPFT must be retained",
+      "original": "All balance types can be picked up, including profit, fees and commitments",
+      "all": "AllAn balanceunrestricted typesselection can beinclude pickedcommitments, up, including profit,unrelated fees and commitmentsduplicated components; required loan-related PRINCIPALPFT must be retained"
+    },
+    {
+      "index": 74,
+      "accepted": "Use the NBS01 loan-stock components, including its 12-code OUTSTANDING group, plus related PRINCIPALPFT and the linked offsets in B5. Define PDOACCOUNT separately. Preserve SP status, maturity and sector dimensions. Exclude unrelated fees/commitments and duplicate other-asset contributions; seven principal types alone are not the complete loan measure.",
+      "original": "Apply the seven principal types (CUR, GRC, DUE, PDO, NAB, DEL, PRE ACCOUNT), as in Tables 613 and 614",
+      "all": "ApplyUse the NBS01 loan-stock components, including its 12-code OUTSTANDING group, plus related PRINCIPALPFT and the linked offsets in B5. Define PDOACCOUNT separately. Preserve SP status, maturity and sector dimensions. Exclude unrelated fees/commitments and duplicate other-asset contributions; seven principal types (CUR,alone GRC,are DUE,not PDO,the NAB,complete DEL,loan PRE ACCOUNT), as in Tables 613 and 614measure."
+    },
+    {
+      "index": 75,
+      "accepted": "B4",
+      "original": "B4",
+      "all": "B4"
+    },
+    {
+      "index": 76,
+      "accepted": "Overdraft lines have no rule",
+      "original": "Overdraft lines have no rule",
+      "all": "Overdraft lines have no rule"
+    },
+    {
+      "index": 77,
+      "accepted": "608/609 \"01 Overdraft\" in all three sections",
+      "original": "608/609 \"01 Overdraft\" in all three sections",
+      "all": "608/609 \"01 Overdraft\" in all three sections"
+    },
+    {
+      "index": 78,
+      "accepted": "Overdrafts not reported",
+      "original": "Overdrafts not reported",
+      "all": "Overdrafts not reported"
+    },
+    {
+      "index": 79,
+      "accepted": "Map overdrawn current accounts (DEBIT on the overdraft categories)",
+      "original": "Map overdrawn current accounts (DEBIT on the overdraft categories)",
+      "all": "Map overdrawn current accounts (DEBIT on the overdraft categories)"
+    },
+    {
+      "index": 80,
+      "accepted": "B5",
+      "original": "",
+      "all": "B5"
+    },
+    {
+      "index": 81,
+      "accepted": "Category 3713 requires linked 6050 CREDIT and paired profit offsets",
+      "original": "",
+      "all": "Category 3713 requires linked 6050 CREDIT and paired profit offsets"
+    },
+    {
+      "index": 82,
+      "accepted": "All 3713 loan-stock selections, Tables 608/609, 613-615 and 625; other asset/profit lines using the same population",
+      "original": "",
+      "all": "All 3713 loan-stock selections, Tables 608/609, 613-615 and 625; other asset/profit lines using the same population"
+    },
+    {
+      "index": 83,
+      "accepted": "Gross loan/offset amounts or duplicated profit can distort loan totals and the credit/deposit ratio",
+      "original": "",
+      "all": "Gross loan/offset amounts or duplicated profit can distort loan totals and the credit/deposit ratio"
+    },
+    {
+      "index": 84,
+      "accepted": "Offset each 3713 loan with its linked 6050 CREDIT. Offset ACCCRPROFIT against matched ACCDEPOSITPFT wherever mapped together. Use verified signed components once, retain the loan dimensions and flag unmatched links. Remove duplicated profit from other assets and exclude all 6050 from deposits.",
+      "original": "",
+      "all": "Offset each 3713 loan with its linked 6050 CREDIT. Offset ACCCRPROFIT against matched ACCDEPOSITPFT wherever mapped together. Use verified signed components once, retain the loan dimensions and flag unmatched links. Remove duplicated profit from other assets and exclude all 6050 from deposits."
+    },
+    {
+      "index": 85,
+      "accepted": "C. Customer sectors",
+      "original": "C. Customer sectors",
+      "all": "C. Customer sectors"
+    },
+    {
+      "index": 86,
+      "accepted": "#",
+      "original": "#",
+      "all": "#"
+    },
+    {
+      "index": 87,
+      "accepted": "Issue",
+      "original": "Issue",
+      "all": "Issue"
+    },
+    {
+      "index": 88,
+      "accepted": "Where",
+      "original": "Where",
+      "all": "Where"
+    },
+    {
+      "index": 89,
+      "accepted": "Impact",
+      "original": "Impact",
+      "all": "Impact"
+    },
+    {
+      "index": 90,
+      "accepted": "Fix",
+      "original": "Fix",
+      "all": "Fix"
+    },
+    {
+      "index": 91,
+      "accepted": "C1",
+      "original": "C1",
+      "all": "C1"
+    },
+    {
+      "index": 92,
+      "accepted": "Sector sections in 608/609 do not match DKB sector codes",
+      "original": "Sector sections in 608/609 do not match DKB sector codes",
+      "all": "Sector sections in 608/609 do not match DKB sector codes"
+    },
+    {
+      "index": 93,
+      "accepted": "Non-bank = 2004; Public = 1000–1999; Private = 4000–4004",
+      "original": "Non-bank = 2004; Public = 1000–1999; Private = 4000–4004",
+      "all": "Non-bank = 2004; Public = 1000–1999; Private = 4000–4004"
+    },
+    {
+      "index": 94,
+      "accepted": "Retail reported as public sector; corporate (2000–2003, about 27.8bn), government (2005, about 21.2bn) and other sectors (about 6.4bn) excluded (31 Aug principal)",
+      "original": "Retail reported as public sector; corporate (2000–2003, about 27.8bn), government (2005, about 21.2bn) and other sectors (about 6.4bn) excluded (31 Aug principal)",
+      "all": "Retail reported as public sector; corporate (2000–2003, about 27.8bn), government (2005, about 21.2bn) and other sectors (about 6.4bn) excluded (31 Aug principal)"
+    },
+    {
+      "index": 95,
+      "accepted": "Public = 2005; Non-bank FI = 2004 (excluding banks); Private = all other customer sectors",
+      "original": "Public = 2005; Non-bank FI = 2004 (excluding banks); Private = all other customer sectors",
+      "all": "Public = 2005; Non-bank FI = 2004 (excluding banks); Private = all other customer sectors"
+    },
+    {
+      "index": 96,
+      "accepted": "C2",
+      "original": "C2",
+      "all": "C2"
+    },
+    {
+      "index": 97,
+      "accepted": "Sector definitions differ between NBS001 tables",
+      "original": "Sector definitions differ between NBS001 tables",
+      "all": "Sector definitions differ between NBS001 tables"
+    },
+    {
+      "index": 98,
+      "accepted": "610/611, 617, 619, 623/624: 2004 / 2005 / all other (consistent with DKB codes). 616, 618, 621, 622: explicit list omitting 5002. 612: government by targets 55–57. 614: list omits 4000–4004, 2005, 2006, 5001, 5002",
+      "original": "610/611, 617, 619, 623/624: 2004 / 2005 / all other (consistent with DKB codes). 616, 618, 621, 622: explicit list omitting 5002. 612: government by targets 55–57. 614: list omits 4000–4004, 2005, 2006, 5001, 5002",
+      "all": "610/611, 617, 619, 623/624: 2004 / 2005 / all other (consistent with DKB codes). 616, 618, 621, 622: explicit list omitting 5002. 612: government by targets 55–57. 614: list omits 4000–4004, 2005, 2006, 5001, 5002"
+    },
+    {
+      "index": 99,
+      "accepted": "Same customer reported in different sectors depending on the table",
+      "original": "Same customer reported in different sectors depending on the table",
+      "all": "Same customer reported in different sectors depending on the table"
+    },
+    {
+      "index": 100,
+      "accepted": "Use one sector definition across NBS001. Attribute linked 6050 offsets and related profit to the associated 3713 loan sector so the net loan is not split into a deposit sector.",
+      "original": "Use one sector definition across all NBS001 tables",
+      "all": "Use one sector definition across allNBS001. NBS001Attribute tableslinked 6050 offsets and related profit to the associated 3713 loan sector so the net loan is not split into a deposit sector."
+    },
+    {
+      "index": 101,
+      "accepted": "D. Claims on central banks and banks (Tables 604/605)",
+      "original": "D. Claims on central banks and banks (Tables 604/605)",
+      "all": "D. Claims on central banks and banks (Tables 604/605)"
+    },
+    {
+      "index": 102,
+      "accepted": "#",
+      "original": "#",
+      "all": "#"
+    },
+    {
+      "index": 103,
+      "accepted": "Issue",
+      "original": "Issue",
+      "all": "Issue"
+    },
+    {
+      "index": 104,
+      "accepted": "Where",
+      "original": "Where",
+      "all": "Where"
+    },
+    {
+      "index": 105,
+      "accepted": "Impact",
+      "original": "Impact",
+      "all": "Impact"
+    },
+    {
+      "index": 106,
+      "accepted": "Fix",
+      "original": "Fix",
+      "all": "Fix"
+    },
+    {
+      "index": 107,
+      "accepted": "D1",
+      "original": "D1",
+      "all": "D1"
+    },
+    {
+      "index": 108,
+      "accepted": "Required Reserve selects categories 5003 and 5004",
+      "original": "Required Reserve selects categories 5003 and 5004",
+      "all": "Required Reserve selects categories 5003 and 5004"
+    },
+    {
+      "index": 109,
+      "accepted": "604/605 \"...01 Required Reserve\"",
+      "original": "604/605 \"...01 Required Reserve\"",
+      "all": "604/605 \"...01 Required Reserve\""
+    },
+    {
+      "index": 110,
+      "accepted": "No balances in 5003/5004 at 31 Aug; the QCB reserve sits in 18060/18061 (already changed in the NBS01 tables)",
+      "original": "No balances in 5003/5004 at 31 Aug; the QCB reserve sits in 18060/18061 (already changed in the NBS01 tables)",
+      "all": "No balances in 5003/5004 at 31 Aug; the QCB reserve sits in 18060/18061 (already changed in the NBS01 tables)"
+    },
+    {
+      "index": 111,
+      "accepted": "Use 18060/18061, consistent with NBS01",
+      "original": "Use 18060/18061, consistent with NBS01",
+      "all": "Use 18060/18061, consistent with NBS01"
+    },
+    {
+      "index": 112,
+      "accepted": "D2",
+      "original": "D2",
+      "all": "D2"
+    },
+    {
+      "index": 113,
+      "accepted": "The claims-on-banks line selects cash categories",
+      "original": "The claims-on-banks line selects cash categories",
+      "all": "The claims-on-banks line selects cash categories"
+    },
+    {
+      "index": 114,
+      "accepted": "604/605 \".......01 Commercial / Conventional\": 10001, 10024, 10025, 12905 (listed twice), 12903, 5003, 5001",
+      "original": "604/605 \".......01 Commercial / Conventional\": 10001, 10024, 10025, 12905 (listed twice), 12903, 5003, 5001",
+      "all": "604/605 \".......01 Commercial / Conventional\": 10001, 10024, 10025, 12905 (listed twice), 12903, 5003, 5001"
+    },
+    {
+      "index": 115,
+      "accepted": "Cash in vault and ATMs (about 114.7bn at 31 Aug) reported as claims on banks",
+      "original": "Cash in vault and ATMs (about 114.7bn at 31 Aug) reported as claims on banks",
+      "all": "Cash in vault and ATMs (about 114.7bn at 31 Aug) reported as claims on banks"
+    },
+    {
+      "index": 116,
+      "accepted": "Remove cash categories; select nostro and placement categories only",
+      "original": "Remove cash categories; select nostro and placement categories only",
+      "all": "Remove cash categories; select nostro and placement categories only"
+    },
+    {
+      "index": 117,
+      "accepted": "D3",
+      "original": "D3",
+      "all": "D3"
+    },
+    {
+      "index": 118,
+      "accepted": "Clearing account selects category 5002",
+      "original": "Clearing account selects category 5002",
+      "all": "Clearing account selects category 5002"
+    },
+    {
+      "index": 119,
+      "accepted": "604/605 \".....01 Clearing Account\"",
+      "original": "604/605 \".....01 Clearing Account\"",
+      "all": "604/605 \".....01 Clearing Account\""
+    },
+    {
+      "index": 120,
+      "accepted": "No balances in 5002 at 31 Aug",
+      "original": "No balances in 5002 at 31 Aug",
+      "all": "No balances in 5002 at 31 Aug"
+    },
+    {
+      "index": 121,
+      "accepted": "Confirm the clearing account category",
+      "original": "Confirm the clearing account category",
+      "all": "Confirm the clearing account category"
+    },
+    {
+      "index": 122,
+      "accepted": "E. Deposits and other tables",
+      "original": "E. Deposits and other tables",
+      "all": "E. Deposits and other tables"
+    },
+    {
+      "index": 123,
+      "accepted": "#",
+      "original": "#",
+      "all": "#"
+    },
+    {
+      "index": 124,
+      "accepted": "Issue",
+      "original": "Issue",
+      "all": "Issue"
+    },
+    {
+      "index": 125,
+      "accepted": "Where",
+      "original": "Where",
+      "all": "Where"
+    },
+    {
+      "index": 126,
+      "accepted": "Impact",
+      "original": "Impact",
+      "all": "Impact"
+    },
+    {
+      "index": 127,
+      "accepted": "Fix",
+      "original": "Fix",
+      "all": "Fix"
+    },
+    {
+      "index": 128,
+      "accepted": "E1",
+      "original": "E1",
+      "all": "E1"
+    },
+    {
+      "index": 129,
+      "accepted": "Deposit selections omit matured balances and do not explicitly exclude category 6050",
+      "original": "Deposit balance types include a non-existent type and miss matured deposits",
+      "all": "Deposit balanceselections typesomit includematured a non-existent typebalances and missdo maturednot depositsexplicitly exclude category 6050"
+    },
+    {
+      "index": 130,
+      "accepted": "Tables 610/611, 625 and every deposit total/breakdown or dependent deposit selection",
+      "original": "610/611 and 625: CREDIT, CURACCOUNT, CURBALANCE",
+      "all": "610/611Tables 610/611, 625 and 625:every CREDIT,deposit CURACCOUNT,total/breakdown CURBALANCEor dependent deposit selection"
+    },
+    {
+      "index": 131,
+      "accepted": "CURBALANCE is absent from the sampled CAL; PAYACCOUNT (about 340m at 31 Aug) is missed. Category 6050 would also be misreported if admitted as a deposit.",
+      "original": "CURBALANCE does not exist in CAL; PAYACCOUNT (about 340m at 31 Aug) not selected",
+      "all": "CURBALANCE doesis notabsent existfrom inthe sampled CAL; PAYACCOUNT (about 340m at 31 Aug) notis selectedmissed. Category 6050 would also be misreported if admitted as a deposit."
+    },
+    {
+      "index": 132,
+      "accepted": "Exclude CATEGORY = 6050 before applying CREDIT, CURACCOUNT and PAYACCOUNT to other eligible deposits. Check CURBALANCE against the versioned dictionary before replacing it. Apply the exclusion to totals, maturity/sector splits and the Table 625 deposit denominator; no 6050 deposit fallback for unresolved links. Apply the matched profit offset wherever the pair is mapped together.",
+      "original": "Use CREDIT, CURACCOUNT and PAYACCOUNT",
+      "all": "UseExclude CATEGORY = 6050 before applying CREDIT, CURACCOUNT and PAYACCOUNT to other eligible deposits. Check CURBALANCE against the versioned dictionary before replacing it. Apply the exclusion to totals, maturity/sector splits and the Table 625 deposit denominator; no 6050 deposit fallback for unresolved links. Apply the matched profit offset wherever the pair is mapped together."
+    },
+    {
+      "index": 133,
+      "accepted": "E2",
+      "original": "E2",
+      "all": "E2"
+    },
+    {
+      "index": 134,
+      "accepted": "Credit / deposit ratio table is incomplete",
+      "original": "Credit / deposit ratio table is incomplete",
+      "all": "Credit / deposit ratio table is incomplete"
+    },
+    {
+      "index": 135,
+      "accepted": "625: rules only for deposits, wakala placements and borrowings",
+      "original": "625: rules only for deposits, wakala placements and borrowings",
+      "all": "625: rules only for deposits, wakala placements and borrowings"
+    },
+    {
+      "index": 136,
+      "accepted": "Credit side of the ratio not mapped",
+      "original": "Credit side of the ratio not mapped",
+      "all": "Credit side of the ratio not mapped"
+    },
+    {
+      "index": 137,
+      "accepted": "Build credit from Tables 608/609 with related PRINCIPALPFT and linked 3713/6050 and profit offsets. Build the deposit denominator from eligible deposits excluding all 6050. Trace each component once; do not deduct the same offset again when deriving the ratio.",
+      "original": "Map the credit facility side, consistent with Tables 608/609",
+      "all": "Map theBuild credit facility side, consistent withfrom Tables 608/609 with related PRINCIPALPFT and linked 3713/6050 and profit offsets. Build the deposit denominator from eligible deposits excluding all 6050. Trace each component once; do not deduct the same offset again when deriving the ratio."
+    },
+    {
+      "index": 138,
+      "accepted": "E3",
+      "original": "E3",
+      "all": "E3"
+    },
+    {
+      "index": 139,
+      "accepted": "Derivative contracts table has no rules",
+      "original": "Derivative contracts table has no rules",
+      "all": "Derivative contracts table has no rules"
+    },
+    {
+      "index": 140,
+      "accepted": "620 (42 description lines)",
+      "original": "620 (42 description lines)",
+      "all": "620 (42 description lines)"
+    },
+    {
+      "index": 141,
+      "accepted": "Table not produced",
+      "original": "Table not produced",
+      "all": "Table not produced"
+    },
+    {
+      "index": 142,
+      "accepted": "Map derivatives (source to be confirmed, e.g. Treasury)",
+      "original": "Map derivatives (source to be confirmed, e.g. Treasury)",
+      "all": "Map derivatives (source to be confirmed, e.g. Treasury)"
+    },
+    {
+      "index": 143,
+      "accepted": "E4",
+      "original": "E4",
+      "all": "E4"
+    },
+    {
+      "index": 144,
+      "accepted": "Many description lines have no rule",
+      "original": "Many description lines have no rule",
+      "all": "Many description lines have no rule"
+    },
+    {
+      "index": 145,
+      "accepted": "e.g. 602: 79 of 86 lines; 603: 36 of 42; 604: 41 of 46",
+      "original": "e.g. 602: 79 of 86 lines; 603: 36 of 42; 604: 41 of 46",
+      "all": "e.g. 602: 79 of 86 lines; 603: 36 of 42; 604: 41 of 46"
+    },
+    {
+      "index": 146,
+      "accepted": "Unclear whether lines are intentionally zero or missing",
+      "original": "Unclear whether lines are intentionally zero or missing",
+      "all": "Unclear whether lines are intentionally zero or missing"
+    },
+    {
+      "index": 147,
+      "accepted": "Mark intentionally empty lines explicitly",
+      "original": "Mark intentionally empty lines explicitly",
+      "all": "Mark intentionally empty lines explicitly"
+    },
+    {
+      "index": 148,
+      "accepted": "E5",
+      "original": "E5",
+      "all": "E5"
+    },
+    {
+      "index": 149,
+      "accepted": "Treasury tables read TMS outbound tables",
+      "original": "Treasury tables read TMS outbound tables",
+      "all": "Treasury tables read TMS outbound tables"
+    },
+    {
+      "index": 150,
+      "accepted": "601–603 (CRSSUKUKT), 606/607 and 625 (CRSMMDEALST)",
+      "original": "601–603 (CRSSUKUKT), 606/607 and 625 (CRSMMDEALST)",
+      "all": "601–603 (CRSSUKUKT), 606/607 and 625 (CRSMMDEALST)"
+    },
+    {
+      "index": 151,
+      "accepted": "Same source gap as seen in NBS01 (Treasury Bills)",
+      "original": "Same source gap as seen in NBS01 (Treasury Bills)",
+      "all": "Same source gap as seen in NBS01 (Treasury Bills)"
+    },
+    {
+      "index": 152,
+      "accepted": "Reconcile outbound tables to the trial balance for each run",
+      "original": "Reconcile outbound tables to the trial balance for each run",
+      "all": "Reconcile outbound tables to the trial balance for each run"
+    },
+    {
+      "index": 153,
+      "accepted": "4. What is consistent",
+      "original": "4. What is consistent",
+      "all": "4. What is consistent"
+    },
+    {
+      "index": 154,
+      "accepted": "Tables 613, 614, 615 and parts of the combined sheet list seven principal types, including DEL and PRE. This is useful coverage but not a complete loan measure: align the component definitions with NBS01 and include related PRINCIPALPFT and linked offsets wherever the same loan stock is measured.",
+      "original": "Where principal balance types are listed (Tables 613, 614, 615 and parts of the combined sheet), all seven types are used, including DEL and PRE.",
+      "all": "Where principal balance types are listed (TablesTables 613, 614, 615 and parts of the combined sheet),sheet alllist seven typesprincipal are used,types, including DEL and PRE. This is useful coverage but not a complete loan measure: align the component definitions with NBS01 and include related PRINCIPALPFT and linked offsets wherever the same loan stock is measured."
+    },
+    {
+      "index": 155,
+      "accepted": "Several tables already use the DKB sector split correctly (610/611, 617, 619, 623/624); they can serve as the template for C1 and C2.",
+      "original": "Several tables already use the DKB sector split correctly (610/611, 617, 619, 623/624); they can serve as the template for C1 and C2.",
+      "all": "Several tables already use the DKB sector split correctly (610/611, 617, 619, 623/624); they can serve as the template for C1 and C2."
+    },
+    {
+      "index": 156,
+      "accepted": "5. Next steps",
+      "original": "5. Next steps",
+      "all": "5. Next steps"
+    },
+    {
+      "index": 157,
+      "accepted": "DKB Finance to confirm the sector definition (C1, C2) and the product-to-line assignment for credit facilities (B1).",
+      "original": "DKB Finance to confirm the sector definition (C1, C2) and the product-to-line assignment for credit facilities (B1).",
+      "all": "DKB Finance to confirm the sector definition (C1, C2) and the product-to-line assignment for credit facilities (B1)."
+    },
+    {
+      "index": 158,
+      "accepted": "SL to correct Tables 604/605 and rebuild 608/609, applying the confirmed PRINCIPALPFT and linked-offset rules in the same release. Propagate them to all relevant asset lines, then complete A1 and E1-E3. Exclude category 6050 throughout the deposit selections.",
+      "original": "SL to correct Tables 604/605 and 608/609 first (priorities 1–3), then A1, E1–E3.",
+      "all": "SL to correct Tables 604/605 and 608/609rebuild first608/609, (prioritiesapplying 1–3),the confirmed PRINCIPALPFT and linked-offset rules in the same release. Propagate them to all relevant asset lines, then A1,complete E1–E3.A1 and E1-E3. Exclude category 6050 throughout the deposit selections."
+    },
+    {
+      "index": 159,
+      "accepted": "Rerun NBS001 and reconcile loan components, offsets, deposits and claims on banks to NBS01 and same-date sources. Test every deposit total/breakdown for zero 6050 contribution. Apply the connected changes to LCR & NSFR and reconcile timing/weight differences. Track unmatched links as exceptions.",
+      "original": "Rerun NBS001 and reconcile the credit facilities, deposits and claims-on-banks tables to the NBS01 tables and the trial balance at the same date.",
+      "all": "Rerun NBS001 and reconcile theloan creditcomponents, facilities,offsets, deposits and claims-on-banksclaims tableson banks to the NBS01 tables and thesame-date trialsources. balanceTest atevery deposit total/breakdown for zero 6050 contribution. Apply the sameconnected date.changes to LCR & NSFR and reconcile timing/weight differences. Track unmatched links as exceptions."
+    },
+    {
+      "index": 160,
+      "accepted": "6. Implementation checks",
+      "original": "",
+      "all": "6. Implementation checks"
+    },
+    {
+      "index": 161,
+      "accepted": "Trace every valid loan-related PRINCIPALPFT state to its loan line and SP status. Confirm that the same amount is not also added to accrued income or other assets.",
+      "original": "",
+      "all": "Trace every valid loan-related PRINCIPALPFT state to its loan line and SP status. Confirm that the same amount is not also added to accrued income or other assets."
+    },
+    {
+      "index": 162,
+      "accepted": "Reconcile each 3713 loan to its linked 6050 CREDIT and each jointly mapped ACCCRPROFIT/ACCDEPOSITPFT pair. Verify source signs, unique component use and all unmatched or ambiguous links; do not remove repeated source entries without investigating their identities.",
+      "original": "",
+      "all": "Reconcile each 3713 loan to its linked 6050 CREDIT and each jointly mapped ACCCRPROFIT/ACCDEPOSITPFT pair. Verify source signs, unique component use and all unmatched or ambiguous links; do not remove repeated source entries without investigating their identities."
+    },
+    {
+      "index": 163,
+      "accepted": "Demonstrate zero category-6050 contribution to every deposit total, breakdown and ratio, and to LCR deposit outflows and NSFR deposit funding. Include direct rules, referenced cells and supporting schedules.",
+      "original": "",
+      "all": "Demonstrate zero category-6050 contribution to every deposit total, breakdown and ratio, and to LCR deposit outflows and NSFR deposit funding. Include direct rules, referenced cells and supporting schedules."
+    },
+    {
+      "index": 164,
+      "accepted": "Reconcile the shared components across all three mappings on the same reporting basis. Explain differences caused by report dimensions, scheduled cash flows and regulatory weights. Record the changed cells, old/new rules and test evidence before release.",
+      "original": "",
+      "all": "Reconcile the shared components across all three mappings on the same reporting basis. Explain differences caused by report dimensions, scheduled cash flows and regulatory weights. Record the changed cells, old/new rules and test evidence before release."
+    }
+  ],
+  "comments": [
+    {
+      "id": "0",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:49:12Z",
+      "text": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.",
+      "start": 11,
+      "end": 11,
+      "selected": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.",
+      "context": [
+        {
+          "index": 9,
+          "accepted": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.",
+          "original": "",
+          "all": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice."
+        },
+        {
+          "index": 10,
+          "accepted": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.",
+          "original": "",
+          "all": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount."
+        },
+        {
+          "index": 11,
+          "accepted": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.",
+          "original": "",
+          "all": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences."
+        },
+        {
+          "index": 12,
+          "accepted": "The figures below are retained historical UAT observations. They are not recalculated impacts of these changes. Apply the confirmed treatment above wherever an earlier recommendation would conflict with it.",
+          "original": "",
+          "all": "The figures below are retained historical UAT observations. They are not recalculated impacts of these changes. Apply the confirmed treatment above wherever an earlier recommendation would conflict with it."
+        },
+        {
+          "index": 13,
+          "accepted": "2. Priorities",
+          "original": "2. Priorities",
+          "all": "2. Priorities"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "author": "Andrei Vassjutinski",
+      "date": "2026-10-25T09:08:55Z",
+      "text": "Profit offset pair: at 31 Aug, 6050 carries ACCCRPROFIT (9.7m) and 3713 carries ACCPRINCIPALPFT and the aged PRINCIPALPFT types; neither carries ACCDEPOSITPFT. As written, the ACCCRPROFIT/ACCDEPOSITPFT offset would not trigger. Should it be ACCCRPROFIT (6050) against PRINCIPALPFT (3713)?",
+      "start": 9,
+      "end": 9,
+      "selected": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.",
+      "context": [
+        {
+          "index": 7,
+          "accepted": "Confirmed mapping changes on 22 October 2026",
+          "original": "",
+          "all": "Confirmed mapping changes on 22 October 2026"
+        },
+        {
+          "index": 8,
+          "accepted": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.",
+          "original": "",
+          "all": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts."
+        },
+        {
+          "index": 9,
+          "accepted": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.",
+          "original": "",
+          "all": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice."
+        },
+        {
+          "index": 10,
+          "accepted": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.",
+          "original": "",
+          "all": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount."
+        },
+        {
+          "index": 11,
+          "accepted": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.",
+          "original": "",
+          "all": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Andrei Vassjutinski",
+      "date": "2026-10-25T09:08:55Z",
+      "text": "6050 DEBIT: the rule offsets 3713 with 6050 CREDIT (about 1.9bn). 6050 also holds debit balances (about -571m at 31 Aug), which are excluded from deposits but have no destination. Please confirm their treatment.",
+      "start": 9,
+      "end": 9,
+      "selected": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.",
+      "context": [
+        {
+          "index": 7,
+          "accepted": "Confirmed mapping changes on 22 October 2026",
+          "original": "",
+          "all": "Confirmed mapping changes on 22 October 2026"
+        },
+        {
+          "index": 8,
+          "accepted": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.",
+          "original": "",
+          "all": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts."
+        },
+        {
+          "index": 9,
+          "accepted": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.",
+          "original": "",
+          "all": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice."
+        },
+        {
+          "index": 10,
+          "accepted": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.",
+          "original": "",
+          "all": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount."
+        },
+        {
+          "index": 11,
+          "accepted": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.",
+          "original": "",
+          "all": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "author": "Andrei Vassjutinski",
+      "date": "2026-10-25T09:08:55Z",
+      "text": "Link level: CAL is aggregated by consol key, so a loan/account-level 3713-6050 link needs the arrangement or account link (ECB/AA). SL should confirm the source; otherwise the offset can only be applied at category level.",
+      "start": 9,
+      "end": 9,
+      "selected": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.",
+      "context": [
+        {
+          "index": 7,
+          "accepted": "Confirmed mapping changes on 22 October 2026",
+          "original": "",
+          "all": "Confirmed mapping changes on 22 October 2026"
+        },
+        {
+          "index": 8,
+          "accepted": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.",
+          "original": "",
+          "all": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts."
+        },
+        {
+          "index": 9,
+          "accepted": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.",
+          "original": "",
+          "all": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice."
+        },
+        {
+          "index": 10,
+          "accepted": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.",
+          "original": "",
+          "all": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount."
+        },
+        {
+          "index": 11,
+          "accepted": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.",
+          "original": "",
+          "all": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "author": "Andrei Vassjutinski",
+      "date": "2026-10-25T09:08:55Z",
+      "text": "PRINCIPALPFT with loans: agreed; this also corrects my original B2 fix. The NBS01 review (C1) still puts ACC/DEL/PRE PRINCIPALPFT in Table 19 accrued income; I am updating it to this rule. The GL keeps them in accrued income (1935), so the trial balance bridge needs this item (about 1.05bn at 31 Aug).",
+      "start": 8,
+      "end": 8,
+      "selected": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.",
+      "context": [
+        {
+          "index": 6,
+          "accepted": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version.",
+          "original": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version.",
+          "all": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version."
+        },
+        {
+          "index": 7,
+          "accepted": "Confirmed mapping changes on 22 October 2026",
+          "original": "",
+          "all": "Confirmed mapping changes on 22 October 2026"
+        },
+        {
+          "index": 8,
+          "accepted": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.",
+          "original": "",
+          "all": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts."
+        },
+        {
+          "index": 9,
+          "accepted": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.",
+          "original": "",
+          "all": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice."
+        },
+        {
+          "index": 10,
+          "accepted": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.",
+          "original": "",
+          "all": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "author": "Andrei Vassjutinski",
+      "date": "2026-10-25T09:08:55Z",
+      "text": "Explicit list needed: RECPRINCIPALPFT is not present in CAL at 31 Aug, and SL cannot implement \"other locally defined states\". Could we list the exact balance types?",
+      "start": 8,
+      "end": 8,
+      "selected": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.",
+      "context": [
+        {
+          "index": 6,
+          "accepted": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version.",
+          "original": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version.",
+          "all": "Caveat. Findings are based on the rules as written. Amounts are indicative UAT figures and show the size of the balances a rule does or does not reach; they are not reconciled report values. Cell and row references refer to the reviewed workbook version."
+        },
+        {
+          "index": 7,
+          "accepted": "Confirmed mapping changes on 22 October 2026",
+          "original": "",
+          "all": "Confirmed mapping changes on 22 October 2026"
+        },
+        {
+          "index": 8,
+          "accepted": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.",
+          "original": "",
+          "all": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts."
+        },
+        {
+          "index": 9,
+          "accepted": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.",
+          "original": "",
+          "all": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice."
+        },
+        {
+          "index": 10,
+          "accepted": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.",
+          "original": "",
+          "all": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount."
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "author": "Andrei Vassjutinski",
+      "date": "2026-10-25T09:08:56Z",
+      "text": "PDOACCOUNT: \"define separately\" does not say where it goes. Should it be part of the loan stock (as in the seven principal types) even though OUTSTANDING excludes it?",
+      "start": 74,
+      "end": 74,
+      "selected": "ApplyUse the NBS01 loan-stock components, including its 12-code OUTSTANDING group, plus related PRINCIPALPFT and the linked offsets in B5. Define PDOACCOUNT separately. Preserve SP status, maturity and sector dimensions. Exclude unrelated fees/commitments and duplicate other-asset contributions; seven principal types (CUR,alone GRC,are DUE,not PDO,the NAB,complete DEL,loan PRE ACCOUNT), as in Tables 613 and 614measure.",
+      "context": [
+        {
+          "index": 72,
+          "accepted": "608/609 Islamic finance rows (CATEGORY and SECTOR only)",
+          "original": "608/609 Islamic finance rows (CATEGORY and SECTOR only)",
+          "all": "608/609 Islamic finance rows (CATEGORY and SECTOR only)"
+        },
+        {
+          "index": 73,
+          "accepted": "An unrestricted selection can include commitments, unrelated fees and duplicated components; required loan-related PRINCIPALPFT must be retained",
+          "original": "All balance types can be picked up, including profit, fees and commitments",
+          "all": "AllAn balanceunrestricted typesselection can beinclude pickedcommitments, up, including profit,unrelated fees and commitmentsduplicated components; required loan-related PRINCIPALPFT must be retained"
+        },
+        {
+          "index": 74,
+          "accepted": "Use the NBS01 loan-stock components, including its 12-code OUTSTANDING group, plus related PRINCIPALPFT and the linked offsets in B5. Define PDOACCOUNT separately. Preserve SP status, maturity and sector dimensions. Exclude unrelated fees/commitments and duplicate other-asset contributions; seven principal types alone are not the complete loan measure.",
+          "original": "Apply the seven principal types (CUR, GRC, DUE, PDO, NAB, DEL, PRE ACCOUNT), as in Tables 613 and 614",
+          "all": "ApplyUse the NBS01 loan-stock components, including its 12-code OUTSTANDING group, plus related PRINCIPALPFT and the linked offsets in B5. Define PDOACCOUNT separately. Preserve SP status, maturity and sector dimensions. Exclude unrelated fees/commitments and duplicate other-asset contributions; seven principal types (CUR,alone GRC,are DUE,not PDO,the NAB,complete DEL,loan PRE ACCOUNT), as in Tables 613 and 614measure."
+        },
+        {
+          "index": 75,
+          "accepted": "B4",
+          "original": "B4",
+          "all": "B4"
+        },
+        {
+          "index": 76,
+          "accepted": "Overdraft lines have no rule",
+          "original": "Overdraft lines have no rule",
+          "all": "Overdraft lines have no rule"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "author": "Andrei Vassjutinski",
+      "date": "2026-10-25T09:08:56Z",
+      "text": "Sector definitions: on 21 Oct we agreed retail first, then industry codes for non-retail (441 for non-bank FIs). C1 and C2 still recommend sector codes (2004/2005); should they be rewritten on the industry-code basis?",
+      "start": 95,
+      "end": 95,
+      "selected": "Public = 2005; Non-bank FI = 2004 (excluding banks); Private = all other customer sectors",
+      "context": [
+        {
+          "index": 93,
+          "accepted": "Non-bank = 2004; Public = 1000–1999; Private = 4000–4004",
+          "original": "Non-bank = 2004; Public = 1000–1999; Private = 4000–4004",
+          "all": "Non-bank = 2004; Public = 1000–1999; Private = 4000–4004"
+        },
+        {
+          "index": 94,
+          "accepted": "Retail reported as public sector; corporate (2000–2003, about 27.8bn), government (2005, about 21.2bn) and other sectors (about 6.4bn) excluded (31 Aug principal)",
+          "original": "Retail reported as public sector; corporate (2000–2003, about 27.8bn), government (2005, about 21.2bn) and other sectors (about 6.4bn) excluded (31 Aug principal)",
+          "all": "Retail reported as public sector; corporate (2000–2003, about 27.8bn), government (2005, about 21.2bn) and other sectors (about 6.4bn) excluded (31 Aug principal)"
+        },
+        {
+          "index": 95,
+          "accepted": "Public = 2005; Non-bank FI = 2004 (excluding banks); Private = all other customer sectors",
+          "original": "Public = 2005; Non-bank FI = 2004 (excluding banks); Private = all other customer sectors",
+          "all": "Public = 2005; Non-bank FI = 2004 (excluding banks); Private = all other customer sectors"
+        },
+        {
+          "index": 96,
+          "accepted": "C2",
+          "original": "C2",
+          "all": "C2"
+        },
+        {
+          "index": 97,
+          "accepted": "Sector definitions differ between NBS001 tables",
+          "original": "Sector definitions differ between NBS001 tables",
+          "all": "Sector definitions differ between NBS001 tables"
+        }
+      ]
+    }
+  ],
+  "revisions": [
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:20:07Z",
+      "text": " Revised 22 October 2026.",
+      "paragraph": 1
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:21:03Z",
+      "text": "",
+      "paragraph": 7
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:21:31Z",
+      "text": "Confirmed mapping changes on 22 October 2026",
+      "paragraph": 7
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:21:59Z",
+      "text": "",
+      "paragraph": 8
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:22:27Z",
+      "text": "PRINCIPALPFT: Report related balances with the associated loans, in the same product and customer classification. Cover ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DUEPRINCIPALPFT, NABPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT and other locally defined states. Preserve SP status and its loan treatment; do not rename SP as ordinary profit. Remove separate accrued-income/other-asset contributions for the same amounts.",
+      "paragraph": 8
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:22:54Z",
+      "text": "",
+      "paragraph": 9
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:23:22Z",
+      "text": "Category 3713: Offset the loan balance with the linked category 6050 CREDIT balance. Where ACCCRPROFIT and ACCDEPOSITPFT are mapped together, offset the matched pair. Combine the verified signed components once at the linked loan/account level; do not net unrelated accounts or subtract an already negative credit twice.",
+      "paragraph": 9
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:23:50Z",
+      "text": "",
+      "paragraph": 10
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:24:18Z",
+      "text": "Category 6050: Exclude it from all deposit reporting, including totals, breakdowns, deposit ratios, LCR deposit outflows and NSFR deposit funding. Trace linked offsets to the related loan. Flag missing or ambiguous links for investigation; do not put them back into deposits or force a balancing amount.",
+      "paragraph": 10
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:24:46Z",
+      "text": "",
+      "paragraph": 11
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:25:14Z",
+      "text": "All changes proposed in NBS01 must be correctly reflected in all three interconnected mappings: NBS01, NBS001 Additional Tables, and LCR & NSFR (Solo). Apply the same underlying balance components, linked offsets and category exclusions wherever that population is used, including referenced cells, direct CAL/ECB rules, supporting schedules and totals. Preserve each report's required dimensions, cash-flow timing and weights, and reconcile the differences.",
+      "paragraph": 11
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:25:42Z",
+      "text": "",
+      "paragraph": 12
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:26:09Z",
+      "text": "The figures below are retained historical UAT observations. They are not recalculated impacts of these changes. Apply the confirmed treatment above wherever an earlier recommendation would conflict with it.",
+      "paragraph": 12
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:29:25Z",
+      "text": "profit",
+      "paragraph": 19
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:29:52Z",
+      "text": "the",
+      "paragraph": 19
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:30:20Z",
+      "text": "balances",
+      "paragraph": 19
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:30:48Z",
+      "text": "loan",
+      "paragraph": 19
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:31:16Z",
+      "text": "are",
+      "paragraph": 19
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:31:44Z",
+      "text": "component",
+      "paragraph": 19
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:32:12Z",
+      "text": "reported",
+      "paragraph": 19
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:32:40Z",
+      "text": "and",
+      "paragraph": 19
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:33:07Z",
+      "text": "as",
+      "paragraph": 19
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:33:35Z",
+      "text": "product",
+      "paragraph": 19
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:34:03Z",
+      "text": "loans",
+      "paragraph": 19
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:34:31Z",
+      "text": "selections need rebuilding",
+      "paragraph": 19
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:36:22Z",
+      "text": "",
+      "paragraph": null
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:36:50Z",
+      "text": "5",
+      "paragraph": 29
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:37:18Z",
+      "text": "Loan component and linked-offset alignment with NBS01 (B2, B3, B5, E1)",
+      "paragraph": 30
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:37:46Z",
+      "text": "Include related PRINCIPALPFT; net linked 3713/6050 and paired profit; exclude 6050 from deposits",
+      "paragraph": 31
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:42:25Z",
+      "text": " the duplicated",
+      "paragraph": 43
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:42:53Z",
+      "text": "from",
+      "paragraph": 43
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:43:20Z",
+      "text": "asset contribution and keep",
+      "paragraph": 43
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:43:48Z",
+      "text": "asset",
+      "paragraph": 43
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:44:16Z",
+      "text": "defined",
+      "paragraph": 43
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:44:44Z",
+      "text": "lines;",
+      "paragraph": 43
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:45:12Z",
+      "text": "deferred-income",
+      "paragraph": 43
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:45:40Z",
+      "text": "keep",
+      "paragraph": 43
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:46:08Z",
+      "text": "treatment,",
+      "paragraph": 43
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:46:35Z",
+      "text": "it",
+      "paragraph": 43
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:47:03Z",
+      "text": "consistent",
+      "paragraph": 43
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:47:31Z",
+      "text": "in",
+      "paragraph": 43
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:47:59Z",
+      "text": "with",
+      "paragraph": 43
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:48:27Z",
+      "text": "deferred",
+      "paragraph": 43
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:48:55Z",
+      "text": "NBS01",
+      "paragraph": 43
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:49:23Z",
+      "text": "interest",
+      "paragraph": 43
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:49:51Z",
+      "text": "A1.",
+      "paragraph": 43
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:50:18Z",
+      "text": "/",
+      "paragraph": 43
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:50:46Z",
+      "text": "This",
+      "paragraph": 43
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:51:14Z",
+      "text": "income",
+      "paragraph": 43
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:51:42Z",
+      "text": "does not remove PRINCIPALPFT: report loan-related PRINCIPALPFT with the associated loan and reconcile signed components.",
+      "paragraph": 43
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:53:06Z",
+      "text": "The same ",
+      "paragraph": 52
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:53:33Z",
+      "text": "profit",
+      "paragraph": 52
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:54:01Z",
+      "text": "balance,",
+      "paragraph": 52
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:54:29Z",
+      "text": "balances",
+      "paragraph": 52
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:54:57Z",
+      "text": "including related PRINCIPALPFT,",
+      "paragraph": 52
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:55:25Z",
+      "text": "counted",
+      "paragraph": 52
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:55:53Z",
+      "text": "selected",
+      "paragraph": 52
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:56:21Z",
+      "text": "twice",
+      "paragraph": 52
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:56:48Z",
+      "text": "in both product lines",
+      "paragraph": 52
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:57:16Z",
+      "text": "Resolve",
+      "paragraph": 53
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:57:44Z",
+      "text": "Make the loan/product populations mutually exclusive (B1-B3). Keep related PRINCIPALPFT",
+      "paragraph": 53
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:58:12Z",
+      "text": "B2",
+      "paragraph": 53
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:58:40Z",
+      "text": "its assigned loan product",
+      "paragraph": 53
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:59:08Z",
+      "text": "B3",
+      "paragraph": 53
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T14:59:36Z",
+      "text": "apply linked offsets once.",
+      "paragraph": 53
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:03:46Z",
+      "text": "Map the actual",
+      "paragraph": 64
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:04:14Z",
+      "text": "Align",
+      "paragraph": 64
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:04:42Z",
+      "text": "to the lines (as agreed for",
+      "paragraph": 64
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:05:10Z",
+      "text": "with",
+      "paragraph": 64
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:05:38Z",
+      "text": "8)",
+      "paragraph": 64
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:06:06Z",
+      "text": "8,",
+      "paragraph": 64
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:06:34Z",
+      "text": "and",
+      "paragraph": 64
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:07:01Z",
+      "text": "including",
+      "paragraph": 64
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:07:29Z",
+      "text": "fill",
+      "paragraph": 64
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:07:57Z",
+      "text": "3713",
+      "paragraph": 64
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:08:25Z",
+      "text": "\"06",
+      "paragraph": 64
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:08:53Z",
+      "text": "in",
+      "paragraph": 64
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:09:21Z",
+      "text": "Others\"",
+      "paragraph": 64
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:09:49Z",
+      "text": "Murabaha. Fill Others",
+      "paragraph": 64
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:10:17Z",
+      "text": "range",
+      "paragraph": 64
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:10:44Z",
+      "text": "eligible population without overlap. Carry the related PRINCIPALPFT with each loan and apply the linked 3713/6050 CREDIT and paired profit offsets (B5).",
+      "paragraph": 64
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:11:40Z",
+      "text": "\"01",
+      "paragraph": 66
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:12:08Z",
+      "text": "The",
+      "paragraph": 66
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:12:36Z",
+      "text": "Loans\"",
+      "paragraph": 66
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:13:04Z",
+      "text": "generic",
+      "paragraph": 66
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:13:32Z",
+      "text": "uses",
+      "paragraph": 66
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:13:59Z",
+      "text": "Loans line mixes product selection and profit components, overlapping",
+      "paragraph": 66
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:14:27Z",
+      "text": "accrued-income",
+      "paragraph": 66
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:14:55Z",
+      "text": "Islamic",
+      "paragraph": 66
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:15:23Z",
+      "text": "balance",
+      "paragraph": 66
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:15:51Z",
+      "text": "finance",
+      "paragraph": 66
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:16:19Z",
+      "text": "types",
+      "paragraph": 66
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:16:47Z",
+      "text": "lines",
+      "paragraph": 66
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:17:14Z",
+      "text": "Profit",
+      "paragraph": 68
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:17:42Z",
+      "text": "Incomplete",
+      "paragraph": 68
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:18:10Z",
+      "text": "balances",
+      "paragraph": 68
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:18:38Z",
+      "text": "loan",
+      "paragraph": 68
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:19:06Z",
+      "text": "reported",
+      "paragraph": 68
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:19:34Z",
+      "text": "selection",
+      "paragraph": 68
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:20:02Z",
+      "text": "as",
+      "paragraph": 68
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:20:30Z",
+      "text": "and",
+      "paragraph": 68
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:20:57Z",
+      "text": "loans",
+      "paragraph": 68
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:21:25Z",
+      "text": "possible duplication; loan-related PRINCIPALPFT itself belongs with the loan",
+      "paragraph": 68
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:21:53Z",
+      "text": "Remove",
+      "paragraph": 69
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:22:21Z",
+      "text": "Allocate loans to mutually exclusive NBS01-aligned product lines. Keep associated PRINCIPALPFT with each loan, including DUE/GRC/NAB and other valid states; remove its separate other-asset contribution. Resolve deferred profit under A1 and NBS01 B1. Do not delete all profit components or assume",
+      "paragraph": 69
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:22:49Z",
+      "text": "profit types; leave the",
+      "paragraph": 69
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:23:17Z",
+      "text": "loan",
+      "paragraph": 69
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:23:45Z",
+      "text": "empty",
+      "paragraph": 69
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:24:12Z",
+      "text": "must",
+      "paragraph": 69
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:24:40Z",
+      "text": "unless",
+      "paragraph": 69
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:25:08Z",
+      "text": "be",
+      "paragraph": 69
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:25:36Z",
+      "text": "DKB has conventional loans",
+      "paragraph": 69
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:26:04Z",
+      "text": "empty.",
+      "paragraph": 69
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:27:00Z",
+      "text": "All",
+      "paragraph": 73
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:27:27Z",
+      "text": "An",
+      "paragraph": 73
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:27:55Z",
+      "text": "balance",
+      "paragraph": 73
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:28:23Z",
+      "text": "unrestricted",
+      "paragraph": 73
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:28:51Z",
+      "text": "types",
+      "paragraph": 73
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:29:19Z",
+      "text": "selection",
+      "paragraph": 73
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:29:47Z",
+      "text": "be",
+      "paragraph": 73
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:30:15Z",
+      "text": "include",
+      "paragraph": 73
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:30:43Z",
+      "text": "picked",
+      "paragraph": 73
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:31:10Z",
+      "text": "commitments,",
+      "paragraph": 73
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:31:38Z",
+      "text": "up, including profit,",
+      "paragraph": 73
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:32:06Z",
+      "text": "unrelated",
+      "paragraph": 73
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:32:34Z",
+      "text": "commitments",
+      "paragraph": 73
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:33:02Z",
+      "text": "duplicated components; required loan-related PRINCIPALPFT must be retained",
+      "paragraph": 73
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:33:30Z",
+      "text": "Apply",
+      "paragraph": 74
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:33:58Z",
+      "text": "Use",
+      "paragraph": 74
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:34:25Z",
+      "text": " NBS01 loan-stock components, including its 12-code OUTSTANDING group, plus related PRINCIPALPFT and the linked offsets in B5. Define PDOACCOUNT separately. Preserve SP status, maturity and sector dimensions. Exclude unrelated fees/commitments and duplicate other-asset contributions;",
+      "paragraph": 74
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:34:53Z",
+      "text": "(CUR,",
+      "paragraph": 74
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:35:21Z",
+      "text": "alone",
+      "paragraph": 74
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:35:49Z",
+      "text": "GRC,",
+      "paragraph": 74
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:36:17Z",
+      "text": "are",
+      "paragraph": 74
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:36:45Z",
+      "text": "DUE,",
+      "paragraph": 74
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:37:13Z",
+      "text": "not",
+      "paragraph": 74
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:37:40Z",
+      "text": "PDO,",
+      "paragraph": 74
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:38:08Z",
+      "text": "the",
+      "paragraph": 74
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:38:36Z",
+      "text": "NAB,",
+      "paragraph": 74
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:39:04Z",
+      "text": "complete",
+      "paragraph": 74
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:39:32Z",
+      "text": "DEL,",
+      "paragraph": 74
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:40:00Z",
+      "text": "loan",
+      "paragraph": 74
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:40:28Z",
+      "text": "PRE ACCOUNT), as in Tables 613 and 614",
+      "paragraph": 74
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:40:56Z",
+      "text": "measure.",
+      "paragraph": 74
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:41:51Z",
+      "text": "",
+      "paragraph": null
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:42:19Z",
+      "text": "B5",
+      "paragraph": 80
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:42:47Z",
+      "text": "Category 3713 requires linked 6050 CREDIT and paired profit offsets",
+      "paragraph": 81
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:43:15Z",
+      "text": "All 3713 loan-stock selections, Tables 608/609, 613-615 and 625; other asset/profit lines using the same population",
+      "paragraph": 82
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:43:43Z",
+      "text": "Gross loan/offset amounts or duplicated profit can distort loan totals and the credit/deposit ratio",
+      "paragraph": 83
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:44:11Z",
+      "text": "Offset each 3713 loan with its linked 6050 CREDIT. Offset ACCCRPROFIT against matched ACCDEPOSITPFT wherever mapped together. Use verified signed components once, retain the loan dimensions and flag unmatched links. Remove duplicated profit from other assets and exclude all 6050 from deposits.",
+      "paragraph": 84
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:48:49Z",
+      "text": "all",
+      "paragraph": 100
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:49:17Z",
+      "text": "NBS001.",
+      "paragraph": 100
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:49:45Z",
+      "text": "NBS001",
+      "paragraph": 100
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:50:13Z",
+      "text": "Attribute",
+      "paragraph": 100
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:50:41Z",
+      "text": "tables",
+      "paragraph": 100
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:51:09Z",
+      "text": "linked 6050 offsets and related profit to the associated 3713 loan sector so the net loan is not split into a deposit sector.",
+      "paragraph": 100
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T15:59:58Z",
+      "text": "balance",
+      "paragraph": 129
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:00:26Z",
+      "text": "selections",
+      "paragraph": 129
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:00:54Z",
+      "text": "types",
+      "paragraph": 129
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:01:22Z",
+      "text": "omit",
+      "paragraph": 129
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:01:49Z",
+      "text": "include",
+      "paragraph": 129
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:02:17Z",
+      "text": "matured",
+      "paragraph": 129
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:02:45Z",
+      "text": "a non-existent type",
+      "paragraph": 129
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:03:13Z",
+      "text": "balances",
+      "paragraph": 129
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:03:41Z",
+      "text": "miss",
+      "paragraph": 129
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:04:09Z",
+      "text": "do",
+      "paragraph": 129
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:04:37Z",
+      "text": "matured",
+      "paragraph": 129
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:05:04Z",
+      "text": "not",
+      "paragraph": 129
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:05:32Z",
+      "text": "deposits",
+      "paragraph": 129
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:06:00Z",
+      "text": "explicitly exclude category 6050",
+      "paragraph": 129
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:06:28Z",
+      "text": "610/611",
+      "paragraph": 130
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:06:56Z",
+      "text": "Tables 610/611, 625",
+      "paragraph": 130
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:07:24Z",
+      "text": "625:",
+      "paragraph": 130
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:07:52Z",
+      "text": "every",
+      "paragraph": 130
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:08:19Z",
+      "text": "CREDIT,",
+      "paragraph": 130
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:08:47Z",
+      "text": "deposit",
+      "paragraph": 130
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:09:15Z",
+      "text": "CURACCOUNT,",
+      "paragraph": 130
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:09:43Z",
+      "text": "total/breakdown",
+      "paragraph": 130
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:10:11Z",
+      "text": "CURBALANCE",
+      "paragraph": 130
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:10:39Z",
+      "text": "or dependent deposit selection",
+      "paragraph": 130
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:11:07Z",
+      "text": "does",
+      "paragraph": 131
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:11:35Z",
+      "text": "is",
+      "paragraph": 131
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:12:02Z",
+      "text": "not",
+      "paragraph": 131
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:12:30Z",
+      "text": "absent",
+      "paragraph": 131
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:12:58Z",
+      "text": "exist",
+      "paragraph": 131
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:13:26Z",
+      "text": "from",
+      "paragraph": 131
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:13:54Z",
+      "text": "in",
+      "paragraph": 131
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:14:22Z",
+      "text": "the sampled",
+      "paragraph": 131
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:14:50Z",
+      "text": "not",
+      "paragraph": 131
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:15:17Z",
+      "text": "is",
+      "paragraph": 131
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:15:45Z",
+      "text": "selected",
+      "paragraph": 131
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:16:13Z",
+      "text": "missed. Category 6050 would also be misreported if admitted as a deposit.",
+      "paragraph": 131
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:16:41Z",
+      "text": "Use",
+      "paragraph": 132
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:17:09Z",
+      "text": "Exclude CATEGORY = 6050 before applying",
+      "paragraph": 132
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:17:37Z",
+      "text": " to other eligible deposits. Check CURBALANCE against the versioned dictionary before replacing it. Apply the exclusion to totals, maturity/sector splits and the Table 625 deposit denominator; no 6050 deposit fallback for unresolved links. Apply the matched profit offset wherever the pair is mapped together.",
+      "paragraph": 132
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:18:32Z",
+      "text": "Map the",
+      "paragraph": 137
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:19:00Z",
+      "text": "Build",
+      "paragraph": 137
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:19:28Z",
+      "text": "facility side, consistent with",
+      "paragraph": 137
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:19:56Z",
+      "text": "from",
+      "paragraph": 137
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:20:24Z",
+      "text": " with related PRINCIPALPFT and linked 3713/6050 and profit offsets. Build the deposit denominator from eligible deposits excluding all 6050. Trace each component once; do not deduct the same offset again when deriving the ratio.",
+      "paragraph": 137
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:22:43Z",
+      "text": "Where principal balance types are listed (Tables",
+      "paragraph": 154
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:23:11Z",
+      "text": "Tables",
+      "paragraph": 154
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:23:39Z",
+      "text": "sheet),",
+      "paragraph": 154
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:24:07Z",
+      "text": "sheet",
+      "paragraph": 154
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:24:35Z",
+      "text": "all",
+      "paragraph": 154
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:25:03Z",
+      "text": "list",
+      "paragraph": 154
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:25:30Z",
+      "text": "types",
+      "paragraph": 154
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:25:58Z",
+      "text": "principal",
+      "paragraph": 154
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:26:26Z",
+      "text": "are used,",
+      "paragraph": 154
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:26:54Z",
+      "text": "types,",
+      "paragraph": 154
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:27:22Z",
+      "text": " This is useful coverage but not a complete loan measure: align the component definitions with NBS01 and include related PRINCIPALPFT and linked offsets wherever the same loan stock is measured.",
+      "paragraph": 154
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:28:18Z",
+      "text": "608/609",
+      "paragraph": 158
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:28:45Z",
+      "text": "rebuild",
+      "paragraph": 158
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:29:13Z",
+      "text": "first",
+      "paragraph": 158
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:29:41Z",
+      "text": "608/609,",
+      "paragraph": 158
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:30:09Z",
+      "text": "(priorities",
+      "paragraph": 158
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:30:37Z",
+      "text": "applying",
+      "paragraph": 158
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:31:05Z",
+      "text": "1–3),",
+      "paragraph": 158
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:31:33Z",
+      "text": "the confirmed PRINCIPALPFT and linked-offset rules in the same release. Propagate them to all relevant asset lines,",
+      "paragraph": 158
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:32:01Z",
+      "text": "A1,",
+      "paragraph": 158
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:32:28Z",
+      "text": "complete",
+      "paragraph": 158
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:32:56Z",
+      "text": "E1–E3.",
+      "paragraph": 158
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:33:24Z",
+      "text": "A1 and E1-E3. Exclude category 6050 throughout the deposit selections.",
+      "paragraph": 158
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:33:52Z",
+      "text": "the",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:34:20Z",
+      "text": "loan",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:34:48Z",
+      "text": "credit",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:35:16Z",
+      "text": "components,",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:35:43Z",
+      "text": "facilities,",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:36:11Z",
+      "text": "offsets,",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:36:39Z",
+      "text": "claims-on-banks",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:37:07Z",
+      "text": "claims",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:37:35Z",
+      "text": "tables",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:38:03Z",
+      "text": "on banks",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:38:31Z",
+      "text": "the ",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:38:58Z",
+      "text": " tables",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:39:26Z",
+      "text": "the",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:39:54Z",
+      "text": "same-date",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:40:22Z",
+      "text": "trial",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:40:50Z",
+      "text": "sources.",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:41:18Z",
+      "text": "balance",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:41:46Z",
+      "text": "Test",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:42:14Z",
+      "text": "at",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:42:41Z",
+      "text": "every deposit total/breakdown for zero 6050 contribution. Apply",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:43:09Z",
+      "text": "same",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:43:37Z",
+      "text": "connected",
+      "paragraph": 159
+    },
+    {
+      "type": "del",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:44:05Z",
+      "text": "date.",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:44:33Z",
+      "text": "changes to LCR & NSFR and reconcile timing/weight differences. Track unmatched links as exceptions.",
+      "paragraph": 159
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:45:01Z",
+      "text": "",
+      "paragraph": 160
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:45:29Z",
+      "text": "6. Implementation checks",
+      "paragraph": 160
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:45:56Z",
+      "text": "",
+      "paragraph": 161
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:46:24Z",
+      "text": "Trace every valid loan-related PRINCIPALPFT state to its loan line and SP status. Confirm that the same amount is not also added to accrued income or other assets.",
+      "paragraph": 161
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:46:52Z",
+      "text": "",
+      "paragraph": 162
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:47:20Z",
+      "text": "Reconcile each 3713 loan to its linked 6050 CREDIT and each jointly mapped ACCCRPROFIT/ACCDEPOSITPFT pair. Verify source signs, unique component use and all unmatched or ambiguous links; do not remove repeated source entries without investigating their identities.",
+      "paragraph": 162
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:47:48Z",
+      "text": "",
+      "paragraph": 163
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:48:16Z",
+      "text": "Demonstrate zero category-6050 contribution to every deposit total, breakdown and ratio, and to LCR deposit outflows and NSFR deposit funding. Include direct rules, referenced cells and supporting schedules.",
+      "paragraph": 163
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:48:44Z",
+      "text": "",
+      "paragraph": 164
+    },
+    {
+      "type": "ins",
+      "author": "Christopher Joseph",
+      "date": "2026-10-22T16:49:12Z",
+      "text": "Reconcile the shared components across all three mappings on the same reporting basis. Explain differences caused by report dimensions, scheduled cash flows and regulatory weights. Record the changed cells, old/new rules and test evidence before release.",
+      "paragraph": 164
+    }
+  ],
+  "extra": {
+    "word/commentsExtended.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><w15:commentsEx xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:oel=\"http://schemas.microsoft.com/office/2019/extlst\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16du=\"http://schemas.microsoft.com/office/word/2023/wordml/word16du\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16sdtfl=\"http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" mc:Ignorable=\"w14 w15 w16se w16cid w16 w16cex w16sdtdh w16sdtfl w16du wp14\">\n<w15:commentEx w15:paraId=\"4BEFF7B3\" w15:done=\"0\"/><w15:commentEx w15:paraId=\"363B9288\" w15:done=\"0\"/><w15:commentEx w15:paraId=\"6A98BA8D\" w15:done=\"0\"/><w15:commentEx w15:paraId=\"3AA54452\" w15:done=\"0\"/><w15:commentEx w15:paraId=\"08FEB873\" w15:done=\"0\"/><w15:commentEx w15:paraId=\"4249073B\" w15:done=\"0\"/><w15:commentEx w15:paraId=\"05F22C0D\" w15:done=\"0\"/></w15:commentsEx>",
+    "word/commentsExtensible.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><w16cex:commentsExtensible xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:oel=\"http://schemas.microsoft.com/office/2019/extlst\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16du=\"http://schemas.microsoft.com/office/word/2023/wordml/word16du\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16sdtfl=\"http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:cr=\"http://schemas.microsoft.com/office/comments/2020/reactions\" mc:Ignorable=\"w14 w15 w16se w16cid w16 w16cex w16sdtdh w16sdtfl cr w16du wp14\">\n<w16cex:commentExtensible w16cex:durableId=\"682D5D8E\" w16cex:dateUtc=\"2026-10-25T09:08:55Z\"/><w16cex:commentExtensible w16cex:durableId=\"09F77E1A\" w16cex:dateUtc=\"2026-10-25T09:08:55Z\"/><w16cex:commentExtensible w16cex:durableId=\"0C1A4439\" w16cex:dateUtc=\"2026-10-25T09:08:55Z\"/><w16cex:commentExtensible w16cex:durableId=\"0FF191E1\" w16cex:dateUtc=\"2026-10-25T09:08:55Z\"/><w16cex:commentExtensible w16cex:durableId=\"689E6E53\" w16cex:dateUtc=\"2026-10-25T09:08:55Z\"/><w16cex:commentExtensible w16cex:durableId=\"5735F2F4\" w16cex:dateUtc=\"2026-10-25T09:08:56Z\"/><w16cex:commentExtensible w16cex:durableId=\"1FA6A17D\" w16cex:dateUtc=\"2026-10-25T09:08:56Z\"/></w16cex:commentsExtensible>",
+    "word/commentsIds.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><w16cid:commentsIds xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:oel=\"http://schemas.microsoft.com/office/2019/extlst\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16du=\"http://schemas.microsoft.com/office/word/2023/wordml/word16du\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16sdtfl=\"http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" mc:Ignorable=\"w14 w15 w16se w16cid w16 w16cex w16sdtdh w16sdtfl w16du wp14\">\n<w16cid:commentId w16cid:paraId=\"4BEFF7B3\" w16cid:durableId=\"682D5D8E\"/><w16cid:commentId w16cid:paraId=\"363B9288\" w16cid:durableId=\"09F77E1A\"/><w16cid:commentId w16cid:paraId=\"6A98BA8D\" w16cid:durableId=\"0C1A4439\"/><w16cid:commentId w16cid:paraId=\"3AA54452\" w16cid:durableId=\"0FF191E1\"/><w16cid:commentId w16cid:paraId=\"08FEB873\" w16cid:durableId=\"689E6E53\"/><w16cid:commentId w16cid:paraId=\"4249073B\" w16cid:durableId=\"5735F2F4\"/><w16cid:commentId w16cid:paraId=\"05F22C0D\" w16cid:durableId=\"1FA6A17D\"/></w16cid:commentsIds>"
+  },
+  "props": "<?xml version='1.0' encoding='UTF-8' standalone='yes'?>\n<cp:coreProperties xmlns:cp=\"http://schemas.openxmlformats.org/package/2006/metadata/core-properties\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:dcterms=\"http://purl.org/dc/terms/\" xmlns:dcmitype=\"http://purl.org/dc/dcmitype/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><dc:creator>Christopher Joseph</dc:creator><cp:lastModifiedBy>Christopher Joseph</cp:lastModifiedBy><cp:revision>3</cp:revision><dcterms:created xsi:type=\"dcterms:W3CDTF\">2026-10-21T07:57:00Z</dcterms:created><dcterms:modified xsi:type=\"dcterms:W3CDTF\">2026-10-22T16:49:12Z</dcterms:modified></cp:coreProperties>"
+}

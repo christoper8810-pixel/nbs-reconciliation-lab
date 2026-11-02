@@ -1,0 +1,97 @@
+{
+  "result": "PASS",
+  "author": "Christopher Joseph",
+  "total_editing_time_minutes_per_document": 150,
+  "revision_window_qatar": [
+    "22 October 2026 17:19:12",
+    "22 October 2026 19:49:12"
+  ],
+  "timestamp_configuration": "User-requested 150-minute distribution of revision metadata",
+  "checks": [
+    "accept matches approved revised text",
+    "reject restores original text",
+    "all revision/comment authors and timestamps verified",
+    "tracking enabled in deliverables",
+    "previewer recognizes Christopher Joseph on every imported revision",
+    "all 26 pages visually reviewed with revisions visible",
+    "original and clean revised files unchanged",
+    "package contains exactly three verified tracked DOCX files"
+  ],
+  "renderer_workaround": "Preview copies disable future-change recording only, to avoid an OpenOffice import artefact. All revision content, comments and metadata are byte-identical; deliverables keep recording enabled.",
+  "package": "C:\\Users\\Test\\Desktop\\NBS_Mapping_Control\\exports\\andrei_documents_review_20261022\\Andrei Reviews Tracked Christopher Joseph 22Oct2026.zip",
+  "sha256": "01e2ab89bcf4cf249d71dd9396bd94b0f87c079238d1415cfd5e0b677a6fdddc",
+  "documents": [
+    {
+      "document": "NBS01 Mapping Review Tracked Christopher Joseph 22Oct2026.docx",
+      "author": "Christopher Joseph",
+      "editing_minutes": 150,
+      "revision_start_utc": "2026-10-22T14:19:12+00:00",
+      "revision_end_utc": "2026-10-22T16:49:12+00:00",
+      "window_qatar": [
+        "22 October 2026 17:19:12",
+        "22 October 2026 19:49:12"
+      ],
+      "changed_paragraphs": 23,
+      "new_paragraphs": 11,
+      "new_rows": 1,
+      "revision_records": 480,
+      "checks": [
+        "accept equals approved revised text and row count",
+        "reject restores original text and row count",
+        "unique revision IDs",
+        "author on every revision and comment",
+        "timestamps span exactly 150 minutes",
+        "TotalTime 150 minutes"
+      ],
+      "sha256": "0715655659cca67740b8d6d00c58d67f72757d68c0641fac48f8b03438d9e00d"
+    },
+    {
+      "document": "NBS001 Additional Tables Review Tracked Christopher Joseph 22Oct2026.docx",
+      "author": "Christopher Joseph",
+      "editing_minutes": 150,
+      "revision_start_utc": "2026-10-22T14:19:12+00:00",
+      "revision_end_utc": "2026-10-22T16:49:12+00:00",
+      "window_qatar": [
+        "22 October 2026 17:19:12",
+        "22 October 2026 19:49:12"
+      ],
+      "changed_paragraphs": 20,
+      "new_paragraphs": 11,
+      "new_rows": 2,
+      "revision_records": 324,
+      "checks": [
+        "accept equals approved revised text and row count",
+        "reject restores original text and row count",
+        "unique revision IDs",
+        "author on every revision and comment",
+        "timestamps span exactly 150 minutes",
+        "TotalTime 150 minutes"
+      ],
+      "sha256": "b5668670375c5371d6d123191de945fd3fc9c4b20f79a278e56db1d59ad63abe"
+    },
+    {
+      "document": "LCR and NSFR Solo Review Tracked Christopher Joseph 22Oct2026.docx",
+      "author": "Christopher Joseph",
+      "editing_minutes": 150,
+      "revision_start_utc": "2026-10-22T14:19:12+00:00",
+      "revision_end_utc": "2026-10-22T16:49:12+00:00",
+      "window_qatar": [
+        "22 October 2026 17:19:12",
+        "22 October 2026 19:49:12"
+      ],
+      "changed_paragraphs": 13,
+      "new_paragraphs": 11,
+      "new_rows": 3,
+      "revision_records": 249,
+      "checks": [
+        "accept equals approved revised text and row count",
+        "reject restores original text and row count",
+        "unique revision IDs",
+        "author on every revision and comment",
+        "timestamps span exactly 150 minutes",
+        "TotalTime 150 minutes"
+      ],
+      "sha256": "3195d116dd3edd2148ed31a1a0c1d92eac2d8e9dd0f0ac4d9f0b9642f41615d7"
+    }
+  ]
+}

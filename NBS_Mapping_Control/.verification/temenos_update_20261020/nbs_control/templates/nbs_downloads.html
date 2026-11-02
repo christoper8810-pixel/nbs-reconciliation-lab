@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block title %}Downloads{% endblock %}{% block content %}
+<h1>4. Downloads</h1>
+<div class="panel"><h2>Original Temenos mapping for 21 October</h2><a href="{{url_for('nbs_temenos')}}">Review original cells and current logic</a> · <a href="{{url_for('nbs_temenos_file',name='NBS_Temenos_Presentation.html')}}">Browser presentation</a> · <a href="{{url_for('nbs_temenos_file',name='NBS_Temenos_Mapping_for_21Oct2026.xlsx')}}">Full mapping workbook</a></div>
+<div class="panel"><h2>NBS figures</h2>{% if run %}<p>Run {{ run.run_id }} ({{ run.created_at[:16] }}) {{ run.label }}</p>
+{% for f in run_files %}<a href="{{ url_for('rebuild_download', run_id=run.run_id, name=f) }}">{{ f }}</a>{% if f.endswith('.xlsx') %} – the full NBS in the BO table layout{% endif %}<br>{% endfor %}
+{% else %}<p>No run yet.</p>{% endif %}</div>
+<div class="panel"><h2>Mapping file for stakeholders</h2>{% for f in specs %}<a href="{{ url_for('rebuild_specification_file', name=f) }}">{{ f }}</a><br>{% else %}<p>None yet.</p>{% endfor %}
+<p><a href="{{ url_for('rebuild_specification') }}">Create a new one from the current mapping</a></p></div>
+<p><a href="{{ url_for('nbs_home') }}">Back</a></p>{% endblock %}

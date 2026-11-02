@@ -1,0 +1,809 @@
+{
+  "name": "NBS_Mapping_Review_Clean_Corrections_1.docx",
+  "sha256": "4edb60bf286acc565d48628c353da2c7bd024b70e134f4373529ce81008c4a19",
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "NBS Mapping Review – Issues and Required Changes",
+      "deleted": ""
+    },
+    {
+      "index": 1,
+      "text": "DKB CBS – QCB regulatory reporting (NBS01 / NBS001). ",
+      "deleted": ""
+    },
+    {
+      "index": 2,
+      "text": "1. Scope and evidence",
+      "deleted": ""
+    },
+    {
+      "index": 3,
+      "text": "Mapping reviewed: NBS MAPPING - 6 Oct 2026.xlsx (copy last saved 7 Oct 2026). A second version (last modified 28 Sep) is in circulation and differs at least in Tables 12 and 40.",
+      "deleted": ""
+    },
+    {
+      "index": 4,
+      "text": "Balances: CAL extract (CONSOLIDATE.ASST.LIAB) at 31 Aug 2026, UAT. Amounts in QAR equivalent; two records with impossible amounts excluded.",
+      "deleted": ""
+    },
+    {
+      "index": 5,
+      "text": "Reports: NBS01 runs dated 31 Aug 2026 and 7 Oct 2026.",
+      "deleted": ""
+    },
+    {
+      "index": 6,
+      "text": "Ledger: Historical trial balance at 23 Sep 2026 (balances apart from one broken record).",
+      "deleted": ""
+    },
+    {
+      "index": 7,
+      "text": "Caveat. Amounts are indicative (UAT data, dates differ between sources). Cell references refer to the 6 Oct workbook and must be checked against the configured version before changes are made. Monetary impacts below remain reported UAT observations pending independent same-date reconciliation. Confirm the deployed NBS01/NBS001 rules and the signed gross/net presentation before activation. Owner-defined balance groups do not alone determine regulatory presentation.",
+      "deleted": ""
+    },
+    {
+      "index": 8,
+      "text": "2. Priorities",
+      "deleted": ""
+    },
+    {
+      "index": 9,
+      "text": "#",
+      "deleted": ""
+    },
+    {
+      "index": 10,
+      "text": "Issue",
+      "deleted": ""
+    },
+    {
+      "index": 11,
+      "text": "Why first",
+      "deleted": ""
+    },
+    {
+      "index": 12,
+      "text": "1",
+      "deleted": ""
+    },
+    {
+      "index": 13,
+      "text": "ACCDEFERREDPFT mapped as both asset and liability (A1)",
+      "deleted": ""
+    },
+    {
+      "index": 14,
+      "text": "About 14.7bn double use; confirmed in the 31 Aug run and by the trial balance",
+      "deleted": ""
+    },
+    {
+      "index": 15,
+      "text": "2",
+      "deleted": ""
+    },
+    {
+      "index": 16,
+      "text": "DEL and PRE principal missing from the balance sheet line and Table 12 (B2)",
+      "deleted": ""
+    },
+    {
+      "index": 17,
+      "text": "About 7.7bn missing from credit facilities (in the 7 Oct-saved copy)",
+      "deleted": ""
+    },
+    {
+      "index": 18,
+      "text": "3",
+      "deleted": ""
+    },
+    {
+      "index": 19,
+      "text": "Public Sector rule includes individuals (B4)",
+      "deleted": ""
+    },
+    {
+      "index": 20,
+      "text": "Changes every sector-split table; sector codes must be confirmed before other sector-related changes",
+      "deleted": ""
+    },
+    {
+      "index": 21,
+      "text": "3. Issues",
+      "deleted": ""
+    },
+    {
+      "index": 22,
+      "text": "A. Double counting",
+      "deleted": ""
+    },
+    {
+      "index": 23,
+      "text": "#",
+      "deleted": ""
+    },
+    {
+      "index": 24,
+      "text": "Issue",
+      "deleted": ""
+    },
+    {
+      "index": 25,
+      "text": "Where",
+      "deleted": ""
+    },
+    {
+      "index": 26,
+      "text": "Impact",
+      "deleted": ""
+    },
+    {
+      "index": 27,
+      "text": "Fix",
+      "deleted": ""
+    },
+    {
+      "index": 28,
+      "text": "A1",
+      "deleted": ""
+    },
+    {
+      "index": 29,
+      "text": "ACCDEFERREDPFT is mapped as an asset (netted against RECDEFERREDPFT in accrued income) and as a liability (deferred income)",
+      "deleted": ""
+    },
+    {
+      "index": 30,
+      "text": "Table 19 C10, D10, F10, G10, M10, P10; ASSET - 100 row 107; Table 30 B7, E7",
+      "deleted": ""
+    },
+    {
+      "index": 31,
+      "text": "Reported about 14.7bn. Potential asset understatement requires same-date signed-amount reconciliation. Reported trial balance deferred income (14.2bn) matches Table 30",
+      "deleted": ""
+    },
+    {
+      "index": 32,
+      "text": "Remove ACCDEFERREDPFT from the loan earned-income expression in Table 19 and the corresponding ASSET - 100 expression. Keep UNEARNED_PROFIT as DEFERREDPFT + ACCDEFERREDPFT. Confirm its approved presentation in Table 30, accounting signs and virtual-balance composition before activation. Check duplicate economic amounts within totals; appearance in two report sections alone does not establish an error.",
+      "deleted": ""
+    },
+    {
+      "index": 33,
+      "text": "A2",
+      "deleted": ""
+    },
+    {
+      "index": 34,
+      "text": "DEBIT on categories 1000–1999 in accrued income also picks up overdrawn current accounts",
+      "deleted": ""
+    },
+    {
+      "index": 35,
+      "text": "Table 19 C10 (and the same cells as A1)",
+      "deleted": ""
+    },
+    {
+      "index": 36,
+      "text": "280.4m under the workbook rules (categories 1000–1004); the 31 Aug report shows 289.8m in Overdraft",
+      "deleted": ""
+    },
+    {
+      "index": 37,
+      "text": "Split the shared category/type predicate into explicit branches. Restrict the accrued-income DEBIT branch to categories 13440-13459 after confirming their definitions. Preserve separately approved selectors for the other profit/interest types. Apply the corresponding correction to ASSET - 100 row 107; do not restrict every loan-profit type to the DEBIT category range.",
+      "deleted": ""
+    },
+    {
+      "index": 38,
+      "text": "A3",
+      "deleted": ""
+    },
+    {
+      "index": 39,
+      "text": "Prepaid Expenses uses different rules inside and outside Qatar: C11 takes ACCDEPOSITPFT for categories 6640–6649 only, F11 for all of 6000–6999",
+      "deleted": ""
+    },
+    {
+      "index": 40,
+      "text": "Table 19 C11, F11; Table 31 row 19 (Profit Payable)",
+      "deleted": ""
+    },
+    {
+      "index": 41,
+      "text": "About 16m of deposit profit payable to non-resident customers (31 Aug) reported as a prepaid asset and as profit payable",
+      "deleted": ""
+    },
+    {
+      "index": 42,
+      "text": "Align F11 with C11",
+      "deleted": ""
+    },
+    {
+      "index": 43,
+      "text": "B. Credit facilities",
+      "deleted": ""
+    },
+    {
+      "index": 44,
+      "text": "#",
+      "deleted": ""
+    },
+    {
+      "index": 45,
+      "text": "Issue",
+      "deleted": ""
+    },
+    {
+      "index": 46,
+      "text": "Where",
+      "deleted": ""
+    },
+    {
+      "index": 47,
+      "text": "Impact",
+      "deleted": ""
+    },
+    {
+      "index": 48,
+      "text": "Fix",
+      "deleted": ""
+    },
+    {
+      "index": 49,
+      "text": "B1",
+      "deleted": ""
+    },
+    {
+      "index": 50,
+      "text": "Deferred profit (RECDEFERREDPFT and the aged DUE, GRC, NAB, DEL, PRE DEFERREDPFT types) is not in any credit facility table",
+      "deleted": ""
+    },
+    {
+      "index": 51,
+      "text": "Tables 8, 10, 12, 44; ASSET - 100",
+      "deleted": ""
+    },
+    {
+      "index": 52,
+      "text": "15.8bn. Of the aged types (0.5bn), NAB, GRC and DUE appear only in Table 11 (deferred income, credit classification); DEL and PRE are not mapped anywhere",
+      "deleted": ""
+    },
+    {
+      "index": 53,
+      "text": "Use the owner-defined OUTSTANDING group for eligible loan-stock rows: CURACCOUNT, PREACCOUNT, GRCACCOUNT, DELACCOUNT, NABACCOUNT, DUEACCOUNT, DELDEFERREDPFT, GRCDEFERREDPFT, NABDEFERREDPFT, DUEDEFERREDPFT, RECDEFERREDPFT, PREDEFERREDPFT. Remove a separately aggregated RECDEFERREDPFT contribution from accrued income for the same population if already included in outstanding. Approve presentation separately and reconcile the same contract amounts.",
+      "deleted": ""
+    },
+    {
+      "index": 54,
+      "text": "B2",
+      "deleted": ""
+    },
+    {
+      "index": 55,
+      "text": "Principal balance-type lists differ between tables",
+      "deleted": ""
+    },
+    {
+      "index": 56,
+      "text": "ASSET - 100 and Table 12 lack DELACCOUNT and PREACCOUNT; Tables 8, 10, 44 include them (7 Oct-saved copy; the 28 Sep copy includes them in Tables 12 and 40)",
+      "deleted": ""
+    },
+    {
+      "index": 57,
+      "text": "7.7bn missing from the balance sheet credit facilities line",
+      "deleted": ""
+    },
+    {
+      "index": 58,
+      "text": "Use the 12-code OUTSTANDING group in B1 wherever the row measures outstanding loan stock. Restore DELACCOUNT and PREACCOUNT where omitted. PDOACCOUNT is outside that approved group and requires a separate definition and owner decision. Preserve separate overdraft, suspense, deposit and contingent measures.",
+      "deleted": ""
+    },
+    {
+      "index": 59,
+      "text": "B3",
+      "deleted": ""
+    },
+    {
+      "index": 60,
+      "text": "Murabaha line covers only 3701, 3717, 3704; 3713 (15.8bn), 3709, 3715 and 3740 fall into \"Others\"",
+      "deleted": ""
+    },
+    {
+      "index": 61,
+      "text": "Table 8 rows 20, 37, 54 and Others rows 27, 44, 61; Table 10",
+      "deleted": ""
+    },
+    {
+      "index": 62,
+      "text": "85.6bn of murabaha reported as \"Others\"",
+      "deleted": ""
+    },
+    {
+      "index": 63,
+      "text": "Add owner-confirmed category 3713 to Murabaha and exclude it from Others in the same change. Validate 3709, 3715 and 3740 against the bank product/category dictionary before adding them. Category 3713 alone does not establish CLM. Include the conditional linked CLS6050 components only with verified parent/child relationships as described in D3.",
+      "deleted": ""
+    },
+    {
+      "index": 64,
+      "text": "B4",
+      "deleted": ""
+    },
+    {
+      "index": 65,
+      "text": "Public Sector is defined as all sectors except 2004 and 4000–4004, which includes individuals",
+      "deleted": ""
+    },
+    {
+      "index": 66,
+      "text": "Table 8 and all tables using the same split",
+      "deleted": ""
+    },
+    {
+      "index": 67,
+      "text": "7 Oct run shows retail murabaha (7.7bn) under Public Sector",
+      "deleted": ""
+    },
+    {
+      "index": 68,
+      "text": "Replace the catch-all exclusion with an approved, exhaustive and mutually exclusive sector classification. Confirm the bank sector codes. Resolve Table 8 E37, which selects sector 2004 inside the Public Sector block whose E28 excludes it. Apply the approved classification consistently across all sector-based tables and totals.",
+      "deleted": ""
+    },
+    {
+      "index": 69,
+      "text": "B5",
+      "deleted": ""
+    },
+    {
+      "index": 70,
+      "text": "Table 9 has no balance-type filter",
+      "deleted": ""
+    },
+    {
+      "index": 71,
+      "text": "Table 9 (categories 3000–3899 by industry)",
+      "deleted": ""
+    },
+    {
+      "index": 72,
+      "text": "Table 9 exceeds Table 8 by 18bn (31 Aug) and 64bn (7 Oct)",
+      "deleted": ""
+    },
+    {
+      "index": 73,
+      "text": "Apply the owner-defined OUTSTANDING group to eligible loan-stock rows, preserving Table 9 customer, industry, residence and currency dimensions. Keep separately approved measures for other facility types. Reconcile category and population differences with Table 8 before expecting equal totals.",
+      "deleted": ""
+    },
+    {
+      "index": 74,
+      "text": "B6",
+      "deleted": ""
+    },
+    {
+      "index": 75,
+      "text": "Ijara specific balances sit outside the Ijara line, which lists principal types only",
+      "deleted": ""
+    },
+    {
+      "index": 76,
+      "text": "Table 8; Table 19 row 12 (C12, F12, M12) and P10",
+      "deleted": ""
+    },
+    {
+      "index": 77,
+      "text": "PRINCIPALBALANCE (+515m) and RENTALRECEIVABLE (+162m) are mapped in Table 19 Amounts Receivables; ACCUMDEPRECN (-677m) is not mapped anywhere",
+      "deleted": ""
+    },
+    {
+      "index": 78,
+      "text": "Confirm the definitions and reporting treatment of PRINCIPALBALANCE, RENTALRECEIVABLE and ACCUMDEPRECN with Temenos and Financial Control. Approve gross/net presentation, signs and any overlap with loan components before moving these balances into the Ijara line.",
+      "deleted": ""
+    },
+    {
+      "index": 79,
+      "text": "B7",
+      "deleted": ""
+    },
+    {
+      "index": 80,
+      "text": "Workbook and report disagree on individual lines",
+      "deleted": ""
+    },
+    {
+      "index": 81,
+      "text": "Diminishing Musharaka is \"No Product Defined\" but shows 52.8m; \"Loans\" rows 14, 31, 48 have no rule but showed 287m on 31 Aug",
+      "deleted": ""
+    },
+    {
+      "index": 82,
+      "text": "Configuration differs from the workbook",
+      "deleted": ""
+    },
+    {
+      "index": 83,
+      "text": "Compare the deployed NBS01/NBS001 rules with the approved workbook version. Explain and align populated lines whose workbook rules are blank or state No Product Defined. Record the configured rule, source population and approved replacement per line.",
+      "deleted": ""
+    },
+    {
+      "index": 84,
+      "text": "B8",
+      "deleted": ""
+    },
+    {
+      "index": 85,
+      "text": "The Overdraft rule covers categories 1000–1004 only. Other overdrawn current accounts (e.g. 1102 Islamic Overdraft – Corporate) fall into Table 19 Accrued Income through DEBIT 1000–1999, and 13410 Commodity Murabaha falls into Table 19 Amounts Receivables (13400–13429)",
+      "deleted": ""
+    },
+    {
+      "index": 86,
+      "text": "Table 8 Overdraft (B12, E12); Table 19 C10, C12",
+      "deleted": ""
+    },
+    {
+      "index": 87,
+      "text": "13410 about 0.6bn and 1102 about 18m (23 Sep) reported as other assets instead of credit facilities",
+      "deleted": ""
+    },
+    {
+      "index": 88,
+      "text": "Extend the Overdraft rule to all overdraft categories and map 13410 to credit facilities; Financial Control to confirm",
+      "deleted": ""
+    },
+    {
+      "index": 89,
+      "text": "C. Other assets and profit",
+      "deleted": ""
+    },
+    {
+      "index": 90,
+      "text": "#",
+      "deleted": ""
+    },
+    {
+      "index": 91,
+      "text": "Issue",
+      "deleted": ""
+    },
+    {
+      "index": 92,
+      "text": "Where",
+      "deleted": ""
+    },
+    {
+      "index": 93,
+      "text": "Impact",
+      "deleted": ""
+    },
+    {
+      "index": 94,
+      "text": "Fix",
+      "deleted": ""
+    },
+    {
+      "index": 95,
+      "text": "C1",
+      "deleted": ""
+    },
+    {
+      "index": 96,
+      "text": "Ordinary ACCPRINCIPALPFT, RECPRINCIPALPFT, DELPRINCIPALPFT and PREPRINCIPALPFT are not named in the mapping (ACCPRINCIPALPFT appears only as its SP variant)",
+      "deleted": ""
+    },
+    {
+      "index": 97,
+      "text": "Table 19 accrued income",
+      "deleted": ""
+    },
+    {
+      "index": 98,
+      "text": "Reported 808.7m for the original ACC/DEL/PRE omission; the additional REC impact must be quantified",
+      "deleted": ""
+    },
+    {
+      "index": 99,
+      "text": "Use AMORTIZED_EARNED: ACCPRINCIPALPFT, RECPRINCIPALPFT, GRCPRINCIPALPFT, DELPRINCIPALPFT, PREPRINCIPALPFT. Include REC in the correction. DUEPRINCIPALPFT and NABPRINCIPALPFT require separate treatment because they are outside this group. Keep SP balances separate. Include ACCDEPOSITPFT only for the verified linked CLS6050 CLM case in D3.",
+      "deleted": ""
+    },
+    {
+      "index": 100,
+      "text": "C2",
+      "deleted": ""
+    },
+    {
+      "index": 101,
+      "text": "Late payment fee names do not match CAL: the mapping lists ...LATEPAYMENTFEE, CAL holds ACCLATEPAYMENT and ACCLATEPAYMENTSP",
+      "deleted": ""
+    },
+    {
+      "index": 102,
+      "text": "Table 19 Amounts Receivables",
+      "deleted": ""
+    },
+    {
+      "index": 103,
+      "text": "1.4bn and 1.0bn likely read as zero",
+      "deleted": ""
+    },
+    {
+      "index": 104,
+      "text": "Validate the exact CAL and ECB names and the separate SP definition before changing the fee selectors. Do not assume an alias or replace every fee state with one observed name. Define Ehab report LOAN_FEES separately; late-payment penalties are not an established equivalent.",
+      "deleted": ""
+    },
+    {
+      "index": 105,
+      "text": "C3",
+      "deleted": ""
+    },
+    {
+      "index": 106,
+      "text": "General completeness gaps",
+      "deleted": ""
+    },
+    {
+      "index": 107,
+      "text": "All tables",
+      "deleted": ""
+    },
+    {
+      "index": 108,
+      "text": "36 balance types with balances at 31 Aug are never named in the mapping (many legitimately out of scope, e.g. commitments and LC contingent types); 26 balance-type names in the mapping do not exist in CAL (e.g. the LATEPAYMENTFEE and ADMINFEE families, PDOACCOUNT)",
+      "deleted": ""
+    },
+    {
+      "index": 109,
+      "text": "Compare the mapping with the versioned local balance dictionary and same-date CAL/ECB inventories. Classify observed types as mapped, intentionally excluded or unresolved. A type absent from one CAL extract is not sufficient evidence that its ECB mapping is invalid. Quantify gaps from the supporting extracts.",
+      "deleted": ""
+    },
+    {
+      "index": 110,
+      "text": "C4",
+      "deleted": ""
+    },
+    {
+      "index": 111,
+      "text": "Table 19 M10 and P10 both repeat the accrued-income rule. P10 also appends other components, including PRINCIPALBALANCE and RENTALRECEIVABLE",
+      "deleted": ""
+    },
+    {
+      "index": 112,
+      "text": "Table 19 M10 and P10; configured use of these auxiliary columns to be confirmed",
+      "deleted": ""
+    },
+    {
+      "index": 113,
+      "text": "Possible duplicate contribution if these columns are consumed by configured processing",
+      "deleted": ""
+    },
+    {
+      "index": 114,
+      "text": "Rebuild both M10 and P10 from the clean approved expression. M10 also repeats the accrued-income predicate; do not copy it into P10 unchanged. Confirm whether these auxiliary columns feed configured processing. Keep fees, Ijara receivables and other-asset components in their separately approved measures.",
+      "deleted": ""
+    },
+    {
+      "index": 115,
+      "text": "C5",
+      "deleted": ""
+    },
+    {
+      "index": 116,
+      "text": "Suspended (SP) balance types for late payment fees and for DEL/PRE profit are not mapped in any table",
+      "deleted": ""
+    },
+    {
+      "index": 117,
+      "text": "Tables 29, 30, 11",
+      "deleted": ""
+    },
+    {
+      "index": 118,
+      "text": "ACCLATEPAYMENTSP about 1.0bn (31 Aug) unmapped; DEL/PRE PRINCIPALPFTSP and DEFERREDPFTSP not listed",
+      "deleted": ""
+    },
+    {
+      "index": 119,
+      "text": "Add the missing SP types to the suspended income tables",
+      "deleted": ""
+    },
+    {
+      "index": 120,
+      "text": "D. Cash, deposits, acceptances, liabilities",
+      "deleted": ""
+    },
+    {
+      "index": 121,
+      "text": "#",
+      "deleted": ""
+    },
+    {
+      "index": 122,
+      "text": "Issue",
+      "deleted": ""
+    },
+    {
+      "index": 123,
+      "text": "Where",
+      "deleted": ""
+    },
+    {
+      "index": 124,
+      "text": "Impact",
+      "deleted": ""
+    },
+    {
+      "index": 125,
+      "text": "Fix",
+      "deleted": ""
+    },
+    {
+      "index": 126,
+      "text": "D1",
+      "deleted": ""
+    },
+    {
+      "index": 127,
+      "text": "Balance sheet cash (101) and other assets (109) are zero in both runs while Table 1 shows 451bn (31 Aug) and 578bn (7 Oct) of cash",
+      "deleted": ""
+    },
+    {
+      "index": 128,
+      "text": "ASSET - 100 / Table 100",
+      "deleted": ""
+    },
+    {
+      "index": 129,
+      "text": "Asset side of the balance sheet incomplete",
+      "deleted": ""
+    },
+    {
+      "index": 130,
+      "text": "Check the configured mapping block and numeric roll-ups before attributing zero balances to missing mapping. ASSET - 100 contains explicit cash/other-asset rules in hidden rows 57-108. Connect summary lines to approved breakdown amounts and reconcile matching company, population, date and valuation basis.",
+      "deleted": ""
+    },
+    {
+      "index": 131,
+      "text": "D2",
+      "deleted": ""
+    },
+    {
+      "index": 132,
+      "text": "Cash reads Asset Type = DEBIT only; no rule for cash outside Qatar",
+      "deleted": ""
+    },
+    {
+      "index": 133,
+      "text": "Table 1",
+      "deleted": ""
+    },
+    {
+      "index": 134,
+      "text": "Assumption to validate: all 12 companies are in Qatar",
+      "deleted": ""
+    },
+    {
+      "index": 135,
+      "text": "Validate and document the all-Qatar cash assumption and the reporting residence basis. Check credit-balance cash accounts and reconcile the cash category scope between Table 1 and ASSET - 100. Implement approved exceptions rather than assuming blank outside-Qatar rules are sufficient.",
+      "deleted": ""
+    },
+    {
+      "index": 136,
+      "text": "D3",
+      "deleted": ""
+    },
+    {
+      "index": 137,
+      "text": "Matured deposits (PAYACCOUNT) are missing from Table 45; deposit profit payable PAYDEPOSITPFT is not mapped anywhere (ACCDEPOSITPFT is in Table 31); debit balances on 6050 Cash Line Saving are not placed",
+      "deleted": ""
+    },
+    {
+      "index": 138,
+      "text": "Table 45; all tables; category 6050",
+      "deleted": ""
+    },
+    {
+      "index": 139,
+      "text": "PAYACCOUNT 340m; PAYDEPOSITPFT 509.5m; 6050 debit 571m",
+      "deleted": ""
+    },
+    {
+      "index": 140,
+      "text": "Validate PAYACCOUNT for Table 45 and define PAYDEPOSITPFT payable-profit treatment. Separate ordinary deposits from verified CLS6050 accounts linked to Murabaha3713 CLM parents. For that case, ACCDEPOSITPFT is AMORTIZED_EARNED; CREDIT to OUTSTANDING is proposed pending owner review. Check unintended reuse across loan and deposit totals. Decide ordinary 6050 debit treatment separately.",
+      "deleted": ""
+    },
+    {
+      "index": 141,
+      "text": "D4",
+      "deleted": ""
+    },
+    {
+      "index": 142,
+      "text": "Acceptances read ACPTCONTRABL only",
+      "deleted": ""
+    },
+    {
+      "index": 143,
+      "text": "Table 35 line 03",
+      "deleted": ""
+    },
+    {
+      "index": 144,
+      "text": "263.6m read; CAL also holds ACPT (279.7m), ACPTBANK (6.4bn), DEFPAY (6.4bn)",
+      "deleted": ""
+    },
+    {
+      "index": 145,
+      "text": "Confirm which balances represent acceptance exposure, contra entries and lifecycle states. Reconcile ACPTCONTRABL, ACPT, ACPTBANK and DEFPAY before expanding the mapping so the same economic exposure is not counted twice.",
+      "deleted": ""
+    },
+    {
+      "index": 146,
+      "text": "D5",
+      "deleted": ""
+    },
+    {
+      "index": 147,
+      "text": "Liabilities side does not hang together (7 Oct run)",
+      "deleted": ""
+    },
+    {
+      "index": 148,
+      "text": "Liabilities sheet / Table 200",
+      "deleted": ""
+    },
+    {
+      "index": 149,
+      "text": "Other Liabilities (277m) smaller than its sub-line Deferred Income (14.0bn); Other Borrowings and AT1 both 1,820.8m; Due to Banks 0 vs 9.9bn in the trial balance; Sukuk 22.4bn vs 9.7bn on the trial balance financing liabilities line",
+      "deleted": ""
+    },
+    {
+      "index": 150,
+      "text": "Reconcile liability parents to their component lines using the deployed mapping and same-date trial balance. Resolve category 18001 in both subordinated debt and AT1 selections. Correct Table 21 E19, which repeats RESIDENCE = QA in the outside-Qatar selection. Validate Table 26 subtotal instructions, signs and source populations before confirming monetary impacts.",
+      "deleted": ""
+    },
+    {
+      "index": 151,
+      "text": "4. Not mapping issues, but blocking testing",
+      "deleted": ""
+    },
+    {
+      "index": 152,
+      "text": "Broken record under category 3702 (about -128.6 trillion) in the 23 Sep trial balance (catch-all DKBGL.5998). A value of similar size (about 128.2 trillion) appears in Interest / Income in Suspense in the 7 Oct run.",
+      "deleted": ""
+    },
+    {
+      "index": 153,
+      "text": "Contingent pair of about 9 trillion each side on 23201 Inward Collection Documents in the 23 Sep trial balance.",
+      "deleted": ""
+    },
+    {
+      "index": 154,
+      "text": "Large suspense balances in the trial balance (309.7bn assets, 185.5bn liabilities), which make totals unrealistic regardless of the mapping.",
+      "deleted": ""
+    },
+    {
+      "index": 155,
+      "text": "5. Next steps",
+      "deleted": ""
+    },
+    {
+      "index": 156,
+      "text": "Systems Ltd to identify the deployed mapping version separately for NBS01 and NBS001, including configuration identity, source workbook hash and effective date. Match every proposed cell change to that version before implementation.",
+      "deleted": ""
+    },
+    {
+      "index": 157,
+      "text": "The report owner controls the component rules in B1, B2 and C1. Financial Control to confirm presentation and local dictionaries for B1, B3, B4, B6, D3 and D4. Approve the conditional CLS relationship and CREDIT group assignment separately.",
+      "deleted": ""
+    },
+    {
+      "index": 158,
+      "text": "Prepare one cell-level change register covering all findings, with the current rule, proposed structured rule, dependent inclusion/exclusion changes, owner decision and reconciliation status. Apply the approved changes together; retain unresolved items explicitly.",
+      "deleted": ""
+    },
+    {
+      "index": 159,
+      "text": "Rerun NBS01 and NBS001 against trial balances and extracts at the same company, population, reporting date and valuation basis. Reconcile every Table 100 and Table 200 line and its breakdown. Investigate abnormal source records and log any quarantines. Retain the earlier Table 10 maturity-boundary and Table 11 direct/indirect subtotal corrections in scope.",
+      "deleted": ""
+    }
+  ],
+  "comments": [],
+  "insertions": 0,
+  "deletions": 0
+}

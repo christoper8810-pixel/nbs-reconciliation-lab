@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-10-17",
+  "authority": "Explicit clarification from the human owner in this conversation",
+  "owner_statement": "categ entries are on 1 oct by it is still 30 Sepetember balances",
+  "status": "OWNER_CONFIRMED",
+  "enabled_for_implementation": true,
+  "source": {
+    "dataset": "CATEG_ENTRY",
+    "filename": "Mock3_UAT3 Categ Entry Extract (1).xlsx",
+    "sha256": "a9dc0021a2cd9551802129fbb2277161178b971c38cbede07d93824d9a2f6ac1",
+    "scope": "This exact source version, including its byte-identical filename copy"
+  },
+  "raw_booking_date": "2026-10-01",
+  "raw_processing_date": "2026-10-01",
+  "effective_reporting_date": "2026-09-30",
+  "meaning": "Owner confirms the supplied extract represents 30 September balances despite its raw October dates",
+  "implementation": {
+    "preserve_raw_dates": true,
+    "retain_all_raw_rows": true,
+    "assign_separate_effective_reporting_date": true,
+    "include_in_september_source_reconstruction": true,
+    "exclude_solely_for_october_raw_date": false,
+    "automatically_apply_to_unrelated_uploads": false,
+    "record_in_run_manifest": true,
+    "make_editable_with_history": true
+  },
+  "not_established_by_this_confirmation": [
+    "Duplicate and subentry sequence treatment",
+    "Whether the source covers all required September or YTD populations",
+    "The accounting role of DC and charge-off records",
+    "Whether particular stock and movement measures overlap",
+    "All remaining NBS mappings, signs and calculations"
+  ],
+  "application_state": "Handoff policy evidence only; production application and effective mappings were not changed by this review update"
+}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block title %}NBS{% endblock %}{% block content %}
+<h1>NBS reporting</h1>
+<p class="muted">Four steps. Every figure is calculated from your files; the BO report is only used to compare.</p>
+<div class="grid">
+<a class="stat" href="{{ url_for('nbs_load') }}" style="text-decoration:none;color:inherit"><b>1</b><span><b>Load files</b><br>
+{% for s in status %}{{ '✔' if loaded[s.kind] else '✖' }} {{ s.label }}<br>{% endfor %}</span></a>
+<a class="stat" href="{{ url_for('nbs_report') }}" style="text-decoration:none;color:inherit"><b>2</b><span><b>NBS report</b><br>All 50 tables with values and, for every line, the balance types and accounts used.
+{% if run %}<br>Figures from run {{ run.run_id }} ({{ run.created_at[:16] }}){% else %}<br>No run yet: use step 2 on the <a href="{{ url_for('rebuild_home') }}">run page</a>{% endif %}</span></a>
+<a class="stat" href="{{ url_for('nbs_balance_types') }}" style="text-decoration:none;color:inherit"><b>3</b><span><b>Balance types</b><br>Every T24 balance type in the ECB file, its total, which groups use it and which NBS lines take it.</span></a>
+<a class="stat" href="{{ url_for('nbs_downloads') }}" style="text-decoration:none;color:inherit"><b>4</b><span><b>Downloads</b><br>NBS Excel, mapping file for stakeholders, comparisons.</span></a>
+</div>
+<div class="panel"><h2>Generate figures</h2>
+<form method="post" action="{{ url_for('rebuild_start') }}"><input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="report_date" value="2026-09-30">
+<label>Label (optional)</label><input type="text" name="label"><button {{ '' if bank else 'disabled' }}>Generate NBS for 30 Sep 2026</button></form>
+<p class="muted">Takes about 5 minutes. {% if not bank %}Load the ECB, loan, deposit and trial-balance files first.{% endif %}</p></div>
+{% endblock %}

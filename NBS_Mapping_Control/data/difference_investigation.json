@@ -1,0 +1,501 @@
+{
+  "largest_differences": [
+    {
+      "account": "400002142812",
+      "product": "MUR",
+      "difference": "-1108536257.97",
+      "ecb": {
+        "CURCOMMITMENT": -1092450000.0,
+        "CURCOMMITMENTBL": 1092450000.0,
+        "TOTCOMMITMENT": -1092450000.0,
+        "TOTCOMMITMENTBL": 1092450000.0
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "1108536257.97",
+      "ethix_earned": "0.0",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400001941289",
+      "product": "RCM",
+      "difference": "989833936.8",
+      "ecb": {
+        "ACCDEFERREDPFT": 954833936.8,
+        "ACCLATEPAYMENT": -320833.32,
+        "CURACCOUNT": -1214659283.69,
+        "CURCOMMITMENT": -1214659283.69,
+        "CURCOMMITMENTBL": 1214659283.69,
+        "DELDEFERREDPFT": -17500000.0,
+        "DUEDEFERREDPFT": 0.0,
+        "GRCDEFERREDPFT": -8750000.0,
+        "PREDEFERREDPFT": -8750000.0,
+        "RECDEFERREDPFT": -1015566900.98,
+        "TOTCOMMITMENT": -1214659283.69,
+        "TOTCOMMITMENTBL": 1214659283.69
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "1214659283.69",
+      "ethix_earned": "60732964.18",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400002049782",
+      "product": "RCM",
+      "difference": "768269942.19",
+      "ecb": {
+        "ACCDEFERREDPFT": 768269942.19,
+        "CURACCOUNT": -1126581627.56,
+        "CURCOMMITMENT": -1126581627.56,
+        "CURCOMMITMENTBL": 1126581627.56,
+        "RECDEFERREDPFT": -785966661.92,
+        "TOTCOMMITMENT": -1126581627.56,
+        "TOTCOMMITMENTBL": 1126581627.56
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "1126581627.56",
+      "ethix_earned": "17696719.73",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400002035178",
+      "product": "RCM",
+      "difference": "684772857.3100002",
+      "ecb": {
+        "ACCDEFERREDPFT": 683772857.31,
+        "CURACCOUNT": -1782976211.36,
+        "CURCOMMITMENT": -1783976211.36,
+        "CURCOMMITMENTBL": 1783976211.36,
+        "DUEDEFERREDPFT": 0.0,
+        "GRCDEFERREDPFT": -1000000.0,
+        "RECDEFERREDPFT": -716764660.98,
+        "TOTCOMMITMENT": -1783976211.36,
+        "TOTCOMMITMENTBL": 1783976211.36
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "1782976211.36",
+      "ethix_earned": "32991803.67",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400002020439",
+      "product": "RCM",
+      "difference": "639852780.6400001",
+      "ecb": {
+        "ACCDEFERREDPFT": 639852780.64,
+        "CURACCOUNT": -936863678.66,
+        "CURCOMMITMENT": -936863678.66,
+        "CURCOMMITMENTBL": 936863678.66,
+        "RECDEFERREDPFT": -667802547.05,
+        "TOTCOMMITMENT": -936863678.66,
+        "TOTCOMMITMENTBL": 936863678.66
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "936863678.66",
+      "ethix_earned": "27949766.41",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400001992393",
+      "product": "RCM",
+      "difference": "593711761.9900001",
+      "ecb": {
+        "ACCDEFERREDPFT": 593711761.99,
+        "CURACCOUNT": -898867416.13,
+        "CURCOMMITMENT": -898867416.13,
+        "CURCOMMITMENTBL": 898867416.13,
+        "RECDEFERREDPFT": -635702603.02,
+        "TOTCOMMITMENT": -898867416.13,
+        "TOTCOMMITMENTBL": 898867416.13
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "898867416.13",
+      "ethix_earned": "41990841.03",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400001920682",
+      "product": "RCM",
+      "difference": "518673297.29999995",
+      "ecb": {
+        "ACCDEFERREDPFT": 512764238.33,
+        "CURACCOUNT": -531317591.84,
+        "CURCOMMITMENT": -540064019.18,
+        "CURCOMMITMENTBL": 540064019.18,
+        "DUEACCOUNT": 0.0,
+        "DUEDEFERREDPFT": 0.0,
+        "GRCACCOUNT": -231941.03,
+        "GRCDEFERREDPFT": -5909058.97,
+        "RECDEFERREDPFT": -518737498.18,
+        "TOTCOMMITMENT": -540064019.18,
+        "TOTCOMMITMENTBL": 540064019.18
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "531549532.87",
+      "ethix_earned": "5973259.85",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400002089263",
+      "product": "RCM",
+      "difference": "498518086.8000001",
+      "ecb": {
+        "ACCDEFERREDPFT": 498518086.8,
+        "CURACCOUNT": -919337783.32,
+        "CURCOMMITMENT": -930357783.32,
+        "CURCOMMITMENTBL": 930357783.32,
+        "RECDEFERREDPFT": -525037715.75,
+        "TOTCOMMITMENT": -930357783.32,
+        "TOTCOMMITMENTBL": 930357783.32
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "919337783.32",
+      "ethix_earned": "26519628.95",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400001361762",
+      "product": "RCM",
+      "difference": "466152165.2800002",
+      "ecb": {
+        "ACCDEFERREDPFT": 466152165.28,
+        "CURACCOUNT": -2597251437.42,
+        "CURCOMMITMENT": -2666052800.0,
+        "CURCOMMITMENTBL": 2666052800.0,
+        "DUEACCOUNT": 0.0,
+        "GRCACCOUNT": -48474746.87,
+        "RECDEFERREDPFT": -466440748.77,
+        "TOTCOMMITMENT": -2666052800.0,
+        "TOTCOMMITMENTBL": 2666052800.0
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "2645726184.29",
+      "ethix_earned": "288583.49",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400002100207",
+      "product": "RCM",
+      "difference": "454386979.06000006",
+      "ecb": {
+        "ACCDEFERREDPFT": 454386979.06,
+        "CURACCOUNT": -719605343.88,
+        "CURCOMMITMENT": -719605343.88,
+        "CURCOMMITMENTBL": 719605343.88,
+        "RECDEFERREDPFT": -457578228.87,
+        "TOTCOMMITMENT": -719605343.88,
+        "TOTCOMMITMENTBL": 719605343.88
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "719605343.88",
+      "ethix_earned": "3191249.81",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400002056063",
+      "product": "RCM",
+      "difference": "439070437.53",
+      "ecb": {
+        "ACCDEFERREDPFT": 439070437.53,
+        "CURACCOUNT": -750000000.0,
+        "CURCOMMITMENT": -750000000.0,
+        "CURCOMMITMENTBL": 750000000.0,
+        "RECDEFERREDPFT": -442073562.53,
+        "TOTCOMMITMENT": -750000000.0,
+        "TOTCOMMITMENTBL": 750000000.0
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "750000000.0",
+      "ethix_earned": "3003125.0",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400002056076",
+      "product": "RCM",
+      "difference": "439070437.53",
+      "ecb": {
+        "ACCDEFERREDPFT": 439070437.53,
+        "CURACCOUNT": -750000000.0,
+        "CURCOMMITMENT": -750000000.0,
+        "CURCOMMITMENTBL": 750000000.0,
+        "RECDEFERREDPFT": -442073562.53,
+        "TOTCOMMITMENT": -750000000.0,
+        "TOTCOMMITMENTBL": 750000000.0
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "750000000.0",
+      "ethix_earned": "3003125.0",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400002056089",
+      "product": "RCM",
+      "difference": "439070437.53",
+      "ecb": {
+        "ACCDEFERREDPFT": 439070437.53,
+        "CURACCOUNT": -750000000.0,
+        "CURCOMMITMENT": -750000000.0,
+        "CURCOMMITMENTBL": 750000000.0,
+        "RECDEFERREDPFT": -442073562.53,
+        "TOTCOMMITMENT": -750000000.0,
+        "TOTCOMMITMENTBL": 750000000.0
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "750000000.0",
+      "ethix_earned": "3003125.0",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400002056131",
+      "product": "RCM",
+      "difference": "439070437.53",
+      "ecb": {
+        "ACCDEFERREDPFT": 439070437.53,
+        "CURACCOUNT": -750000000.0,
+        "CURCOMMITMENT": -750000000.0,
+        "CURCOMMITMENTBL": 750000000.0,
+        "RECDEFERREDPFT": -442073562.53,
+        "TOTCOMMITMENT": -750000000.0,
+        "TOTCOMMITMENTBL": 750000000.0
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "750000000.0",
+      "ethix_earned": "3003125.0",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400001994948",
+      "product": "RCM",
+      "difference": "410732291.65999985",
+      "ecb": {
+        "ACCDEFERREDPFT": 410732291.66,
+        "CURACCOUNT": -1300000000.0,
+        "CURCOMMITMENT": -1300000000.0,
+        "CURCOMMITMENTBL": 1300000000.0,
+        "RECDEFERREDPFT": -440117708.32,
+        "TOTCOMMITMENT": -1300000000.0,
+        "TOTCOMMITMENTBL": 1300000000.0
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "1300000000.0",
+      "ethix_earned": "29385416.66",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400001921678",
+      "product": "RCM",
+      "difference": "407361880.87",
+      "ecb": {
+        "ACCDEFERREDPFT": 407361880.87,
+        "CURACCOUNT": -644230432.52,
+        "CURCOMMITMENT": -644230432.52,
+        "CURCOMMITMENTBL": 644230432.52,
+        "RECDEFERREDPFT": -417325978.22,
+        "TOTCOMMITMENT": -644230432.52,
+        "TOTCOMMITMENTBL": 644230432.52
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "644230432.52",
+      "ethix_earned": "9964097.35",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400001908468",
+      "product": "RCM",
+      "difference": "388453535.12",
+      "ecb": {
+        "ACCDEFERREDPFT": 388453535.12,
+        "CURACCOUNT": -616684355.18,
+        "CURCOMMITMENT": -616684355.18,
+        "CURCOMMITMENTBL": 616684355.18,
+        "RECDEFERREDPFT": -399481907.01,
+        "TOTCOMMITMENT": -616684355.18,
+        "TOTCOMMITMENTBL": 616684355.18
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "616684355.18",
+      "ethix_earned": "11028371.89",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400001941467",
+      "product": "RCM",
+      "difference": "386559672.2700001",
+      "ecb": {
+        "ACCDEFERREDPFT": 349265114.07,
+        "ACCLATEPAYMENT": -626893.53,
+        "CURACCOUNT": -564785480.32,
+        "CURCOMMITMENT": -567037945.42,
+        "CURCOMMITMENTBL": 567037945.42,
+        "DELDEFERREDPFT": -13182341.1,
+        "DUEACCOUNT": 0.0,
+        "DUEDEFERREDPFT": 0.0,
+        "GRCACCOUNT": -2252465.1,
+        "GRCDEFERREDPFT": -4338705.45,
+        "PREDEFERREDPFT": -19773511.65,
+        "RECDEFERREDPFT": -386689102.27,
+        "TOTCOMMITMENT": -567037945.42,
+        "TOTCOMMITMENTBL": 567037945.42
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "567037945.42",
+      "ethix_earned": "37423988.2",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400002021001",
+      "product": "RCM",
+      "difference": "311418727.3000001",
+      "ecb": {
+        "ACCDEFERREDPFT": 311418727.3,
+        "CURACCOUNT": -573085891.46,
+        "CURCOMMITMENT": -579865891.46,
+        "CURCOMMITMENTBL": 579865891.46,
+        "RECDEFERREDPFT": -327948036.36,
+        "TOTCOMMITMENT": -579865891.46,
+        "TOTCOMMITMENTBL": 579865891.46
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "573085891.46",
+      "ethix_earned": "16529309.06",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400001668041",
+      "product": "RCM",
+      "difference": "269232999.10000014",
+      "ecb": {
+        "ACCDEFERREDPFT": 266275616.31,
+        "CURACCOUNT": -730180961.94,
+        "CURCOMMITMENT": -756949608.92,
+        "CURCOMMITMENTBL": 756949608.92,
+        "DUEACCOUNT": 0.0,
+        "DUEDEFERREDPFT": 0.0,
+        "GRCACCOUNT": -1542617.21,
+        "GRCDEFERREDPFT": -2957382.79,
+        "RECDEFERREDPFT": -269331370.71,
+        "TOTCOMMITMENT": -756949608.92,
+        "TOTCOMMITMENTBL": 756949608.92
+      },
+      "child_ecb": null,
+      "ethix_outstanding": "731723579.15",
+      "ethix_earned": "3055754.4",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400000884622",
+      "product": "CLM",
+      "difference": "1060088.9399999976",
+      "ecb": {
+        "ACCPRINCIPALPFT": -1080543.1,
+        "CURACCOUNT": -9724887918.2,
+        "CURCOMMITMENT": -10174887918.2,
+        "CURCOMMITMENTBL": 10174887918.2,
+        "TOTCOMMITMENT": -10174887918.2,
+        "TOTCOMMITMENTBL": 10174887918.2
+      },
+      "child_ecb": {
+        "ACCCRPROFIT": 1060088.94,
+        "CREDIT": 9540800483.2
+      },
+      "ethix_outstanding": "184087435.0",
+      "ethix_earned": "20454.16",
+      "generated_earned": "1080543.1"
+    },
+    {
+      "account": "400002015680",
+      "product": "CLM",
+      "difference": "141170.45000000112",
+      "ecb": {
+        "CURACCOUNT": -23214000.0,
+        "CURCOMMITMENT": -43744000.0,
+        "CURCOMMITMENTBL": 43744000.0,
+        "TOTCOMMITMENT": -43744000.0,
+        "TOTCOMMITMENTBL": 43744000.0
+      },
+      "child_ecb": {
+        "ACCCRPROFIT": 3160.97,
+        "CREDIT": 26159829.38
+      },
+      "ethix_outstanding": "-2945829.38",
+      "ethix_earned": "-141170.45",
+      "generated_earned": "0.0"
+    },
+    {
+      "account": "400001261862",
+      "product": "CLM",
+      "difference": "35808.07",
+      "ecb": {
+        "ACCPRINCIPALPFT": -35808.07,
+        "CURACCOUNT": -429697000.0,
+        "CURCOMMITMENT": -429697000.0,
+        "CURCOMMITMENTBL": 429697000.0,
+        "TOTCOMMITMENT": -429697000.0,
+        "TOTCOMMITMENTBL": 429697000.0
+      },
+      "child_ecb": {
+        "ACCCRPROFIT": 35808.07,
+        "CREDIT": 429697000.0
+      },
+      "ethix_outstanding": "0.0",
+      "ethix_earned": "0.0",
+      "generated_earned": "35808.07"
+    },
+    {
+      "account": "400001467763",
+      "product": "CLM",
+      "difference": "31616.30999994278",
+      "ecb": {
+        "ACCPRINCIPALPFT": -89416.67,
+        "CURACCOUNT": -740000000.0,
+        "CURCOMMITMENT": -740000000.0,
+        "CURCOMMITMENTBL": 740000000.0,
+        "TOTCOMMITMENT": -740000000.0,
+        "TOTCOMMITMENTBL": 740000000.0
+      },
+      "child_ecb": {
+        "ACCCRPROFIT": 31616.31,
+        "CREDIT": 261652230.09
+      },
+      "ethix_outstanding": "478347769.91",
+      "ethix_earned": "57800.36",
+      "generated_earned": "89416.67"
+    }
+  ],
+  "RCM_exclusion_test": {
+    "accounts": 1622,
+    "within_1_QAR": 0,
+    "remaining_difference": -603928706.1599988,
+    "samples": [
+      {
+        "account": "400001941289",
+        "difference": 989833936.8,
+        "RECDEFERREDPFT": -1015566900.98,
+        "after_exclusion": -25732964.180000067
+      },
+      {
+        "account": "400002049782",
+        "difference": 768269942.19,
+        "RECDEFERREDPFT": -785966661.92,
+        "after_exclusion": -17696719.7299999
+      },
+      {
+        "account": "400002035178",
+        "difference": 684772857.3100002,
+        "RECDEFERREDPFT": -716764660.98,
+        "after_exclusion": -31991803.669999838
+      },
+      {
+        "account": "400002020439",
+        "difference": 639852780.6400001,
+        "RECDEFERREDPFT": -667802547.05,
+        "after_exclusion": -27949766.409999847
+      },
+      {
+        "account": "400001992393",
+        "difference": 593711761.9900001,
+        "RECDEFERREDPFT": -635702603.02,
+        "after_exclusion": -41990841.02999985
+      }
+    ]
+  }
+}

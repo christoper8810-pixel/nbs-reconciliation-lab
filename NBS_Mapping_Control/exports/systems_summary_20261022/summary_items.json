@@ -1,0 +1,153 @@
+[
+  {
+    "number": 1,
+    "topic": "Wrong category codes",
+    "issue": "Some categories differ from the GLs in Ehab's mapping. Examples: government sukuk income uses 65037 instead of 65073; investment property uses 11320 instead of 13337.",
+    "fix": "Confirm the intended NBS treatment and correct the category codes. Also review bond expense, where the selected GLs map to 66560-66562 rather than 60031-60034.",
+    "reference": "Income B21/C21; Table 15 B10; Expense B22/C22",
+    "evidence": [
+      "NBS-0085",
+      "NBS-0129",
+      "NBS-0093"
+    ]
+  },
+  {
+    "number": 2,
+    "topic": "Finance company investments",
+    "issue": "The finance-company line includes 11908 but leaves out 11903-11907 from the GLs selected by Ehab.",
+    "fix": "Check each investment and put it in the correct company group. Confirm 11902-11907 for this line and explain whether 11908 belongs elsewhere.",
+    "reference": "Table 14 C28; Ehab K938",
+    "evidence": [
+      "NBS-0128"
+    ]
+  },
+  {
+    "number": 3,
+    "topic": "Intangible assets",
+    "issue": "The Other line leaves out 11301 and 11570 and includes 11550 compared with Ehab's selected GLs.",
+    "fix": "Confirm which assets belong in each line and which accumulated amortisation belongs with them. Correct the gross and amortisation categories together.",
+    "reference": "Table 18 B16/C16; Ehab K1042",
+    "evidence": [
+      "NBS-0135"
+    ]
+  },
+  {
+    "number": 4,
+    "topic": "Bank profit expense",
+    "issue": "The bank-profit expense line includes product category 15154 and omits PL categories 66586-66588 found under the selected GLs.",
+    "fix": "Use the correct profit-and-loss categories for this expense. Keep the product category separate and confirm the missing categories with Finance.",
+    "reference": "Expense B30/C30/D30/F30/G30; Ehab K256",
+    "evidence": [
+      "NBS-0094"
+    ]
+  },
+  {
+    "number": 5,
+    "topic": "Loan balance components",
+    "issue": "The financing schedules do not consistently use the same principal and profit components. Some definitions leave out overdue or prepaid components.",
+    "fix": "Agree what each line should include: principal, earned profit, deferred profit and any fees. Document each component and apply the agreed definition consistently.",
+    "reference": "Assets and Tables 8, 10, 12 and 44",
+    "evidence": []
+  },
+  {
+    "number": 6,
+    "topic": "Local and foreign currency rules",
+    "issue": "Some local-currency and foreign-currency columns use different categories or sectors without an explanation.",
+    "fix": "Use the same business selection for both columns unless a difference is intentional. Keep the currency filter and document any valid exception.",
+    "reference": "Income C28:D37 and C80:D80; Expense C57:D58",
+    "evidence": [
+      "NBS-0142",
+      "NBS-0143",
+      "NBS-0144",
+      "NBS-0145",
+      "NBS-0146",
+      "NBS-0147",
+      "NBS-0148"
+    ]
+  },
+  {
+    "number": 7,
+    "topic": "Balance codes and field names",
+    "issue": "Some names do not match the supplied data. Examples include CONTDRBL, CREDIIT and ACCOUNT.CUTOMER. Other requested balance components are missing from the extract.",
+    "fix": "Correct spelling against the actual Temenos fields. Confirm each balance code and obtain missing inputs. Show missing data as incomplete; do not silently return zero or substitute a similar name.",
+    "reference": "Table 35; Table 22 B13; Table 19; repeated customer rules",
+    "evidence": []
+  },
+  {
+    "number": 8,
+    "topic": "Profit on both accounting sides",
+    "issue": "ACCDEFERREDPFT is selected in accrued-income assets and deferred-income liabilities for overlapping categories. This creates a risk of counting the same component twice.",
+    "fix": "Finance and Systems should agree where this component belongs and how it is presented. Correct both schedules together and demonstrate that the balance is counted as intended.",
+    "reference": "Table 19 C10 and related cells; Table 30 B7/E7",
+    "evidence": [
+      "NBS-1451"
+    ]
+  },
+  {
+    "number": 9,
+    "topic": "Customer sector classification",
+    "issue": "Table 11 includes sector 2006 under non-bank financial institutions, while the supplied GL dictionary calls 2006 Salary Cards.",
+    "fix": "Confirm the sector dictionary used by the live report. Agree the bank-to-QCB classification with Finance and use it consistently across the affected tables.",
+    "reference": "Table 11 B7 and repeated cells; GL SEGMENT C30",
+    "evidence": [
+      "NBS-1452"
+    ]
+  },
+  {
+    "number": 10,
+    "topic": "Credit quality calculations",
+    "issue": "Some Table 11 totals mix direct and indirect exposures or count performing balances again. The source has 75 formula defects and 90 saved Excel errors.",
+    "fix": "Rebuild the totals from their labelled columns. Test with nonzero examples so each exposure appears once in the correct performing or non-performing total.",
+    "reference": "Table 11 F/G/N/O/P/Q columns",
+    "evidence": []
+  },
+  {
+    "number": 11,
+    "topic": "Maturity calculations",
+    "issue": "Some rules subtract maturity from the reporting date, giving negative days for future contracts. Table 10 also misses eight exact boundaries and treats Without Maturity as a one-day band.",
+    "fix": "Calculate days from 30 September 2026 to maturity. Give every boundary one clear home. Handle overdue balances, missing dates and open-ended contracts separately.",
+    "reference": "Table 10 D6:N6; Table 24 E9:J9",
+    "evidence": []
+  },
+  {
+    "number": 12,
+    "topic": "Totals using the wrong columns",
+    "issue": "Twenty-five written totals point to the wrong columns. For example, the inside-Qatar total in Assets E61 says B+C although its amount columns are C and D.",
+    "fix": "Correct the references against the headings. Check local currency, foreign currency, inside Qatar, outside Qatar and grand totals using an independent example.",
+    "reference": "Assets rows 61-62; Table 9 row 6; Table 26 rows 5/26",
+    "evidence": [
+      "NBS-1171"
+    ]
+  },
+  {
+    "number": 13,
+    "topic": "Repeated treasury-share GL",
+    "issue": "Ehab uses GL 3200000001 for both treasury-share nominal value and premium or discount. The GL mapping places it under category 18008.",
+    "fix": "Investigate whether the second line needs another GL or a documented split. Agree this with the bank's GL owner before removing or changing either entry.",
+    "reference": "Ehab K109/K111; Liabilities C56/C58",
+    "evidence": [
+      "NBS-1450"
+    ]
+  },
+  {
+    "number": 14,
+    "topic": "Mapping versions",
+    "issue": "The clearing-account rule matches the September GL version, but the current GL adds category 18062. Later changes can therefore look like original errors.",
+    "fix": "Confirm which mapping is deployed and its effective date. Record the old and new rules and update the NBS where the change is applicable.",
+    "reference": "Table 2 B12/E12; Ehab L380",
+    "evidence": [
+      "NBS-0107"
+    ]
+  },
+  {
+    "number": 15,
+    "topic": "Missing schedules and source rules",
+    "issue": "Tables 20 and 38 have no worksheet in the supplied Systems mapping. Some treasury and other externally sourced lines also lack a complete category bridge.",
+    "fix": "Provide the missing specifications and source definitions. For each line, show the source, selection, balance components, sign, calculation and reporting split.",
+    "reference": "Tables 20/38; source-dependent lines in the detailed register",
+    "evidence": [
+      "NBS-1473",
+      "NBS-1474"
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{% extends "base.html" %}{% block title %}Load files{% endblock %}{% block content %}
+<h1>1. Load files</h1>
+<p class="muted">Pick the files from your computer and press <b>Load</b> once. You can load all of them or only the ones that changed. They are copied into
+<code>{{ inputs }}</code>; the account database (ECB + loans + deposits + trial balance) takes about 6 minutes, the others about 2.</p>
+<form method="post" enctype="multipart/form-data" class="panel"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<table><tr><th>Source</th><th>Now loaded</th><th>Choose a new file</th></tr>
+{% for s in status %}<tr><td><b>{{ s.label }}</b><br><span class="muted">{{ s.what }}</span></td>
+<td>{% for f in s.files %}{{ f.file }}<br><span class="tag {{ 'ok' if f.state in ('IMPORTED','IN ACCOUNT DATABASE') else 'warn' }}">{{ f.state }}</span> <span class="muted">{{ f.info }}</span><br>{% else %}<span class="tag bad">none</span>{% endfor %}</td>
+<td><input type="file" name="file_{{ s.kind }}" accept=".xlsx" {{ 'multiple' if s.multiple }}>
+<input type="text" name="path_{{ s.kind }}" placeholder="…or full path, e.g. D:\NBS\{{ s.pattern[0] }}"></td></tr>{% endfor %}</table>
+<label><input type="checkbox" name="reload"> Reload everything from the files already chosen</label>
+<label>Your name</label><input type="text" name="actor" style="max-width:300px">
+<button>Load</button></form>
+<p><a href="{{ url_for('nbs_home') }}">Back</a></p>{% endblock %}

@@ -1,0 +1,11 @@
+{
+ "schema_version": 1,
+ "report_date": "2026-09-30",
+ "maturity_convention": "CALENDAR_EOM",
+ "open_ended_products": [],
+ "notes": [
+  "open_ended_products lists products evidenced as having no contractual maturity; none is evidenced yet",
+  "maturity_convention CALENDAR_EOM is provisional; actual Ethix boundary logic not supplied"
+ ],
+ "maturity_convention_evidence": "Provisional. BO Table 010 row 1-010-10501 reports exactly the two loans maturing 31 Dec 2026 (731,437 thousand) in One To 3 Month and the loan maturing 31 Jan 2027 in Three To 6 Month: month-end to month-end calendar bands. One revolving (RCM) account maturing 11 Sep 2027 is reported by BO in One To 2 Year, which no date convention explains (a different date may be used for revolving facilities)."
+}
