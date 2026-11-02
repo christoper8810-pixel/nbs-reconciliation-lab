@@ -20,6 +20,7 @@ PAGE = 200
 
 
 def register_tb_routes(app, root):
+    app.config['TB_RECON_ENABLED'] = True
     root = Path(root)
     data_root, export_root = root / 'data', root / 'exports' / 'tb_recon'
 

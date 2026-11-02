@@ -23,11 +23,14 @@ from nbs_control.studio import STUDIO_VERSION  # noqa: E402
 
 KNOWN_COMMITS = ('3dcb6ef', '289c59b')            # initial application; TB reconciliation release
 NEW_TREES = ('nbs_control/studio', 'nbs_control/tbrecon')
-NEW_FILES = ('tests/test_studio.py', 'tests/test_tbrecon.py', 'Start_Mapping_Studio.cmd', 'Start_TB_Reconciliation.cmd', 'build_release.py',
+NEW_FILES = ('nbs_control/studio_app.py', 'tests/test_studio.py', 'tests/test_tbrecon.py', 'Start_Mapping_Studio.cmd', 'Start_TB_Reconciliation.cmd', 'build_release.py',
              'MAPPING_STUDIO_GUIDE.md', 'TB_RECON_GUIDE.md', 'CURRENT_STATE_ASSESSMENT.md', 'FIXES_IMPLEMENTED.md', 'RECONCILIATION_VALIDATION.md',
              'REMAINING_ISSUES.md', 'PROGRESS.md', 'MAPPING_STUDIO_VALIDATION.md')
 CONFIGS = ('config/studio.json', 'config/tb_recon.json')
-REQUIRED_MODIFY = ('nbs_control/web.py', 'nbs_control/cli.py', 'nbs_control/templates/base.html')
+# Studio runs through nbs_control/studio_app.py, so no existing file has to change for it to work: these edits only
+# add the Studio to the existing 'serve' command, menu and command line, and are skipped (with a warning) if impossible.
+REQUIRED_MODIFY = ()
+INTEGRATION_MODIFY = ('nbs_control/web.py', 'nbs_control/cli.py', 'nbs_control/templates/base.html')
 OPTIONAL_MODIFY = ('nbs_control/gl_mapping.py', 'nbs_control/bank_data.py', 'tests/test_rebuild.py', 'README.md')
 
 
@@ -53,15 +56,20 @@ def ops_for(rel):
     cur = (APP / rel).read_text(encoding='utf-8')
     if rel == 'nbs_control/web.py':
         anchor = '    register_rebuild_routes(app,service.config_dir.parent)\n'
-        return [{'op': 'insert_after', 'anchor': anchor, 'marker': 'register_studio_routes',
+        alt = [{'op': 'insert_after', 'anchor': anchor}, {'op': 'insert_before', 'anchor': '\n    return app\n'}]
+        return [{'marker': 'register_studio_routes', 'alternatives': alt,
                  'text': '    from .studio.web import register_studio_routes\n    register_studio_routes(app, service.config_dir.parent)\n'},
-                {'op': 'insert_after', 'anchor': anchor, 'marker': 'register_tb_routes',
+                {'marker': 'register_tb_routes', 'alternatives': alt,
                  'text': '    from .tbrecon.web import register_tb_routes\n    register_tb_routes(app, service.config_dir.parent)\n'}]
     if rel == 'nbs_control/templates/base.html':
-        return [{'op': 'insert_before', 'anchor': '''  <a href="{{ url_for('nbs_home') }}">Home</a>''', 'marker': "url_for('studio_home')",
-                 'text': '''  <a href="{{ url_for('studio_home') }}"><b>Mapping Studio</b></a>\n'''},
-                {'op': 'insert_after', 'anchor': '''  <a href="{{ url_for('nbs_downloads') }}">4 Downloads</a>\n''', 'marker': "url_for('tb_home')",
-                 'text': '''  <a href="{{ url_for('tb_home') }}">TB reconciliation (separate tool)</a>\n'''}]
+        studio = '''  {% if config.get('STUDIO_ENABLED') %}<a href="{{ url_for('studio_home') }}"><b>Mapping Studio</b></a>{% endif %}\n'''
+        tb = '''  {% if config.get('TB_RECON_ENABLED') %}<a href="{{ url_for('tb_home') }}">TB reconciliation (separate tool)</a>{% endif %}\n'''
+        return [{'marker': "url_for('studio_home')", 'text': studio,
+                 'alternatives': [{'op': 'insert_before', 'anchor': '''  <a href="{{ url_for('nbs_home') }}">Home</a>'''},
+                                  {'op': 'insert_before', 'anchor': '</header>'}]},
+                {'marker': "url_for('tb_home')", 'text': tb,
+                 'alternatives': [{'op': 'insert_after', 'anchor': '''  <a href="{{ url_for('nbs_downloads') }}">4 Downloads</a>\n'''},
+                                  {'op': 'insert_before', 'anchor': '</header>'}]}]
     if rel == 'nbs_control/cli.py':
         parse = '    args = parser.parse_args(argv)\n'
         tb_sub = between(cur, "    p = sub.add_parser('tb-recon', ", "    p = sub.add_parser('studio-analyse'")
@@ -90,7 +98,7 @@ def file_list():
             out.append((p.relative_to(APP).as_posix(), 'add'))
     out += [(f, 'add') for f in NEW_FILES if (APP / f).exists()]
     out += [(f, 'config_add_if_missing') for f in CONFIGS]
-    out += [(f, 'modify') for f in REQUIRED_MODIFY + OPTIONAL_MODIFY]
+    out += [(f, 'modify') for f in REQUIRED_MODIFY + INTEGRATION_MODIFY + OPTIONAL_MODIFY]
     return out
 
 
@@ -113,6 +121,7 @@ def build(out_dir, test_results=None):
             entry['required'] = rel in REQUIRED_MODIFY
             entry['ops'] = ops_for(rel)
             for op in entry['ops']:
+                op.setdefault('alternatives', [{'op': op.pop('op'), 'anchor': op.pop('anchor')}] if 'op' in op else [])
                 assert op['marker'] in data.decode('utf-8'), (rel, op['marker'])
         files.append(entry)
     man = {'patch_id': f'NBS_MAPPING_STUDIO_{STUDIO_VERSION}', 'version': STUDIO_VERSION,

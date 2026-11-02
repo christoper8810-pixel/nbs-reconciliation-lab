@@ -5,7 +5,7 @@
 1. Close NBS Mapping Control if it is running (its black window).
 2. Download `NBS_Mapping_Studio_Update.zip`. Right-click → Properties → tick **Unblock** if shown → OK.
 3. Extract it, ideally next to or inside your `NBS_Mapping_Control` folder.
-4. Double-click **`INSTALL_UPDATE.bat`**. Confirm the application folder it found, or pick it in the folder dialog. The folder is the one that contains `nbs_control\` and `config\`.
+4. Double-click **`INSTALL_UPDATE.bat`**. The installer searches the extraction folder, Desktop, Documents, Downloads, OneDrive and `C:\` for your installation and asks you to confirm it. If it finds several, it lists them so you can pick one by number. If it finds none, a folder dialog opens. You can choose the application folder itself, a folder above it, or the `nbs_control` folder inside it. If a folder is refused, the message shows what that folder contains.
 5. The installer checks compatibility, backs up, installs, validates the updated application (including its regression tests), and then starts **Mapping Studio** at `http://127.0.0.1:8765/studio`.
 
 If anything fails, the installer restores the backup automatically and tells you that the application is unchanged. To undo a successful update later, double-click **`ROLLBACK_UPDATE.bat`**.
@@ -29,7 +29,7 @@ python patch_engine.py rollback --app-dir "C:\NBS_Mapping_Control"
 ## What the installer guarantees
 
 - **Never written:** `data\`, `exports\`, `inputs\`, your existing `config\*.json`, databases, mapping records, previous reports and decisions. A snapshot of `data\`, `inputs\` and `config\` is compared before and after installation.
-- **Compatibility check:** every file the update changes must be a known version of NBS Mapping Control; line endings are ignored. A locally changed `web.py`, `cli.py` or `base.html` receives only small anchored insertions (route registration, menu links, commands). If an insertion point is missing, the update refuses and changes nothing. Optional fixes (`gl_mapping.py`, `bank_data.py`, `tests/test_rebuild.py`, `README.md`) are skipped with a warning on locally changed copies.
+- **Compatibility check:** the installer refuses, without changing anything, only if `nbs_control\web.py` has no `create_app()`. Files that match a known version are replaced; line endings are ignored. A locally changed `web.py`, `cli.py` or `base.html` receives only small anchored insertions (route registration, menu links, commands). If no insertion point is found, that file is left unchanged with a warning. Mapping Studio still runs through `Start_Mapping_Studio.cmd`, which starts `nbs_control.studio_app`. Optional fixes (`gl_mapping.py`, `bank_data.py`, `tests/test_rebuild.py`, `README.md`) are skipped with a warning on locally changed copies.
 - **Backup first:** every file to be replaced is copied to `patch_backups\<update>_<time>\` and verified by SHA-256 before the first change.
 - **No partial updates:** files are written to a temporary name and moved into place. Any error restores the backup.
 - **Validation:** imports, the Studio and TB web pages, and the Studio and TB regression tests run in a separate process. Failure triggers automatic rollback.

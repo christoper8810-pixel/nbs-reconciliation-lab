@@ -14,4 +14,4 @@ echo Installing Flask and openpyxl for the current user from "%WHEELS%" (offline
 :run
 echo Opening http://127.0.0.1:8765/studio  - keep this window open while you work.
 start "" "http://127.0.0.1:8765/studio"
-%PY% -m nbs_control serve --port 8765
+%PY% -m nbs_control.studio_app --port 8765

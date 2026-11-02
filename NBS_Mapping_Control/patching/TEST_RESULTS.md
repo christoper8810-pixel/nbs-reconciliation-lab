@@ -10,14 +10,14 @@ Command:
 python -m unittest discover -s tests -t .
 ```
 
-Result: **Ran 263 tests in 55.812s; OK (skipped=20)**. 0 failures, 0 errors.
+Result: **Ran 266 tests in 75.795s; OK (skipped=20)**. 0 failures, 0 errors.
 
 | Suite | Tests |
 |---|---|
 | Existing application (owner review, rebuild, generation, ECB adapter, selectors, QCB, Temenos review) | 192 |
 | TB reconciliation, the separate tool (`tests/test_tbrecon.py`) | 45 |
 | Mapping Studio (`tests/test_studio.py`) | 19 |
-| Windows patch package (`tests/test_patch_package.py`) | 7 |
+| Windows patch package (`tests/test_patch_package.py`) | 10 |
 
 The 20 skipped tests need bank inputs that are not in Git. The skip reasons reported were: QCB files not present; generated bank workbook not available; legacy balance-sheet SQL CASE extract (excluded *.csv) not on this machine; no real run yet; original workbooks not on this machine; real category source not available; real store not built; starter review workbook not present; template missing.
 
@@ -67,8 +67,11 @@ The test installations are copies of the application rebuilt from Git history. S
 | Install on the TB release (commit 289c59b) | Success; the known file versions were replaced. |
 | Locally modified web.py and cli.py (CRLF line endings plus an extra line) | Only the anchored insertions were applied. The local line and the CRLF line endings were kept, and the updated command line works. |
 | CRLF copy of a known version | Recognised as that known version. |
-| Folder without the application | Refused. |
-| cli.py without the required insertion point | Refused. Nothing was written and no backup folder was created. |
+| Folder chosen above the application, as the `nbs_control` folder, or inside a subfolder of it | The application folder is found in every case; a missing `config` folder is accepted. |
+| Folder containing two installations | Both are listed with their paths; the installer asks which one to update. |
+| cli.py and base.html that cannot be patched | Installation succeeds with a warning: cli.py is left unchanged, the menu link is placed before `</header>`, and /studio works through `Start_Mapping_Studio.cmd`. |
+| Folder without the application | Refused, with a message listing what the folder contains. |
+| web.py without create_app() | Refused. Nothing was written and no backup folder was created. |
 
 Not tested here: running the `.bat` files and launching the browser on a real Windows desktop, because the container runs Linux. The `.bat` files only find Python (`python`, or `py -3`) and call `patch_engine.py`, which is what was tested. On the first Windows install you can preview the changes without applying them:
 

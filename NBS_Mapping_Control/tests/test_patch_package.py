@@ -149,22 +149,53 @@ class PatchPackage(unittest.TestCase):
         self.assertIn('REPLACE_KNOWN_VERSION                  nbs_control/web.py', out)
         self.assertFalse(p.exists())
 
+    def test_folder_can_be_chosen_above_or_inside_the_application(self):
+        app = baseline('3dcb6ef', self.tmp / 'h')
+        for chosen in (self.tmp / 'h', app / 'nbs_control', app / 'nbs_control' / 'templates'):
+            rc, out = self.engine('install', '--app-dir', str(chosen), '--yes', '--no-launch', '--dry-run')
+            self.assertEqual(rc, 0, out)
+            self.assertIn(f'Application folder: {app.resolve()}', out)
+        shutil.rmtree(app / 'config')                                                   # config folder is optional
+        rc, out = self.engine('install', '--app-dir', str(app), '--yes', '--no-launch', '--dry-run')
+        self.assertEqual(rc, 0, out)
+
+    def test_several_installations_are_listed(self):
+        baseline('3dcb6ef', self.tmp / 'i' / 'one')
+        baseline('3dcb6ef', self.tmp / 'i' / 'two')
+        rc, out = self.engine('install', '--app-dir', str(self.tmp / 'i'), '--yes', '--no-launch', '--dry-run')
+        self.assertEqual(rc, 2)
+        self.assertIn('Several installations found', out)
+        self.assertIn(str((self.tmp / 'i' / 'two' / 'NBS_Mapping_Control').resolve()), out)
+
+    def test_unpatchable_integration_files_still_install_studio(self):
+        app = baseline('3dcb6ef', self.tmp / 'j')
+        cli = app / 'nbs_control' / 'cli.py'
+        cli.write_text(cli.read_text().replace('    args = parser.parse_args(argv)\n', '    args = parser.parse_args(argv or None)\n'))
+        base = app / 'nbs_control' / 'templates' / 'base.html'
+        base.write_text(base.read_text().replace('Home</a>', 'Start</a>').replace('4 Downloads</a>', 'Downloads</a>') + '\n')
+        rc, out = self.engine('install', '--app-dir', str(app), '--yes', '--no-launch', '--skip-tests')
+        self.assertEqual(rc, 0, out)
+        self.assertIn('left unchanged', out)
+        self.assertIn("url_for('studio_home')", base.read_text())                       # fallback anchor before </header>
+        self.assertIn('Web smoke test: pages [200, 200]', out)
+
     def test_incompatible_installations_are_refused_without_change(self):
         empty = self.tmp / 'f'
         empty.mkdir()
+        (empty / 'some_file.txt').write_text('x')
         rc, out = self.engine('install', '--app-dir', str(empty), '--yes', '--no-launch')
         self.assertEqual(rc, 2)
-        self.assertIn('No NBS Mapping Control installation found', out)
+        self.assertIn('is not an NBS Mapping Control folder', out)
+        self.assertIn('some_file.txt', out)                                             # explains what the folder contains
         app = baseline('3dcb6ef', self.tmp / 'g')
-        cli = app / 'nbs_control' / 'cli.py'
-        cli.write_text(cli.read_text().replace('    args = parser.parse_args(argv)\n', '    args = parser.parse_args(argv or None)\n'))
+        web = app / 'nbs_control' / 'web.py'
+        web.write_text(web.read_text().replace('def create_app', 'def make_app'))
         before = tree(app)
         rc, out = self.engine('install', '--app-dir', str(app), '--yes', '--no-launch')
         self.assertEqual(rc, 2, out)
         self.assertIn('Nothing was changed', out)
         self.assertEqual(tree(app), before)
         self.assertFalse((app / 'patch_backups').exists())
-
 
 if __name__ == '__main__':
     unittest.main()

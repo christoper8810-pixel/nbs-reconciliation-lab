@@ -70,30 +70,136 @@ def manifest():
 
 
 # ------------------------------------------------------------------ locating and checking the application
+SKIP_DIRS = {'exports', 'data', 'inputs', '.git', 'node_modules', '__pycache__', 'patch_backups', 'patch_logs', 'wheels', 'venv', '.venv',
+             'patch_files', 'AppData', 'Windows', 'Program Files', 'Program Files (x86)', '$Recycle.Bin'}
+
+
 def is_app(p: Path):
-    return (p / 'nbs_control' / '__init__.py').exists() and (p / 'nbs_control' / 'web.py').exists() and (p / 'config').is_dir()
+    """The folder that directly contains the nbs_control package (the config folder is optional: it is created if missing)."""
+    pkg = p / 'nbs_control'
+    try:
+        return (pkg / '__init__.py').is_file() and ((pkg / 'web.py').is_file() or (pkg / 'cli.py').is_file())
+    except OSError:
+        return False
+
+
+def _inside_patch(p: Path):
+    try:
+        p.resolve().relative_to(HERE)
+        return True
+    except ValueError:
+        return False
+
+
+def find_apps(start: Path, depth=3):
+    """Installations at, above (up to 4 levels) or below (up to `depth` levels) a folder."""
+    found = []
+    try:
+        start = Path(start).expanduser().resolve()
+    except OSError:
+        return found
+    for q in [start] + list(start.parents)[:4]:
+        if is_app(q) and not _inside_patch(q):
+            found.append(q)
+            break
+    if found:
+        return found
+
+    def walk(d, level):
+        if level > depth:
+            return
+        try:
+            subs = [x for x in d.iterdir() if x.is_dir() and x.name not in SKIP_DIRS and not x.name.startswith('.')]
+        except OSError:
+            return
+        for x in sorted(subs):
+            if _inside_patch(x):
+                continue
+            if is_app(x):
+                found.append(x.resolve())
+            else:
+                walk(x, level + 1)
+    if start.is_dir():
+        walk(start, 1)
+    return found
+
+
+def describe(p: Path):
+    try:
+        items = sorted(x.name + ('\\' if x.is_dir() else '') for x in Path(p).iterdir())
+    except OSError as exc:
+        return f'cannot read {p}: {exc}'
+    return f'{p} contains: ' + (', '.join(items[:25]) + (' ...' if len(items) > 25 else '') if items else 'nothing')
+
+
+def _pick(apps, interactive):
+    apps = list(dict.fromkeys(apps))
+    if len(apps) == 1:
+        if not interactive or _confirm(f'Install the update into {apps[0]}?'):
+            return apps[0]
+        return None
+    if not interactive:
+        raise PatchError('Several installations found; run again with --app-dir and one of: ' + '; '.join(map(str, apps)))
+    print('Several NBS Mapping Control installations were found:')
+    for i, a in enumerate(apps, 1):
+        print(f'  {i}. {a}')
+    try:
+        ans = input('Type the number of the one to update (or press Enter to choose another folder): ').strip()
+    except EOFError:
+        return None
+    return apps[int(ans) - 1] if ans.isdigit() and 1 <= int(ans) <= len(apps) else None
 
 
 def resolve_app(arg, interactive):
-    cands = []
     if arg:
-        cands.append(Path(arg))
-    else:
-        cands += [HERE.parent, HERE.parent / 'NBS_Mapping_Control', HERE.parent.parent, HERE.parent.parent / 'NBS_Mapping_Control',
-                  Path.home() / 'NBS_Mapping_Control', Path('C:/NBS_Mapping_Control'), Path.cwd()]
-    for c in cands:
-        for p in (c, c / 'NBS_Mapping_Control'):
-            if is_app(p):
-                if arg or not interactive or _confirm(f'Install the update into {p.resolve()}?'):
-                    return p.resolve()
-    if interactive:
-        chosen = _choose_folder()
+        apps = find_apps(Path(arg.strip().strip('"')))
+        if apps:
+            if len(apps) == 1:
+                return apps[0]
+            return _pick(apps, interactive) or _ask(interactive)
+        msg = (f'{arg} is not an NBS Mapping Control folder and none was found above or inside it. Expected: the folder that '
+               f'contains the "nbs_control" folder. {describe(Path(arg))}')
+        if not interactive:
+            raise PatchError(msg)
+        print(msg)
+        return _ask(interactive)
+    home = Path.home()
+    roots = [HERE.parent, HERE.parent.parent, Path.cwd(), home / 'Desktop', home / 'Documents', home / 'Downloads', home]
+    roots += sorted(home.glob('OneDrive*'))
+    roots += [Path(f'{d}:/') for d in 'CD' if Path(f'{d}:/').exists()]
+    apps = []
+    for r in roots:
+        if r.exists():
+            apps += find_apps(r, depth=2 if r in (home, Path('C:/'), Path('D:/')) else 3)
+    apps = list(dict.fromkeys(apps))
+    if apps:
+        chosen = _pick(apps, interactive)
         if chosen:
-            for p in (Path(chosen), Path(chosen) / 'NBS_Mapping_Control'):
-                if is_app(p):
-                    return p.resolve()
-    raise PatchError('No NBS Mapping Control installation found. Run INSTALL_UPDATE.bat --app-dir "C:\\path\\to\\NBS_Mapping_Control" '
-                     'or choose the folder that contains nbs_control\\ and config\\.')
+            return chosen
+    elif not interactive:
+        raise PatchError('No NBS Mapping Control installation found automatically. Run again with --app-dir "<folder that contains nbs_control>".')
+    return _ask(interactive)
+
+
+def _ask(interactive):
+    if not interactive:
+        raise PatchError('No NBS Mapping Control folder selected.')
+    for attempt in range(3):
+        print('\nSelect the NBS Mapping Control folder (the one that contains the "nbs_control" folder; selecting a folder above or '
+              'inside it also works).')
+        chosen = _choose_folder()
+        if not chosen:
+            break
+        apps = find_apps(Path(chosen))
+        if apps:
+            pick = apps[0] if len(apps) == 1 else _pick(apps, True)
+            if pick:
+                print(f'Using {pick}')
+                return pick
+        print(f'Not an NBS Mapping Control folder: no "nbs_control" package with web.py / cli.py was found at, above or inside it.\n'
+              f'{describe(Path(chosen))}')
+    raise PatchError('No NBS Mapping Control folder selected. Tip: run INSTALL_UPDATE.bat --app-dir "C:\\path\\to\\your\\folder" '
+                     'and send the message above if it still refuses.')
 
 
 def _confirm(q):
@@ -110,14 +216,16 @@ def _choose_folder():
         root = tkinter.Tk()
         root.withdraw()
         root.attributes('-topmost', True)
-        d = filedialog.askdirectory(title='Select the NBS_Mapping_Control application folder')
+        d = filedialog.askdirectory(title='Select the NBS_Mapping_Control application folder', mustexist=True)
         root.destroy()
-        return d or None
+        if d:
+            return d
     except Exception:  # noqa: BLE001 - no GUI available
-        try:
-            return input('Path of the NBS_Mapping_Control folder: ').strip().strip('"') or None
-        except EOFError:
-            return None
+        pass
+    try:
+        return input('Type or paste the folder path (Enter to cancel): ').strip().strip('"') or None
+    except EOFError:
+        return None
 
 
 def app_running():
@@ -144,22 +252,20 @@ def locked(paths):
 
 # ------------------------------------------------------------------ planning
 def _apply_ops(text, ops, path):
-    """Anchored insertions for a locally modified file. Returns new text or raises PatchError."""
+    """Anchored insertions for a locally modified file. Each insertion tries its anchors in order; an anchor must
+    occur exactly once. Returns new text or raises PatchError."""
     nl = '\r\n' if '\r\n' in text else '\n'
     t = text.replace('\r\n', '\n')
     for op in ops:
         if op['marker'] in t:
             continue
-        anchor = op['anchor']
-        if t.count(anchor) != 1:
-            raise PatchError(f'{path}: insertion point not found exactly once ({anchor.strip()[:60]!r}); the file differs too much '
-                             'from any known version')
-        if op['op'] == 'insert_before':
-            t = t.replace(anchor, op['text'] + anchor, 1)
-        elif op['op'] == 'insert_after':
-            t = t.replace(anchor, anchor + op['text'], 1)
+        for alt in op.get('alternatives') or [{'op': op.get('op'), 'anchor': op.get('anchor')}]:
+            anchor = alt['anchor']
+            if anchor and t.count(anchor) == 1:
+                t = t.replace(anchor, op['text'] + anchor, 1) if alt['op'] == 'insert_before' else t.replace(anchor, anchor + op['text'], 1)
+                break
         else:
-            raise PatchError(f'unknown op {op["op"]}')
+            raise PatchError(f'{path}: no insertion point found for {op["marker"]!r}; the file differs too much from any known version')
     return t.replace('\n', nl)
 
 
@@ -199,9 +305,10 @@ def plan(app: Path, man, log):
                 steps.append({'path': f['path'], 'do': 'ANCHORED_INSERTIONS_ON_LOCAL_VERSION', 'data': data})
                 warnings.append(f'{f["path"]} differs from the known versions; only the anchored insertions were applied')
             except PatchError as exc:
-                (problems if f.get('required') else warnings).append(str(exc))
+                (problems if f.get('required') else warnings).append(str(exc) + ('' if f.get('required') else
+                    ' - left unchanged; Mapping Studio still runs through Start_Mapping_Studio.cmd'))
         else:
-            msg = f'{f["path"]} differs from the known versions; {"cannot update safely" if f.get("required") else "optional fix not applied"}'
+            msg = f'{f["path"]} differs from the known versions; {"cannot update safely" if f.get("required") else "left unchanged (optional)"}'
             (problems if f.get('required') else warnings).append(msg)
     for s in steps:
         if s['data'] is not None and s['path'].endswith('.py'):
@@ -297,16 +404,16 @@ def data_snapshot(app):
 
 def validate(app, man, skip_tests, log):
     py = sys.executable
-    code = ('import sys; sys.path.insert(0, "."); import nbs_control.web, nbs_control.cli, nbs_control.studio.run, nbs_control.tbrecon.run; '
+    code = ('import sys; sys.path.insert(0, "."); import nbs_control.web, nbs_control.studio_app, nbs_control.studio.run, nbs_control.tbrecon.run; '
             'from nbs_control.studio import STUDIO_VERSION; assert STUDIO_VERSION == %r; print("import ok")' % man['version'])
     r = subprocess.run([py, '-c', code], cwd=app, capture_output=True, text=True, timeout=300)
     log('Import check: ' + (r.stdout.strip() or r.stderr.strip()[-400:]))
     if r.returncode != 0:
         return False
     smoke = ('import sys, tempfile, shutil, pathlib; sys.path.insert(0, ".");'
-             'from nbs_control.service import ControlService; from nbs_control.web import create_app;'
+             'from nbs_control.service import ControlService; from nbs_control.studio_app import build_app;'
              't = pathlib.Path(tempfile.mkdtemp()); shutil.copytree("config", t / "config", ignore=shutil.ignore_patterns("history", "mapping_versions", "policy_history"));'
-             'app = create_app(ControlService(t / "config", t / "data", t / "supplied"), export_dir=t / "exports");'
+             'app = build_app(ControlService(t / "config", t / "data", t / "supplied"), export_dir=t / "exports");'
              'c = app.test_client(); codes = [c.get(u).status_code for u in ("/studio", "/tb")]; shutil.rmtree(t, ignore_errors=True);'
              'print("pages", codes); assert codes == [200, 200]')
     r = subprocess.run([py, '-c', smoke], cwd=app, capture_output=True, text=True, timeout=300)
@@ -358,6 +465,9 @@ def install(args):
             raise PatchError(msg)
         busy = app_running()
     ensure_dependencies(log)
+    web = app / 'nbs_control' / 'web.py'
+    if not web.is_file() or 'def create_app' not in web.read_text(encoding='utf-8', errors='replace'):
+        raise PatchError(f'{web} has no create_app(): this is not a compatible NBS Mapping Control version. Nothing was changed.')
     steps, problems, warnings = plan(app, man, log)
     for s in steps:
         log(f'  {s["do"]:38} {s["path"]}')

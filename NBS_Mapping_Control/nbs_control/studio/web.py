@@ -18,6 +18,7 @@ _CACHE = OrderedDict()
 
 
 def register_studio_routes(app, root):
+    app.config['STUDIO_ENABLED'] = True
     root = Path(root)
     data_root, export_root = root / 'data', root / 'exports' / 'studio'
     store = Store(data_root)
