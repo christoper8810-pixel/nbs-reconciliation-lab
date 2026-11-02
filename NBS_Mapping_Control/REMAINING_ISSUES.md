@@ -25,3 +25,15 @@
 | E6 | The existing NBS rebuild uses `gl_mapping.line_parts`, which now benefits from fix A1 / A2. NBS lines generated earlier with literal ranges should be regenerated and compared once the bank database is available. |
 | E7 | The two legacy-SQL test classes now skip when their excluded CSV is absent. Supplying those CSVs locally re-enables them. |
 | E8 | The rule-file layout is the tool's own convention (RULE_ID, TYPE, TARGET_GL, BALANCE_TYPE, CATEGORY, PRODUCT, SECTOR, …). Loading the bank's GL Report sheet directly into Engine A, rather than through `gl_mapping.py` into the NBS rebuild, still needs a small column-mapping adapter once the sheet's exact columns are confirmed. |
+
+## 3. Mapping Studio (studio-1.0.0)
+
+| # | Item |
+|---|---|
+| S1 | **Real workbook not seen.** Sheets are recognised by name and columns by header text, using the existing adapter's letters as a disclosed fall-back. Confirm the column map on the first real run. Headers the Studio does not recognise are listed and are not used as conditions. |
+| S2 | **Real BO report not seen.** It needs a line column and an amount column. Confirm the unit (thousands?), the sign convention and whether total lines are included. A global scale or sign pattern is detected and reported, but never applied automatically. |
+| S3 | **Overlapping lines.** Whether BO counts a record that two lines match in both lines or in one is not known. The setting `overlap_policy` (ALL, the default and flagged, or MOST_SPECIFIC) must be confirmed. |
+| S4 | **Formulas.** Formula cells that are not direct references and were saved without a calculated value are marked not executable. Fix: open and save the workbook in Excel once. |
+| S5 | **Corrected copy limits.** The Excel library does not carry charts, images, pivot tables or external links into the corrected copy. When the workbook contains them, PATCH_AUDIT_LOG.xlsx lists them. Copying the approved cell values into the original by hand is then the alternative. |
+| S6 | **Scope of proposals.** Each proposal changes one condition cell, one GL Mapping line cell, or moves a value between two columns of one row. Structural redesign (new lines, new allocation rules) is reported for Finance and never generated. |
+| S7 | **Windows tests.** The `.bat` wrappers were not run on Windows in this environment; the patch engine they call was tested on Linux. Use `INSTALL_UPDATE.bat --dry-run` first. |
