@@ -1,0 +1,11 @@
+{% macro num(v) %}{% if v is not defined or v is none or v == '' %}{% else %}{{ '{:,.2f}'.format(v|float) }}{% endif %}{% endmacro %}
+{% macro st(s) %}<span class="tag {{ {'PASS':'ok','RECONCILED':'ok','FAIL':'bad','DIFFERENCE':'bad','EXPECTED_ONLY':'bad','ACTUAL_ONLY':'bad'}.get(s, 'warn' if s in ('WARN','INCOMPLETE','SOURCE_PENDING','AMBIGUOUS','NO_RULE','MULTI_TARGET_UNRESOLVED','CONTRA_UNRESOLVED','INVALID_KEY') else '') }}">{{ s }}</span>{% endmacro %}
+{% macro nav(r) %}<p><a href="{{ url_for('tb_home') }}">TB reconciliation</a> &rsaquo; <a href="{{ url_for('tb_run', rid=r.run_id) }}">Run {{ r.run_id }}</a>
+ &middot; <a href="{{ url_for('tb_exceptions', rid=r.run_id) }}">Root causes &amp; exceptions</a>
+ &middot; <a href="{{ url_for('tb_worklist', rid=r.run_id) }}">Correction worklist</a>
+ &middot; <a href="{{ url_for('tb_rules', rid=r.run_id) }}">Rules, allocation &amp; GL Report</a>
+ {% if r.label %}<span class="muted">({{ r.label }})</span>{% endif %}</p>{% endmacro %}
+{% macro comptable(rows, rid) %}<table><tr><th>Engine</th><th>Account</th><th>Key / ref</th><th>Legacy GL</th><th>Ccy</th><th>Balance type</th><th>Amount</th><th>Status</th><th>Rule</th><th>Target GL</th><th>Candidates</th><th>Reason</th></tr>
+{% for c in rows %}<tr><td>{{ c.engine }}</td><td><a href="{{ url_for('tb_account', rid=rid, acct=c.account) }}">{{ c.account }}</a></td><td class="pre">{{ c.ref }}</td><td>{{ c.legacy_gl }}</td><td>{{ c.currency }}</td>
+<td>{{ c.balance_type }}{% if c.contra %} <span class="tag warn">contra</span>{% endif %}</td><td style="text-align:right">{{ num(c.amount) }}</td><td>{{ st(c.status) }}{% if c.misalignment %} <span class="tag bad">{{ c.misalignment }}</span>{% endif %}{% if c.duplicate_source %} <span class="tag warn">duplicate</span>{% endif %}</td>
+<td>{{ c.rule_id }}</td><td>{{ c.target_gl }}{{ c.target_account and ' / ' + c.target_account }}</td><td>{{ c.candidates }}</td><td>{{ c.reason }}{{ c.flags }}</td></tr>{% endfor %}</table>{% endmacro %}

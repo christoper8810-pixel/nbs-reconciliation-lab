@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block title %}Mapping Studio - running{% endblock %}
+{% block content %}{% if job.status == 'RUNNING' %}<meta http-equiv="refresh" content="2">{% endif %}
+<div class="panel"><h1>Mapping Studio: {{ job.status|lower }}</h1><p>{{ job.message }}</p>{% if job.error %}<div class="flash error">{{ job.error }}</div><p><a href="{{ url_for('studio_home') }}">Back</a></p>{% endif %}</div>
+{% endblock %}

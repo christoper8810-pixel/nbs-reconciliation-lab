@@ -1,0 +1,14 @@
+{% extends "base.html" %}{% from "tb_macros.html" import num, st, nav %}
+{% block title %}Root causes{% endblock %}
+{% block content %}{{ nav(r) }}<h1>Systemic root causes</h1>
+<div class="panel"><p class="muted">Levels are kept apart so money is not counted twice: COMPONENT (source items left unallocated), RULE, LEGACY_GL, and GL (classification of each open GL line's residual).</p>
+<table><tr><th>ID</th><th>Root cause</th><th>Level</th><th>Group</th><th>Records</th><th>Accounts</th><th>Net</th><th>Absolute</th><th>Rules</th><th>Confidence</th><th>Proposed action</th><th>Open question</th></tr>
+{% for i in issues %}<tr{% if i.informational == 'Y' %} class="muted"{% endif %}><td>{{ i.issue_id }}</td><td><a href="?category={{ i.category }}">{{ i.title }}</a></td><td>{{ i.level }}</td><td>{{ i.group }}</td><td>{{ i.records }}</td><td>{{ i.accounts }}</td>
+<td style="text-align:right">{{ num(i.net_amount) }}</td><td style="text-align:right">{{ num(i.absolute_amount) }}</td><td class="pre">{{ i.related_rules }}</td><td>{{ i.confidence }}</td><td>{{ i.proposed_action }}</td><td>{{ i.open_question }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Exceptions {% if cat %}- {{ cat }} <a href="?">(all)</a>{% endif %}</h2>
+<form class="filters"><select name="category"><option value="">all categories</option>{% for c in cats %}<option {{ 'selected' if c == cat }}>{{ c }}</option>{% endfor %}</select><button>Filter</button></form>
+<table><tr><th>ID</th><th>Category</th><th>Level</th><th>Engine</th><th>Amount</th><th>Account</th><th>Balance type</th><th>Ccy</th><th>Legacy GL</th><th>Target GL</th><th>Rules</th><th>Confidence</th><th>Reason</th></tr>
+{% for e in exc %}<tr><td>{{ e.exception_id }}</td><td>{{ e.category }}</td><td>{{ e.level }}</td><td>{{ e.engine }}</td><td style="text-align:right">{{ num(e.amount) }}</td>
+<td>{% if e.account %}<a href="{{ url_for('tb_account', rid=r.run_id, acct=e.account) }}">{{ e.account }}</a>{% endif %}</td><td>{{ e.balance_type }}</td><td>{{ e.currency }}</td><td>{{ e.legacy_gl }}</td>
+<td>{% if e.target_gl and e.currency %}<a href="{{ url_for('tb_gl', rid=r.run_id, gl=e.target_gl, ccy=e.currency) }}">{{ e.target_gl }}</a>{% endif %}</td><td class="pre">{{ e.rules }}</td><td>{{ e.confidence }}</td><td>{{ e.reason }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

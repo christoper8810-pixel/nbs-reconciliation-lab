@@ -1,0 +1,14 @@
+{% extends "base.html" %}{% from "tb_macros.html" import num, st, nav, comptable %}
+{% block title %}GL {{ gl }} {{ ccy }}{% endblock %}
+{% block content %}{{ nav(r) }}<h1>GL {{ gl }} &middot; {{ ccy }}</h1>
+{% if row %}<div class="panel"><table><tr><th>Expected</th><th>By stream</th><th>Actual closing</th><th>Post-COB movements</th><th>Actual opening</th><th>Difference</th><th>Unresolved candidates</th><th>Status</th><th>Reason</th></tr>
+<tr><td>{{ num(row.expected) }}</td><td class="pre">{{ row.expected_by_stream }}</td><td>{{ num(row.actual_closing) }}</td><td>{{ num(row.post_cob_movements) }}</td><td>{{ num(row.actual_opening) }}</td><td>{{ row.amount_exact }}</td><td>{{ num(row.unresolved_candidate_amount) }}</td><td>{{ st(row.recon_status) }}</td><td>{{ row.exception_reason }}</td></tr></table>
+<p class="muted">Legacy GL(s): {{ row.legacy_gls }}</p></div>{% endif %}
+<div class="panel"><h2>Allocation grain (balance type &times; rule)</h2><table><tr><th>Balance type</th><th>Rule / mapping</th><th>Components</th><th>Amount</th></tr>
+{% for g in grain %}<tr><td>{{ g.balance_type }}</td><td>{{ g.rule_id }}</td><td>{{ g.n }}</td><td style="text-align:right">{{ num(g.amount) }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Exceptions and classifications on this GL</h2><table><tr><th>ID</th><th>Category</th><th>Level</th><th>Amount</th><th>Confidence</th><th>Reason</th></tr>
+{% for e in exc %}<tr><td>{{ e.exception_id }}</td><td>{{ e.category }}</td><td>{{ e.level }}</td><td style="text-align:right">{{ num(e.amount) }}</td><td>{{ e.confidence }}</td><td>{{ e.reason }}</td></tr>{% endfor %}</table></div>
+{% if roll %}<div class="panel"><h2>Roll-forward</h2>{% for x in roll %}<p>Opening migrated (expected) {{ num(x.opening_migrated_expected) }} + validated post-COB {{ num(x.validated_post_cob_movements) }} {{ x.by_type }} = {{ num(x.computed_closing) }}; actual closing {{ num(x.actual_closing) }}; roll-forward difference {{ num(x.rollforward_difference) }}</p>{% endfor %}</div>{% endif %}
+<div class="panel"><h2>Unresolved components that may belong here ({{ cands|length }})</h2>{{ comptable(cands, r.run_id) }}</div>
+<div class="panel"><h2>Mapped source components ({{ comps|length }}{% if comps|length == 2000 %}, first 2000 - see components.csv{% endif %})</h2>{{ comptable(comps, r.run_id) }}</div>
+{% endblock %}

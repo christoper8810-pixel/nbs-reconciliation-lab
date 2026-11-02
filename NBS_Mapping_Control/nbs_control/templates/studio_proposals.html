@@ -1,0 +1,15 @@
+{% extends "base.html" %}{% from "studio_macros.html" import num, tag, nav %}
+{% block title %}Proposed corrections{% endblock %}
+{% block content %}{{ nav(r) }}<h1>Proposed corrections</h1>
+<div class="banner">HIGH = deterministic: the edit closes every affected BO difference on re-execution and no other cell does the same. MEDIUM / LOW need Finance confirmation. UNRESOLVED items have no value to approve. The original workbook is not changed by approval.</div>
+<form class="filters" method="get"><div><label>Confidence</label><select name="confidence"><option value="">all</option>{% for c in ('HIGH','MEDIUM','LOW') %}<option {{ 'selected' if conf == c }}>{{ c }}</option>{% endfor %}</select></div>
+<div><label>Status</label><select name="status"><option value="">all</option>{% for c in ('PROPOSED','APPROVED','REJECTED') %}<option {{ 'selected' if st == c }}>{{ c }}</option>{% endfor %}</select></div><button>Filter</button></form>
+<form method="post" action="{{ url_for('studio_decide', rid=r.id) }}"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<table><tr><th></th><th>ID</th><th>Worksheet / cell</th><th>Existing</th><th>Proposed</th><th>Reason and evidence</th><th>Records</th><th>Impact</th><th>Confidence</th><th>Status</th></tr>
+{% for p in props %}<tr><td><input type="checkbox" name="pid" value="{{ p.id }}"></td><td>{{ p.id }}</td>
+<td>{% for e in p.edits %}{{ e.cell }}<br>{% endfor %}</td><td class="pre">{% for e in p.edits %}{{ e.existing }}<br>{% endfor %}</td><td class="pre">{% for e in p.edits %}{{ e.proposed }}<br>{% endfor %}</td>
+<td><b>{{ p.reason }}</b><br><span class="muted">{{ p.evidence }}{% if p.note %} {{ p.note }}{% endif %}</span></td><td>{{ p.affected_records }}</td><td style="text-align:right">{{ num(p.financial_impact) }}</td>
+<td>{{ tag(p.confidence) }}</td><td>{{ tag(p.status) }}{% if p.decided_by %}<br><span class="muted">{{ p.decided_by }} {{ p.decided_at }}</span>{% endif %}</td></tr>{% endfor %}</table>
+<div class="filters"><div><label>Decision</label><select name="decision"><option>APPROVED</option><option>REJECTED</option><option>PROPOSED</option></select></div>
+<div><label>Your name</label><input type="text" name="actor" required></div><div style="flex:1"><label>Reason</label><input type="text" name="reason" required></div><button>Record decision for the ticked proposals</button></div></form>
+{% endblock %}

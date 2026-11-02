@@ -32,3 +32,9 @@
 *.csv
 *.pdf
 *.zip
+# TB reconciliation runtime state and run outputs (financial results stay local)
+**/data/tbrecon/
+**/exports/tb_recon/
+**/dist/
+**/data/studio/
+**/exports/studio/

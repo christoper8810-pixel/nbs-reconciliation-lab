@@ -1,0 +1,25 @@
+{% extends "base.html" %}{% from "studio_macros.html" import num, tag %}
+{% block title %}Mapping Studio{% endblock %}
+{% block content %}
+<h1>NBS Mapping Studio</h1>
+<div class="panel"><p><b>Excel mapping workbook &rarr; rule compiler &rarr; expected BO allocation &rarr; actual BO report &rarr; differences &rarr; root-cause investigation &rarr; proposed correction.</b>
+The workbook's own conditions are compiled with their exact cells and executed; nothing has to be re-entered. Every proposed correction is verified by re-executing the workbook with the edit applied.
+The original workbook is never changed: approved corrections go to a separate, verified copy.</p></div>
+<div class="cols">
+<div class="panel"><h2>Steps 1-3: upload</h2>
+<form method="post" action="{{ url_for('studio_start') }}" enctype="multipart/form-data"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<label>Step 1 - Excel mapping workbook (.xlsx / .xlsm)</label><input type="file" name="workbook" accept=".xlsx,.xlsm"><input type="text" name="workbook_path" placeholder="or a local path">
+<label>Step 2 - BO-generated report (.xlsx / .csv; columns LINE / DKBGL, AMOUNT, optional CURRENCY and other dimensions)</label><input type="file" name="bo" accept=".xlsx,.xlsm,.csv"><input type="text" name="bo_path" placeholder="or a local path">
+<label>Step 3 - supporting source records (one or more; account-level balances with CATEGORY, SECTOR, BALANCE_TYPE, CURRENCY ... or LEGACY_GL)</label><input type="file" name="sources" multiple accept=".xlsx,.xlsm,.csv"><textarea name="sources_path" rows="2" placeholder="or local paths, one per line"></textarea>
+<div class="filters"><div><label>Tolerance</label><input type="text" name="tolerance" value="0.01"></div>
+<div><label>BO amount unit (multiplier)</label><input type="text" name="bo_amount_scale" value="1"></div><div><label>BO sign</label><select name="bo_sign"><option>1</option><option>-1</option></select></div>
+<div><label>Overlapping lines</label><select name="overlap_policy"><option value="ALL">count in each line (literal, flagged)</option><option value="MOST_SPECIFIC">most specific line only</option></select></div></div>
+<label>Label</label><input type="text" name="label">
+<button>Steps 4-9: compile, validate, reconcile and investigate</button></form>
+<form method="post" action="{{ url_for('studio_synthetic') }}" style="margin-top:10px"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<label>Try it with SYNTHETIC data (no bank data)</label><select name="scenario"><option>defects</option><option>clean</option></select> <button class="secondary">Run synthetic demonstration</button></form></div>
+<div class="panel"><h2>Runs</h2><table><tr><th>Run</th><th>Kind</th><th>Created</th><th>BO keys matched</th><th>Abs. difference</th><th>Proposals</th><th>Unresolved</th></tr>
+{% for r in runs %}{% set s = r.summary %}<tr><td><a href="{{ url_for('studio_run', rid=r.id) }}">{{ r.id }}</a></td><td>{{ r.kind }}{% if r.parent_run %} of {{ r.parent_run }}{% endif %}</td><td>{{ r.created }}</td>
+<td>{{ s.bo_matched_before }} / {{ s.bo_keys }}</td><td>{{ num(s.bo_abs_difference_before) }}</td><td>{{ s.proposals }}</td><td>{{ s.unresolved }}</td></tr>{% endfor %}</table></div>
+</div>
+{% endblock %}

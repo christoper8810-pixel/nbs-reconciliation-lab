@@ -1,0 +1,39 @@
+{% extends "base.html" %}{% from "studio_macros.html" import num, tag, nav %}
+{% block title %}Mapping Studio run{% endblock %}
+{% block content %}{{ nav(r) }}
+<h1>Executive summary</h1>
+<p class="muted">Workbook {{ res.workbook.name }} &middot; BO {{ (res.bo or {}).name or 'not supplied' }} &middot; sources {{ s.source_records }} records &middot; grain: line{% for d in res.key_dims %} + {{ d }}{% endfor %} &middot; tolerance {{ res.tolerance }}</p>
+{% if res.parent_summary %}<div class="banner">Rerun on the corrected mapping. Before: {{ res.parent_summary.bo_matched_before }} / {{ res.parent_summary.bo_keys }} keys matched, absolute difference {{ num(res.parent_summary.bo_abs_difference_before) }}. Now: {{ s.bo_matched_before }} / {{ s.bo_keys }}, {{ num(s.bo_abs_difference_before) }}.</div>{% endif %}
+<div class="grid">
+<div class="stat"><b>{{ s.rules }}</b><span>criteria rows compiled ({{ s.rules_not_executable }} not executable)</span></div>
+<div class="stat"><b>{{ s.conditions }}</b><span>conditions with cell references</span></div>
+<div class="stat"><b>{{ s.validation.get('ERROR', 0) }}</b><span>validation errors</span></div>
+<div class="stat"><b>{{ s.bo_matched_before }} / {{ s.bo_keys }}</b><span>BO keys matched</span></div>
+<div class="stat"><b>{{ num(s.bo_abs_difference_before) }}</b><span>absolute BO difference (detail lines)</span></div>
+<div class="stat"><b>{{ s.bo_matched_after_proposals if s.bo_matched_after_proposals is not none else '-' }}</b><span>matched if all proposals approved</span></div>
+<div class="stat"><b>{{ s.proposals }}</b><span>proposals by confidence</span></div>
+<div class="stat"><b>{{ s.unresolved }}</b><span>unresolved (evidence needed)</span></div>
+</div>
+<div class="cols">
+<div class="panel"><h2>Step 10: approve and export</h2>
+<form method="post" action="{{ url_for('studio_decide', rid=r.id) }}"><input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="all_high" value="1"><input type="hidden" name="decision" value="APPROVED">
+<label>Your name</label><input type="text" name="actor" required><label>Reason</label><input type="text" name="reason" value="Deterministic corrections verified by re-execution" required>
+<button>Approve all HIGH-confidence proposals ({{ props|selectattr('confidence','equalto','HIGH')|selectattr('status','equalto','PROPOSED')|list|length }})</button></form>
+<p><a href="{{ url_for('studio_proposals', rid=r.id) }}">Review all proposals individually</a> ({{ props|selectattr('status','equalto','APPROVED')|list|length }} approved)</p>
+<form method="post" action="{{ url_for('studio_export', rid=r.id) }}"><input type="hidden" name="csrf" value="{{ csrf_token }}"><label>Your name</label><input type="text" name="actor" required>
+<button>Write CORRECTED_MAPPING_PREVIEW.xlsx (approved edits only)</button></form>
+<h2>Step 11: rerun</h2><form method="post" action="{{ url_for('studio_rerun', rid=r.id) }}"><input type="hidden" name="csrf" value="{{ csrf_token }}"><button class="secondary">Rerun the reconciliation on the corrected copy</button></form></div>
+<div class="panel"><h2>Reports</h2><ul>{% for f in files %}<li><a href="{{ url_for('studio_file', rid=r.id, name=f) }}">{{ f }}</a></li>{% endfor %}</ul>
+<h2>Systemic root causes</h2><table><tr><th>ID</th><th>Root cause</th><th>Resp.</th><th>Records</th><th>Impact</th><th>Conf.</th></tr>
+{% for c in res.root_causes[:12] %}<tr><td>{{ c.id }}</td><td>{{ c.root_cause }}{% if c.cells %}<br><span class="muted">{{ c.cells }}</span>{% endif %}</td><td>{{ c.responsibility }}</td><td>{{ c.records }}</td><td style="text-align:right">{{ num(c.financial_impact) }}</td><td>{{ tag(c.confidence) }}</td></tr>{% endfor %}</table></div>
+</div>
+<div class="panel"><h2>Discrepancy dashboard: expected (workbook conditions) versus BO report</h2>
+<form class="filters" method="get"><div><label>Status</label><select name="status"><option value="">all</option><option value="OPEN" {{ 'selected' if request.args.get('status') == 'OPEN' }}>all open</option>{% for st in statuses %}<option {{ 'selected' if request.args.get('status') == st }}>{{ st }}</option>{% endfor %}</select></div>
+<div><label>Line / key contains</label><input type="text" name="q" value="{{ request.args.get('q', '') }}"></div><button>Filter</button></form>
+<table><tr><th>Key</th><th>Type</th><th>Expected</th><th>BO actual</th><th>Difference</th><th>Status</th><th>After proposals</th></tr>
+{% for x in rows %}<tr><td><a href="{{ url_for('studio_key', rid=r.id, k=x.k) }}">{{ x.k }}</a></td><td>{{ x.line_type }}</td><td style="text-align:right">{{ num(x.expected) }}</td><td style="text-align:right">{{ num(x.actual) }}</td>
+<td style="text-align:right">{{ num(x.difference) }}</td><td>{{ tag(x.status) }}</td><td style="text-align:right">{{ num(x.after) }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Differences not explained by a mapping correction</h2><table><tr><th>Key</th><th>Difference</th><th>Category</th><th>Responsibility</th><th>Confidence</th><th>Evidence needed</th></tr>
+{% for x in res.residuals %}<tr><td>{{ x.key }}</td><td style="text-align:right">{{ num(x.difference) }}</td><td>{{ x.category }}</td><td>{{ x.responsibility }}</td><td>{{ tag(x.confidence) }}</td><td>{{ x.evidence_needed }}</td></tr>{% endfor %}</table>
+{% if res.bo_internal_totals %}<h3>BO internal totals</h3><table><tr><th>Total line</th><th>BO total</th><th>Sum of BO details</th><th>Difference</th><th>Basis</th></tr>{% for t in res.bo_internal_totals %}<tr><td>{{ t.key }}</td><td>{{ num(t.bo_total) }}</td><td>{{ num(t.bo_members_sum) }}</td><td>{{ num(t.difference) }}</td><td>{{ t.basis }}</td></tr>{% endfor %}</table>{% endif %}</div>
+{% endblock %}

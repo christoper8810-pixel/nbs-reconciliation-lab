@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block title %}Running{% endblock %}
+{% block content %}{% if job.status == 'RUNNING' %}<meta http-equiv="refresh" content="2">{% endif %}
+<div class="panel"><h1>Reconciliation {{ job.status|lower }}</h1><p>{{ job.message }}</p>{% if job.error %}<div class="flash error">{{ job.error }}</div><p><a href="{{ url_for('tb_home') }}">Back</a></p>{% endif %}</div>
+{% endblock %}

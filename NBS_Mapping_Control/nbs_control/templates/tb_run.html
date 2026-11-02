@@ -1,0 +1,34 @@
+{% extends "base.html" %}{% from "tb_macros.html" import num, st, nav %}
+{% block title %}TB run {{ r.run_id }}{% endblock %}
+{% block content %}{{ nav(r) }}
+<h1>Run {{ r.run_id }}</h1>
+{% set s = m.statistics %}{% set mt = m.meta %}
+{% if mt.legacy_semantics %}<div class="flash error">BEFORE baseline run with the original token semantics (first match wins, literal ranges). For measurement only.</div>{% endif %}
+{% if mt.missing_inputs %}<div class="banner">Missing inputs (analysis incomplete, not reconciled): {{ mt.missing_inputs|join(', ') }}</div>{% endif %}
+<div class="grid">
+<div class="stat"><b>{{ s.gl_reconciled }} / {{ s.gl_lines }}</b><span>GL / currency lines reconciled</span></div>
+<div class="stat"><b>{{ s.unresolved_gl_lines }}</b><span>open GL lines</span></div>
+<div class="stat"><b>{{ num(s.absolute_difference) }}</b><span>absolute difference</span></div>
+<div class="stat"><b>{{ num(s.unmatched_balance_abs) }}</b><span>unallocated source balance (abs)</span></div>
+<div class="stat"><b>{{ s.components_unmapped }} / {{ s.components_total }}</b><span>components not mapped</span></div>
+<div class="stat"><b>{{ s.ambiguous_allocations }}</b><span>ambiguous allocations</span></div>
+<div class="stat"><b>{{ s.unsupported_balance_types }}</b><span>unsupported rule balance types</span></div>
+<div class="stat"><b>{{ s.misalignment_findings }}</b><span>column-misalignment findings</span></div>
+</div>
+<div class="panel"><h2>Streams</h2><table><tr><th>Engine</th><th>Status</th><th>Counts</th><th>Note</th></tr>
+{% for k, e in m.engines.items() %}<tr><td>{{ k }} {{ e.name }}</td><td>{{ st(e.status) }}</td><td class="pre">{{ e.stats }}</td><td>{{ e.reason or '' }}</td></tr>{% endfor %}</table>
+<p class="muted">Tolerance absolute {{ mt.tolerance.absolute }}, relative {{ mt.tolerance.relative }} &middot; result hash {{ mt.result_hash[:16] }} &middot; config {{ mt.config_hash[:12] }} &middot; rules {{ mt.rules_hash[:12] }} &middot; engine {{ mt.engine_version }}</p>
+<p>Downloads: {% for f in downloads if f in files %}<a href="{{ url_for('tb_file', rid=r.run_id, name=f) }}">{{ f }}</a>{% if not loop.last %} &middot; {% endif %}{% endfor %}</p></div>
+<div class="panel"><h2>Controls</h2><table><tr><th>ID</th><th>Control</th><th>Status</th><th>Detail</th></tr>
+{% for c in controls %}<tr><td>{{ c.id }}</td><td>{{ c.control }}</td><td>{{ st(c.status) }}</td><td>{{ c.detail }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Expected versus actual TB ({{ total }} lines)</h2>
+<form class="filters" method="get">{% for f, vals in facets.items() %}<div><label>{{ f }}</label><select name="{{ f }}"><option value="">all</option>{% for v in vals %}<option {{ 'selected' if request.args.get(f) == v }}>{{ v }}</option>{% endfor %}</select></div>{% endfor %}
+<div><label>GL starts with</label><input type="text" name="gl" value="{{ request.args.get('gl', '') }}"></div><button>Filter</button></form>
+<table><tr><th>Target GL</th><th>Ccy</th><th>Class</th><th>Legacy GL(s)</th><th>Expected</th><th>By stream</th><th>Actual closing</th><th>Post-COB</th><th>Actual opening</th><th>Difference</th><th>Mapping</th><th>Status</th><th>Reason</th></tr>
+{% for x in rows %}<tr><td><a href="{{ url_for('tb_gl', rid=r.run_id, gl=x.target_gl, ccy=x.currency) }}">{{ x.target_gl }}</a></td><td>{{ x.currency }}</td><td>{{ x['class'] }}</td><td>{{ x.legacy_gls }}</td>
+<td style="text-align:right">{{ num(x.expected) }}</td><td class="pre">{{ x.expected_by_stream }}</td><td style="text-align:right">{{ num(x.actual_closing) }}</td><td style="text-align:right">{{ num(x.post_cob_movements) }}</td>
+<td style="text-align:right">{{ num(x.actual_opening) }}</td><td style="text-align:right">{{ num(x.difference) }}</td><td>{{ x.mapping_status }}</td><td>{{ st(x.recon_status) }}</td><td>{{ x.exception_reason }}</td></tr>{% endfor %}</table>
+{% if pages > 1 %}<p>Page {{ page + 1 }} / {{ pages }}{% if page > 0 %} <a href="{{ page_url(page - 1) }}">previous</a>{% endif %}{% if page + 1 < pages %} <a href="{{ page_url(page + 1) }}">next</a>{% endif %}</p>{% endif %}</div>
+<div class="panel"><h2>Legacy TB lines (source &rarr; stream)</h2><table><tr><th>Legacy GL</th><th>Ccy</th><th>Class</th><th>TB amount</th><th>Stream</th><th>Population</th><th>Gap</th><th>Mapping targets</th><th>Status</th></tr>
+{% for l in legacy %}<tr><td>{{ l.legacy_gl }}</td><td>{{ l.currency }}</td><td>{{ l['class'] }}</td><td style="text-align:right">{{ num(l.tb_amount) }}</td><td>{{ l.stream }}</td><td style="text-align:right">{{ num(l.population) }}</td><td style="text-align:right">{{ num(l.gap) }}</td><td>{{ l.targets }}</td><td>{{ st(l.status) }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

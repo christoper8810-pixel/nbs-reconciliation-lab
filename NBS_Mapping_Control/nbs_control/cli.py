@@ -85,8 +85,38 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument('--report-date', default='2026-09-30'); p.add_argument('--label', default='')
     p.add_argument('--no-excel', action='store_true')
 
+    p = sub.add_parser('tb-recon', help='Whole-TB migration reconciliation (engines A PRODUCT_S3, B INTERNAL_CUS_ACC, C PL)')
+    p.add_argument('--inputs', required=True, help='Folder with legacy_tb / actual_tb / gl_mapping / asset_balances / gl_rules ... files')
+    p.add_argument('--config', help='tb_recon.json (default: <inputs>/tb_recon.json, else config/tb_recon.json)')
+    p.add_argument('--label', default='')
+    p.add_argument('--legacy-semantics', action='store_true', help='BEFORE baseline: original token handling and first-match-wins')
+    p.add_argument('--apply-proposals', nargs='?', const='all', help='Apply auto-applicable proposals (all or PC0001,PC0002) to a copy of gl_rules')
+    p = sub.add_parser('tb-recon-synthetic', help='Write a SYNTHETIC tb-recon dataset (clean or defects)')
+    p.add_argument('--dir', required=True); p.add_argument('--scenario', choices=('clean', 'defects'), default='defects')
+    p = sub.add_parser('tb-recon-compare', help='Before / after comparison of two tb-recon runs')
+    p.add_argument('before'); p.add_argument('after')
+    sub.add_parser('tb-recon-runs', help='List stored tb-recon runs')
+
+    p = sub.add_parser('studio-analyse', help='Mapping Studio: compile the workbook conditions, validate, reconcile the BO report, propose corrections')
+    p.add_argument('--workbook', required=True); p.add_argument('--bo'); p.add_argument('--sources', nargs='*', default=[])
+    p.add_argument('--label', default=''); p.add_argument('--tolerance'); p.add_argument('--bo-scale'); p.add_argument('--bo-sign')
+    p = sub.add_parser('studio-synthetic', help='Write a SYNTHETIC Mapping Studio dataset (workbook, BO report, source records)')
+    p.add_argument('--dir', required=True); p.add_argument('--scenario', choices=('clean', 'defects'), default='defects')
+    p = sub.add_parser('studio-decide', help='Approve / reject Mapping Studio proposals (or --all-high)')
+    p.add_argument('run'); p.add_argument('--proposals', nargs='*', default=[]); p.add_argument('--all-high', action='store_true')
+    p.add_argument('--decision', choices=('APPROVED', 'REJECTED', 'PROPOSED'), default='APPROVED')
+    p.add_argument('--actor', required=True); p.add_argument('--reason', required=True)
+    p = sub.add_parser('studio-export', help='Write the corrected copy (approved edits only) and refresh the reports')
+    p.add_argument('run'); p.add_argument('--actor', required=True)
+    p = sub.add_parser('studio-rerun', help='Rerun the reconciliation on the corrected copy')
+    p.add_argument('run')
+
     args = parser.parse_args(argv)
     try:
+        if args.command.startswith('studio-'):
+            return _studio(args)
+        if args.command.startswith('tb-recon'):
+            return _tb_recon(args)
         if args.command == 'rebuild-setup':
             from .rebuild_run import setup
             print(json.dumps(setup(PROJECT_ROOT, args.categ, args.bo, args.live, qcb_paths=args.qcb), indent=2, default=str))
@@ -194,6 +224,78 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({"status": "ERROR", "detail": str(exc)}), file=sys.stderr)
         return 1
     return 1
+
+
+def _studio(args) -> int:
+    from .studio import exports as sx, run as sr, synthetic as ss
+    from .studio.store import Store
+    data_root, export_root = PROJECT_ROOT / 'data', EXPORT_DIR / 'studio'
+    store = Store(data_root)
+    try:
+        if args.command == 'studio-synthetic':
+            print(json.dumps({'synthetic_dataset': str(ss.build(args.dir, args.scenario)), 'scenario': args.scenario}))
+            return 0
+        if args.command == 'studio-analyse':
+            cfg = {k: v for k, v in (('tolerance', args.tolerance), ('bo_amount_scale', args.bo_scale), ('bo_sign', args.bo_sign)) if v}
+            pid = sr.new_project(store, data_root, args.label, args.workbook, args.bo, args.sources, cfg)
+            rid, folder, res = sr.run_project(store, data_root, export_root, pid, progress=lambda m: print('...', m, file=sys.stderr))
+        elif args.command == 'studio-decide':
+            pids = [p['id'] for p in store.proposals(args.run) if p['confidence'] == 'HIGH' and p['status'] == 'PROPOSED'] if args.all_high else args.proposals
+            print(json.dumps({'decided': store.decide(args.run, pids, args.decision, args.actor, args.reason)}))
+            return 0
+        elif args.command == 'studio-export':
+            r = store.run(args.run)
+            if not r:
+                raise ValueError('Unknown run')
+            corr = sx.write_corrected(store, args.run, r['folder'], sr.load_result(r['folder']), args.actor)
+            print(json.dumps({'corrected_copy': corr['path'], 'applied': len(corr['applied']), 'refused': len(corr['conflicts']),
+                              'preserved': corr['verification']['preserved'], 'lossy_parts': corr['lossy_parts']}, indent=2))
+            return 0 if corr['verification']['preserved'] and not corr['conflicts'] else 2
+        else:
+            rid, folder, res = sr.rerun(store, data_root, export_root, args.run)
+        print(json.dumps({'run_id': rid, 'folder': str(folder), 'summary': res['summary']}, indent=2, default=str))
+        s = res['summary']
+        return 0 if s['bo_open_before'] == 0 and not s['validation'].get('ERROR') else 2
+    except (ValueError, OSError, KeyError) as exc:
+        print(json.dumps({'status': 'ERROR', 'detail': str(exc)}), file=sys.stderr)
+        return 1
+
+
+def _tb_recon(args) -> int:
+    from .tbrecon import compare, run as tbrun, synthetic
+    from .tbrecon.tables import TableError
+    data_root, export_root = PROJECT_ROOT / 'data', EXPORT_DIR / 'tb_recon'
+    try:
+        if args.command == 'tb-recon-synthetic':
+            print(json.dumps({'synthetic_dataset': str(synthetic.build(args.dir, args.scenario)), 'scenario': args.scenario}))
+            return 0
+        if args.command == 'tb-recon-runs':
+            for r in tbrun.list_runs(data_root):
+                s = r['summary']
+                print(f"{r['run_id']}  {r['label'][:30]:30}  reconciled {s.get('gl_reconciled')}/{s.get('gl_lines')}  "
+                      f"open {s.get('unresolved_gl_lines')}  repro {r['reproducible']}")
+            return 0
+        if args.command == 'tb-recon-compare':
+            res = compare.compare_runs(data_root, export_root, args.before, args.after)
+            print(json.dumps({'folder': res['folder'], 'summary': res['summary'], 'statistics': res['statistics']}, indent=2, default=str))
+            return 0
+        paths = tbrun.discover(args.inputs)
+        cfg = args.config or compare.folder_config(args.inputs)
+        if args.apply_proposals:
+            only = None if args.apply_proposals == 'all' else set(args.apply_proposals.split(','))
+            run_id, folder, res, applied = compare.run_with_proposals(paths, data_root, export_root, cfg, only, args.label)
+        else:
+            run_id, folder, res = tbrun.run_and_store(paths, data_root, export_root, label=args.label, cfg_path=cfg,
+                                                      legacy=args.legacy_semantics, progress=lambda m: print('...', m, file=sys.stderr))
+        out = {'run_id': run_id, 'folder': str(folder), 'missing_inputs': res['meta']['missing_inputs'],
+               'engines': {k: e['status'] for k, e in res['engines'].items()},
+               'controls': {c['id']: c['status'] for c in res['controls']}, 'statistics': res['statistics']}
+        print(json.dumps(out, indent=2, default=str))
+        s = res['statistics']
+        return 0 if s['unresolved_gl_lines'] == 0 and not s['controls_failed'] and not res['meta']['missing_inputs'] else 2
+    except (TableError, ValueError, OSError) as exc:
+        print(json.dumps({'status': 'ERROR', 'detail': str(exc)}), file=sys.stderr)
+        return 1
 
 
 if __name__ == "__main__":

@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% from "tb_macros.html" import num, st %}
+{% block title %}Compare runs{% endblock %}
+{% block content %}<p><a href="{{ url_for('tb_home') }}">TB reconciliation</a></p><h1>Before {{ res.before }} &rarr; after {{ res.after }}</h1>
+<div class="panel"><p>{{ res.before_label }} &rarr; {{ res.after_label }}. Changes: {{ res.summary }}. Written to {{ res.folder }}.</p>
+<table><tr><th>Statistic</th><th>Before</th><th>After</th></tr>{% for k, v in res.statistics.items() %}<tr><td>{{ k }}</td><td>{{ v.before }}</td><td>{{ v.after }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><table><tr><th>GL</th><th>Ccy</th><th>Class</th><th>Before</th><th>After</th><th>Before difference</th><th>After difference</th><th>Change</th></tr>
+{% for l in res.lines %}<tr><td>{{ l.target_gl }}</td><td>{{ l.currency }}</td><td>{{ l['class'] }}</td><td>{{ st(l.before_status) }}</td><td>{{ st(l.after_status) }}</td><td>{{ l.before_difference }}</td><td>{{ l.after_difference }}</td><td>{{ l.change }}</td></tr>{% endfor %}</table></div>
+{% endblock %}
