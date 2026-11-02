@@ -72,6 +72,8 @@ def manifest():
 # ------------------------------------------------------------------ locating and checking the application
 SKIP_DIRS = {'exports', 'data', 'inputs', '.git', 'node_modules', '__pycache__', 'patch_backups', 'patch_logs', 'wheels', 'venv', '.venv',
              'patch_files', 'AppData', 'Windows', 'Program Files', 'Program Files (x86)', '$Recycle.Bin'}
+# Folders of a bundled / portable Python: never the application, and large.
+PY_DIRS = {'Lib', 'lib', 'site-packages', 'DLLs', 'Scripts', 'include', 'Include', 'tcl', 'libs', 'share', 'Tools', 'Doc'}
 
 
 def is_app(p: Path):
@@ -92,24 +94,23 @@ def _inside_patch(p: Path):
 
 
 def find_apps(start: Path, depth=3):
-    """Installations at, above (up to 4 levels) or below (up to `depth` levels) a folder."""
+    """Installations at or above (up to 6 levels) the chosen folder, otherwise below it, otherwise anywhere inside the
+    program folder that holds a bundled Python (portable builds such as NBS_Control_Centre keep the code several levels
+    deep, beside portable\\). Sibling folders of an unrelated choice are never searched."""
     found = []
     try:
         start = Path(start).expanduser().resolve()
     except OSError:
         return found
-    for q in [start] + list(start.parents)[:4]:
+    for q in [start] + list(start.parents)[:6]:
         if is_app(q) and not _inside_patch(q):
-            found.append(q)
-            break
-    if found:
-        return found
+            return [q]
 
-    def walk(d, level):
-        if level > depth:
+    def walk(d, level, limit):
+        if level > limit or len(found) > 20:
             return
         try:
-            subs = [x for x in d.iterdir() if x.is_dir() and x.name not in SKIP_DIRS and not x.name.startswith('.')]
+            subs = [x for x in d.iterdir() if x.is_dir() and x.name not in SKIP_DIRS and x.name not in PY_DIRS and not x.name.startswith('.')]
         except OSError:
             return
         for x in sorted(subs):
@@ -118,10 +119,85 @@ def find_apps(start: Path, depth=3):
             if is_app(x):
                 found.append(x.resolve())
             else:
-                walk(x, level + 1)
+                walk(x, level + 1, limit)
     if start.is_dir():
-        walk(start, 1)
-    return found
+        walk(start, 1, depth)
+    if not found:
+        root = product_root(start)              # only inside the program that holds a bundled Python, never siblings
+        if root != start:
+            walk(root, 1, 7)
+    return list(dict.fromkeys(found))
+
+
+def app_python(app: Path):
+    """The interpreter the application itself runs on: a bundled / portable python.exe near it, else this Python."""
+    names = ('python.exe', 'pythonw.exe', 'python3', 'python')
+    for base in [app] + list(app.parents)[:3]:
+        for sub in ('portable', 'python', 'runtime', 'portable/python', 'Python', ''):
+            for n in names[:1] + names[2:]:
+                cand = base / sub / n if sub else base / n
+                if cand.is_file():
+                    return cand
+    return Path(sys.executable)
+
+
+def product_root(c: Path):
+    """The folder that holds a bundled Python (e.g. NBS_Control_Centre for ...\\NBS_Control_Centre\\portable\\Lib\\...)."""
+    chain = [c] + list(c.parents)
+    for anc in chain:
+        if anc.name.lower() in ('portable', 'python', 'runtime') and anc.parent != anc:
+            return anc.parent
+    for anc in chain[:6]:
+        try:
+            if (anc / 'portable').is_dir():
+                return anc
+        except OSError:
+            pass
+    for anc in chain:
+        if anc.name in PY_DIRS and anc.parent != anc:
+            return anc.parent
+    return c
+
+
+def write_report(chosen, log=None):
+    """Names-only layout report (no file contents) to send for support when no installation is recognised."""
+    out = HERE / 'NBS_folder_report.txt'
+    lines = ['NBS Mapping Studio update - folder layout report (file and folder NAMES only, no contents)', '']
+    roots = []
+    for c in chosen:
+        try:
+            c = Path(c).resolve()
+        except OSError:
+            continue
+        lines.append(f'Chosen: {c}')
+        root = product_root(c)
+        roots.append(root)
+    for root in dict.fromkeys(roots):
+        lines += ['', f'Tree of {root} (depth 6; bundled Python libraries, data and exports not expanded):']
+        count = [0]
+
+        def tree(d, level):
+            if level > 6 or count[0] > 2500:
+                return
+            try:
+                items = sorted(d.iterdir(), key=lambda x: (not x.is_dir(), x.name.lower()))
+            except OSError as exc:
+                lines.append('  ' * level + f'[cannot read: {exc}]')
+                return
+            for x in items:
+                count[0] += 1
+                if x.is_dir():
+                    folded = x.name in PY_DIRS or x.name in SKIP_DIRS or x.name.startswith('.')
+                    lines.append('  ' * level + x.name + '\\' + ('  [not expanded]' if folded else ''))
+                    if not folded:
+                        tree(x, level + 1)
+                elif x.suffix.lower() in ('.py', '.pyc', '.pyz', '.zip', '.cmd', '.bat', '.exe', '.json', '.md', '.txt', '.html', '.spec', '.toml', '.cfg', '.ini'):
+                    lines.append('  ' * level + x.name)
+        tree(root, 1)
+    out.write_text('\n'.join(lines), encoding='utf-8')
+    if log:
+        log(f'Folder layout report written: {out}')
+    return out
 
 
 def describe(p: Path):
@@ -130,6 +206,26 @@ def describe(p: Path):
     except OSError as exc:
         return f'cannot read {p}: {exc}'
     return f'{p} contains: ' + (', '.join(items[:25]) + (' ...' if len(items) > 25 else '') if items else 'nothing')
+
+
+def _portable_homes(root: Path, depth):
+    out = []
+
+    def walk(d, level):
+        if level > depth:
+            return
+        try:
+            subs = [x for x in d.iterdir() if x.is_dir() and x.name not in SKIP_DIRS and x.name not in PY_DIRS and not x.name.startswith('.')]
+        except OSError:
+            return
+        if any(x.name.lower() == 'portable' for x in subs):
+            out.append(d)
+            return
+        for x in subs:
+            walk(x, level + 1)
+    if root.is_dir():
+        walk(root, 0)
+    return out
 
 
 def _pick(apps, interactive):
@@ -160,7 +256,8 @@ def resolve_app(arg, interactive):
         msg = (f'{arg} is not an NBS Mapping Control folder and none was found above or inside it. Expected: the folder that '
                f'contains the "nbs_control" folder. {describe(Path(arg))}')
         if not interactive:
-            raise PatchError(msg)
+            rep = write_report([arg])
+            raise PatchError(msg + f' Folder layout report (names only): {rep}')
         print(msg)
         return _ask(interactive)
     home = Path.home()
@@ -171,6 +268,10 @@ def resolve_app(arg, interactive):
     for r in roots:
         if r.exists():
             apps += find_apps(r, depth=2 if r in (home, Path('C:/'), Path('D:/')) else 3)
+    if not apps:                                   # portable builds: look inside folders that hold a bundled Python
+        for r in roots:
+            for d in _portable_homes(r, 3):
+                apps += find_apps(d)
     apps = list(dict.fromkeys(apps))
     if apps:
         chosen = _pick(apps, interactive)
@@ -184,12 +285,14 @@ def resolve_app(arg, interactive):
 def _ask(interactive):
     if not interactive:
         raise PatchError('No NBS Mapping Control folder selected.')
+    tried = []
     for attempt in range(3):
         print('\nSelect the NBS Mapping Control folder (the one that contains the "nbs_control" folder; selecting a folder above or '
               'inside it also works).')
         chosen = _choose_folder()
         if not chosen:
             break
+        tried.append(chosen)
         apps = find_apps(Path(chosen))
         if apps:
             pick = apps[0] if len(apps) == 1 else _pick(apps, True)
@@ -403,7 +506,8 @@ def data_snapshot(app):
 
 
 def validate(app, man, skip_tests, log):
-    py = sys.executable
+    py = str(app_python(app))
+    log(f'Validating with the Python the application uses: {py}')
     code = ('import sys; sys.path.insert(0, "."); import nbs_control.web, nbs_control.studio_app, nbs_control.studio.run, nbs_control.tbrecon.run; '
             'from nbs_control.studio import STUDIO_VERSION; assert STUDIO_VERSION == %r; print("import ok")' % man['version'])
     r = subprocess.run([py, '-c', code], cwd=app, capture_output=True, text=True, timeout=300)
@@ -429,21 +533,17 @@ def validate(app, man, skip_tests, log):
     return True
 
 
-def ensure_dependencies(log):
-    missing = []
-    for mod in ('flask', 'openpyxl', 'werkzeug'):
-        try:
-            __import__(mod)
-        except ImportError:
-            missing.append(mod)
-    if not missing:
+def ensure_dependencies(app, log):
+    py = str(app_python(app))
+    r = subprocess.run([py, '-c', 'import flask, openpyxl, werkzeug'], capture_output=True, text=True)
+    if r.returncode == 0:
         return
     wheels = HERE / 'wheels'
-    log(f'Missing Python packages {missing}; installing for the current user from the bundled wheels (offline)')
-    r = subprocess.run([sys.executable, '-m', 'pip', 'install', '--user', '--no-index', '--find-links', str(wheels), 'flask', 'openpyxl'],
+    log(f'Flask / openpyxl missing for {py}; installing them for the current user from the bundled wheels (offline)')
+    r = subprocess.run([py, '-m', 'pip', 'install', '--user', '--no-index', '--find-links', str(wheels), 'flask', 'openpyxl'],
                        capture_output=True, text=True)
     if r.returncode != 0:
-        raise PatchError('Required packages could not be installed offline: ' + r.stderr.strip()[-300:])
+        raise PatchError('Required packages could not be installed offline: ' + (r.stderr or r.stdout).strip()[-300:])
 
 
 # ------------------------------------------------------------------ commands
@@ -464,7 +564,7 @@ def install(args):
         if args.yes or not _confirm(msg + ' Closed it - try again?'):
             raise PatchError(msg)
         busy = app_running()
-    ensure_dependencies(log)
+    ensure_dependencies(app, log)
     web = app / 'nbs_control' / 'web.py'
     if not web.is_file() or 'def create_app' not in web.read_text(encoding='utf-8', errors='replace'):
         raise PatchError(f'{web} has no create_app(): this is not a compatible NBS Mapping Control version. Nothing was changed.')

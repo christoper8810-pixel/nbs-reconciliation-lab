@@ -197,5 +197,42 @@ class PatchPackage(unittest.TestCase):
         self.assertEqual(tree(app), before)
         self.assertFalse((app / 'patch_backups').exists())
 
+    def _control_centre(self, name, with_code=True):
+        root = self.tmp / name / 'NBS_Control_Centre_PRIVATE_OWNER_Windows_Offline' / 'NBS_Control_Centre'
+        lib = root / 'portable' / 'Lib' / 'site-packages' / 'openpyxl' / 'workbook'
+        lib.mkdir(parents=True)
+        (lib / 'web.py').write_text('# bundled library file, not the application\n')
+        (root / 'portable' / 'python').symlink_to(sys.executable)                      # stands in for portable\python.exe
+        (root / 'Start NBS Control Centre.bat').write_text('rem launcher\n')
+        if with_code:
+            app = baseline('3dcb6ef', root / 'app')
+            return root, app
+        (root / 'app').mkdir()
+        (root / 'app' / 'nbs_app.pyz').write_bytes(b'PK')
+        return root, None
+
+    def test_portable_control_centre_found_from_its_python_folders(self):
+        root, app = self._control_centre('cc')
+        rc, out = self.engine('install', '--app-dir', str(root / 'portable' / 'Lib'), '--yes', '--no-launch', '--skip-tests')
+        self.assertEqual(rc, 0, out)
+        self.assertIn(f'Application folder: {app.resolve()}', out)
+        self.assertIn(str(root / 'portable' / 'python'), out)                           # validated with the bundled Python
+        rc, out = self.engine('install', '--app-dir', str(root / 'portable' / 'Lib' / 'site-packages' / 'openpyxl' / 'workbook'),
+                              '--yes', '--no-launch', '--skip-tests')
+        self.assertEqual(rc, 0, out)
+        self.assertIn('Already up to date', out)
+
+    def test_unrecognised_layout_writes_names_only_report(self):
+        root, _ = self._control_centre('cc2', with_code=False)
+        rc, out = self.engine('install', '--app-dir', str(root / 'portable' / 'Lib'), '--yes', '--no-launch')
+        self.assertEqual(rc, 2, out)
+        rep = self.pkg / 'NBS_folder_report.txt'
+        self.assertIn(str(rep), out)
+        text = rep.read_text()
+        self.assertIn('Tree of ' + str(root.resolve()), text)
+        self.assertIn('nbs_app.pyz', text)
+        self.assertIn('Lib\\  [not expanded]', text)
+        self.assertNotIn('bundled library file', text)                                   # names only, never contents
+
 if __name__ == '__main__':
     unittest.main()
