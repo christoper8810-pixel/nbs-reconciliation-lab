@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% from "tb_macros.html" import num, st, nav, comptable %}
+{% block title %}Account {{ acct }}{% endblock %}
+{% block content %}{{ nav(r) }}<h1>Account / arrangement {{ acct }}</h1>
+<div class="panel"><h2>Balance-type components</h2>{{ comptable(comps, r.run_id) }}</div>
+<div class="panel"><h2>Exceptions</h2><table><tr><th>ID</th><th>Category</th><th>Amount</th><th>Reason</th></tr>
+{% for e in exc %}<tr><td>{{ e.exception_id }}</td><td>{{ e.category }}</td><td style="text-align:right">{{ num(e.amount) }}</td><td>{{ e.reason }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

@@ -85,8 +85,22 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument('--report-date', default='2026-09-30'); p.add_argument('--label', default='')
     p.add_argument('--no-excel', action='store_true')
 
+    p = sub.add_parser('tb-recon', help='Whole-TB migration reconciliation (engines A PRODUCT_S3, B INTERNAL_CUS_ACC, C PL)')
+    p.add_argument('--inputs', required=True, help='Folder with legacy_tb / actual_tb / gl_mapping / asset_balances / gl_rules ... files')
+    p.add_argument('--config', help='tb_recon.json (default: <inputs>/tb_recon.json, else config/tb_recon.json)')
+    p.add_argument('--label', default='')
+    p.add_argument('--legacy-semantics', action='store_true', help='BEFORE baseline: original token handling and first-match-wins')
+    p.add_argument('--apply-proposals', nargs='?', const='all', help='Apply auto-applicable proposals (all or PC0001,PC0002) to a copy of gl_rules')
+    p = sub.add_parser('tb-recon-synthetic', help='Write a SYNTHETIC tb-recon dataset (clean or defects)')
+    p.add_argument('--dir', required=True); p.add_argument('--scenario', choices=('clean', 'defects'), default='defects')
+    p = sub.add_parser('tb-recon-compare', help='Before / after comparison of two tb-recon runs')
+    p.add_argument('before'); p.add_argument('after')
+    sub.add_parser('tb-recon-runs', help='List stored tb-recon runs')
+
     args = parser.parse_args(argv)
     try:
+        if args.command.startswith('tb-recon'):
+            return _tb_recon(args)
         if args.command == 'rebuild-setup':
             from .rebuild_run import setup
             print(json.dumps(setup(PROJECT_ROOT, args.categ, args.bo, args.live, qcb_paths=args.qcb), indent=2, default=str))
@@ -194,6 +208,43 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({"status": "ERROR", "detail": str(exc)}), file=sys.stderr)
         return 1
     return 1
+
+
+def _tb_recon(args) -> int:
+    from .tbrecon import compare, run as tbrun, synthetic
+    from .tbrecon.tables import TableError
+    data_root, export_root = PROJECT_ROOT / 'data', EXPORT_DIR / 'tb_recon'
+    try:
+        if args.command == 'tb-recon-synthetic':
+            print(json.dumps({'synthetic_dataset': str(synthetic.build(args.dir, args.scenario)), 'scenario': args.scenario}))
+            return 0
+        if args.command == 'tb-recon-runs':
+            for r in tbrun.list_runs(data_root):
+                s = r['summary']
+                print(f"{r['run_id']}  {r['label'][:30]:30}  reconciled {s.get('gl_reconciled')}/{s.get('gl_lines')}  "
+                      f"open {s.get('unresolved_gl_lines')}  repro {r['reproducible']}")
+            return 0
+        if args.command == 'tb-recon-compare':
+            res = compare.compare_runs(data_root, export_root, args.before, args.after)
+            print(json.dumps({'folder': res['folder'], 'summary': res['summary'], 'statistics': res['statistics']}, indent=2, default=str))
+            return 0
+        paths = tbrun.discover(args.inputs)
+        cfg = args.config or compare.folder_config(args.inputs)
+        if args.apply_proposals:
+            only = None if args.apply_proposals == 'all' else set(args.apply_proposals.split(','))
+            run_id, folder, res, applied = compare.run_with_proposals(paths, data_root, export_root, cfg, only, args.label)
+        else:
+            run_id, folder, res = tbrun.run_and_store(paths, data_root, export_root, label=args.label, cfg_path=cfg,
+                                                      legacy=args.legacy_semantics, progress=lambda m: print('...', m, file=sys.stderr))
+        out = {'run_id': run_id, 'folder': str(folder), 'missing_inputs': res['meta']['missing_inputs'],
+               'engines': {k: e['status'] for k, e in res['engines'].items()},
+               'controls': {c['id']: c['status'] for c in res['controls']}, 'statistics': res['statistics']}
+        print(json.dumps(out, indent=2, default=str))
+        s = res['statistics']
+        return 0 if s['unresolved_gl_lines'] == 0 and not s['controls_failed'] and not res['meta']['missing_inputs'] else 2
+    except (TableError, ValueError, OSError) as exc:
+        print(json.dumps({'status': 'ERROR', 'detail': str(exc)}), file=sys.stderr)
+        return 1
 
 
 if __name__ == "__main__":

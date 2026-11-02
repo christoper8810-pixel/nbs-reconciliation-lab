@@ -1,0 +1,58 @@
+{
+  "_purpose": "Whole-TB migration reconciliation (tbrecon). Three independent streams: A PRODUCT_S3 asset-type balances, B INTERNAL_CUS_ACC one-to-one accounts, C PL. Edit with care: every run records the hash of this file.",
+  "consol_key_layouts": {
+    "AC": {
+      "prefix": "AC",
+      "separator": ".",
+      "min_tokens": 11,
+      "segments": {
+        "currency": {"position": 3, "verified": false, "evidence": "Matches 3-letter ISO pattern in the historical example AC.1.TR.QAR.3717..."},
+        "category": {"position": 4, "verified": false, "evidence": "Historical example token 4 = 3717 (T24 category range)"},
+        "product": {"position": 5, "verified": false, "evidence": "UNCONFIRMED. Token 5 (example 5261). Candidate PRODUCT segment; see POSSIBLE_MAPPING_COLUMN_MISALIGNMENT diagnostic"},
+        "sector": {"position": 6, "verified": false, "evidence": "Position used by the existing ECB loader (bank_data.py parts[6], example 1000). Not confirmed against CONSOLIDATE.COND"},
+        "department": {"position": 7, "verified": false, "evidence": "UNCONFIRMED. Token 7 (example 14)"},
+        "residence": {"position": 8, "verified": false, "evidence": "Existing ECB loader parts[8] (example QA)"},
+        "industry": {"position": 9, "verified": false, "evidence": "Existing ECB loader parts[9] (example 47004)"},
+        "maturity": {"position": 10, "verified": false, "evidence": "UNCONFIRMED. Token 10 (example 2Y)"},
+        "company": {"position": -1, "verified": false, "evidence": "Existing ECB loader parts[-1] (example QA0011014)"}
+      }
+    },
+    "PL": {
+      "prefix": "PL",
+      "separator": ".",
+      "min_tokens": 14,
+      "segments": {
+        "pl_category": {"position": 1, "verified": true, "evidence": "categ_data.py: validated against PL.CATEGORY on every row of the September category extract (NBS_SOURCE_REVIEW.md)"},
+        "currency": {"position": 2, "verified": true, "evidence": "categ_data.py: validated against CURRENCY"},
+        "product": {"position": 3, "verified": true, "evidence": "categ_data.py: validated against PRODUCT.CATEGORY"},
+        "department": {"position": 4, "verified": true, "evidence": "categ_data.py: validated against ACCOUNT.OFFICER"},
+        "company": {"position": -1, "verified": true, "evidence": "categ_data.py: validated against COMPANY.CODE"}
+      },
+      "_note": "Sector and residence positions in the PL key are NOT defined. PL rules restricting them need explicit SECTOR / RESIDENCE source columns, otherwise the rule is reported as DIMENSION_NOT_AVAILABLE."
+    }
+  },
+  "balance_type_column_suffix": "_BAL_QAR",
+  "balance_type_aliases": {},
+  "contra_balance_types": [],
+  "contra_balance_type_prefixes": ["BL"],
+  "criteria": {
+    "blank_means": "UNRESTRICTED",
+    "explicit_any_tokens": ["*", "ANY", "ALL"],
+    "explicit_blank_token": "<BLANK>",
+    "inherit_token": "^",
+    "inherit_blank_columns": [],
+    "list_separators": [",", ";", "\n"]
+  },
+  "sign_convention": {
+    "legacy_tb": 1,
+    "actual_tb": 1,
+    "asset_balances": 1,
+    "internal_balances": 1,
+    "pl_balances": 1,
+    "_note": "Multiplier applied to each source before comparison. 1 = amounts are already in the same signed (debit positive) convention. Never change to make a difference disappear: record the evidence for the convention."
+  },
+  "tolerance": {"absolute": "0.01", "relative": "0"},
+  "cutover_date": null,
+  "duplicate_source_policy": "RETAIN_AND_FLAG",
+  "gl_class_from_target": {"_note": "Optional prefix -> BS / PL / OBS classification when the TB file has no CLASS column", "prefixes": {}}
+}

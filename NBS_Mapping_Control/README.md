@@ -1,5 +1,7 @@
 # NBS mapping control
 
+**Whole-TB migration reconciliation (new, `tbrecon-1.0.0`):** double-click `Start_TB_Reconciliation.cmd` or open `http://127.0.0.1:8765/tb`. Three independent streams are reconstructed and reconciled against the actual Temenos TB: A PRODUCT_S3 asset-type balances, B INTERNAL_CUS_ACC one-to-one accounts, C PL. See **[TB_RECON_GUIDE.md](TB_RECON_GUIDE.md)**. Status and evidence: [CURRENT_STATE_ASSESSMENT.md](CURRENT_STATE_ASSESSMENT.md), [FIXES_IMPLEMENTED.md](FIXES_IMPLEMENTED.md), [RECONCILIATION_VALIDATION.md](RECONCILIATION_VALIDATION.md), [REMAINING_ISSUES.md](REMAINING_ISSUES.md), [PROGRESS.md](PROGRESS.md).
+
 ECB Excel report generation is now available at `http://127.0.0.1:8767/reports`. Double-click `Start_NBS_Reports.cmd` if the application is stopped. See **[NBS_REPORT_RUN_GUIDE.md](NBS_REPORT_RUN_GUIDE.md)** for uploading ECB, reviewing differences and changing row mappings or RCM / CLM calculation policies.
 
 The local import, owner-review and component-mapping application is built. To use it, see **[RUN_GUIDE.md](RUN_GUIDE.md)**. The original starter notes follow; the engine and its rules are unchanged in meaning.

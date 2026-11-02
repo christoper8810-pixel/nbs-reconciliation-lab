@@ -17,6 +17,27 @@ FIELDS = ['source','account','arrangement','currency','country','company','categ
           'outstanding','earned','fees','unearned','suspense','components','source_row','linked_account']
 NUMERIC = {'amount','outstanding','earned','fees','unearned','suspense'}
 
+# AC CONSOL_KEY segment positions, read from config/tb_recon.json (consol_key_layouts.AC) so the layout is
+# configurable and shared with the TB reconciliation. Defaults are the positions this loader always used; none of
+# them is verified against the bank's CONSOLIDATE.COND record (see POSSIBLE_MAPPING_COLUMN_MISALIGNMENT).
+AC_DEFAULT_POSITIONS = {'currency': 3, 'category': 4, 'sector': 6, 'residence': 8, 'industry': 9, 'company': -1}
+
+
+def ac_positions(config_path=None):
+    path = Path(config_path) if config_path else Path(__file__).resolve().parent.parent / 'config' / 'tb_recon.json'
+    try:
+        seg = json.loads(path.read_text(encoding='utf-8'))['consol_key_layouts']['AC']['segments']
+        return {k: int(seg[k]['position']) for k in AC_DEFAULT_POSITIONS if k in seg} or dict(AC_DEFAULT_POSITIONS)
+    except (OSError, KeyError, ValueError, TypeError):
+        return dict(AC_DEFAULT_POSITIONS)
+
+
+def key_segment(parts, pos, min_len=None):
+    if pos < 0:
+        return parts[pos] if len(parts) > (min_len or 0) else None
+    return parts[pos] if len(parts) > pos else None
+
+
 def code(v):
     if v is None: return ''
     if isinstance(v,float) and v.is_integer(): return str(int(v))
@@ -67,6 +88,7 @@ def xlsx_rows(path, sheet='xl/worksheets/sheet1.xml'):
                 while row.getprevious() is not None: del row.getparent()[0]
 
 def import_file(conn,path,source):
+    pos=ac_positions()
     headers=None; batch=[]; n=0; duplicates=0; dates=Counter(); types=Counter(); component_counts=Counter()
     insert='INSERT INTO records ('+','.join(FIELDS)+') VALUES ('+','.join('?' for _ in FIELDS)+')'
     for row,values in xlsx_rows(path):
@@ -90,9 +112,9 @@ def import_file(conn,path,source):
             account=code(d.get('ACCOUNT_NO')); parts=code(d.get('CONSOL_KEY')).split('.')
             if account.lower() in ('','total','grand total'): continue
             r.update(account=account,arrangement=code(d.get('ARRANGEMENT_ID')),
-                     currency=parts[3] if len(parts)>3 else None,category=parts[4] if len(parts)>4 else None,
-                     sector=parts[6] if len(parts)>6 else None,country=parts[8] if len(parts)>8 else None,
-                     industry=parts[9] if len(parts)>9 else None,company=parts[-1] if len(parts)>10 else None)
+                     currency=key_segment(parts,pos['currency']),category=key_segment(parts,pos['category']),
+                     sector=key_segment(parts,pos['sector']),country=key_segment(parts,pos['residence']),
+                     industry=key_segment(parts,pos['industry']),company=key_segment(parts,pos['company'],10))
             comp={k[:-8]:number(v) for k,v in d.items() if k.endswith('_BAL_QAR') and number(v) is not None}
             r['components']=json.dumps(comp,separators=(',',':'))
             for k,v in comp.items():
@@ -127,6 +149,7 @@ def import_file(conn,path,source):
     if batch:conn.executemany(insert,batch)
     conn.commit()
     return {'path':str(Path(path).resolve()),'sha256':sha(path),'rows':n,'dates':dict(dates),
+            'consol_key_positions':pos if source=='ECB' else None,
             'products':dict(types),'component_columns':[v[:-8] for v in headers.values() if v.endswith('_BAL_QAR')],
             'nonzero_components':dict(component_counts)}
 

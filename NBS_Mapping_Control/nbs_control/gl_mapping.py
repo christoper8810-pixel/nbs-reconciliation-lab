@@ -176,7 +176,9 @@ def named_ranges(c, digest):
 
 
 def _token_filter(token, field, named):
-    """'*NAME' -> named range; '5001' -> exact code; '6001, 7001' -> list."""
+    """'*NAME' -> named range; '5001' -> exact code; '6001, 7001' -> list; '1000-1999, 6001' -> inclusive range OR list.
+
+    Fixed: inline ranges were previously kept as the literal text '1000-1999' and never matched a category."""
     if not token:
         return None, None
     token = token.strip()
@@ -191,11 +193,26 @@ def _token_filter(token, field, named):
         if nr['start']:
             return {'field': field, 'op': 'in', 'values': _items(nr['start'])}, None
         return None, f'named range {token} has no values'
-    vals = _items(token)
-    return ({'field': field, 'op': 'in', 'values': vals}, None) if vals else (None, None)
+    from .tbrecon import criteria
+    text = re.sub(r'\s*-\s*', '-', token)
+    text = re.sub(r'\s+', ',', text)
+    try:
+        crit = criteria.parse(text)
+    except criteria.CriteriaError as exc:
+        return None, f'{field} criterion {token!r}: {exc}'
+    if crit.kind != 'SET':
+        return None, None
+    parts = []
+    if crit.exact:
+        parts.append({'field': field, 'op': 'in', 'values': sorted(crit.exact)})
+    parts += [{'field': field, 'op': 'range', 'values': [lo, hi]} for lo, hi in crit.ranges]
+    if crit.prefixes:
+        parts.append({'field': field, 'op': 'prefix', 'values': list(crit.prefixes)})
+    return (parts[0] if len(parts) == 1 else {'any': parts}), None
 
 
 def _balance_types(token, named):
+    """Fixed: a listed cell such as 'CURACCOUNT, DUEACCOUNT' was previously one (non-existent) balance type."""
     if not token:
         return [], 'no balance type'
     if token.startswith('*'):
@@ -203,7 +220,11 @@ def _balance_types(token, named):
         if not nr:
             return [], f'balance group {token} not defined'
         return [x.upper() for x in (nr['items'] or _items(nr['start']))], None
-    return [token.upper()], None
+    types = [x.upper() for x in _items(token)]
+    bad = [x for x in types if not re.fullmatch(r'[A-Z][A-Z0-9_]*', x)]
+    if bad:
+        return [], f'balance type(s) {", ".join(bad)} are not atomic identifiers'
+    return types, None
 
 
 def line_parts(c, digest, line):

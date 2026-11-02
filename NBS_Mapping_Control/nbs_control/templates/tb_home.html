@@ -1,0 +1,32 @@
+{% extends "base.html" %}{% from "tb_macros.html" import num, st %}
+{% block title %}TB reconciliation{% endblock %}
+{% block content %}
+<h1>Whole-TB migration reconciliation</h1>
+<div class="panel"><p>Three independent streams are reconstructed from source data and authorised mappings and combined only at final aggregation:
+<b>A</b> PRODUCT_S3 asset-type balances (CONSOL_KEY + atomic balance type &rarr; GL rule), <b>B</b> INTERNAL_CUS_ACC one-to-one accounts (no CONSOL_KEY),
+<b>C</b> PL with its own key layout. Legacy TB lines without an account-level population use the labelled <b>DIRECT</b> stream (single-target GL mapping only).
+Missing inputs give SOURCE_PENDING / INCOMPLETE, never a reconciled status. Nothing is plugged or forced to zero.</p></div>
+<div class="cols">
+<div class="panel"><h2>Run a reconciliation</h2>
+<form method="post" action="{{ url_for('tb_start') }}"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<label>Input folder (files named as in the list on the right; or a manifest.json)</label><input type="text" name="inputs" value="{{ prefill }}" required>
+<label>Configuration (optional; default &lt;folder&gt;/tb_recon.json, else config/tb_recon.json)</label><input type="text" name="config">
+<label>Label</label><input type="text" name="label">
+<label>Mode</label><select name="mode"><option value="normal">Normal</option><option value="proposals">Apply auto-applicable proposals to a copy of gl_rules</option>
+<option value="legacy">BEFORE baseline: original token handling, first match wins (measurement only)</option></select>
+<button>Run</button></form>
+<form method="post" action="{{ url_for('tb_synthetic') }}" style="margin-top:10px"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<label>Create a SYNTHETIC demonstration dataset (no bank data)</label><select name="scenario"><option>defects</option><option>clean</option></select>
+<button class="secondary">Create synthetic dataset</button></form></div>
+<div class="panel"><h2>Input files</h2><table><tr><th>File name</th><th>Required columns</th><th>Purpose</th></tr>
+{% for k, v in kinds.items() %}<tr><td class="pre">{{ k }}.csv / .xlsx</td><td class="pre">{{ v[0]|join(', ') }}</td><td>{{ v[1] }}</td></tr>{% endfor %}
+</table><p class="muted">TrialBalance_withConsolKey.csv is recognised as the benchmark. Header aliases (e.g. CCY, OLD_GL, DKB_GL) are accepted.</p></div>
+</div>
+<div class="panel"><h2>Runs</h2>
+<form method="get" action="{{ url_for('tb_compare') }}" class="filters"><div><label>Before run</label><select name="before">{% for r in runs %}<option>{{ r.run_id }}</option>{% endfor %}</select></div>
+<div><label>After run</label><select name="after">{% for r in runs %}<option>{{ r.run_id }}</option>{% endfor %}</select></div><button>Compare</button></form>
+<table><tr><th>Run</th><th>Created</th><th>Label</th><th>GL lines</th><th>Reconciled</th><th>Open</th><th>Unmapped components</th><th>Ambiguous</th><th>Failed controls</th><th>Reproducible</th></tr>
+{% for r in runs %}{% set s = r.summary %}<tr><td><a href="{{ url_for('tb_run', rid=r.run_id) }}">{{ r.run_id }}</a></td><td>{{ r.created }}</td><td>{{ r.label }}{% if r.legacy_semantics %} <span class="tag warn">legacy semantics</span>{% endif %}</td>
+<td>{{ s.gl_lines }}</td><td>{{ s.gl_reconciled }}</td><td>{{ s.unresolved_gl_lines }}</td><td>{{ s.components_unmapped }}</td><td>{{ s.ambiguous_allocations }}</td><td>{{ s.controls_failed|join(', ') }}</td><td>{{ st(r.reproducible) }}</td></tr>{% endfor %}
+</table></div>
+{% endblock %}

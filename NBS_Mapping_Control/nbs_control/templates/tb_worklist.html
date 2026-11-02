@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% from "tb_macros.html" import num, st, nav %}
+{% block title %}Correction worklist{% endblock %}
+{% block content %}{{ nav(r) }}<h1>Proposed mapping corrections</h1>
+<div class="banner">Proposals only. The approved mapping files are never changed. "Apply auto-applicable proposals" on the TB page re-runs on a corrected copy so the effect can be compared before approval.</div>
+<div class="panel"><table><tr><th>ID</th><th>Kind</th><th>File</th><th>Rule / item</th><th>Row</th><th>Original value</th><th>Proposed value</th><th>Reason</th><th>Evidence</th><th>Amount</th><th>Confidence</th><th>Auto</th></tr>
+{% for w in items %}<tr><td>{{ w.proposal_id }}</td><td>{{ w.kind }}</td><td>{{ w.file }}</td><td>{{ w.rule_id }}</td><td>{{ w.source_row }}</td><td class="pre">{{ w.original_value }}</td><td class="pre">{{ w.proposed_value }}</td>
+<td>{{ w.reason }}</td><td>{{ w.evidence }}</td><td style="text-align:right">{{ num(w.amount_affected) }}</td><td>{{ w.confidence }}</td><td>{{ w.auto_applicable }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

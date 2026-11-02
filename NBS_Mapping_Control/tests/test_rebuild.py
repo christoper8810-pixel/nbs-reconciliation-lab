@@ -405,6 +405,12 @@ class T11GrossNet(unittest.TestCase):
         self.assertEqual(Decimal(r['assets_vs_liabilities_capital']['difference']), Decimal(5747560))
 
 
+LEGACY_SQL_CSV = ROOT / 'exports/rebuild_review_20261017/balance_sheet_case_rules.csv'
+
+
+# The legacy-SQL CASE extract is a *.csv runtime evidence file excluded from Git by .gitignore; skip (do not fail)
+# when it is absent, like the other tests that need bank-supplied inputs.
+@unittest.skipUnless(LEGACY_SQL_CSV.exists(), 'legacy balance-sheet SQL CASE extract (excluded *.csv) not on this machine')
 class T13LegacyGL(unittest.TestCase):
     CSV = ROOT / 'exports/rebuild_review_20261017/balance_sheet_case_rules.csv'
     OUT = ROOT / 'exports/rebuild_review_20261017/balance_sheet_output_lines.csv'
@@ -475,6 +481,7 @@ class T15Partitions(unittest.TestCase):
         self.assertEqual(g['contributions'][0][3], 'UNKNOWN_DIMENSION')
 
 
+@unittest.skipUnless(LEGACY_SQL_CSV.exists(), 'legacy balance-sheet SQL CASE extract (excluded *.csv) not on this machine')
 class T8T16T17T18EndToEnd(unittest.TestCase):
     """Fixture project: upload/import -> preview -> owner edit -> regenerate -> compare both references -> Excel."""
 

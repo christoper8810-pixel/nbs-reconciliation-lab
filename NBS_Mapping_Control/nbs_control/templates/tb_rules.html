@@ -1,0 +1,20 @@
+{% extends "base.html" %}{% from "tb_macros.html" import num, st, nav %}
+{% block title %}Rules and allocation{% endblock %}
+{% block content %}{{ nav(r) }}<h1>Rules, allocation diagnostics and GL Report</h1>
+<div class="panel"><h2>POSSIBLE_MAPPING_COLUMN_MISALIGNMENT</h2>{% if not mis %}<p class="muted">No finding.</p>{% endif %}
+{% for x in mis %}<p><b>{{ x.rule_column or x.source_column }}</b> holds <b>{{ x.observed_dimension }}</b> values (expected {{ x.expected_dimension }}). Rules {{ x.affected_rules }}; {{ x.affected_rows }} rows, {{ x.affected_accounts }} accounts, net {{ num(x.net_amount) }}, absolute {{ num(x.absolute_amount) }}. Segments verified: {{ x.segments_verified }}</p><p>{{ x.evidence }}</p><pre>{{ x.examples }}</pre>{% endfor %}</div>
+<div class="panel"><h2>CONSOL_KEY layouts in use</h2>{% for k, e in m.engines.items() if e.layout %}<h3>{{ k }} {{ e.name }}</h3><table><tr><th>Dimension</th><th>Position</th><th>Verified</th><th>Evidence</th></tr>
+{% for d, v in e.layout.items() %}<tr><td>{{ d }}</td><td>{{ v.position }}</td><td>{{ st('PASS' if v.verified else 'WARN') }}</td><td>{{ v.evidence }}</td></tr>{% endfor %}</table>{% endfor %}</div>
+<div class="panel"><h2>Unsupported rule balance types (not in source schema, not a validated alias)</h2><table><tr><th>Rule</th><th>Balance type</th><th>Targets</th><th>Row</th></tr>
+{% for u in unsupported %}<tr><td>{{ u.rule_id }}</td><td>{{ u.balance_type }}</td><td>{{ u.targets }}</td><td>{{ u.row }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Rule diagnostics</h2><table><tr><th>Engine</th><th>Type</th><th>Rule</th><th>Row</th><th>Detail</th></tr>
+{% for d in diags %}<tr><td>{{ d.engine }}</td><td>{{ d.type }}</td><td>{{ d.rule or d.rules or d.line }}</td><td>{{ d.row }}</td><td>{{ d.detail }}{{ d.targets }}{{ d.dimensions }}{{ d.errors }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>GL Report (H header / D detail / T total)</h2><table><tr><th>Line</th><th>Type</th><th>Description</th><th>Target GL</th><th>Amount</th><th>Components</th><th>Status</th></tr>
+{% for g in report %}<tr><td>{{ g.line }}</td><td>{{ g.type }}</td><td>{% if g.type != 'D' %}<b>{{ g.description }}</b>{% else %}{{ g.description }}{% endif %}</td><td>{{ g.target_gl }}</td><td style="text-align:right">{{ num(g.amount) }}</td><td>{{ g.components }}</td><td>{{ g.status }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Roll-forward (opening migrated + validated post-COB = closing)</h2><table><tr><th>GL</th><th>Ccy</th><th>Opening migrated</th><th>Post-COB</th><th>By type</th><th>Computed closing</th><th>Actual closing</th><th>Difference</th></tr>
+{% for x in roll %}<tr><td>{{ x.target_gl }}</td><td>{{ x.currency }}</td><td>{{ num(x.opening_migrated_expected) }}</td><td>{{ num(x.validated_post_cob_movements) }}</td><td>{{ x.by_type }}</td><td>{{ num(x.computed_closing) }}</td><td>{{ num(x.actual_closing) }}</td><td>{{ num(x.rollforward_difference) }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Internal target accounts not reconciled</h2><table><tr><th>Target account</th><th>Expected</th><th>Actual</th><th>Difference</th><th>Status</th><th>Sources</th></tr>
+{% for a in accounts %}<tr><td>{{ a.target_account }}</td><td>{{ num(a.expected) }}</td><td>{{ num(a.actual) }}</td><td>{{ num(a.difference) }}</td><td>{{ st(a.status) }}</td><td>{{ a.sources }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Benchmark differences (benchmark only, never a source)</h2><table><tr><th>GL</th><th>Ccy</th><th>Expected</th><th>Benchmark</th><th>Difference</th><th>Status</th></tr>
+{% for b in bench %}<tr><td>{{ b.target_gl }}</td><td>{{ b.currency }}</td><td>{{ num(b.expected) }}</td><td>{{ num(b.benchmark) }}</td><td>{{ num(b.difference) }}</td><td>{{ b.status }}</td></tr>{% endfor %}</table></div>
+{% endblock %}
