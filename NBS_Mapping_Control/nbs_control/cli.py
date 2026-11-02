@@ -97,8 +97,24 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument('before'); p.add_argument('after')
     sub.add_parser('tb-recon-runs', help='List stored tb-recon runs')
 
+    p = sub.add_parser('studio-analyse', help='Mapping Studio: compile the workbook conditions, validate, reconcile the BO report, propose corrections')
+    p.add_argument('--workbook', required=True); p.add_argument('--bo'); p.add_argument('--sources', nargs='*', default=[])
+    p.add_argument('--label', default=''); p.add_argument('--tolerance'); p.add_argument('--bo-scale'); p.add_argument('--bo-sign')
+    p = sub.add_parser('studio-synthetic', help='Write a SYNTHETIC Mapping Studio dataset (workbook, BO report, source records)')
+    p.add_argument('--dir', required=True); p.add_argument('--scenario', choices=('clean', 'defects'), default='defects')
+    p = sub.add_parser('studio-decide', help='Approve / reject Mapping Studio proposals (or --all-high)')
+    p.add_argument('run'); p.add_argument('--proposals', nargs='*', default=[]); p.add_argument('--all-high', action='store_true')
+    p.add_argument('--decision', choices=('APPROVED', 'REJECTED', 'PROPOSED'), default='APPROVED')
+    p.add_argument('--actor', required=True); p.add_argument('--reason', required=True)
+    p = sub.add_parser('studio-export', help='Write the corrected copy (approved edits only) and refresh the reports')
+    p.add_argument('run'); p.add_argument('--actor', required=True)
+    p = sub.add_parser('studio-rerun', help='Rerun the reconciliation on the corrected copy')
+    p.add_argument('run')
+
     args = parser.parse_args(argv)
     try:
+        if args.command.startswith('studio-'):
+            return _studio(args)
         if args.command.startswith('tb-recon'):
             return _tb_recon(args)
         if args.command == 'rebuild-setup':
@@ -208,6 +224,41 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({"status": "ERROR", "detail": str(exc)}), file=sys.stderr)
         return 1
     return 1
+
+
+def _studio(args) -> int:
+    from .studio import exports as sx, run as sr, synthetic as ss
+    from .studio.store import Store
+    data_root, export_root = PROJECT_ROOT / 'data', EXPORT_DIR / 'studio'
+    store = Store(data_root)
+    try:
+        if args.command == 'studio-synthetic':
+            print(json.dumps({'synthetic_dataset': str(ss.build(args.dir, args.scenario)), 'scenario': args.scenario}))
+            return 0
+        if args.command == 'studio-analyse':
+            cfg = {k: v for k, v in (('tolerance', args.tolerance), ('bo_amount_scale', args.bo_scale), ('bo_sign', args.bo_sign)) if v}
+            pid = sr.new_project(store, data_root, args.label, args.workbook, args.bo, args.sources, cfg)
+            rid, folder, res = sr.run_project(store, data_root, export_root, pid, progress=lambda m: print('...', m, file=sys.stderr))
+        elif args.command == 'studio-decide':
+            pids = [p['id'] for p in store.proposals(args.run) if p['confidence'] == 'HIGH' and p['status'] == 'PROPOSED'] if args.all_high else args.proposals
+            print(json.dumps({'decided': store.decide(args.run, pids, args.decision, args.actor, args.reason)}))
+            return 0
+        elif args.command == 'studio-export':
+            r = store.run(args.run)
+            if not r:
+                raise ValueError('Unknown run')
+            corr = sx.write_corrected(store, args.run, r['folder'], sr.load_result(r['folder']), args.actor)
+            print(json.dumps({'corrected_copy': corr['path'], 'applied': len(corr['applied']), 'refused': len(corr['conflicts']),
+                              'preserved': corr['verification']['preserved'], 'lossy_parts': corr['lossy_parts']}, indent=2))
+            return 0 if corr['verification']['preserved'] and not corr['conflicts'] else 2
+        else:
+            rid, folder, res = sr.rerun(store, data_root, export_root, args.run)
+        print(json.dumps({'run_id': rid, 'folder': str(folder), 'summary': res['summary']}, indent=2, default=str))
+        s = res['summary']
+        return 0 if s['bo_open_before'] == 0 and not s['validation'].get('ERROR') else 2
+    except (ValueError, OSError, KeyError) as exc:
+        print(json.dumps({'status': 'ERROR', 'detail': str(exc)}), file=sys.stderr)
+        return 1
 
 
 def _tb_recon(args) -> int:

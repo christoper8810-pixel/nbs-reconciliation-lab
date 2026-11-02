@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% from "studio_macros.html" import num, tag, nav %}
+{% block title %}Compiled conditions{% endblock %}
+{% block content %}{{ nav(r) }}<h1>Compiled workbook conditions</h1>
+<div class="panel"><h2>Sheets and columns</h2><p>Sheets: {{ res.workbook.sheets|join(', ') }}. Recognised: {{ res.workbook.roles }}.</p>
+{% for role, m in res.workbook.column_maps.items() %}<h3>{{ role }} (header row {{ m.header_row }})</h3><p class="pre">{{ m.columns }}</p>{% if m.evidence %}<ul class="reasons">{% for e in m.evidence %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}{% endfor %}</div>
+<div class="panel"><h2>Lines and rules</h2><table><tr><th>Line</th><th>Type</th><th>Description</th><th>Rule</th><th>Compiled</th><th>Cells (original text)</th><th>Executable</th></tr>
+{% for ln in res.lines %}{% set rr = res.line_rules.get(ln.line, []) %}{% if not rr %}<tr><td>{{ ln.line }}</td><td>{{ ln.type }}</td><td>{{ ln.description }}</td><td colspan="4" class="muted">{% if ln.type == 'T' %}total of {{ ln.total_members|join(', ') }} ({{ ln.total_basis }}){% else %}no condition row{% endif %}</td></tr>{% endif %}
+{% for x in rr %}<tr><td>{{ ln.line }}</td><td>{{ ln.type }}</td><td>{{ ln.description }}</td><td>{{ x.rule }}</td><td>{{ x.description }}</td><td class="pre">{% for d, c in x.cells.items() %}{{ c.cell }} {{ d }} = {{ c.text }}
+{% endfor %}</td><td>{% set rs = res.rules|selectattr('rule','equalto',x.rule)|first %}{{ tag('HIGH' if rs.usable else 'ERROR') }} {{ rs.errors|join('; ') }}</td></tr>{% endfor %}{% endfor %}</table></div>
+<div class="panel"><h2>Named ranges and references</h2><table><tr><th>Name</th><th>Values</th><th>Defined at</th><th>Source</th></tr>{% for n, v in res.named_ranges.items() %}<tr><td>{{ n }}</td><td>{{ v.text }}</td><td>{{ v.ref }}</td><td>{{ v.source }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

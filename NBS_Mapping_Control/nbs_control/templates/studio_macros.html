@@ -1,0 +1,6 @@
+{% macro num(v) %}{% if v is not defined or v is none or v == '' %}{% else %}{{ '{:,.2f}'.format(v|float) }}{% endif %}{% endmacro %}
+{% macro tag(s) %}<span class="tag {{ {'MATCHED':'ok','HIGH':'ok','APPROVED':'ok','DIFFERENCE':'bad','NOT_EXPECTED':'bad','MISSING_IN_BO':'bad','LINE_NOT_IN_MAPPING':'bad','ERROR':'bad','REJECTED':'bad','UNRESOLVED':'bad'}.get(s, 'warn' if s in ('MEDIUM','LOW','WARNING','PROPOSED') else '') }}">{{ s }}</span>{% endmacro %}
+{% macro nav(r) %}<p><a href="{{ url_for('studio_home') }}">Mapping Studio</a> &rsaquo; <a href="{{ url_for('studio_run', rid=r.id) }}">Run {{ r.id }}</a>
+ &middot; <a href="{{ url_for('studio_proposals', rid=r.id) }}">Proposed corrections</a>
+ &middot; <a href="{{ url_for('studio_validation', rid=r.id) }}">Mapping validation</a>
+ &middot; <a href="{{ url_for('studio_rules', rid=r.id) }}">Compiled workbook conditions</a> <span class="muted">({{ r.kind }})</span></p>{% endmacro %}

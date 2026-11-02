@@ -1,4 +1,4 @@
-{% macro num(v) %}{% if v is none or v == '' %}{% else %}{{ '{:,.2f}'.format(v|float) }}{% endif %}{% endmacro %}
+{% macro num(v) %}{% if v is not defined or v is none or v == '' %}{% else %}{{ '{:,.2f}'.format(v|float) }}{% endif %}{% endmacro %}
 {% macro st(s) %}<span class="tag {{ {'PASS':'ok','RECONCILED':'ok','FAIL':'bad','DIFFERENCE':'bad','EXPECTED_ONLY':'bad','ACTUAL_ONLY':'bad'}.get(s, 'warn' if s in ('WARN','INCOMPLETE','SOURCE_PENDING','AMBIGUOUS','NO_RULE','MULTI_TARGET_UNRESOLVED','CONTRA_UNRESOLVED','INVALID_KEY') else '') }}">{{ s }}</span>{% endmacro %}
 {% macro nav(r) %}<p><a href="{{ url_for('tb_home') }}">TB reconciliation</a> &rsaquo; <a href="{{ url_for('tb_run', rid=r.run_id) }}">Run {{ r.run_id }}</a>
  &middot; <a href="{{ url_for('tb_exceptions', rid=r.run_id) }}">Root causes &amp; exceptions</a>

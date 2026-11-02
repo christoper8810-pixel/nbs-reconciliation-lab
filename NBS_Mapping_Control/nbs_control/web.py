@@ -296,4 +296,6 @@ def create_app(service, export_dir: Path = EXPORT_DIR) -> Flask:
     register_rebuild_routes(app,service.config_dir.parent)
     from .tbrecon.web import register_tb_routes
     register_tb_routes(app, service.config_dir.parent)
+    from .studio.web import register_studio_routes
+    register_studio_routes(app, service.config_dir.parent)
     return app

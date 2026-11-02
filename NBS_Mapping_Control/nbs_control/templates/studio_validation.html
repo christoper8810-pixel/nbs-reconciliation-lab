@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% from "studio_macros.html" import num, tag, nav %}
+{% block title %}Mapping validation{% endblock %}
+{% block content %}{{ nav(r) }}<h1>Mapping validation ({{ items|length }} of {{ res.validation|length }})</h1>
+<form class="filters" method="get"><div><label>Severity</label><select name="severity"><option value="">all</option>{% for c in ('ERROR','WARNING','INFO') %}<option {{ 'selected' if sev == c }}>{{ c }}</option>{% endfor %}</select></div>
+<div><label>Check</label><select name="check"><option value="">all</option>{% for c in checks %}<option {{ 'selected' if chk == c }}>{{ c }}</option>{% endfor %}</select></div><button>Filter</button></form>
+<div class="panel"><table><tr><th>ID</th><th>Severity</th><th>Classification</th><th>Check</th><th>Cell</th><th>Finding</th><th>Records</th><th>Amount</th></tr>
+{% for v in items %}<tr><td>{{ v.id }}</td><td>{{ tag(v.severity) }}</td><td>{{ v.classification }}</td><td>{{ v.check }}</td><td>{{ v.cell }}</td><td>{{ v.message }}</td><td>{{ v.records or '' }}</td><td style="text-align:right">{{ num(v.amount) }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

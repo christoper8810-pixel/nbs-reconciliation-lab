@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% from "studio_macros.html" import num, tag, nav %}
+{% block title %}{{ k }}{% endblock %}
+{% block content %}{{ nav(r) }}<h1>{{ k }}</h1>
+{% if rec %}<div class="panel"><table><tr><th>Line</th><th>Description</th><th>Expected</th><th>BO actual</th><th>Difference</th><th>Status</th></tr>
+<tr><td>{{ line }} ({{ ln.type if ln }})</td><td>{{ ln.description if ln }}</td><td>{{ num(rec.expected) }}</td><td>{{ num(rec.actual) }}</td><td>{{ num(rec.difference) }}</td><td>{{ tag(rec.status) }}</td></tr></table>
+{% if ln %}<p class="muted">Defined at {{ ln.cell }}{% if ln.type == 'T' %}; total of {{ ln.total_members|join(', ') }} ({{ ln.total_basis }}){% endif %}</p>{% endif %}</div>{% endif %}
+<div class="panel"><h2>Workbook conditions of this line</h2><table><tr><th>Rule</th><th>Compiled condition</th><th>Cells and original text</th></tr>
+{% for x in rules %}<tr><td>{{ x.rule }}</td><td>{{ x.description }}</td><td class="pre">{% for d, c in x.cells.items() %}{{ c.cell }} {{ d }} = {{ c.text }}{% if c.formula %} ({{ c.formula }}){% endif %}
+{% endfor %}</td></tr>{% endfor %}</table></div>
+{% for p in props %}<div class="panel"><h2>Proposal {{ p.id }} {{ tag(p.confidence) }} {{ tag(p.status) }}</h2><p>{{ p.reason }}</p>
+<table><tr><th>Cell</th><th>Existing</th><th>Proposed</th></tr>{% for e in p.edits %}<tr><td>{{ e.cell }}</td><td class="pre">{{ e.existing }}</td><td class="pre">{{ e.proposed }}</td></tr>{% endfor %}</table><p class="muted">{{ p.evidence }}</p></div>{% endfor %}
+{% for x in resid %}<div class="panel"><h2>Unexplained by mapping: {{ x.category }}</h2><p>Responsibility {{ x.responsibility }}, confidence {{ x.confidence }}. Evidence needed: {{ x.evidence_needed }}</p></div>{% endfor %}
+<div class="panel"><h2>Source records allocated here ({{ sigs|length }} signatures)</h2><table><tr><th>Dimensions</th><th>Records</th><th>Amount</th><th>Rules</th><th>Status</th><th>Accounts</th><th>Source rows</th></tr>
+{% for s in sigs %}<tr><td class="pre">{{ s.dims }}</td><td>{{ s.records }}</td><td style="text-align:right">{{ num(s.amount) }}</td><td>{{ s.rules|join(', ') }}{{ s.gl_rows }}</td><td>{{ tag(s.status) }}</td><td>{{ s.accounts|join(', ') }}</td><td>{{ s.refs|join(', ') }}</td></tr>{% endfor %}</table></div>
+<div class="panel"><h2>Unallocated or double-allocated source records (whole run)</h2><table><tr><th>Dimensions</th><th>Records</th><th>Amount</th><th>Status</th><th>Lines</th><th>Source rows</th></tr>
+{% for s in near %}<tr><td class="pre">{{ s.dims }}</td><td>{{ s.records }}</td><td style="text-align:right">{{ num(s.amount) }}</td><td>{{ tag(s.status) }}</td><td>{{ s.lines|join(', ') }}</td><td>{{ s.refs|join(', ') }}</td></tr>{% endfor %}</table></div>
+{% endblock %}

@@ -36,13 +36,14 @@ button.secondary{background:#5b6475}
 <body>
 <header>
   <b>NBS</b>
+  <a href="{{ url_for('studio_home') }}"><b>Mapping Studio</b></a>
   <a href="{{ url_for('nbs_home') }}">Home</a>
   <a href="{{ url_for('nbs_load') }}">1 Load files</a>
   <a href="{{ url_for('nbs_report') }}">2 NBS report</a>
   <a href="{{ url_for('nbs_temenos') }}">Original Temenos logic</a>
   <a href="{{ url_for('nbs_balance_types') }}">3 Balance types</a>
   <a href="{{ url_for('nbs_downloads') }}">4 Downloads</a>
-  <a href="{{ url_for('tb_home') }}">TB reconciliation</a>
+  <a href="{{ url_for('tb_home') }}">TB reconciliation (separate tool)</a>
   <a href="{{ url_for('rebuild_explore') }}">Explore sources</a>
   <details style="display:inline-block;position:relative"><summary style="cursor:pointer;color:#cfe0ff">More</summary>
   <div style="position:absolute;z-index:9;background:#18243a;padding:8px 12px;border-radius:6px;display:flex;flex-direction:column;gap:4px;min-width:240px">

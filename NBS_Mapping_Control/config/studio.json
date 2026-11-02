@@ -1,0 +1,12 @@
+{
+  "_purpose": "NBS Mapping Studio settings. Each run records the settings it used.",
+  "tolerance": "0.01",
+  "space_separates_values": true,
+  "overlap_policy": "ALL",
+  "_overlap_policy": "ALL = a record satisfying the conditions of several detail lines counts in each (literal execution, flagged OVERLAP); MOST_SPECIFIC = only the most specific line, ties left unallocated.",
+  "bo_amount_scale": 1,
+  "bo_sign": 1,
+  "_bo": "Declared presentation of the BO report (e.g. 1000 when BO shows thousands). Detected mismatches are reported, never applied automatically.",
+  "evaluate_validation_proposals": true,
+  "max_iterations": 60
+}
